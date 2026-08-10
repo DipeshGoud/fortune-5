@@ -85,10 +85,3 @@ body {
 .gold-gradient-bg {
   background: linear-gradient(135deg, #f5d77f 0%, #c59b27 50%, #966c0f 100%);
 }
-
-/* Smooth transition for interactive items */
-* {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}

@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import StatsBar from "@/components/StatsBar";
 import CustomizedRiskSolutions from "@/components/CustomizedRiskSolutions";
 import AboutFortune5 from "@/components/AboutFortune5";
+import WhyFortune5 from "@/components/WhyFortune5";
 import Legacy75Section from "@/components/Legacy75Section";
 import HowWeWork from "@/components/HowWeWork";
 import TrustProofSection from "@/components/TrustProofSection";
@@ -16,9 +17,7 @@ export default function Home() {
       <TopBar />
 
       {/* Navigation Header */}
-      <div className="relative z-40">
-        <Navbar />
-      </div>
+      <Navbar />
 
       {/* Section 1: Hero Section */}
       <Hero />
@@ -28,6 +27,9 @@ export default function Home() {
 
       {/* Section 2: About Fortune 5 (A Legacy of Trust) */}
       <AboutFortune5 />
+
+      {/* Why Fortune 5 Feature Grid */}
+      <WhyFortune5 />
 
       {/* Section 3: Customised Risk Solutions */}
       <CustomizedRiskSolutions />

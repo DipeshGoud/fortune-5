@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ShieldCheck, Trophy, Building2 } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function TrustProofSection() {
   const awards = [
@@ -14,21 +15,110 @@ export default function TrustProofSection() {
   ];
 
   const generalPartners = [
-    { name: "BAJAJ Allianz", color: "text-[#00529B]", sub: "General Insurance" },
-    { name: "ICICI Lombard", color: "text-[#F37021]", sub: "General Insurance" },
-    { name: "HDFC ERGO", color: "text-[#ED1C24]", sub: "General Insurance" },
+    {
+      name: "BAJAJ Allianz",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <text x="5" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="13" fill="#00529B" letterSpacing="0.5">BAJAJ</text>
+          <text x="56" y="20" fontFamily="sans-serif" fontWeight="700" fontSize="12" fill="#00529B">Allianz</text>
+        </svg>
+      ),
+      sub: "General Insurance",
+    },
+    {
+      name: "ICICI Lombard",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <text x="5" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="13" fill="#024B8B">ICICI</text>
+          <text x="48" y="20" fontFamily="sans-serif" fontWeight="700" fontSize="11" fill="#F37021">Lombard</text>
+        </svg>
+      ),
+      sub: "General Insurance",
+    },
+    {
+      name: "HDFC ERGO",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <rect x="5" y="7" width="16" height="16" fill="#ED1C24" rx="2" />
+          <text x="9" y="19" fontFamily="sans-serif" fontWeight="900" fontSize="10" fill="#FFFFFF">H</text>
+          <text x="26" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="12" fill="#231F20">HDFC</text>
+          <text x="68" y="20" fontFamily="sans-serif" fontWeight="800" fontSize="11" fill="#ED1C24">ERGO</text>
+        </svg>
+      ),
+      sub: "General Insurance",
+    },
   ];
 
   const lifePartners = [
-    { name: "LIC of India", color: "text-[#003B73]", sub: "Life Insurance" },
-    { name: "HDFC Life", color: "text-[#ED1C24]", sub: "Life Insurance" },
-    { name: "SBI Life", color: "text-[#2B2A29]", sub: "Life Insurance" },
+    {
+      name: "LIC of India",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <circle cx="16" cy="15" r="9" fill="#FDB813" />
+          <text x="30" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="13" fill="#003B73">LIC</text>
+          <text x="58" y="20" fontFamily="sans-serif" fontWeight="700" fontSize="10" fill="#003B73">of India</text>
+        </svg>
+      ),
+      sub: "Life Insurance",
+    },
+    {
+      name: "HDFC Life",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <rect x="5" y="7" width="16" height="16" fill="#ED1C24" rx="2" />
+          <text x="9" y="19" fontFamily="sans-serif" fontWeight="900" fontSize="10" fill="#FFFFFF">H</text>
+          <text x="26" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="12" fill="#231F20">HDFC</text>
+          <text x="68" y="20" fontFamily="sans-serif" fontWeight="800" fontSize="11" fill="#ED1C24">Life</text>
+        </svg>
+      ),
+      sub: "Life Insurance",
+    },
+    {
+      name: "SBI Life",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <circle cx="14" cy="15" r="8" fill="#2B2A29" />
+          <circle cx="14" cy="15" r="3" fill="#FFFFFF" />
+          <text x="28" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="13" fill="#2B2A29">SBI</text>
+          <text x="54" y="20" fontFamily="sans-serif" fontWeight="700" fontSize="12" fill="#2B2A29">Life</text>
+        </svg>
+      ),
+      sub: "Life Insurance",
+    },
   ];
 
   const healthPartners = [
-    { name: "STAR Health", color: "text-[#004B87]", sub: "Health Insurance" },
-    { name: "Niva Bupa", color: "text-[#00A099]", sub: "Health Insurance" },
-    { name: "Care Health", color: "text-[#F8981D]", sub: "Health Insurance" },
+    {
+      name: "STAR Health",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <path d="M12 7 L14 12 L19 12 L15 15 L17 20 L12 17 L7 20 L9 15 L5 12 L10 12 Z" fill="#004B87" />
+          <text x="24" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="12" fill="#004B87">STAR</text>
+          <text x="62" y="20" fontFamily="sans-serif" fontWeight="700" fontSize="11" fill="#004B87">Health</text>
+        </svg>
+      ),
+      sub: "Health Insurance",
+    },
+    {
+      name: "Niva Bupa",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <text x="5" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="12" fill="#00A099">Niva</text>
+          <text x="38" y="20" fontFamily="sans-serif" fontWeight="800" fontSize="12" fill="#00A099">Bupa</text>
+        </svg>
+      ),
+      sub: "Health Insurance",
+    },
+    {
+      name: "Care Health",
+      svg: (
+        <svg viewBox="0 0 120 30" className="h-6 w-auto object-contain">
+          <text x="5" y="20" fontFamily="sans-serif" fontWeight="900" fontSize="13" fill="#F8981D">care</text>
+          <text x="38" y="20" fontFamily="sans-serif" fontWeight="700" fontSize="10" fill="#58595B">HEALTH</text>
+        </svg>
+      ),
+      sub: "Health Insurance",
+    },
   ];
 
   const corporateClients = [
@@ -48,7 +138,12 @@ export default function TrustProofSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10">
           
           {/* CARD 1: OUR PARTNERS (lg:col-span-4) */}
-          <div className="lg:col-span-4 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300">
+          <ScrollReveal
+            variant="fadeUp"
+            delay={0.05}
+            duration={0.8}
+            className="lg:col-span-4 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full"
+          >
             <div>
               <div className="flex items-center justify-center gap-2 mb-6">
                 <ShieldCheck className="w-5 h-5 text-[#C59B27]" />
@@ -66,11 +161,9 @@ export default function TrustProofSection() {
                   {generalPartners.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex flex-col items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group"
+                      className="p-3.5 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex flex-col items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group"
                     >
-                      <span className={`font-extrabold text-xs leading-tight ${item.color}`}>
-                        {item.name}
-                      </span>
+                      {item.svg}
                     </div>
                   ))}
                 </div>
@@ -85,11 +178,9 @@ export default function TrustProofSection() {
                   {lifePartners.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex flex-col items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group"
+                      className="p-3.5 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex flex-col items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group"
                     >
-                      <span className={`font-extrabold text-xs leading-tight ${item.color}`}>
-                        {item.name}
-                      </span>
+                      {item.svg}
                     </div>
                   ))}
                 </div>
@@ -104,20 +195,23 @@ export default function TrustProofSection() {
                   {healthPartners.map((item, idx) => (
                     <div
                       key={idx}
-                      className="p-3 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex flex-col items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group"
+                      className="p-3.5 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex flex-col items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group"
                     >
-                      <span className={`font-extrabold text-xs leading-tight ${item.color}`}>
-                        {item.name}
-                      </span>
+                      {item.svg}
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* CARD 2: AWARDS & RECOGNITION (lg:col-span-5) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300">
+          <ScrollReveal
+            variant="fadeUp"
+            delay={0.2}
+            duration={0.8}
+            className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full"
+          >
             <div>
               <div className="flex items-center justify-center gap-2 mb-6">
                 <Trophy className="w-5 h-5 text-[#C59B27]" />
@@ -159,10 +253,15 @@ export default function TrustProofSection() {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* CARD 3: OUR CLIENTS (lg:col-span-3) */}
-          <div className="lg:col-span-3 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300">
+          <ScrollReveal
+            variant="fadeUp"
+            delay={0.35}
+            duration={0.8}
+            className="lg:col-span-3 bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full"
+          >
             <div>
               <div className="flex items-center justify-center gap-2 mb-6">
                 <Building2 className="w-5 h-5 text-[#C59B27]" />
@@ -185,7 +284,7 @@ export default function TrustProofSection() {
                 ))}
               </div>
             </div>
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

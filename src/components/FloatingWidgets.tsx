@@ -104,7 +104,7 @@ export default function FloatingWidgets() {
 
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/919820710067?text=Hello%20Fortune%205%2C%20I%20would%20like%20to%20inquire%20about%20your%20risk%20management%20services."
+          href="https://wa.me/919820810067?text=Hello%20Fortune%205%2C%20I%20would%20like%20to%20inquire%20about%20your%20risk%20management%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-2xl hover:bg-[#20ba5a] hover:scale-110 transition-all duration-300"

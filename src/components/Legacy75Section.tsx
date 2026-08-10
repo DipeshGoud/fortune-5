@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Legacy75Section() {
   return (
@@ -13,7 +14,11 @@ export default function Legacy75Section() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 xl:gap-20 items-center">
           
           {/* Left Column: 75-Year Emblem Logo */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end">
+          <ScrollReveal
+            variant="zoomIn"
+            duration={0.9}
+            className="lg:col-span-5 flex justify-center lg:justify-end"
+          >
             <div className="relative group">
               <Image
                 src="/75year-logo.png"
@@ -25,28 +30,31 @@ export default function Legacy75Section() {
                 className="w-56 sm:w-72 md:w-80 lg:w-[380px] xl:w-[420px] h-auto object-contain drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)] group-hover:scale-[1.02] transition-transform duration-300"
               />
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right Column: Clean Content matching Screenshot */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-5 max-w-2xl lg:max-w-3xl">
-            
+          <ScrollReveal
+            variant="fadeLeft"
+            duration={0.8}
+            delay={0.15}
+            className="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-5 max-w-2xl lg:max-w-3xl"
+          >
             {/* Gold Badge */}
             <div className="inline-block bg-[#B8860B] text-white font-extrabold text-[11px] sm:text-xs tracking-widest px-4 py-1.5 rounded-full uppercase shadow-xs">
               CELEBRATING EXCELLENCE
             </div>
 
-            {/* Main Headline (Sans-serif font matching reference image exactly) */}
+            {/* Main Headline */}
             <h2 className="font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] font-extrabold text-white leading-[1.1] tracking-tight">
               75 Years of Trust <br />
               &amp; Protection
             </h2>
 
-            {/* Paragraph Description matching screenshot */}
+            {/* Paragraph Description */}
             <p className="text-slate-300 text-base sm:text-lg lg:text-[19px] leading-relaxed font-sans font-normal max-w-xl lg:max-w-2xl">
               For generations, Fortune Five has been a trusted name in insurance and risk management, delivering protection with integrity and care. Join thousands of satisfied clients who have experienced our commitment to excellence.
             </p>
-
-          </div>
+          </ScrollReveal>
 
         </div>
       </div>

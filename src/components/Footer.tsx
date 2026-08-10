@@ -2,247 +2,248 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Logo from "./Logo";
+import Link from "next/link";
 import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, Copy, Check } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 export default function Footer() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("info@fortune5.in");
+    navigator.clipboard.writeText("insure@fortune5.in");
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2000);
   };
 
   return (
-    <footer className="w-full bg-[#011331] text-white relative font-sans overflow-hidden border-t border-[#C59B27]/30">
+    <footer className="w-full bg-[#011331] text-white relative font-sans overflow-hidden border-t border-[#C59B27]/30 pt-12 sm:pt-16">
       
-      {/* 1. TOP CALL-TO-ACTION BANNER */}
-      <div className="w-full bg-gradient-to-r from-[#011331] via-[#071F47] to-[#011331] border-b border-[#C59B27]/40 py-12 sm:py-16 relative overflow-hidden">
-        {/* Subtle Ambient Gold Glow */}
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-[#C59B27]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#F5D77F]/5 rounded-full blur-3xl pointer-events-none" />
+      {/* FLOATING ELEGANT CTA CARD */}
+      <ScrollReveal variant="fadeUp" duration={0.6}>
+        <div className="mx-auto w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20">
+          <div className="relative overflow-hidden rounded-3xl border border-[#C59B27]/40 bg-gradient-to-r from-[#03193d] via-[#082454] to-[#03193d] p-8 sm:p-10 lg:p-12 shadow-2xl">
+            {/* Geometric Blueprint Grid Pattern */}
+            <div
+              className="absolute inset-0 pointer-events-none opacity-[0.07]"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(245,215,127,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(245,215,127,0.5) 1px, transparent 1px)",
+                backgroundSize: "36px 36px",
+              }}
+            />
 
-        <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-            
-            {/* Left Graphic Shield Icon & Text */}
-            <div className="flex items-center gap-6 sm:gap-8 text-center lg:text-left">
-              {/* 3D Shield Badge Container */}
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-tr from-[#011331] via-[#071f47] to-[#011331] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] shadow-2xl flex-shrink-0 relative group">
-                <div className="absolute inset-0 bg-[#C59B27]/20 rounded-2xl blur-md group-hover:blur-lg transition-all" />
-                <ShieldCheck className="w-10 h-10 sm:w-12 sm:h-12 text-[#F5D77F] relative z-10" />
-              </div>
+            {/* Decorative Gold Concentric Circles Pattern */}
+            <div className="absolute -right-16 -top-16 w-80 h-80 rounded-full border border-[#C59B27]/20 pointer-events-none" />
+            <div className="absolute -right-28 -top-28 w-96 h-96 rounded-full border border-[#C59B27]/10 pointer-events-none" />
+            <div className="absolute -left-20 -bottom-20 w-72 h-72 rounded-full border border-[#C59B27]/15 pointer-events-none" />
 
-              {/* Title & Tagline */}
-              <div>
-                <h3 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white tracking-wide uppercase leading-tight">
-                  READY TO PROTECT <span className="text-[#C59B27]">WHAT MATTERS MOST?</span>
+            {/* Soft decorative background glows */}
+            <div className="absolute -left-20 -top-20 w-64 h-64 bg-[#C59B27]/15 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-[#F5D77F]/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10 text-center md:text-left">
+              <div className="max-w-2xl">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#C59B27]/30 bg-[#C59B27]/10 px-3.5 py-1 text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#F5D77F] mb-3">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#C59B27]" />
+                  <span>3 GENERATIONS OF TRUST</span>
+                </span>
+                <h3 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                  Protecting what matters most <span className="text-[#F5D77F]">to you.</span>
                 </h3>
-                <p className="text-slate-300 text-sm sm:text-base lg:text-lg font-medium mt-1">
-                  Talk to our experts and get a solution that&apos;s tailored for you.
+                <p className="mt-2.5 text-xs sm:text-sm text-slate-300 font-medium leading-relaxed max-w-xl">
+                  Talk to our senior advisory team for unbiased risk audits, insurer negotiation, and 24/7 claims advocacy.
                 </p>
               </div>
-            </div>
 
-            {/* Right Gold Consultation Button */}
-            <div className="flex-shrink-0">
-              <a
-                href="#consultation"
-                className="group flex items-center gap-3 bg-gradient-to-r from-[#C59B27] via-[#D4AF37] to-[#F5D77F] hover:from-[#F5D77F] hover:to-[#C59B27] text-[#011331] font-extrabold text-sm sm:text-base tracking-widest px-8 py-4 sm:py-4.5 rounded-xl shadow-xl hover:shadow-amber-500/20 transition-all duration-300 uppercase"
-              >
-                <span>SCHEDULE A CONSULTATION</span>
-                <ArrowRight className="w-5 h-5 text-[#011331] group-hover:translate-x-1.5 transition-transform" />
-              </a>
+              <div className="flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full sm:w-auto">
+                <Link
+                  href="/contact"
+                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#C59B27] via-[#D4AF37] to-[#F5D77F] px-7 py-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#011331] shadow-lg transition-all duration-300 hover:shadow-amber-500/25 hover:scale-[1.02]"
+                >
+                  <span>REQUEST CONSULTATION</span>
+                  <ArrowRight className="h-4 w-4 text-[#011331] transition-transform group-hover:translate-x-1" />
+                </Link>
+                <a
+                  href="tel:+919820810067"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-white transition-all"
+                >
+                  <Phone className="h-4 w-4 text-[#C59B27]" />
+                  <span>+91 98208 10067</span>
+                </a>
+              </div>
             </div>
-
           </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 2. MAIN FOOTER COLUMNS */}
-      <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 py-16 sm:py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12">
-          
-          {/* Column 1: Logo & Company Bio (lg:col-span-4) */}
-          <div className="lg:col-span-4 flex flex-col space-y-6">
-            {/* Logo without white background and enlarged */}
-            <div className="inline-block w-fit py-1">
-              <a href="#" className="flex items-center group cursor-pointer">
-                <Image
-                  src="/logo.png"
-                  alt="Fortune 5 Risk Management Solutions LLP"
-                  width={300}
-                  height={90}
-                  priority
-                  quality={100}
-                  className="h-16 sm:h-20 md:h-22 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]"
-                />
-              </a>
-            </div>
-
-            {/* Tagline Bio */}
-            <p className="text-slate-300 text-sm leading-relaxed font-medium max-w-sm">
-              Building trust. Protecting futures. A 3rd generation insurance consultancy committed to protecting what matters most to you.
-            </p>
-
-            {/* Social Icons (Circular styled as in screenshot) */}
-            <div className="flex items-center gap-3 pt-2">
-              {/* Facebook */}
-              <a
-                href="#"
-                aria-label="Facebook"
-                className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
-                </svg>
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.47 1.47 0 1 0 0 2.94 1.47 1.47 0 0 0 0-2.94Z" />
-                </svg>
-              </a>
-
-              {/* Twitter / X */}
-              <a
-                href="#"
-                aria-label="Twitter"
-                className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="#"
-                aria-label="Instagram"
-                className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
-              >
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          {/* Column 2: QUICK LINKS (lg:col-span-2) */}
-          <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
-            <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
-              QUICK LINKS
-            </h4>
-            <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
-              <li><a href="#about" className="hover:text-[#F5D77F] transition-colors">About Us</a></li>
-              <li><a href="#solutions" className="hover:text-[#F5D77F] transition-colors">Our Solutions</a></li>
-              <li><a href="#industries" className="hover:text-[#F5D77F] transition-colors">Industries</a></li>
-              <li><a href="#claims" className="hover:text-[#F5D77F] transition-colors">Claims Support</a></li>
-              <li><a href="#resources" className="hover:text-[#F5D77F] transition-colors">Resources</a></li>
-              <li><a href="#contact" className="hover:text-[#F5D77F] transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-
-          {/* Column 3: SOLUTIONS (lg:col-span-2) */}
-          <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
-            <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
-              SOLUTIONS
-            </h4>
-            <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
-              <li><a href="#corporate" className="hover:text-[#F5D77F] transition-colors">Corporate Insurance</a></li>
-              <li><a href="#retail" className="hover:text-[#F5D77F] transition-colors">Retail Insurance</a></li>
-              <li><a href="#benefits" className="hover:text-[#F5D77F] transition-colors">Employee Benefits</a></li>
-              <li><a href="#liability" className="hover:text-[#F5D77F] transition-colors">Liability Insurance</a></li>
-              <li><a href="#health" className="hover:text-[#F5D77F] transition-colors">Health Insurance</a></li>
-              <li><a href="#motor" className="hover:text-[#F5D77F] transition-colors">Motor Insurance</a></li>
-            </ul>
-          </div>
-
-          {/* Column 4: OUR OFFICES (lg:col-span-2) */}
-          <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
-            <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
-              OUR OFFICES
-            </h4>
-            <div className="space-y-3 text-xs text-slate-300 font-medium">
-              <div>
-                <div className="flex items-center gap-1.5 font-bold text-white mb-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#C59B27]" />
-                  <span>Head Office (Mumbai)</span>
-                </div>
-                <p className="text-slate-400 pl-5 text-[11px] leading-relaxed">
-                  Vile Parle (East)
-                </p>
-                <p className="text-amber-300 pl-5 text-[11px] font-semibold">
-                  +91-98207 10067
-                </p>
+      <ScrollReveal variant="fadeUp" delay={0.15} duration={0.8}>
+        <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 py-16 sm:py-20 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 xl:gap-12">
+            
+            {/* Column 1: Logo & Company Bio */}
+            <div className="lg:col-span-4 flex flex-col space-y-6">
+              <div className="inline-block w-fit py-1">
+                <Link href="/" className="flex items-center group cursor-pointer">
+                  <Image
+                    src="/logo.png"
+                    alt="Fortune 5 Risk Management Solutions LLP"
+                    width={450}
+                    height={140}
+                    priority
+                    quality={100}
+                    className="h-14 sm:h-16 md:h-18 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.03]"
+                  />
+                </Link>
               </div>
 
-              <div>
-                <div className="flex items-center gap-1.5 font-bold text-white mb-0.5">
-                  <MapPin className="w-3.5 h-3.5 text-[#C59B27]" />
-                  <span>Branch Offices</span>
-                </div>
-                <p className="text-slate-400 pl-5 text-[11px]">
-                  Ghatkopar || Powai
-                </p>
-                <p className="text-amber-300 pl-5 text-[11px] font-semibold">
-                  +91-22-2619 27 27
-                </p>
+              <p className="text-slate-300 text-sm leading-relaxed font-medium max-w-sm">
+                Building trust. Protecting futures. A 3rd generation insurance consultancy committed to protecting what matters most to you.
+              </p>
+
+              <div className="flex items-center gap-3 pt-2">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.47 1.47 0 1 0 0 2.94 1.47 1.47 0 0 0 0-2.94Z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+
+                <a
+                  href="#"
+                  aria-label="Instagram"
+                  className="w-10 h-10 rounded-full border border-slate-700 hover:border-[#C59B27] bg-[#071F47]/60 hover:bg-[#C59B27] text-slate-200 hover:text-[#011331] flex items-center justify-center transition-all duration-200 transform hover:scale-105"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* Column 5: CONTACT US (lg:col-span-2) */}
-          <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
-            <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
-              CONTACT US
-            </h4>
-            <div className="space-y-3 text-xs text-slate-300 font-medium">
-              
-              {/* Email */}
-              <div
-                onClick={handleCopyEmail}
-                className="flex items-start gap-2 cursor-pointer hover:text-[#F5D77F] transition-colors group"
-              >
-                <Mail className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
+            {/* Column 2: QUICK LINKS */}
+            <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
+              <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
+                QUICK LINKS
+              </h4>
+              <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
+                <li><Link href="/about" className="hover:text-[#F5D77F] transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-[#F5D77F] transition-colors">Our Services</Link></li>
+                <li><Link href="/testimonials" className="hover:text-[#F5D77F] transition-colors">Testimonials</Link></li>
+                <li><Link href="/blog" className="hover:text-[#F5D77F] transition-colors">Blog & Articles</Link></li>
+                <li><Link href="/gallery" className="hover:text-[#F5D77F] transition-colors">Gallery & Media</Link></li>
+                <li><Link href="/contact" className="hover:text-[#F5D77F] transition-colors">Contact Us</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 3: SOLUTIONS */}
+            <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
+              <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
+                SOLUTIONS
+              </h4>
+              <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
+                <li><Link href="/solutions#corporate" className="hover:text-[#F5D77F] transition-colors">Corporate Insurance</Link></li>
+                <li><Link href="/solutions#retail" className="hover:text-[#F5D77F] transition-colors">Retail Insurance</Link></li>
+                <li><Link href="/solutions#benefits" className="hover:text-[#F5D77F] transition-colors">Employee Benefits</Link></li>
+                <li><Link href="/solutions#liability" className="hover:text-[#F5D77F] transition-colors">Liability Insurance</Link></li>
+                <li><Link href="/solutions#health" className="hover:text-[#F5D77F] transition-colors">Health Insurance</Link></li>
+                <li><Link href="/solutions#motor" className="hover:text-[#F5D77F] transition-colors">Motor Insurance</Link></li>
+              </ul>
+            </div>
+
+            {/* Column 4: OUR LOCATION */}
+            <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
+              <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
+                OUR LOCATION
+              </h4>
+              <div className="space-y-3 text-xs text-slate-300 font-medium">
                 <div>
-                  <span className="block font-semibold">info@fortune5.in</span>
-                  <span className="text-[10px] text-amber-300 flex items-center gap-1 mt-0.5">
-                    {copiedEmail ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
-                    {copiedEmail ? "Copied!" : "Click to copy"}
-                  </span>
+                  <div className="flex items-center gap-1.5 font-bold text-white mb-0.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#C59B27]" />
+                    <span>Mumbai Office</span>
+                  </div>
+                  <p className="text-slate-400 pl-5 text-[11px] leading-relaxed">
+                    Vile Parle (East)
+                  </p>
+                  <p className="text-amber-300 pl-5 text-[11px] font-semibold mt-1">
+                    +91-98208 10067
+                  </p>
+                  <p className="text-slate-400 pl-5 text-[11px]">
+                    +91-22-2619 27 27
+                  </p>
                 </div>
               </div>
-
-              {/* Phone */}
-              <div className="flex items-start gap-2">
-                <Phone className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="block font-bold text-white">+91-98207 10067</span>
-                  <span className="block text-[11px] text-slate-400">+91-22-2619 37 37</span>
-                </div>
-              </div>
-
-              {/* Address */}
-              <div className="flex items-start gap-2 pt-1">
-                <MapPin className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
-                <p className="text-[11px] text-slate-300 leading-relaxed font-normal">
-                  Fortune 5 Risk Management Solutions LLP,<br />
-                  106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai - 400057.
-                </p>
-              </div>
-
             </div>
-          </div>
 
+            {/* Column 5: CONTACT US */}
+            <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
+              <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
+                CONTACT US
+              </h4>
+              <div className="space-y-3 text-xs text-slate-300 font-medium">
+                
+                {/* Email */}
+                <div
+                  onClick={handleCopyEmail}
+                  className="flex items-start gap-2 cursor-pointer hover:text-[#F5D77F] transition-colors group"
+                >
+                  <Mail className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="block font-semibold">insure@fortune5.in</span>
+                    <span className="text-[10px] text-amber-300 flex items-center gap-1 mt-0.5">
+                      {copiedEmail ? <Check className="w-3 h-3 text-emerald-400" /> : <Copy className="w-3 h-3" />}
+                      {copiedEmail ? "Copied!" : "Click to copy"}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start gap-2">
+                  <Phone className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="block font-bold text-white">+91-98208 10067</span>
+                    <span className="block text-[11px] text-slate-400">+91-22-2619 37 37</span>
+                  </div>
+                </div>
+
+                {/* Address */}
+                <div className="flex items-start gap-2 pt-1">
+                  <MapPin className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
+                  <p className="text-[11px] text-slate-300 leading-relaxed font-normal">
+                    Fortune 5 Risk Management Solutions LLP,<br />
+                    106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai - 400057.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
+      </ScrollReveal>
 
       {/* 3. BOTTOM COPYRIGHT & LEGAL BAR */}
       <div className="w-full bg-[#000d24] border-t border-slate-800/80 py-5 relative z-10 text-xs text-slate-400 font-medium">
