@@ -5,6 +5,7 @@ import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import BlogGrid from "@/components/BlogGrid";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { articles } from "@/data/blog";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         <div className="relative mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-10 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center gap-10 lg:gap-14">
             {/* Left Copy Column */}
+            <ScrollReveal variant="fadeUp" className="w-full">
             <div>
               <nav
                 aria-label="Breadcrumb"
@@ -76,8 +78,10 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                 <span className="text-slate-400">New issues monthly</span>
               </div>
             </div>
+            </ScrollReveal>
 
             {/* Right Featured Article Highlight Card */}
+            <ScrollReveal variant="fadeLeft" delay={0.15} className="w-full">
             <div className="relative group">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#C59B27]/40 via-[#F5D77F]/30 to-[#C59B27]/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
               <Link
@@ -113,6 +117,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                 </div>
               </Link>
             </div>
+            </ScrollReveal>
           </div>
         </div>
 
@@ -121,6 +126,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
 
       {/* ── STATS STRIP ── */}
       <section className="relative z-20 -mt-8 px-5 sm:px-8 lg:px-10 xl:px-12">
+        <ScrollReveal variant="fadeUp" className="w-full">
         <div className="mx-auto grid w-full max-w-[1480px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {stats.map((s) => (
             <div
@@ -135,11 +141,13 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             </div>
           ))}
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ── LATEST / ARCHIVE ── */}
       <section id="articles" className="scroll-mt-24 pb-10 pt-14 sm:pb-16 sm:pt-16 lg:pb-20">
         <div className="mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-10 xl:px-12">
+          <ScrollReveal variant="fadeUp" className="w-full">
           <div className="mb-8 flex flex-col gap-6 lg:mb-10 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 rounded-full border border-[#C59B27]/20 bg-white px-3 py-1.5 shadow-sm">
@@ -158,10 +166,12 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               <span>Filter by topic or search</span>
             </div>
           </div>
+          </ScrollReveal>
 
           <BlogGrid initialQuery={initialQuery} />
 
           {/* trust strip */}
+          <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">
           <div className="mt-10 flex flex-col items-center justify-between gap-4 rounded-[1.4rem] border border-[#C59B27]/20 bg-white p-5 sm:flex-row sm:p-6">
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#011331] text-[#F5D77F]">
@@ -179,6 +189,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               Ask us a question <ArrowRight className="h-4 w-4 text-[#F5D77F]" />
             </Link>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 

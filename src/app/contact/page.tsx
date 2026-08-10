@@ -20,6 +20,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -129,7 +130,7 @@ function ContactInner() {
 
         <div className="relative mx-auto grid w-full max-w-[1380px] grid-cols-1 items-center gap-10 px-5 pb-14 sm:px-8 sm:pb-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 lg:px-12 lg:pb-20 xl:px-16">
           {/* Left copy */}
-          <div>
+          <ScrollReveal variant="fadeUp" className="w-full">
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
               <Link href="/" className="transition-colors hover:text-[#f5d77f]">
                 Home
@@ -191,9 +192,10 @@ function ContactInner() {
                 <Clock className="h-4 w-4 text-[#f3d77f]" /> Mon–Sat, 10am–7:30pm
               </span>
             </div>
-          </div>
+          </ScrollReveal>
 
           {/* Right: contact card preview */}
+          <ScrollReveal variant="fadeLeft" delay={0.15} className="w-full">
           <div className="relative mx-auto w-full max-w-[480px] lg:mx-0 lg:ml-auto">
             <div className="absolute -top-6 -right-6 h-40 w-40 rounded-full bg-[#f3d47c]/15 blur-2xl" />
             <div className="relative rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-3 backdrop-blur">
@@ -260,6 +262,7 @@ function ContactInner() {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
 
         {/* bottom gold hairline */}
@@ -271,7 +274,7 @@ function ContactInner() {
         <div className="mx-auto w-full max-w-[1380px] px-5 sm:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-8">
             {/* LEFT: Form */}
-            <div className="lg:col-span-7">
+            <ScrollReveal variant="fadeUp" className="lg:col-span-7">
               <div className="relative overflow-hidden rounded-[26px] border border-[#e7e0c8] bg-white p-6 shadow-[0_20px_60px_rgba(11,34,70,0.08)] sm:p-8 lg:p-9">
                 <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#041735] via-[#c59b27] to-[#f3d47c]" />
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#f3d47c]/12 blur-2xl" />
@@ -432,10 +435,10 @@ function ContactInner() {
                   ))}
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
 
             {/* RIGHT: Details premium card */}
-            <div className="lg:col-span-5">
+            <ScrollReveal variant="fadeLeft" delay={0.15} className="lg:col-span-5">
               <div className="relative overflow-hidden rounded-[26px] border border-[#0b2246] bg-gradient-to-br from-[#041735] via-[#0b254d] to-[#041735] p-6 text-white shadow-[0_20px_60px_rgba(4,23,53,0.35)] sm:p-7 lg:p-8">
                 <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#c59b27]/15 blur-3xl" />
                 <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(245,215,127,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.5)_1px,transparent_1px)] [background-size:36px_36px]" />
@@ -537,7 +540,7 @@ function ContactInner() {
                   Call now <Phone className="h-3.5 w-3.5 text-[#f3d77f]" />
                 </a>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -545,14 +548,17 @@ function ContactInner() {
       {/* ===== FAQ — premium ===== */}
       <section className="w-full border-t border-[#e7e0c8] bg-[#fdfbf3] py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-[1380px] px-5 sm:px-8 lg:px-12 xl:px-16">
-          <div className="text-center">
-            <p className="text-[11px] font-extrabold tracking-[0.2em] text-[#a47a13] uppercase">Frequently asked questions</p>
-            <h2 className="mt-2 font-cormorant text-4xl font-bold tracking-[-0.02em] text-[#0b2246] sm:text-5xl">Got questions? We&apos;ve got answers.</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
-              Clear answers on cover, claims and how we work — so you can decide with confidence.
-            </p>
-          </div>
+          <ScrollReveal variant="fadeUp">
+            <div className="text-center">
+              <p className="text-[11px] font-extrabold tracking-[0.2em] text-[#a47a13] uppercase">Frequently asked questions</p>
+              <h2 className="mt-2 font-cormorant text-4xl font-bold tracking-[-0.02em] text-[#0b2246] sm:text-5xl">Got questions? We&apos;ve got answers.</h2>
+              <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
+                Clear answers on cover, claims and how we work — so you can decide with confidence.
+              </p>
+            </div>
+          </ScrollReveal>
 
+          <ScrollReveal variant="fadeUp" delay={0.1}>
           <div className="mt-10 space-y-3">
             {faqs.map((faq, index) => {
               const isOpen = openIndex === index;
@@ -592,7 +598,9 @@ function ContactInner() {
               );
             })}
           </div>
+          </ScrollReveal>
 
+          <ScrollReveal variant="fadeUp" delay={0.15}>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#e7e0c8] bg-white px-6 py-5 text-center sm:flex-row sm:justify-between sm:text-left">
             <p className="text-sm font-semibold text-slate-700">
               Still unsure? <span className="font-extrabold text-[#0b2246]">Talk to a human in minutes.</span>
@@ -606,6 +614,7 @@ function ContactInner() {
               </a>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   X,
   ChevronLeft,
@@ -197,12 +198,21 @@ export default function GalleryGrid() {
       </div>
 
       {/* Fullscreen Lightbox Modal */}
+      <AnimatePresence>
       {lightboxIndex !== null && activeItem && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-8 animate-in fade-in duration-200"
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.22 }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-8"
           onClick={() => setLightboxIndex(null)}
         >
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.94 }}
+            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className="relative max-w-5xl w-full h-[85vh] bg-[#041735] rounded-2xl overflow-hidden border border-[#c59b27]/40 shadow-2xl flex flex-col justify-between"
             onClick={(e) => e.stopPropagation()}
           >
@@ -263,9 +273,10 @@ export default function GalleryGrid() {
                 Photo {lightboxIndex + 1} of {filteredItems.length}
               </span>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -16,6 +16,7 @@ import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import GalleryGrid from "@/components/GalleryGrid";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Gallery & Milestones | Fortune 5 Risk Management Solutions LLP",
@@ -53,6 +54,7 @@ export default function GalleryPage() {
 
         <div className="relative mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-10 xl:px-12 grid grid-cols-1 lg:grid-cols-[1.08fr_0.92fr] gap-10 lg:gap-8 xl:gap-12 items-center">
           {/* LEFT: copy */}
+          <ScrollReveal variant="fadeUp" className="w-full">
           <div className="max-w-3xl">
             <nav
               aria-label="Breadcrumb"
@@ -116,8 +118,10 @@ export default function GalleryPage() {
               <span className="text-slate-500">Updated 2026 • Mumbai</span>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* RIGHT: editorial collage */}
+          <ScrollReveal variant="fadeLeft" delay={0.15} className="w-full">
           <div className="relative mx-auto w-full max-w-[520px] lg:ml-auto">
             <div className="absolute inset-0 -rotate-1 rounded-[2rem] border border-[#C59B27]/20 bg-gradient-to-b from-white/[0.06] to-transparent" />
             <div className="absolute -bottom-4 -right-4 hidden h-24 w-24 rounded-2xl border border-[#C59B27]/20 bg-[#C59B27]/10 backdrop-blur sm:block" />
@@ -191,6 +195,7 @@ export default function GalleryPage() {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
 
         {/* bottom hairline */}
@@ -199,6 +204,7 @@ export default function GalleryPage() {
 
       {/* ── FLOATING STATS ── */}
       <section className="relative z-20 -mt-8 px-5 sm:px-8 lg:px-10 xl:px-12">
+        <ScrollReveal variant="fadeUp" className="w-full">
         <div className="mx-auto grid w-full max-w-[1480px] grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {heroStats.map((s) => (
             <div
@@ -211,11 +217,13 @@ export default function GalleryPage() {
             </div>
           ))}
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ── GALLERY ARCHIVE SECTION ── */}
       <section id="archive" className="py-16 sm:py-24 bg-[#F9F8F6]">
         <div className="mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-10 xl:px-12">
+          <ScrollReveal variant="fadeUp">
           <div className="mb-10 text-center max-w-2xl mx-auto">
             <p className="text-xs font-extrabold tracking-[0.2em] text-[#a47a13] uppercase">
               Photo Gallery Archive
@@ -224,6 +232,7 @@ export default function GalleryPage() {
               Moments that define Fortune 5
             </h2>
           </div>
+          </ScrollReveal>
 
           <GalleryGrid />
         </div>
@@ -235,6 +244,7 @@ export default function GalleryPage() {
           <div className="absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#C59B27]/10 blur-3xl" />
           <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-white/[0.04] blur-3xl" />
         </div>
+        <ScrollReveal variant="fadeUp" className="w-full">
         <div className="relative mx-auto flex w-full max-w-[1480px] flex-col gap-6 px-5 sm:px-8 lg:px-10 xl:px-12 md:flex-row md:items-center md:justify-between">
           <div className="flex gap-4 max-w-3xl">
             <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#C59B27]/30 bg-white/5 text-[#F5D77F]">
@@ -254,42 +264,45 @@ export default function GalleryPage() {
             Read client stories <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ── CTA ── */}
       <section className="bg-[#F9F8F6] px-5 py-12 sm:px-8 sm:py-16 lg:px-10">
         <div className="mx-auto w-full max-w-[1480px]">
-          <div className="relative overflow-hidden rounded-[1.8rem] border border-[#C59B27]/20 bg-white p-8 shadow-[0_18px_60px_rgba(1,19,49,0.08)] sm:p-10 lg:p-12">
-            <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-[#F5D77F]/20 blur-2xl" />
-            <div className="absolute -left-10 -bottom-10 h-64 w-64 rounded-full bg-[#011331]/5 blur-2xl" />
-            <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-              <div>
-                <span className="inline-flex items-center gap-2 rounded-full bg-[#011331] px-3.5 py-1.5 text-[11px] font-extrabold tracking-widest text-[#F5D77F] uppercase">
-                  <Sparkles className="h-3.5 w-3.5" /> Partner with us
-                </span>
-                <h2 className="mt-4 font-cormorant text-3xl font-bold leading-tight tracking-tight text-[#011331] sm:text-4xl lg:text-[2.6rem]">
-                  Ready to secure your business with <span className="text-[#B8860B]">75 years of expertise?</span>
-                </h2>
-                <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-[15px]">
-                  Schedule a personalised risk consultation with Kaushal Shah and our senior advisory team. Unbiased advice, insurer-grade negotiation, claim-time advocacy.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row lg:justify-end lg:items-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#011331] px-7 py-4 text-xs font-extrabold tracking-widest text-white uppercase shadow-lg transition hover:bg-[#0a2a5e]"
-                >
-                  Schedule consultation <ArrowRight className="h-4 w-4 text-[#F5D77F]" />
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-xs font-extrabold tracking-widest text-[#011331] uppercase transition hover:border-[#C59B27]/40 hover:text-[#B8860B]"
-                >
-                  Explore services
-                </Link>
+          <ScrollReveal variant="fadeUp">
+            <div className="relative overflow-hidden rounded-[1.8rem] border border-[#C59B27]/20 bg-white p-8 shadow-[0_18px_60px_rgba(1,19,49,0.08)] sm:p-10 lg:p-12">
+              <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-[#F5D77F]/20 blur-2xl" />
+              <div className="absolute -left-10 -bottom-10 h-64 w-64 rounded-full bg-[#011331]/5 blur-2xl" />
+              <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                <div>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#011331] px-3.5 py-1.5 text-[11px] font-extrabold tracking-widest text-[#F5D77F] uppercase">
+                    <Sparkles className="h-3.5 w-3.5" /> Partner with us
+                  </span>
+                  <h2 className="mt-4 font-cormorant text-3xl font-bold leading-tight tracking-tight text-[#011331] sm:text-4xl lg:text-[2.6rem]">
+                    Ready to secure your business with <span className="text-[#B8860B]">75 years of expertise?</span>
+                  </h2>
+                  <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-[15px]">
+                    Schedule a personalised risk consultation with Kaushal Shah and our senior advisory team. Unbiased advice, insurer-grade negotiation, claim-time advocacy.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row lg:justify-end lg:items-center">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#011331] px-7 py-4 text-xs font-extrabold tracking-widest text-white uppercase shadow-lg transition hover:bg-[#0a2a5e]"
+                  >
+                    Schedule consultation <ArrowRight className="h-4 w-4 text-[#F5D77F]" />
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-xs font-extrabold tracking-widest text-[#011331] uppercase transition hover:border-[#C59B27]/40 hover:text-[#B8860B]"
+                  >
+                    Explore services
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
 

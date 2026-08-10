@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Mail, X, Check, ShieldCheck, Send, ArrowUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function FloatingWidgets() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -87,11 +88,16 @@ export default function FloatingWidgets() {
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3.5">
         
         {/* Scroll to Top Button (Vibrant Gold Theme) */}
+        <AnimatePresence>
         {showScrollTop && (
-          <button
+          <motion.button
             onClick={scrollToTop}
             aria-label="Scroll to top"
-            className="group relative flex items-center justify-center w-13 h-13 rounded-full bg-[#E5B842] hover:bg-[#FADB6A] text-[#011331] shadow-[0_4px_20px_rgba(229,184,66,0.45)] border border-[#D4AF37] transition-all duration-300 transform hover:scale-110 animate-fadeIn"
+            initial={{ opacity: 0, scale: 0.7 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.7 }}
+            transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="group relative flex items-center justify-center w-13 h-13 rounded-full bg-[#E5B842] hover:bg-[#FADB6A] text-[#011331] shadow-[0_4px_20px_rgba(229,184,66,0.45)] border border-[#D4AF37] transition-all duration-300 transform hover:scale-110"
           >
             <ArrowUp className="w-6 h-6 text-[#011331] stroke-[2.8] group-hover:-translate-y-1 transition-transform" />
             
@@ -99,8 +105,9 @@ export default function FloatingWidgets() {
             <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#011331] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
               Back to Top
             </span>
-          </button>
+          </motion.button>
         )}
+        </AnimatePresence>
 
         {/* WhatsApp Button */}
         <a
@@ -126,8 +133,15 @@ export default function FloatingWidgets() {
       </div>
 
       {/* 3. TIMED & INTERACTIVE LEAD FORM MODAL ("Connect With Us") */}
+      <AnimatePresence>
       {isFormOpen && (
-        <div className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md animate-fadeIn">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.22 }}
+          className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md"
+        >
           
           {/* Modal Backdrop Overlay Click to Close */}
           <div
@@ -136,7 +150,13 @@ export default function FloatingWidgets() {
           />
 
           {/* Form Modal Box */}
-          <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border-2 border-[#C59B27] overflow-hidden z-10 transform transition-all animate-scaleUp">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92, y: 12 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.92, y: 12 }}
+            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border-2 border-[#C59B27] overflow-hidden z-10"
+          >
             
             {/* Top Navy Header */}
             <div className="bg-[#011331] text-white p-6 sm:p-7 relative border-b border-[#C59B27]/40">
@@ -256,9 +276,10 @@ export default function FloatingWidgets() {
               )}
             </div>
 
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
+      </AnimatePresence>
     </>
   );
 }

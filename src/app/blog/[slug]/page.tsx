@@ -18,6 +18,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import ShareBar from "@/components/ShareBar";
+import ScrollReveal from "@/components/ScrollReveal";
 import { articles, getArticle, getRelated, formatDate, type ArticleSection } from "@/data/blog";
 
 // ─────────────────────────────────────────────────────────────
@@ -152,6 +153,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#C59B27]/40 to-transparent" />
 
         <div className="relative mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-10">
+          <ScrollReveal variant="fadeUp" className="w-full">
           <nav aria-label="Breadcrumb" className="mb-8 inline-flex flex-wrap items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-slate-300 uppercase">
             <Link href="/" className="transition-colors hover:text-white">
               Home
@@ -193,23 +195,27 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── COVER IMAGE (overlaps hero) ── */}
       <section className="relative z-20 px-5 sm:px-8 lg:px-10">
+        <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">
         <div className="mx-auto -mt-40 w-full max-w-[1180px] sm:-mt-48 lg:-mt-52">
           <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[1.4rem] border border-white/10 bg-slate-800 shadow-[0_24px_70px_rgba(1,19,49,0.35)] sm:rounded-[1.6rem]">
             <Image src={article.coverImage} alt={article.alt} fill priority className="object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* ── BODY ── */}
       <section className="pb-10 pt-10 sm:pt-12 lg:pb-16">
         <div className="mx-auto grid w-full max-w-[1180px] grid-cols-1 gap-10 px-5 sm:px-8 lg:grid-cols-[minmax(0,720px)_260px] lg:px-10 lg:gap-16">
           {/* Article content */}
+          <ScrollReveal variant="fadeUp" className="w-full min-w-0">
           <article className="min-w-0 max-w-[720px]">
             {/* drop cap first paragraph styling via first-letter */}
             <div className="[&>p:first-of-type]:text-[17px] [&>p:first-of-type]:text-slate-800 [&>p:first-of-type]:first-letter:float-left [&>p:first-of-type]:first-letter:mr-3 [&>p:first-of-type]:first-letter:mt-1 [&>p:first-of-type]:first-letter:font-cormorant [&>p:first-of-type]:first-letter:text-[3.2rem] [&>p:first-of-type]:first-letter:font-bold [&>p:first-of-type]:first-letter:leading-[0.85] [&>p:first-of-type]:first-letter:text-[#C59B27]">
@@ -260,8 +266,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </Link>
             </div>
           </article>
+          </ScrollReveal>
 
           {/* Sidebar */}
+          <ScrollReveal variant="fadeLeft" delay={0.15} className="hidden lg:block">
           <aside className="hidden lg:block">
             <div className="sticky top-40 space-y-5">
               <div className="rounded-[1.4rem] border border-slate-200/80 bg-white p-5 shadow-[0_8px_28px_rgba(1,19,49,0.06)]">
@@ -291,12 +299,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
           </aside>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ── RELATED ── */}
       <section className="border-t border-slate-200/80 bg-[#F9F8F6] py-14 sm:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-10">
+          <ScrollReveal variant="fadeUp" className="w-full">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#9A7A1A]">Keep reading</p>
@@ -308,11 +318,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               View all articles <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
+          </ScrollReveal>
+          <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">
           <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {related.map((a, i) => (
               <BlogCard key={a.slug} article={a} index={i + 1} />
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </section>
 
