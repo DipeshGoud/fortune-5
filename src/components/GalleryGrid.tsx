@@ -213,7 +213,7 @@ export default function GalleryGrid() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.94 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="relative max-w-5xl w-full h-[85vh] bg-[#041735] rounded-2xl overflow-hidden border border-[#c59b27]/40 shadow-2xl flex flex-col justify-between"
+            className="relative max-w-5xl w-full h-[85vh] bg-[#012257] rounded-2xl overflow-hidden border border-[#c59b27]/40 shadow-2xl flex flex-col justify-between"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}

@@ -28,15 +28,15 @@ export default function BlogCard({ article, index = 0 }: BlogCardProps) {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover transition duration-700 group-hover:scale-[1.06]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#011331]/80 via-[#011331]/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/80 via-[#01327a]/15 to-transparent" />
 
         {/* category pill */}
         <div className="absolute left-4 top-4 z-10 flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center rounded-full border border-white/15 bg-[#011331]/80 px-3 py-1.5 text-[10px] font-extrabold tracking-widest text-[#F5D77F] uppercase backdrop-blur">
+          <span className="inline-flex items-center rounded-full border border-white/15 bg-[#01327a]/80 px-3 py-1.5 text-[10px] font-extrabold tracking-widest text-[#F5D77F] uppercase backdrop-blur">
             {article.categoryLabel}
           </span>
           {article.featured && (
-            <span className="inline-flex items-center rounded-full bg-[#F5D77F] px-2.5 py-1 text-[10px] font-black tracking-widest text-[#011331] uppercase shadow">
+            <span className="inline-flex items-center rounded-full bg-[#F5D77F] px-2.5 py-1 text-[10px] font-black tracking-widest text-[#01327a] uppercase shadow">
               Featured
             </span>
           )}
@@ -60,7 +60,7 @@ export default function BlogCard({ article, index = 0 }: BlogCardProps) {
         </div>
 
         <h3
-          className={`mt-3 font-cormorant font-bold leading-tight text-[#011331] transition-colors group-hover:text-[#9A7A1A] ${
+          className={`mt-3 font-cormorant font-bold leading-tight text-[#01327a] transition-colors group-hover:text-[#9A7A1A] ${
             isFeatured ? "text-2xl sm:text-3xl" : "text-[21px] sm:text-[23px]"
           }`}
         >
@@ -71,7 +71,7 @@ export default function BlogCard({ article, index = 0 }: BlogCardProps) {
 
         <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-4">
           <div className="flex min-w-0 items-center gap-2.5">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#011331] text-[11px] font-extrabold text-[#F5D77F]">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#01327a] text-[11px] font-extrabold text-[#F5D77F]">
               {article.author.name
                 .split(" ")
                 .slice(0, 2)
@@ -80,11 +80,11 @@ export default function BlogCard({ article, index = 0 }: BlogCardProps) {
                 .toUpperCase()}
             </span>
             <div className="min-w-0">
-              <p className="truncate text-xs font-extrabold text-[#011331]">{article.author.name}</p>
+              <p className="truncate text-xs font-extrabold text-[#01327a]">{article.author.name}</p>
               <p className="truncate text-[11px] font-medium text-slate-500">{article.author.role.split(",")[0]}</p>
             </div>
           </div>
-          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#011331] transition-all group-hover:border-[#C59B27] group-hover:bg-[#011331] group-hover:text-[#F5D77F]">
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#01327a] transition-all group-hover:border-[#C59B27] group-hover:bg-[#01327a] group-hover:text-[#F5D77F]">
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
           </span>
         </div>

@@ -146,7 +146,7 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Banner */}
-      <section className="relative isolate overflow-hidden bg-[#041735] pt-[170px] sm:pt-[190px] lg:pt-[210px] pb-12 sm:pb-20 lg:pb-0">
+      <section className="relative isolate overflow-hidden bg-[#012257] pt-[170px] sm:pt-[190px] lg:pt-[210px] pb-12 sm:pb-20 lg:pb-0">
         <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(245,215,127,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.28)_1px,transparent_1px)] [background-size:58px_58px]" />
         <div className="absolute -left-32 top-28 h-[28rem] w-[28rem] rounded-full bg-[#c59b27]/20 blur-3xl" />
         <div className="absolute right-[-12rem] top-0 h-[38rem] w-[38rem] rounded-full border border-[#c59b27]/20" />
@@ -172,7 +172,7 @@ export default function AboutPage() {
               For more than seven decades, Fortune 5 has brought a human point of view to insurance—turning complex risk into clear, confident decisions.
             </p>
             <div className="mt-7 sm:mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#f3d47c] px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-[#041735] uppercase transition hover:bg-white">
+              <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#f3d47c] px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-[#012257] uppercase transition hover:bg-white">
                 Speak with an advisor <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <a href="#founder" className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-white uppercase transition hover:border-[#f3d47c] hover:text-[#f3d47c]">
@@ -186,7 +186,7 @@ export default function AboutPage() {
           <div className="relative mx-auto flex w-full max-w-[400px] sm:max-w-[540px] justify-center self-end lg:justify-end mt-4 lg:mt-0">
             <div className="absolute bottom-0 h-[82%] w-[78%] rounded-t-[10rem] border border-[#c59b27]/40 bg-gradient-to-b from-[#c59b27]/25 to-transparent z-0" />
             <Image src="/kaushal-shah.png" alt="Kaushal Shah, Chairman & Managing Director" width={680} height={1050} priority className="relative z-10 h-auto w-[82%] sm:w-[86%] max-w-[360px] sm:max-w-[480px] object-contain drop-shadow-2xl" />
-            <div className="absolute bottom-4 sm:bottom-8 right-2 sm:right-2 z-20 rounded-2xl border border-white/15 bg-[#0c254d]/90 px-3.5 py-2.5 sm:px-4 sm:py-3 text-left shadow-2xl backdrop-blur">
+            <div className="absolute bottom-4 sm:bottom-8 right-2 sm:right-2 z-20 rounded-2xl border border-white/15 bg-[#012b6b]/90 px-3.5 py-2.5 sm:px-4 sm:py-3 text-left shadow-2xl backdrop-blur">
               <p className="text-[9px] sm:text-[10px] font-extrabold tracking-[0.18em] text-[#f5d77f] uppercase">Chairman &amp; Managing Director</p>
               <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Kaushal Shah</p>
             </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
         <div className="mx-auto grid w-full max-w-[1380px] grid-cols-2 divide-x divide-[#b9942a]/25 px-5 sm:grid-cols-4 sm:px-8 lg:px-12 xl:px-16">
           {stats.map((stat) => (
             <div key={stat.label} className="py-6 text-center sm:py-7">
-              <p className="font-cormorant text-3xl font-bold leading-none text-[#0b2246] sm:text-4xl">{stat.value}</p>
+              <p className="font-cormorant text-3xl font-bold leading-none text-[#012b6b] sm:text-4xl">{stat.value}</p>
               <p className="mt-1.5 text-[10px] font-extrabold tracking-[0.12em] text-[#75570d] uppercase sm:text-[11px]">{stat.label}</p>
             </div>
           ))}
@@ -215,7 +215,7 @@ export default function AboutPage() {
           <ScrollReveal variant="fadeUp">
             <div className="text-center max-w-3xl mx-auto mb-14">
               <p className="text-xs font-extrabold tracking-[0.2em] text-[#a47a13] uppercase">A Message From Our Founder</p>
-              <h2 className="mt-3 font-cormorant text-4xl sm:text-5xl font-bold text-[#011331] uppercase tracking-tight">
+              <h2 className="mt-3 font-cormorant text-4xl sm:text-5xl font-bold text-[#01327a] uppercase tracking-tight">
                 Building Trust. <span className="text-[#c59b27]">Protecting Futures.</span>
               </h2>
               <div className="flex items-center justify-center gap-3 my-4">
@@ -231,12 +231,12 @@ export default function AboutPage() {
             <ScrollReveal variant="fadeRight" className="lg:col-span-6 bg-white p-8 sm:p-10 rounded-3xl border border-[#e5e1d6] shadow-xl relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#c59b27]/10 rounded-full blur-2xl pointer-events-none" />
               <span className="font-cormorant text-6xl text-[#c59b27] leading-none block">&ldquo;</span>
-              <p className="font-cormorant text-2xl sm:text-3xl font-bold text-[#011331] leading-snug italic mt-1 mb-6">
+              <p className="font-cormorant text-2xl sm:text-3xl font-bold text-[#01327a] leading-snug italic mt-1 mb-6">
                 Insurance isn&apos;t about selling policies. It&apos;s about protecting dreams, preserving businesses, and standing by people when they need us the most.
               </p>
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div>
-                  <h3 className="font-cormorant text-2xl font-bold text-[#011331]">Kaushal Shah</h3>
+                  <h3 className="font-cormorant text-2xl font-bold text-[#01327a]">Kaushal Shah</h3>
                   <p className="text-xs font-extrabold text-[#c59b27] tracking-wider uppercase mt-0.5">
                     Chairman &amp; Managing Director
                   </p>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                 </div>
                 <div className="text-right">
                   <span className="text-xs font-bold text-slate-500 block">Experience</span>
-                  <span className="text-sm font-extrabold text-[#011331]">22+ Years Prof.</span>
+                  <span className="text-sm font-extrabold text-[#01327a]">22+ Years Prof.</span>
                   <span className="text-xs text-[#c59b27] font-bold block">75+ Years Legacy</span>
                 </div>
               </div>
@@ -256,11 +256,11 @@ export default function AboutPage() {
             <ScrollReveal variant="fadeLeft" delay={0.12} className="lg:col-span-6 space-y-3.5">
               {founderPrinciples.map((item, idx) => (
                 <div key={idx} className="p-4 sm:p-5 rounded-2xl bg-white border border-[#e5e1d6] shadow-xs flex items-start gap-4 hover:border-[#c59b27] transition-all">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#011331] text-[#f3d47c] text-xs font-bold font-cormorant">
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#01327a] text-[#f3d47c] text-xs font-bold font-cormorant">
                     0{idx + 1}
                   </span>
                   <div>
-                    <h4 className="font-sans font-bold text-sm text-[#011331] uppercase tracking-wider">{item.title}</h4>
+                    <h4 className="font-sans font-bold text-sm text-[#01327a] uppercase tracking-wider">{item.title}</h4>
                     <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -278,7 +278,7 @@ export default function AboutPage() {
                 <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#c59b27] transition-all flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-extrabold uppercase text-[#c59b27] tracking-wider block mb-2">{item.subtitle}</span>
-                    <h4 className="font-sans font-bold text-sm sm:text-base text-[#011331] mb-2">{item.title}</h4>
+                    <h4 className="font-sans font-bold text-sm sm:text-base text-[#01327a] mb-2">{item.title}</h4>
                     <p className="text-xs text-slate-600 leading-relaxed font-medium">{item.desc}</p>
                   </div>
                 </div>
@@ -289,7 +289,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="bg-[#041735] py-20 sm:py-24 text-white relative overflow-hidden">
+      <section className="bg-[#012257] py-20 sm:py-24 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.1] [background-image:linear-gradient(rgba(245,215,127,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.28)_1px,transparent_1px)] [background-size:40px_40px]" />
         
         <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12 xl:px-0 relative z-10">
@@ -303,10 +303,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {/* Vision */}
             <ScrollReveal variant="fadeUp">
-              <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0c254d] to-[#041735] p-8 sm:p-10 text-white border border-[#c59b27]/40 shadow-2xl h-full flex flex-col justify-between">
+              <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#012b6b] to-[#012257] p-8 sm:p-10 text-white border border-[#c59b27]/40 shadow-2xl h-full flex flex-col justify-between">
                 <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full border border-[#c59b27]/25" />
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#f3d47c] text-[#041735] flex items-center justify-center mb-6 shadow-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-[#f3d47c] text-[#012257] flex items-center justify-center mb-6 shadow-lg">
                     <Eye className="h-6 w-6 stroke-[2.2]" />
                   </div>
                   <p className="text-xs font-extrabold tracking-[0.18em] text-[#f3d47c] uppercase">Our Vision</p>
@@ -322,10 +322,10 @@ export default function AboutPage() {
 
             {/* Mission */}
             <ScrollReveal variant="fadeUp" delay={0.12}>
-              <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0c254d] to-[#041735] p-8 sm:p-10 text-white border border-[#c59b27]/40 shadow-2xl h-full flex flex-col justify-between">
+              <article className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#012b6b] to-[#012257] p-8 sm:p-10 text-white border border-[#c59b27]/40 shadow-2xl h-full flex flex-col justify-between">
                 <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full border border-[#c59b27]/25" />
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#c59b27] text-[#041735] flex items-center justify-center mb-6 shadow-lg">
+                  <div className="w-12 h-12 rounded-2xl bg-[#c59b27] text-[#012257] flex items-center justify-center mb-6 shadow-lg">
                     <Target className="h-6 w-6 stroke-[2.2]" />
                   </div>
                   <p className="text-xs font-extrabold tracking-[0.18em] text-[#f3d47c] uppercase">Our Mission</p>

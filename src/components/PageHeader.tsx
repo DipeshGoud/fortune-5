@@ -14,7 +14,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle, breadcrumb, bgImage }: PageHeaderProps) {
   return (
-    <section className="relative w-full overflow-hidden bg-[#011331] text-white pt-[200px] sm:pt-[220px] lg:pt-[240px] pb-16 sm:pb-20 lg:pb-24">
+    <section className="relative w-full overflow-hidden bg-[#01327a] text-white pt-[200px] sm:pt-[220px] lg:pt-[240px] pb-16 sm:pb-20 lg:pb-24">
       {/* Background Image if provided */}
       {bgImage && (
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -26,7 +26,7 @@ export default function PageHeader({ title, subtitle, breadcrumb, bgImage }: Pag
             quality={90}
             className="object-cover object-center opacity-25 scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#011331]/90 via-[#011331]/80 to-[#011331]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#01327a]/90 via-[#01327a]/80 to-[#01327a]" />
         </div>
       )}
 
@@ -66,7 +66,7 @@ export default function PageHeader({ title, subtitle, breadcrumb, bgImage }: Pag
         {/* Gold ornament divider */}
         <div className="flex items-center gap-3 mt-5">
           <span className="h-[2px] w-16 sm:w-24 bg-gradient-to-r from-transparent to-[#C59B27] inline-block" />
-          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] border-2 border-[#011331] shadow-xs" />
+          <span className="w-2.5 h-2.5 rounded-full bg-[#C59B27] border-2 border-[#01327a] shadow-xs" />
           <span className="h-[2px] w-16 sm:w-24 bg-gradient-to-l from-transparent to-[#C59B27] inline-block" />
         </div>
 

@@ -137,7 +137,7 @@ export default function TrustProofSection() {
             <div>
               <div className="flex items-center justify-center gap-2 mb-5">
                 <ShieldCheck className="w-5 h-5 text-[#C59B27]" />
-                <h3 className="font-cormorant font-extrabold text-2xl text-[#011331] uppercase tracking-widest text-center">
+                <h3 className="font-cormorant font-extrabold text-2xl text-[#01327a] uppercase tracking-widest text-center">
                   RECOMMENDED PARTNERS
                 </h3>
               </div>
@@ -204,13 +204,13 @@ export default function TrustProofSection() {
             <div>
               <div className="flex items-center justify-center gap-2 mb-5">
                 <Trophy className="w-5 h-5 text-[#C59B27]" />
-                <h3 className="font-cormorant font-extrabold text-2xl text-[#011331] uppercase tracking-widest text-center">
+                <h3 className="font-cormorant font-extrabold text-2xl text-[#01327a] uppercase tracking-widest text-center">
                   RECENT AWARDS &amp; RECOGNITION
                 </h3>
               </div>
 
               {/* Featured Major Trophy Badge */}
-              <div className="mb-5 p-4 rounded-xl bg-gradient-to-r from-[#011331] via-[#082454] to-[#011331] text-white flex items-center gap-4 border border-[#C59B27]/40 shadow-md">
+              <div className="mb-5 p-4 rounded-xl bg-gradient-to-r from-[#01327a] via-[#084299] to-[#01327a] text-white flex items-center gap-4 border border-[#D4AF37]/50 shadow-md">
                 <div className="w-14 h-14 shrink-0 relative flex items-center justify-center">
                   <Image
                     src="/trophy.png"
@@ -222,26 +222,26 @@ export default function TrustProofSection() {
                   />
                 </div>
                 <div>
-                  <span className="inline-block bg-[#C59B27] text-[#011331] text-[10px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider mb-1">
+                  <span className="inline-block bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] text-[10px] font-black px-2.5 py-0.5 rounded uppercase tracking-wider mb-1 shadow-xs">
                     {featuredAward.year} Featured
                   </span>
                   <h4 className="font-cormorant font-bold text-base sm:text-lg text-white leading-tight">
                     {featuredAward.title}
                   </h4>
-                  <p className="text-xs text-amber-200 font-medium">{featuredAward.sub}</p>
+                  <p className="text-xs text-[#F5D77F] font-medium">{featuredAward.sub}</p>
                 </div>
               </div>
 
               {/* GIFI Awards 2026 */}
               <div className="mb-4">
-                <h4 className="text-[10px] font-extrabold text-[#C59B27] uppercase tracking-wider mb-2 border-b border-slate-100 pb-1 flex items-center gap-1.5">
-                  <Award className="w-3.5 h-3.5 text-[#C59B27]" />
+                <h4 className="text-[10px] font-extrabold text-[#D4AF37] uppercase tracking-wider mb-2 border-b border-slate-100 pb-1 flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5 text-[#D4AF37]" />
                   <span>GIFY AWARDS 2026</span>
                 </h4>
                 <div className="grid grid-cols-2 gap-2">
                   {gifyAwards.map((award, idx) => (
                     <div key={idx} className="p-2.5 bg-[#F9F8F6] rounded-lg border border-slate-200/80 flex flex-col justify-center">
-                      <p className="text-[11px] font-bold text-[#011331] leading-tight">{award.title}</p>
+                      <p className="text-[11px] font-bold text-[#01327a] leading-tight">{award.title}</p>
                       {award.sub && <p className="text-[10px] text-[#C59B27] font-semibold mt-0.5">{award.sub}</p>}
                     </div>
                   ))}
@@ -257,7 +257,7 @@ export default function TrustProofSection() {
                 <div className="grid grid-cols-2 gap-2">
                   {otherRecognitions.map((rec, idx) => (
                     <div key={idx} className="p-2.5 bg-[#F9F8F6] rounded-lg border border-slate-200/80 flex flex-col justify-center">
-                      <p className="text-[11px] font-bold text-[#011331] leading-tight">{rec.title}</p>
+                      <p className="text-[11px] font-bold text-[#01327a] leading-tight">{rec.title}</p>
                       <p className="text-[10px] text-slate-500 font-medium mt-0.5">{rec.sub}</p>
                     </div>
                   ))}
@@ -276,7 +276,7 @@ export default function TrustProofSection() {
             <div>
               <div className="flex items-center justify-center gap-2 mb-4">
                 <Building2 className="w-5 h-5 text-[#C59B27]" />
-                <h3 className="font-cormorant font-extrabold text-2xl text-[#011331] uppercase tracking-widest text-center">
+                <h3 className="font-cormorant font-extrabold text-2xl text-[#01327a] uppercase tracking-widest text-center">
                   VALUED CLIENTS
                 </h3>
               </div>
@@ -292,7 +292,7 @@ export default function TrustProofSection() {
                     key={idx}
                     className="p-2 bg-[#F9F8F6] rounded-lg border border-slate-200/80 flex items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all duration-200 group"
                   >
-                    <span className="text-[11px] font-bold text-[#011331] group-hover:text-[#C59B27] transition-colors leading-tight">
+                    <span className="text-[11px] font-bold text-[#01327a] group-hover:text-[#C59B27] transition-colors leading-tight">
                       {client}
                     </span>
                   </div>

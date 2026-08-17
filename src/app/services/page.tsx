@@ -409,7 +409,7 @@ export default function ServicesPage() {
               <Sparkles className="w-3.5 h-3.5 text-[#C59B27]" />
               <span>75+ YEARS TRUSTED LEGACY</span>
             </div>
-            <h1 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#011331] uppercase tracking-tight leading-[1.05]">
+            <h1 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#01327a] uppercase tracking-tight leading-[1.05]">
               OUR INSURANCE{" "}
               <span className="text-[#C59B27]">
                 SOLUTIONS
@@ -423,7 +423,7 @@ export default function ServicesPage() {
           {/* 4 Stat Cards Row */}
           <ScrollReveal variant="fadeUp" delay={0.15} className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-12">
             <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
-              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#011331] tracking-normal">
+              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#01327a] tracking-normal">
                 75+
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
@@ -432,7 +432,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
-              <span className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#011331] tracking-normal whitespace-nowrap">
+              <span className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#01327a] tracking-normal whitespace-nowrap">
                 ₹100+ Cr
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
@@ -441,7 +441,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
-              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#011331] tracking-normal">
+              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#01327a] tracking-normal">
                 10,000+
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
@@ -450,7 +450,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
-              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#011331] tracking-normal">
+              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#01327a] tracking-normal">
                 500+
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
@@ -534,12 +534,12 @@ export default function ServicesPage() {
                 onClick={() => setActiveCategory("ALL")}
                 className={`px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === "ALL"
-                    ? "bg-[#011331] text-[#C59B27] shadow-md border border-[#C59B27]/40"
-                    : "text-slate-600 hover:text-[#011331] hover:bg-slate-100/70"
+                    ? "bg-[#01327a] text-[#F5D77F] shadow-md border border-[#D4AF37]/50"
+                    : "text-slate-600 hover:text-[#01327a] hover:bg-slate-100/70"
                 }`}
               >
                 <span>All Solutions</span>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${activeCategory === "ALL" ? "bg-[#C59B27] text-[#011331]" : "bg-slate-200 text-slate-700"}`}>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${activeCategory === "ALL" ? "bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] shadow-xs" : "bg-slate-200 text-slate-700"}`}>
                   {servicesData.length}
                 </span>
               </button>
@@ -548,13 +548,13 @@ export default function ServicesPage() {
                 onClick={() => setActiveCategory("RETAIL")}
                 className={`px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === "RETAIL"
-                    ? "bg-[#011331] text-[#C59B27] shadow-md border border-[#C59B27]/40"
-                    : "text-slate-600 hover:text-[#011331] hover:bg-slate-100/70"
+                    ? "bg-[#01327a] text-[#F5D77F] shadow-md border border-[#D4AF37]/50"
+                    : "text-slate-600 hover:text-[#01327a] hover:bg-slate-100/70"
                 }`}
               >
-                <User className="w-3.5 h-3.5 text-[#C59B27]" />
+                <User className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span>Retail Solutions</span>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${activeCategory === "RETAIL" ? "bg-[#C59B27] text-[#011331]" : "bg-slate-200 text-slate-700"}`}>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${activeCategory === "RETAIL" ? "bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] shadow-xs" : "bg-slate-200 text-slate-700"}`}>
                   {retailCount}
                 </span>
               </button>
@@ -563,13 +563,13 @@ export default function ServicesPage() {
                 onClick={() => setActiveCategory("CORPORATE")}
                 className={`px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2 ${
                   activeCategory === "CORPORATE"
-                    ? "bg-[#011331] text-[#C59B27] shadow-md border border-[#C59B27]/40"
-                    : "text-slate-600 hover:text-[#011331] hover:bg-slate-100/70"
+                    ? "bg-[#01327a] text-[#F5D77F] shadow-md border border-[#D4AF37]/50"
+                    : "text-slate-600 hover:text-[#01327a] hover:bg-slate-100/70"
                 }`}
               >
-                <Briefcase className="w-3.5 h-3.5 text-[#C59B27]" />
+                <Briefcase className="w-3.5 h-3.5 text-[#D4AF37]" />
                 <span>Corporate Solutions</span>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${activeCategory === "CORPORATE" ? "bg-[#C59B27] text-[#011331]" : "bg-slate-200 text-slate-700"}`}>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${activeCategory === "CORPORATE" ? "bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] shadow-xs" : "bg-slate-200 text-slate-700"}`}>
                   {corporateCount}
                 </span>
               </button>
@@ -583,7 +583,7 @@ export default function ServicesPage() {
                 placeholder="Search services (e.g. Health, Fire, Vehicle)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-white border border-slate-200/80 rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] transition-all shadow-xs"
+                className="w-full bg-white border border-slate-200/80 rounded-xl pl-10 pr-4 py-2.5 text-xs sm:text-sm font-medium text-slate-800 placeholder:text-slate-400 focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-all shadow-xs"
               />
               {searchQuery && (
                 <button
@@ -610,7 +610,7 @@ export default function ServicesPage() {
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
                       transition={{ duration: 0.3 }}
-                      className="group relative bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                      className="group relative bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between overflow-hidden"
                     >
                       {/* Top Card Image Thumbnail with Overlay Badges */}
                         <div className="relative h-48 sm:h-52 w-full bg-slate-900 overflow-hidden">
@@ -621,15 +621,15 @@ export default function ServicesPage() {
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className="object-cover object-center transition-transform duration-500 group-hover:scale-108"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#011331]/90 via-[#011331]/30 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/90 via-[#01327a]/30 to-transparent" />
 
                           {/* Category Badge on Top Left */}
                           <div className="absolute top-3.5 left-3.5 z-10">
                             <span
-                              className={`text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md backdrop-blur-md border ${
+                              className={`text-[10px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md backdrop-blur-md border ${
                                 service.category === "RETAIL"
-                                  ? "bg-[#011331]/90 text-[#F5D77F] border-[#C59B27]/40"
-                                  : "bg-[#C59B27]/90 text-[#011331] border-white/40"
+                                  ? "bg-[#01327a]/90 text-[#F5D77F] border-[#D4AF37]/50"
+                                  : "bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] border-[#F5D77F]/80 shadow-md"
                               }`}
                             >
                               {service.category} SOLUTION
@@ -637,7 +637,7 @@ export default function ServicesPage() {
                           </div>
 
                           {/* Icon Circle on Bottom Right of Image */}
-                          <div className="absolute bottom-3.5 right-3.5 z-10 w-11 h-11 rounded-xl bg-[#011331]/90 backdrop-blur-md border border-[#C59B27]/50 text-[#C59B27] flex items-center justify-center shadow-lg group-hover:bg-[#C59B27] group-hover:text-[#011331] transition-colors duration-300">
+                          <div className="absolute bottom-3.5 right-3.5 z-10 w-11 h-11 rounded-xl bg-[#01327a]/90 backdrop-blur-md border border-[#D4AF37]/50 text-[#F5D77F] flex items-center justify-center shadow-lg group-hover:bg-gradient-to-r group-hover:from-[#D4AF37] group-hover:to-[#F5D77F] group-hover:text-[#01327a] transition-all duration-300">
                             <Icon className="w-5 h-5 stroke-[1.8]" />
                           </div>
                         </div>
@@ -646,7 +646,7 @@ export default function ServicesPage() {
                         <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between">
                           <div>
                             {/* Title */}
-                            <h3 className="font-cormorant text-2xl font-extrabold text-[#011331] group-hover:text-[#C59B27] transition-colors leading-tight mb-2.5">
+                            <h3 className="font-cormorant text-2xl font-extrabold text-[#01327a] group-hover:text-[#D4AF37] transition-colors leading-tight mb-2.5">
                               {service.title}
                             </h3>
 
@@ -659,7 +659,7 @@ export default function ServicesPage() {
                             <div className="space-y-2 pt-3 border-t border-slate-100">
                               {service.highlights.map((h, i) => (
                                 <div key={i} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C59B27] flex-shrink-0" />
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
                                   <span>{h}</span>
                                 </div>
                               ))}
@@ -670,18 +670,18 @@ export default function ServicesPage() {
                           <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
                             <button
                               onClick={() => setSelectedService(service)}
-                              className="group/btn flex items-center gap-1.5 bg-[#011331] hover:bg-[#071f47] text-[#C59B27] hover:text-white font-extrabold text-xs tracking-widest px-4 py-2.5 rounded-lg border border-[#C59B27]/30 transition-all uppercase"
+                              className="group/btn flex items-center gap-1.5 bg-[#01327a] hover:bg-[#01255e] text-[#F5D77F] hover:text-white font-extrabold text-xs tracking-widest px-4 py-2.5 rounded-lg border border-[#D4AF37]/40 hover:border-[#F5D77F] shadow-sm transition-all uppercase cursor-pointer"
                             >
-                              <span>READ MORE</span>
-                              <ChevronRight className="w-3.5 h-3.5 text-[#C59B27] group-hover/btn:translate-x-1 transition-transform" />
+                              <span className="text-[#F5D77F] group-hover/btn:text-white transition-colors">READ MORE</span>
+                              <ChevronRight className="w-3.5 h-3.5 text-[#F5D77F] group-hover/btn:text-white group-hover/btn:translate-x-1 transition-transform" />
                             </button>
 
                             <Link
                               href={`/contact?service=${encodeURIComponent(service.title)}`}
-                              className="text-xs font-bold text-[#011331] hover:text-[#C59B27] transition-colors flex items-center gap-1 uppercase tracking-wider"
+                              className="text-xs font-bold text-[#01327a] hover:text-[#D4AF37] transition-colors flex items-center gap-1 uppercase tracking-wider"
                             >
                               <span>GET QUOTE</span>
-                              <ArrowRight className="w-3.5 h-3.5 text-[#C59B27]" />
+                              <ArrowRight className="w-3.5 h-3.5 text-[#D4AF37]" />
                             </Link>
                           </div>
                         </div>
@@ -693,14 +693,14 @@ export default function ServicesPage() {
           ) : (
             <div className="text-center py-16 bg-white rounded-2xl border border-slate-200/80 p-8 max-w-md mx-auto">
               <HelpCircle className="w-12 h-12 text-[#C59B27] mx-auto mb-3 opacity-60" />
-              <h3 className="font-cormorant text-xl font-bold text-[#011331]">No solutions found</h3>
+              <h3 className="font-cormorant text-xl font-bold text-[#01327a]">No solutions found</h3>
               <p className="text-xs text-slate-500 mt-1">Try adjusting your search keyword or selected category tab.</p>
               <button
                 onClick={() => {
                   setSearchQuery("");
                   setActiveCategory("ALL");
                 }}
-                className="mt-4 text-xs font-extrabold text-[#011331] bg-amber-100/60 px-4 py-2 rounded-lg hover:bg-[#C59B27] hover:text-white transition-colors"
+                className="mt-4 text-xs font-extrabold text-[#01327a] bg-amber-100/60 px-4 py-2 rounded-lg hover:bg-[#C59B27] hover:text-white transition-colors"
               >
                 Reset Filters
               </button>
@@ -714,7 +714,7 @@ export default function ServicesPage() {
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#01327a]/80 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -730,17 +730,17 @@ export default function ServicesPage() {
                   fill
                   className="object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#011331] via-[#011331]/70 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#01327a] via-[#01327a]/70 to-transparent" />
 
                 <button
                   onClick={() => setSelectedService(null)}
-                  className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-[#011331]/80 hover:bg-[#011331] text-white flex items-center justify-center transition-colors border border-white/20 shadow-lg"
+                  className="absolute top-5 right-5 z-20 w-10 h-10 rounded-full bg-[#01327a]/80 hover:bg-[#01327a] text-white flex items-center justify-center transition-colors border border-white/20 shadow-lg"
                 >
                   <X className="w-5 h-5" />
                 </button>
 
                 <div className="relative z-10 flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-[#011331] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] shadow-xl flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl bg-[#01327a] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] shadow-xl flex-shrink-0">
                     <selectedService.icon className="w-7 h-7" />
                   </div>
                   <div>
@@ -783,7 +783,7 @@ export default function ServicesPage() {
 
                 {/* Target Audience */}
                 <div className="bg-[#F8F7F3] p-4 rounded-2xl border border-slate-200/80">
-                  <h4 className="text-xs font-extrabold uppercase text-[#011331] tracking-wider mb-1">
+                  <h4 className="text-xs font-extrabold uppercase text-[#01327a] tracking-wider mb-1">
                     RECOMMENDED FOR
                   </h4>
                   <p className="text-slate-600 text-xs leading-relaxed font-medium">
@@ -795,7 +795,7 @@ export default function ServicesPage() {
                 <div className="bg-amber-50/60 p-4 rounded-2xl border border-[#C59B27]/30 flex items-start gap-3">
                   <ShieldCheck className="w-5 h-5 text-[#B8860B] flex-shrink-0 mt-0.5" />
                   <div>
-                    <h5 className="text-xs font-extrabold text-[#011331] uppercase">FORTUNE 5 CLAIM COMMITMENT</h5>
+                    <h5 className="text-xs font-extrabold text-[#01327a] uppercase">FORTUNE 5 CLAIM COMMITMENT</h5>
                     <p className="text-slate-700 text-xs font-medium mt-0.5">{selectedService.claimHighlight}</p>
                   </div>
                 </div>
@@ -811,7 +811,7 @@ export default function ServicesPage() {
                 </button>
                 <Link
                   href={`/contact?service=${encodeURIComponent(selectedService.title)}`}
-                  className="flex items-center gap-2 bg-[#011331] hover:bg-[#071f47] text-white font-extrabold text-xs px-6 py-3 rounded-xl border border-slate-900 transition-colors uppercase tracking-wider shadow-md"
+                  className="flex items-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs px-6 py-3 rounded-xl border border-slate-900 transition-colors uppercase tracking-wider shadow-md"
                 >
                   <PhoneCall className="w-3.5 h-3.5 text-[#C59B27]" />
                   <span>Request Custom Quote</span>

@@ -49,7 +49,7 @@ export default function CustomizedRiskSolutions() {
           </div>
 
           {/* Main Title */}
-          <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#011331] tracking-tight leading-[1.15] uppercase">
+          <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#01327a] tracking-tight leading-[1.15] uppercase">
             Customised Risk <span className="text-[#C59B27]">Solutions</span>
           </h2>
           
@@ -77,12 +77,12 @@ export default function CustomizedRiskSolutions() {
               <StaggerItem key={item.id} variant="fadeUp">
                 <div className="group relative bg-white rounded-2xl p-8 sm:p-9 lg:p-10 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-2 h-full">
                   {/* Gold Gradient Top Border Highlight */}
-                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#011331] via-[#C59B27] to-[#011331] rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#01327a] via-[#C59B27] to-[#01327a] rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div>
                     {/* Top Row: Icon Container & Number Badge */}
                     <div className="flex items-center justify-between mb-8">
-                      <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-[#011331] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] shadow-md group-hover:bg-[#071f47] group-hover:border-[#F5D77F] group-hover:text-[#F5D77F] transition-all duration-300">
+                      <div className="w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-[#01327a] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] shadow-md group-hover:bg-[#01255e] group-hover:border-[#F5D77F] group-hover:text-[#F5D77F] transition-all duration-300">
                         <IconComponent className="w-8 h-8 sm:w-9 sm:h-9 stroke-[1.8]" />
                       </div>
 
@@ -92,7 +92,7 @@ export default function CustomizedRiskSolutions() {
                     </div>
 
                     {/* Card Title */}
-                    <h3 className="font-sans font-extrabold text-xl sm:text-2xl text-[#011331] leading-snug tracking-tight mb-4 group-hover:text-[#C59B27] transition-colors duration-300">
+                    <h3 className="font-sans font-extrabold text-xl sm:text-2xl text-[#01327a] leading-snug tracking-tight mb-4 group-hover:text-[#C59B27] transition-colors duration-300">
                       {item.title}
                     </h3>
 
@@ -105,7 +105,7 @@ export default function CustomizedRiskSolutions() {
                   {/* Card Action Link */}
                   <Link
                     href={item.link}
-                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#011331] tracking-wider uppercase group-hover:text-[#C59B27] transition-colors pt-4 border-t border-slate-100"
+                    className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#01327a] tracking-wider uppercase group-hover:text-[#C59B27] transition-colors pt-4 border-t border-slate-100"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 text-[#C59B27] group-hover:translate-x-1.5 transition-transform" />

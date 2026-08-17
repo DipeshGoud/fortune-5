@@ -12,10 +12,10 @@ export default function HowWeWork() {
       desc: "We understand your needs, goals and current coverage.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="21" cy="20" r="13" stroke="#011331" strokeWidth="3.2" fill="none" />
-          <path d="M30.5 29.5L41 40" stroke="#011331" strokeWidth="3.8" strokeLinecap="round" />
-          <circle cx="21" cy="16" r="3.5" fill="#011331" />
-          <path d="M14.5 24.5C14.5 21.5 17 21 21 21C25 21 27.5 21.5 27.5 24.5" stroke="#011331" strokeWidth="2.6" strokeLinecap="round" />
+          <circle cx="21" cy="20" r="13" stroke="#01327a" strokeWidth="3.2" fill="none" />
+          <path d="M30.5 29.5L41 40" stroke="#01327a" strokeWidth="3.8" strokeLinecap="round" />
+          <circle cx="21" cy="16" r="3.5" fill="#01327a" />
+          <path d="M14.5 24.5C14.5 21.5 17 21 21 21C25 21 27.5 21.5 27.5 24.5" stroke="#01327a" strokeWidth="2.6" strokeLinecap="round" />
         </svg>
       ),
     },
@@ -25,11 +25,11 @@ export default function HowWeWork() {
       desc: "We identify potential risks and evaluate your protection gaps.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="11" y="8" width="26" height="34" rx="3" stroke="#011331" strokeWidth="3" fill="none" />
-          <path d="M17 5.5C17 4.5 18 3.8 19.2 3.8H28.8C30 3.8 31 4.5 31 5.5V8.5H17V5.5Z" fill="#011331" />
-          <path d="M16 17H28" stroke="#011331" strokeWidth="2.4" strokeLinecap="round" />
-          <path d="M16 23H26" stroke="#011331" strokeWidth="2.4" strokeLinecap="round" />
-          <path d="M16 29H22" stroke="#011331" strokeWidth="2.4" strokeLinecap="round" />
+          <rect x="11" y="8" width="26" height="34" rx="3" stroke="#01327a" strokeWidth="3" fill="none" />
+          <path d="M17 5.5C17 4.5 18 3.8 19.2 3.8H28.8C30 3.8 31 4.5 31 5.5V8.5H17V5.5Z" fill="#01327a" />
+          <path d="M16 17H28" stroke="#01327a" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M16 23H26" stroke="#01327a" strokeWidth="2.4" strokeLinecap="round" />
+          <path d="M16 29H22" stroke="#01327a" strokeWidth="2.4" strokeLinecap="round" />
           <g transform="translate(23, 21)">
             <path d="M11 2L19 5.5V12C19 16.5 15 19.5 11 21C7 19.5 3 16.5 3 12V5.5L11 2Z" fill="#C59B27" stroke="#966C0F" strokeWidth="0.8" />
             <path d="M7 11.5L9.5 14L15 8.5" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -43,14 +43,14 @@ export default function HowWeWork() {
       desc: "We compare top insurers to find the best fit for you.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 19C7 10 14.5 4 24 4C33.5 4 41 10 41 19H7Z" fill="#011331" />
-          <path d="M24 4V2" stroke="#011331" strokeWidth="2.5" strokeLinecap="round" />
-          <circle cx="24" cy="26" r="3.2" fill="#011331" />
-          <path d="M17.5 37C17.5 32.5 20 32 24 32C28 32 30.5 32.5 30.5 37" stroke="#011331" strokeWidth="2.4" strokeLinecap="round" />
-          <circle cx="13.5" cy="28" r="2.6" fill="#011331" />
-          <path d="M9 37C9 33.5 11.5 33 13.5 33C15.8 33 17 33.5 17.5 35.5" stroke="#011331" strokeWidth="1.8" strokeLinecap="round" />
-          <circle cx="34.5" cy="28" r="2.6" fill="#011331" />
-          <path d="M39 37C39 33.5 36.5 33 34.5 33C32.2 33 31 33.5 30.5 35.5" stroke="#011331" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M7 19C7 10 14.5 4 24 4C33.5 4 41 10 41 19H7Z" fill="#01327a" />
+          <path d="M24 4V2" stroke="#01327a" strokeWidth="2.5" strokeLinecap="round" />
+          <circle cx="24" cy="26" r="3.2" fill="#01327a" />
+          <path d="M17.5 37C17.5 32.5 20 32 24 32C28 32 30.5 32.5 30.5 37" stroke="#01327a" strokeWidth="2.4" strokeLinecap="round" />
+          <circle cx="13.5" cy="28" r="2.6" fill="#01327a" />
+          <path d="M9 37C9 33.5 11.5 33 13.5 33C15.8 33 17 33.5 17.5 35.5" stroke="#01327a" strokeWidth="1.8" strokeLinecap="round" />
+          <circle cx="34.5" cy="28" r="2.6" fill="#01327a" />
+          <path d="M39 37C39 33.5 36.5 33 34.5 33C32.2 33 31 33.5 30.5 35.5" stroke="#01327a" strokeWidth="1.8" strokeLinecap="round" />
           <circle cx="39" cy="37.5" r="4.8" fill="#C59B27" />
           <path d="M37 37.5L38.5 39L41.5 36" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -62,8 +62,8 @@ export default function HowWeWork() {
       desc: "Hassle-free policy issuance with complete transparency.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 5C10 4 11 3 12.5 3H26L38 15V43C38 44 37 45 35.5 45H12.5C11 45 10 44 10 43V5Z" fill="#011331" />
-          <path d="M26 3V15H38" fill="#092248" />
+          <path d="M10 5C10 4 11 3 12.5 3H26L38 15V43C38 44 37 45 35.5 45H12.5C11 45 10 44 10 43V5Z" fill="#01327a" />
+          <path d="M26 3V15H38" fill="#01327a" />
           <path d="M16 18H23" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" />
           <path d="M16 24H29" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" />
           <path d="M16 30H23" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" />
@@ -80,11 +80,11 @@ export default function HowWeWork() {
       desc: "We assist you at every step for faster, smoother claims.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 23C8 14.2 15.2 7 24 7C32.8 7 40 14.2 40 23V32C40 34.5 38 36.5 35.5 36.5H33V22H40" stroke="#011331" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <rect x="6" y="21" width="6.5" height="14" rx="3" fill="#011331" />
-          <rect x="35.5" y="21" width="6.5" height="14" rx="3" fill="#011331" />
-          <path d="M9 32C9 39.5 15.5 42 22 42H25.5" stroke="#011331" strokeWidth="2.6" strokeLinecap="round" />
-          <circle cx="26.5" cy="42" r="2.6" fill="#011331" />
+          <path d="M8 23C8 14.2 15.2 7 24 7C32.8 7 40 14.2 40 23V32C40 34.5 38 36.5 35.5 36.5H33V22H40" stroke="#01327a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <rect x="6" y="21" width="6.5" height="14" rx="3" fill="#01327a" />
+          <rect x="35.5" y="21" width="6.5" height="14" rx="3" fill="#01327a" />
+          <path d="M9 32C9 39.5 15.5 42 22 42H25.5" stroke="#01327a" strokeWidth="2.6" strokeLinecap="round" />
+          <circle cx="26.5" cy="42" r="2.6" fill="#01327a" />
           <circle cx="24" cy="23" r="7.5" fill="#C59B27" />
           <path d="M20.5 23L23 25.5L27.5 20.5" stroke="#FFFFFF" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -96,11 +96,11 @@ export default function HowWeWork() {
       desc: "Timely reminders and best renewal options to keep you covered.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 5C33.5 5 41.5 12.5 41.5 22.5C41.5 26 40.5 29.2 38.5 32" stroke="#011331" strokeWidth="3" strokeLinecap="round" fill="none" />
-          <path d="M41.5 8L41.5 16L33.5 16" stroke="#011331" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M24 43C14.5 43 6.5 35.5 6.5 25.5C6.5 22 7.5 18.8 9.5 16" stroke="#011331" strokeWidth="3" strokeLinecap="round" fill="none" />
-          <path d="M6.5 40L6.5 32L14.5 32" stroke="#011331" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M16.5 13C16.5 12 17.5 11 18.5 11H27L32.5 16.5V34C32.5 35 31.5 36 30.5 36H18.5C17.5 36 16.5 35 16.5 34V13Z" fill="#011331" />
+          <path d="M24 5C33.5 5 41.5 12.5 41.5 22.5C41.5 26 40.5 29.2 38.5 32" stroke="#01327a" strokeWidth="3" strokeLinecap="round" fill="none" />
+          <path d="M41.5 8L41.5 16L33.5 16" stroke="#01327a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M24 43C14.5 43 6.5 35.5 6.5 25.5C6.5 22 7.5 18.8 9.5 16" stroke="#01327a" strokeWidth="3" strokeLinecap="round" fill="none" />
+          <path d="M6.5 40L6.5 32L14.5 32" stroke="#01327a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M16.5 13C16.5 12 17.5 11 18.5 11H27L32.5 16.5V34C32.5 35 31.5 36 30.5 36H18.5C17.5 36 16.5 35 16.5 34V13Z" fill="#01327a" />
           <path d="M20 19H26.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
           <path d="M20 24H26.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
           <path d="M20 29H24.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
@@ -115,9 +115,9 @@ export default function HowWeWork() {
       desc: "We help you plan ahead for your future and your loved ones.",
       renderIcon: () => (
         <svg className="w-10 h-10 sm:w-11 sm:h-11 lg:w-10 lg:h-10 xl:w-11 xl:h-11 2xl:w-12 2xl:h-12 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="7" y="31" width="5.5" height="12" rx="1.8" fill="#011331" />
-          <rect x="15.5" y="23" width="5.5" height="20" rx="1.8" fill="#011331" />
-          <rect x="24" y="15" width="5.5" height="28" rx="1.8" fill="#011331" />
+          <rect x="7" y="31" width="5.5" height="12" rx="1.8" fill="#01327a" />
+          <rect x="15.5" y="23" width="5.5" height="20" rx="1.8" fill="#01327a" />
+          <rect x="24" y="15" width="5.5" height="28" rx="1.8" fill="#01327a" />
           <path d="M7 26L21 12L29 18L41 6" stroke="#C59B27" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
           <path d="M33 6H41V14" stroke="#C59B27" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round" />
           <circle cx="38" cy="25.5" r="3.4" fill="#C59B27" />
@@ -131,14 +131,14 @@ export default function HowWeWork() {
     <section className="w-full py-16 sm:py-20 lg:py-28 bg-[#F9F8F6] relative overflow-hidden">
       {/* Background Decorative Crest Watermark */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 w-[500px] h-[500px] pointer-events-none opacity-[0.035]">
-        <Shield className="w-full h-full text-[#011331]" />
+        <Shield className="w-full h-full text-[#01327a]" />
       </div>
 
       <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 relative z-10">
         
         {/* Section Header */}
         <ScrollReveal variant="fadeUp" duration={0.8} className="flex flex-col items-center justify-center text-center mb-14 sm:mb-20">
-          <h2 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#011331] tracking-tight">
+          <h2 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#01327a] tracking-tight">
             How We <span className="text-[#C59B27]">Work</span>
           </h2>
           
@@ -146,14 +146,14 @@ export default function HowWeWork() {
           <div className="flex items-center gap-3 mt-3.5 mb-3">
             <span className="h-[1.5px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-[#C59B27] inline-block"></span>
             <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[#E2B755] to-[#B8860B] p-[1.5px] flex items-center justify-center shadow-sm">
-              <div className="w-full h-full bg-[#011331] rounded-full flex items-center justify-center">
+              <div className="w-full h-full bg-[#01327a] rounded-full flex items-center justify-center">
                 <Shield className="w-3.5 h-3.5 text-[#C59B27] fill-[#C59B27]/40" />
               </div>
             </div>
             <span className="h-[1.5px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-[#C59B27] inline-block"></span>
           </div>
 
-          <p className="text-xs sm:text-sm font-extrabold text-[#011331] tracking-[0.2em] uppercase font-sans">
+          <p className="text-xs sm:text-sm font-extrabold text-[#01327a] tracking-[0.2em] uppercase font-sans">
             A SIMPLE. TRANSPARENT. CLIENT-FIRST PROCESS.
           </p>
         </ScrollReveal>
@@ -205,7 +205,7 @@ export default function HowWeWork() {
                     </div>
 
                     {/* Step Title */}
-                    <h3 className="font-cormorant sm:font-sans font-bold text-base sm:text-[17px] text-[#011331] leading-tight tracking-tight min-h-[38px] flex items-center justify-center transition-colors duration-300 group-hover:text-[#C59B27] px-1">
+                    <h3 className="font-cormorant sm:font-sans font-bold text-base sm:text-[17px] text-[#01327a] leading-tight tracking-tight min-h-[38px] flex items-center justify-center transition-colors duration-300 group-hover:text-[#C59B27] px-1">
                       {item.title}
                     </h3>
 
@@ -224,7 +224,7 @@ export default function HowWeWork() {
         <div className="mt-16 sm:mt-20 flex flex-col items-center justify-center">
           <div className="w-full max-w-xl h-[1px] bg-gradient-to-r from-transparent via-[#C59B27]/40 to-transparent relative flex items-center justify-center">
             <div className="absolute w-8 h-8 rounded-full bg-gradient-to-b from-[#E2B755] to-[#B8860B] p-[1px] shadow-sm">
-              <div className="w-full h-full bg-[#011331] rounded-full flex items-center justify-center">
+              <div className="w-full h-full bg-[#01327a] rounded-full flex items-center justify-center">
                 <Shield className="w-4 h-4 text-[#C59B27] fill-[#C59B27]/30" />
               </div>
             </div>

@@ -75,12 +75,12 @@ export default function Navbar() {
                       className={`relative py-2 flex items-center gap-1 text-[13px] xl:text-sm font-bold tracking-wider transition-colors ${
                         active
                           ? "text-[#C59B27]"
-                          : "text-[#011331] hover:text-[#C59B27]"
+                          : "text-[#01327a] hover:text-[#C59B27]"
                       }`}
                     >
                       <span>{link.name}</span>
                       {link.hasDropdown && (
-                        <ChevronDown className="w-4 h-4 text-[#011331] group-hover:text-[#C59B27] transition-transform group-hover:rotate-180 duration-200" />
+                        <ChevronDown className="w-4 h-4 text-[#01327a] group-hover:text-[#C59B27] transition-transform group-hover:rotate-180 duration-200" />
                       )}
 
                       {/* Gold Active Underline Indicator */}
@@ -88,7 +88,7 @@ export default function Navbar() {
                         <span className="pointer-events-none absolute bottom-0 left-0 w-full h-[2.5px] bg-[#C59B27] rounded-full" />
                       )}
                       {!active && (
-                        <span className="pointer-events-none absolute bottom-0 left-0 w-0 h-[2px] bg-[#011331] transition-all duration-200 group-hover:w-full" />
+                        <span className="pointer-events-none absolute bottom-0 left-0 w-0 h-[2px] bg-[#01327a] transition-all duration-200 group-hover:w-full" />
                       )}
                     </Link>
                   </div>
@@ -100,7 +100,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center">
               <button
                 onClick={() => setModalOpen(true)}
-                className="bg-[#011331] hover:bg-[#071f47] text-white text-xs xl:text-sm font-bold tracking-wider px-6 xl:px-7 py-3.5 rounded-md shadow-md hover:shadow-lg transition-all duration-200 border border-slate-800 uppercase cursor-pointer"
+                className="bg-[#01327a] hover:bg-[#01255e] text-white text-xs xl:text-sm font-bold tracking-wider px-6 xl:px-7 py-3.5 rounded-md shadow-md hover:shadow-lg transition-all duration-200 border border-slate-800 uppercase cursor-pointer"
               >
                 BOOK CONSULTATION
               </button>
@@ -110,7 +110,7 @@ export default function Navbar() {
             <div className="flex lg:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-md text-slate-700 hover:text-[#011331] hover:bg-amber-100/50 focus:outline-none"
+                className="p-2 rounded-md text-slate-700 hover:text-[#01327a] hover:bg-amber-100/50 focus:outline-none"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? (
@@ -143,7 +143,7 @@ export default function Navbar() {
                     className={`flex items-center justify-between text-sm font-bold tracking-wider py-2 px-3 rounded-md ${
                       active
                         ? "bg-amber-100/60 text-[#C59B27]"
-                        : "text-slate-700 hover:bg-amber-100/40 hover:text-[#011331]"
+                        : "text-slate-700 hover:bg-amber-100/40 hover:text-[#01327a]"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -158,7 +158,7 @@ export default function Navbar() {
                     setMobileMenuOpen(false);
                     setModalOpen(true);
                   }}
-                  className="w-full text-center bg-[#011331] hover:bg-[#071f47] text-white text-xs font-bold tracking-wider px-5 py-3 rounded-md shadow-md uppercase cursor-pointer"
+                  className="w-full text-center bg-[#01327a] hover:bg-[#01255e] text-white text-xs font-bold tracking-wider px-5 py-3 rounded-md shadow-md uppercase cursor-pointer"
                 >
                   BOOK CONSULTATION
                 </button>

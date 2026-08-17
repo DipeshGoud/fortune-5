@@ -8,17 +8,17 @@
 
 ## 1. Brand Identity & Global Contact Details
 
-| Attribute | Verified Value from Brochure | Website Usage Locations |
-| :--- | :--- | :--- |
-| **Legal Entity Name** | **Fortune 5 Risk Management Solutions LLP** | Header, Footer, TopBar, Legal Disclaimers, Meta Tags |
-| **Primary Tagline** | *PEOPLE YOU TRUST, ADVICE THAT WORKS* | TopBar, Hero Tagline, Footer, Meta Descriptions |
-| **Secondary Motto** | *Your Risk. Our Responsibility.* | TopBar Marquee, Section Subtitles, Footer |
-| **Brand Promise** | *BUILDING TRUST. PROTECTING FUTURES.* | Founder Section, Why Fortune 5 Header |
-| **Head Office Address** | `106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai 400057, India.` | Footer, Contact Page, Map Cards, TopBar |
-| **Direct Cell** | `+91-98207 10067` | TopBar, Hero Phone Buttons, Contact Page, Footer |
-| **Support Line** | `+91-98208 10067` | TopBar, Contact Page, Sticky WhatsApp/Help Bar |
-| **Board Line** | `+91-22-2619 27 27` | TopBar, Contact Page, Footer |
-| **Official Email** | `insure@fortune5.in` (Claims: `claims@fortune5.in`) | TopBar, Contact Forms, Footer Email Copy Action |
+| Attribute               | Verified Value from Brochure                                                        | Website Usage Locations                              |
+| :---------------------- | :---------------------------------------------------------------------------------- | :--------------------------------------------------- |
+| **Legal Entity Name**   | **Fortune 5 Risk Management Solutions LLP**                                         | Header, Footer, TopBar, Legal Disclaimers, Meta Tags |
+| **Primary Tagline**     | _PEOPLE YOU TRUST, ADVICE THAT WORKS_                                               | TopBar, Hero Tagline, Footer, Meta Descriptions      |
+| **Secondary Motto**     | _Your Risk. Our Responsibility._                                                    | TopBar Marquee, Section Subtitles, Footer            |
+| **Brand Promise**       | _BUILDING TRUST. PROTECTING FUTURES._                                               | Founder Section, Why Fortune 5 Header                |
+| **Head Office Address** | `106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai 400057, India.` | Footer, Contact Page, Map Cards, TopBar              |
+| **Direct Cell**         | `+91-98207 10067`                                                                   | TopBar, Hero Phone Buttons, Contact Page, Footer     |
+| **Support Line**        | `+91-98208 10067`                                                                   | TopBar, Contact Page, Sticky WhatsApp/Help Bar       |
+| **Board Line**          | `+91-22-2619 27 27`                                                                 | TopBar, Contact Page, Footer                         |
+| **Official Email**      | `insure@fortune5.in` (Claims: `claims@fortune5.in`)                                 | TopBar, Contact Forms, Footer Email Copy Action      |
 
 ---
 
@@ -26,40 +26,45 @@
 
 All statistics on the website must align with the brochure data:
 
-| Metric | Official Brochure Value | Placement on Site |
-| :--- | :--- | :--- |
-| **Legacy & Heritage** | **75+ Years** of Experience / 3 Generations | Hero, StatsBar, About, Legacy75Section, Footer |
-| **Lives Protected** | **10,000+** Lives Protected | StatsBar, Hero Metric, About Page |
-| **Business Portfolios** | **500+** Business Portfolios | StatsBar, Hero Metric, About, Contact |
-| **Claims Assisted** | **₹100+ Cr** Claims Assisted | StatsBar, Hero, About, Testimonials Banner |
-| **Service Spectrum** | **Corporate, Retail, SME** | Hero Category Switcher, Services, About |
-| **Advisory Scope** | **End-to-End Risk Management** | Why Fortune 5, Solutions Grid |
+| Metric                  | Official Brochure Value                     | Placement on Site                              |
+| :---------------------- | :------------------------------------------ | :--------------------------------------------- |
+| **Legacy & Heritage**   | **75+ Years** of Experience / 3 Generations | Hero, StatsBar, About, Legacy75Section, Footer |
+| **Lives Protected**     | **10,000+** Lives Protected                 | StatsBar, Hero Metric, About Page              |
+| **Business Portfolios** | **500+** Business Portfolios                | StatsBar, Hero Metric, About, Contact          |
+| **Claims Assisted**     | **₹100+ Cr** Claims Assisted                | StatsBar, Hero, About, Testimonials Banner     |
+| **Service Spectrum**    | **Corporate, Retail, SME**                  | Hero Category Switcher, Services, About        |
+| **Advisory Scope**      | **End-to-End Risk Management**              | Why Fortune 5, Solutions Grid                  |
 
 ---
 
 ## 3. Leadership & Founder Profile (Kaushal Shah)
 
 ### 3.1 Personal & Leadership Credentials
+
 - **Name**: Kaushal Shah
 - **Title**: Chairman & Managing Director, Fortune 5 Risk Management Solutions LLP
 - **Experience**: 22+ Years of Professional Experience (Carrying forward 75+ Years Family Legacy)
 - **Generational Standing**: 3rd Generation Insurance Consultant
 
 ### 3.2 Formal Qualifications & Certifications
+
 1. **B.E. (Chemical Engineering)** — Engineering background bringing analytical and quantitative rigor to risk assessment.
 2. **Fellow, Insurance Institute of India (FIII)** — Recognized highest-level insurance technical qualification in India.
 3. **Advanced Diploma in Risk & Insurance Management (NMIMS)** — Specialized knowledge and strategic insight.
 4. **MD Club Member, Bajaj Allianz** — Continuous member since 2003.
 
 ### 3.3 Founder's Official Quote
-> *"Insurance isn't about selling policies. It's about protecting dreams, preserving businesses, and standing by people when they need us the most."*  
+
+> _"Insurance isn't about selling policies. It's about protecting dreams, preserving businesses, and standing by people when they need us the most."_  
 > — **Kaushal Shah**, Chairman & Managing Director
 
 ### 3.4 Official Vision & Mission Statements
-- **Vision**: *“Protecting businesses, families, and futures through intelligent, unbiased risk management.”*
-- **Mission**: *“To deliver end-to-end risk protection — from discovery to claims to renewal — with the integrity of a 75-year legacy and the responsiveness of a dedicated relationship team.”*
+
+- **Vision**: _“Protecting businesses, families, and futures through intelligent, unbiased risk management.”_
+- **Mission**: _“To deliver end-to-end risk protection — from discovery to claims to renewal — with the integrity of a 75-year legacy and the responsiveness of a dedicated relationship team.”_
 
 ### 3.5 Core Leadership Principles & Pillars
+
 - **Founder's Vision**: To make insurance simple, transparent and impactful for every client.
 - **Our Philosophy**: Right advice. Right protection. Right time.
 - **Why Fortune 5 Started**: To bridge the gap between complex insurance and real protection with honest guidance.
@@ -84,15 +89,15 @@ All statistics on the website must align with the brochure data:
 
 ## 5. Difference in Our Approach (Traditional Policy Seller vs. Fortune 5)
 
-| Traditional Seller Workflow | Fortune 5 Risk Management Lifecycle |
-| :--- | :--- |
-| 1. **Policy Sold** | 1. **Risk Assessment** (Thorough hazard audit & gap analysis) |
-| 2. **Wait for Claim** | 2. **Coverage Planning** (Custom terms, sub-limits & add-ons) |
-| 3. **Customer Struggles** | 3. **Policy Design** (Tailored wording & insurer negotiation) |
-| — | 4. **Continuous Support** (Year-round policy & employee assistance) |
-| — | 5. **Fast Claims** (Immediate surveyor coordination & advocacy) |
-| — | 6. **Annual Review** (Pre-renewal audit & exposure reassessment) |
-| — | 7. **Risk Forecasting** (Proactive adaptation to emerging business risks) |
+| Traditional Seller Workflow | Fortune 5 Risk Management Lifecycle                                       |
+| :-------------------------- | :------------------------------------------------------------------------ |
+| 1. **Policy Sold**          | 1. **Risk Assessment** (Thorough hazard audit & gap analysis)             |
+| 2. **Wait for Claim**       | 2. **Coverage Planning** (Custom terms, sub-limits & add-ons)             |
+| 3. **Customer Struggles**   | 3. **Policy Design** (Tailored wording & insurer negotiation)             |
+| —                           | 4. **Continuous Support** (Year-round policy & employee assistance)       |
+| —                           | 5. **Fast Claims** (Immediate surveyor coordination & advocacy)           |
+| —                           | 6. **Annual Review** (Pre-renewal audit & exposure reassessment)          |
+| —                           | 7. **Risk Forecasting** (Proactive adaptation to emerging business risks) |
 
 ---
 
@@ -111,6 +116,7 @@ All statistics on the website must align with the brochure data:
 ## 7. Insurance Solutions Categorization
 
 ### 7.1 Corporate Insurance Solutions
+
 1. **Fire Insurance** (Industrial All Risk, standard fire & special perils)
 2. **Marine Insurance** (Inland transit, export-import cargo, open marine policies)
 3. **Engineering Insurance** (Contractor All Risk, Erection All Risk, Plant & Machinery)
@@ -120,6 +126,7 @@ All statistics on the website must align with the brochure data:
 7. **Industries Insurance** (Specialized risk management for manufacturing, chemicals, logistics & pharma)
 
 ### 7.2 Retail Insurance Solutions (Personal Lines)
+
 1. **Health Insurance** (Comprehensive individual & family floaters, top-ups, senior citizen covers)
 2. **Motor Insurance** (Private cars, two-wheelers, commercial vehicle fleet)
 3. **Travel Insurance** (International Schengen/USA/Worldwide & domestic trip protection)
@@ -132,14 +139,14 @@ All statistics on the website must align with the brochure data:
 
 ## 8. Verified Corporate Client Roster
 
-*Trusted by leading businesses across manufacturing, logistics, media, finance, and chemicals:*
+_Trusted by leading businesses across manufacturing, logistics, media, finance, and chemicals:_
 
-| Sector / Domain | Client Names |
-| :--- | :--- |
-| **Global & Large Corporates** | Harman, Mintifi, Gumpro Drilling Fluids, Rossari |
-| **Shipping, Logistics & Freight** | AGS (Atlantic Global Shipping), TORM, HMM, TeamGlobal, Transtar, HAB, PentaFreight, Wallem |
-| **Media, Telecom & Tech** | Hathway Broadband, Shemaroo Entertainment, Nextgen Clearing, Creative Eye Limited, eClinicalWorks |
-| **Pharma, Chemical & Materials** | Chembond Material Technologies, Mehta API, Jenburkt Pharmaceuticals, Mosil Lubricants, Amal Group, HP Adhesives, AHK |
+| Sector / Domain                   | Client Names                                                                                                                    |
+| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------ |
+| **Global & Large Corporates**     | Harman, Mintifi, Gumpro Drilling Fluids, Rossari                                                                                |
+| **Shipping, Logistics & Freight** | AGS (Atlantic Global Shipping), TORM, HMM, TeamGlobal, Transtar, HAB, PentaFreight, Wallem                                      |
+| **Media, Telecom & Tech**         | Hathway Broadband, Shemaroo Entertainment, Nextgen Clearing, Creative Eye Limited, eClinicalWorks                               |
+| **Pharma, Chemical & Materials**  | Chembond Material Technologies, Mehta API, Jenburkt Pharmaceuticals, Mosil Lubricants, Amal Group, HP Adhesives, AHK            |
 | **Finance, Real Estate & Retail** | PPFAS Mutual Fund, Sunidhi Securities, Rodium Realty Ltd, EVIO Private Limited, Abhay Ispat, Shubhada, BIS, Baggit, Being Human |
 
 ---
@@ -147,6 +154,7 @@ All statistics on the website must align with the brochure data:
 ## 9. Recommended Insurance Partners
 
 ### 9.1 General Insurance Partners
+
 1. Bajaj General Insurance (Bajaj Allianz)
 2. Generali Central
 3. ICICI Lombard General Insurance
@@ -157,6 +165,7 @@ All statistics on the website must align with the brochure data:
 8. The New India Assurance Co. Ltd.
 
 ### 9.2 Life Insurance Partners
+
 1. Bajaj Life Insurance (Bajaj Allianz Life)
 2. HDFC Life Insurance
 3. TATA AIA Life Insurance
@@ -168,14 +177,16 @@ All statistics on the website must align with the brochure data:
 ## 10. Industry Awards & Honors
 
 ### 10.1 Global & GIFI Awards 2026
-- **Global Insurance Excellence Awards 2026** — *Asia and MENA Region*
+
+- **Global Insurance Excellence Awards 2026** — _Asia and MENA Region_
 - **Best Property Insurance Award 2026** (GIFI)
-- **Best Women Advisor 2026** — *Ekta Shah* (GIFI)
+- **Best Women Advisor 2026** — _Ekta Shah_ (GIFI)
 - **Best Multiline Insurance Advisor 2026** (GIFI)
 - **Best Customer Service Award 2026** (GIFI)
 
 ### 10.2 Standing Recognitions & Institutional Clubs
-- **MD Club Member** — Bajaj General Insurance (*Member continuously since 2003*)
+
+- **MD Club Member** — Bajaj General Insurance (_Member continuously since 2003_)
 - **Top 30 Advisors Worldwide 2025** — Generali Central
 - **COT CLUB (Court of the Table)** — Life Insurance Corporation of India (LIC)
 - **DGC Committee & Advisor** — Bajaj General Insurance

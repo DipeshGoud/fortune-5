@@ -196,7 +196,7 @@ export default function TeamSection() {
             <Sparkles className="w-4 h-4 text-[#C59B27]" />
             <span>EXPERT ADVISORS & LEADERSHIP</span>
           </div>
-          <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#011331] tracking-wider uppercase leading-tight">
+          <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-[#01327a] tracking-wider uppercase leading-tight">
             MEET THE TEAM BEHIND <span className="text-[#C59B27]">FORTUNE 5</span>
           </h2>
           <div className="flex items-center gap-3 mt-4">
@@ -220,8 +220,8 @@ export default function TeamSection() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-4 sm:px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 ${
                     isActive
-                      ? "bg-[#011331] text-[#C59B27] shadow-md border border-[#C59B27]/40"
-                      : "text-slate-600 hover:text-[#011331] hover:bg-slate-100/70"
+                      ? "bg-[#01327a] text-[#C59B27] shadow-md border border-[#C59B27]/40"
+                      : "text-slate-600 hover:text-[#01327a] hover:bg-slate-100/70"
                   }`}
                 >
                   {tab.label}
@@ -245,8 +245,8 @@ export default function TeamSection() {
                 className="group relative bg-white rounded-xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between overflow-hidden"
               >
                   {/* Top Image / Avatar Banner */}
-                  <div className="relative h-64 sm:h-72 lg:h-80 bg-gradient-to-br from-[#011331] via-[#071f47] to-[#011331] flex items-center justify-center overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#011331]/80 via-transparent to-transparent z-10" />
+                  <div className="relative h-64 sm:h-72 lg:h-80 bg-gradient-to-br from-[#01327a] via-[#01255e] to-[#01327a] flex items-center justify-center overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/80 via-transparent to-transparent z-10" />
 
                     {/* Image or Avatar Display */}
                     {member.img ? (
@@ -259,7 +259,7 @@ export default function TeamSection() {
                     ) : (
                       <div className="relative z-0 flex flex-col items-center justify-center p-4 text-center">
                         <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#C59B27] to-[#F5D77F] p-[2px] shadow-md mb-1 group-hover:scale-105 transition-transform duration-300">
-                          <div className="w-full h-full rounded-full bg-[#011331] flex items-center justify-center">
+                          <div className="w-full h-full rounded-full bg-[#01327a] flex items-center justify-center">
                             <span className="font-cormorant text-lg font-extrabold text-[#C59B27]">
                               {member.name
                                 .split(" ")
@@ -273,7 +273,7 @@ export default function TeamSection() {
                     )}
 
                     {/* Experience Badge */}
-                    <div className="absolute top-3 right-3 z-20 bg-[#011331]/90 backdrop-blur-md border border-[#C59B27]/40 text-[#F5D77F] text-[10px] font-extrabold tracking-wider px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
+                    <div className="absolute top-3 right-3 z-20 bg-[#01327a]/90 backdrop-blur-md border border-[#C59B27]/40 text-[#F5D77F] text-[10px] font-extrabold tracking-wider px-2.5 py-1 rounded-full shadow-md flex items-center gap-1">
                       <Award className="w-3 h-3 text-[#C59B27]" />
                       <span>{member.experience}</span>
                     </div>
@@ -286,7 +286,7 @@ export default function TeamSection() {
                         <Briefcase className="w-3 h-3 text-[#C59B27]" />
                         <span>{member.department}</span>
                       </div>
-                      <h3 className="font-cormorant text-xl font-extrabold text-[#011331] group-hover:text-[#C59B27] transition-colors leading-tight">
+                      <h3 className="font-cormorant text-xl font-extrabold text-[#01327a] group-hover:text-[#C59B27] transition-colors leading-tight">
                         {member.name}
                       </h3>
                       <p className="text-[11px] text-slate-500 font-bold mt-0.5 tracking-wide">
@@ -302,7 +302,7 @@ export default function TeamSection() {
                             href={member.linkedin}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-7 h-7 rounded-md bg-slate-100 hover:bg-[#011331] text-slate-600 hover:text-[#C59B27] flex items-center justify-center transition-colors shadow-2xs"
+                            className="w-7 h-7 rounded-md bg-slate-100 hover:bg-[#01327a] text-slate-600 hover:text-[#C59B27] flex items-center justify-center transition-colors shadow-2xs"
                             title="LinkedIn Profile"
                           >
                             <LinkedinIcon className="w-3.5 h-3.5" />
@@ -311,7 +311,7 @@ export default function TeamSection() {
                         {member.email && (
                           <a
                             href={`mailto:${member.email}`}
-                            className="w-7 h-7 rounded-md bg-slate-100 hover:bg-[#011331] text-slate-600 hover:text-[#C59B27] flex items-center justify-center transition-colors shadow-2xs"
+                            className="w-7 h-7 rounded-md bg-slate-100 hover:bg-[#01327a] text-slate-600 hover:text-[#C59B27] flex items-center justify-center transition-colors shadow-2xs"
                             title="Send Email"
                           >
                             <Mail className="w-3.5 h-3.5" />

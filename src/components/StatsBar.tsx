@@ -50,7 +50,7 @@ export default function StatsBar() {
                     <IconComp className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 text-[#C59B27] stroke-[1.8] flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
                     <div className="flex flex-col">
                       <div
-                        className={`font-sans font-extrabold text-[#011331] leading-tight flex items-baseline ${
+                        className={`font-sans font-extrabold text-[#01327a] leading-tight flex items-baseline ${
                           stat.isHeadline
                             ? "text-base sm:text-lg lg:text-xl xl:text-2xl"
                             : "text-lg sm:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap"

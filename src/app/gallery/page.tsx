@@ -33,12 +33,12 @@ const heroStats = [
 
 export default function GalleryPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#011331] selection:bg-amber-100 selection:text-amber-900">
+    <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#01327a] selection:bg-amber-100 selection:text-amber-900">
       <TopBar />
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative isolate overflow-hidden bg-[#011331] pt-[148px] sm:pt-[166px] lg:pt-[182px] pb-20 sm:pb-24 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-[#01327a] pt-[148px] sm:pt-[166px] lg:pt-[182px] pb-20 sm:pb-24 lg:pb-28">
         {/* grid + glows */}
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
@@ -92,10 +92,10 @@ export default function GalleryPage() {
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
                 href="#archive"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#F5D77F] px-6 py-3.5 text-xs font-extrabold tracking-[0.14em] text-[#011331] uppercase shadow-[0_10px_30px_rgba(197,155,39,0.25)] transition hover:bg-white"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[#F5D77F] px-6 py-3.5 text-xs font-extrabold tracking-[0.14em] text-[#01327a] uppercase shadow-[0_10px_30px_rgba(197,155,39,0.25)] transition hover:bg-white"
               >
                 Explore archive
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#011331] text-white transition group-hover:translate-x-0.5">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#01327a] text-white transition group-hover:translate-x-0.5">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </a>
@@ -138,8 +138,8 @@ export default function GalleryPage() {
                     sizes="(max-width: 1024px) 60vw, 420px"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#011331]/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-[#011331]/75 backdrop-blur px-3 py-2.5 border border-white/10">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-[#01327a]/75 backdrop-blur px-3 py-2.5 border border-white/10">
                     <p className="text-[10px] font-extrabold tracking-[0.14em] text-[#F5D77F] uppercase">Team Photo</p>
                     <p className="mt-1 font-cormorant text-sm font-bold leading-tight text-white">Fortune 5 Advisory Team</p>
                     <p className="text-[11px] text-slate-300">Mumbai • Executive Advisory</p>
@@ -153,11 +153,11 @@ export default function GalleryPage() {
                   <div className="relative aspect-[4/3.2] w-full">
                     <Image src="/gallery-event-gala.png" alt="Gala Event" fill sizes="220px" className="object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <span className="absolute left-2.5 top-2.5 rounded-full bg-[#F5D77F] px-2.5 py-1 text-[9px] font-black tracking-widest text-[#011331] uppercase">
+                    <span className="absolute left-2.5 top-2.5 rounded-full bg-[#F5D77F] px-2.5 py-1 text-[9px] font-black tracking-widest text-[#01327a] uppercase">
                       Events
                     </span>
                   </div>
-                  <div className="bg-[#0b1f44] px-3 py-2.5">
+                  <div className="bg-[#01327a] px-3 py-2.5">
                     <p className="text-[11px] font-bold leading-tight text-white">75th Anniversary Gala</p>
                     <p className="text-[10px] text-[#F5D77F]">Grand Celebration</p>
                   </div>
@@ -169,10 +169,10 @@ export default function GalleryPage() {
                   </div>
                   <div className="flex items-center justify-between bg-white px-3 py-2.5">
                     <div>
-                      <p className="text-[11px] font-extrabold text-[#011331]">Awards</p>
+                      <p className="text-[11px] font-extrabold text-[#01327a]">Awards</p>
                       <p className="text-[10px] font-semibold text-slate-500">Leadership Honor</p>
                     </div>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#011331] text-[#F5D77F]">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#01327a] text-[#F5D77F]">
                       <Sparkles className="h-3.5 w-3.5" />
                     </span>
                   </div>
@@ -182,11 +182,11 @@ export default function GalleryPage() {
 
             {/* Floating credibility badge */}
             <div className="absolute -bottom-5 left-2 sm:left-0 flex items-center gap-3 rounded-2xl border border-[#C59B27]/30 bg-white px-4 py-3 shadow-[0_12px_40px_rgba(1,19,49,0.18)]">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#011331] text-[#F5D77F]">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#01327a] text-[#F5D77F]">
                 <ShieldCheck className="h-5 w-5" />
               </div>
               <div>
-                <p className="text-xs font-extrabold tracking-wide text-[#011331]">Trusted since 1950</p>
+                <p className="text-xs font-extrabold tracking-wide text-[#01327a]">Trusted since 1950</p>
                 <p className="text-[11px] font-medium text-slate-500">3 generations • Mumbai</p>
               </div>
               <div className="hidden sm:flex items-center gap-1 pl-2 text-amber-500">
@@ -211,7 +211,7 @@ export default function GalleryPage() {
               key={s.label}
               className="group rounded-2xl border border-slate-200/80 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(1,19,49,0.08)] transition hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(1,19,49,0.12)] hover:border-[#C59B27]/30"
             >
-              <p className="font-cormorant text-3xl font-bold tracking-tight text-[#011331] sm:text-4xl">{s.value}</p>
+              <p className="font-cormorant text-3xl font-bold tracking-tight text-[#01327a] sm:text-4xl">{s.value}</p>
               <p className="mt-1 text-[11px] font-extrabold tracking-[0.14em] text-[#9A7A1A] uppercase">{s.label}</p>
               <p className="mt-1 text-xs font-medium text-slate-500">{s.sub}</p>
             </div>
@@ -239,7 +239,7 @@ export default function GalleryPage() {
       </section>
 
       {/* ── LEGACY QUOTE STRIP ── */}
-      <section className="relative overflow-hidden bg-[#011331] py-10 sm:py-14">
+      <section className="relative overflow-hidden bg-[#01327a] py-10 sm:py-14">
         <div className="absolute inset-0 opacity-40">
           <div className="absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#C59B27]/10 blur-3xl" />
           <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-white/[0.04] blur-3xl" />
@@ -259,7 +259,7 @@ export default function GalleryPage() {
           </div>
           <Link
             href="/testimonials"
-            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C59B27]/30 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-widest text-[#F5D77F] uppercase backdrop-blur transition hover:bg-[#F5D77F] hover:text-[#011331]"
+            className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C59B27]/30 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-widest text-[#F5D77F] uppercase backdrop-blur transition hover:bg-[#F5D77F] hover:text-[#01327a]"
           >
             Read client stories <ArrowRight className="h-4 w-4" />
           </Link>
@@ -273,13 +273,13 @@ export default function GalleryPage() {
           <ScrollReveal variant="fadeUp">
             <div className="relative overflow-hidden rounded-[1.8rem] border border-[#C59B27]/20 bg-white p-8 shadow-[0_18px_60px_rgba(1,19,49,0.08)] sm:p-10 lg:p-12">
               <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-[#F5D77F]/20 blur-2xl" />
-              <div className="absolute -left-10 -bottom-10 h-64 w-64 rounded-full bg-[#011331]/5 blur-2xl" />
+              <div className="absolute -left-10 -bottom-10 h-64 w-64 rounded-full bg-[#01327a]/5 blur-2xl" />
               <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
                 <div>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#011331] px-3.5 py-1.5 text-[11px] font-extrabold tracking-widest text-[#F5D77F] uppercase">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#01327a] px-3.5 py-1.5 text-[11px] font-extrabold tracking-widest text-[#F5D77F] uppercase">
                     <Sparkles className="h-3.5 w-3.5" /> Partner with us
                   </span>
-                  <h2 className="mt-4 font-cormorant text-3xl font-bold leading-tight tracking-tight text-[#011331] sm:text-4xl lg:text-[2.6rem]">
+                  <h2 className="mt-4 font-cormorant text-3xl font-bold leading-tight tracking-tight text-[#01327a] sm:text-4xl lg:text-[2.6rem]">
                     Ready to secure your business with <span className="text-[#B8860B]">75 years of expertise?</span>
                   </h2>
                   <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-[15px]">
@@ -289,13 +289,13 @@ export default function GalleryPage() {
                 <div className="flex flex-col gap-3 sm:flex-row lg:justify-end lg:items-center">
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#011331] px-7 py-4 text-xs font-extrabold tracking-widest text-white uppercase shadow-lg transition hover:bg-[#0a2a5e]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#01327a] px-7 py-4 text-xs font-extrabold tracking-widest text-white uppercase shadow-lg transition hover:bg-[#01327a]"
                   >
                     Schedule consultation <ArrowRight className="h-4 w-4 text-[#F5D77F]" />
                   </Link>
                   <Link
                     href="/services"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-xs font-extrabold tracking-widest text-[#011331] uppercase transition hover:border-[#C59B27]/40 hover:text-[#B8860B]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-7 py-4 text-xs font-extrabold tracking-widest text-[#01327a] uppercase transition hover:border-[#C59B27]/40 hover:text-[#B8860B]"
                   >
                     Explore services
                   </Link>

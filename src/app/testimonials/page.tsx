@@ -506,12 +506,12 @@ export default function TestimonialsPage() {
                     onClick={() => setActiveCategory(cat)}
                     className={`px-4 sm:px-5 py-2 rounded-xl font-extrabold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 flex items-center gap-2 ${
                       isActive
-                        ? "bg-[#011331] text-[#C59B27] shadow-md border border-[#C59B27]/40"
-                        : "text-slate-600 hover:text-[#011331] hover:bg-slate-100/70"
+                        ? "bg-[#01327a] text-[#C59B27] shadow-md border border-[#C59B27]/40"
+                        : "text-slate-600 hover:text-[#01327a] hover:bg-slate-100/70"
                     }`}
                   >
                     <span>{cat}</span>
-                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${isActive ? "bg-[#C59B27] text-[#011331]" : "bg-slate-200 text-slate-700"}`}>
+                    <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${isActive ? "bg-[#C59B27] text-[#01327a]" : "bg-slate-200 text-slate-700"}`}>
                       {categoryCounts[cat] || 0}
                     </span>
                   </button>
@@ -542,7 +542,7 @@ export default function TestimonialsPage() {
 
               <button
                 onClick={() => setShowSubmitModal(true)}
-                className="flex items-center gap-2 bg-[#011331] hover:bg-[#071f47] text-[#C59B27] font-extrabold text-xs tracking-wider px-4 py-2.5 rounded-xl border border-[#C59B27]/40 transition-colors uppercase whitespace-nowrap shadow-md"
+                className="flex items-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-[#C59B27] font-extrabold text-xs tracking-wider px-4 py-2.5 rounded-xl border border-[#C59B27]/40 transition-colors uppercase whitespace-nowrap shadow-md"
               >
                 <MessageSquarePlus className="w-4 h-4 text-[#C59B27]" />
                 <span className="hidden sm:inline">Share Review</span>
@@ -580,7 +580,7 @@ export default function TestimonialsPage() {
                     {/* Claim Amount / Coverage Badge Slot - Guaranteed Uniform Height */}
                     <div className="mb-4 min-h-[36px] flex items-center">
                       {item.claimSettledAmount ? (
-                        <div className="w-full bg-[#011331] text-[#F5D77F] px-3 py-1.5 rounded-xl text-xs font-extrabold flex items-center justify-between border border-[#C59B27]/40 shadow-2xs">
+                        <div className="w-full bg-[#01327a] text-[#F5D77F] px-3 py-1.5 rounded-xl text-xs font-extrabold flex items-center justify-between border border-[#C59B27]/40 shadow-2xs">
                           <span>Claim Settled:</span>
                           <span className="text-[#C59B27] text-xs font-bold">{item.claimSettledAmount}</span>
                         </div>
@@ -608,7 +608,7 @@ export default function TestimonialsPage() {
                   <div className="pt-4 border-t border-slate-100 flex items-end justify-between gap-2">
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-1.5">
-                        <h4 className="font-cormorant text-base sm:text-lg font-extrabold text-[#011331] group-hover:text-[#C59B27] transition-colors truncate">
+                        <h4 className="font-cormorant text-base sm:text-lg font-extrabold text-[#01327a] group-hover:text-[#C59B27] transition-colors truncate">
                           {item.name}
                         </h4>
                         {item.verified && (
@@ -625,7 +625,7 @@ export default function TestimonialsPage() {
 
                     <button
                       onClick={() => setSelectedTestimonial(item)}
-                      className="text-[11px] font-extrabold text-[#011331] hover:text-[#C59B27] uppercase underline underline-offset-2 flex-shrink-0 pb-0.5"
+                      className="text-[11px] font-extrabold text-[#01327a] hover:text-[#C59B27] uppercase underline underline-offset-2 flex-shrink-0 pb-0.5"
                     >
                       Read Story
                     </button>
@@ -642,7 +642,7 @@ export default function TestimonialsPage() {
       {/* Full Testimonial Detail Modal */}
       <AnimatePresence>
         {selectedTestimonial && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#01327a]/80 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -651,7 +651,7 @@ export default function TestimonialsPage() {
               className="relative w-full max-w-2xl bg-white rounded-3xl border border-[#C59B27]/40 shadow-2xl overflow-hidden text-slate-900 max-h-[90vh] flex flex-col"
             >
               {/* Header */}
-              <div className="relative bg-gradient-to-r from-[#011331] via-[#071f47] to-[#011331] p-6 sm:p-8 text-white">
+              <div className="relative bg-gradient-to-r from-[#01327a] via-[#01255e] to-[#01327a] p-6 sm:p-8 text-white">
                 <button
                   onClick={() => setSelectedTestimonial(null)}
                   className="absolute top-5 right-5 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors border border-white/20"
@@ -660,7 +660,7 @@ export default function TestimonialsPage() {
                 </button>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-2xl bg-[#011331] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] font-cormorant text-2xl font-extrabold shadow-xl flex-shrink-0">
+                  <div className="w-14 h-14 rounded-2xl bg-[#01327a] border-2 border-[#C59B27] flex items-center justify-center text-[#C59B27] font-cormorant text-2xl font-extrabold shadow-xl flex-shrink-0">
                     {selectedTestimonial.name
                       .split(" ")
                       .map((n) => n[0])
@@ -694,11 +694,11 @@ export default function TestimonialsPage() {
                 <div className="grid grid-cols-2 gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200/80">
                   <div>
                     <span className="text-[10px] font-bold uppercase text-slate-500 block">Policy Portfolio</span>
-                    <span className="text-xs font-extrabold text-[#011331]">{selectedTestimonial.policyType}</span>
+                    <span className="text-xs font-extrabold text-[#01327a]">{selectedTestimonial.policyType}</span>
                   </div>
                   <div>
                     <span className="text-[10px] font-bold uppercase text-slate-500 block">Location</span>
-                    <span className="text-xs font-extrabold text-[#011331]">{selectedTestimonial.location}</span>
+                    <span className="text-xs font-extrabold text-[#01327a]">{selectedTestimonial.location}</span>
                   </div>
                 </div>
               </div>
@@ -713,7 +713,7 @@ export default function TestimonialsPage() {
                 </button>
                 <Link
                   href="/contact"
-                  className="flex items-center gap-2 bg-[#011331] hover:bg-[#071f47] text-white font-extrabold text-xs px-5 py-2.5 rounded-xl border border-slate-900 transition-colors uppercase tracking-wider"
+                  className="flex items-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs px-5 py-2.5 rounded-xl border border-slate-900 transition-colors uppercase tracking-wider"
                 >
                   <span>Consult Fortune 5 Team</span>
                   <ArrowRight className="w-3.5 h-3.5 text-[#C59B27]" />
@@ -727,7 +727,7 @@ export default function TestimonialsPage() {
       {/* Submit Testimonial Modal */}
       <AnimatePresence>
         {showSubmitModal && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#01327a]/80 backdrop-blur-md">
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -746,7 +746,7 @@ export default function TestimonialsPage() {
                 <div className="text-[#B8860B] font-extrabold text-xs tracking-widest uppercase mb-1">
                   CLIENT FEEDBACK
                 </div>
-                <h3 className="font-cormorant text-2xl sm:text-3xl font-extrabold text-[#011331]">
+                <h3 className="font-cormorant text-2xl sm:text-3xl font-extrabold text-[#01327a]">
                   Share Your Experience
                 </h3>
                 <p className="text-slate-500 text-xs font-medium mt-1">
@@ -757,7 +757,7 @@ export default function TestimonialsPage() {
               {submitted ? (
                 <div className="py-8 text-center space-y-3">
                   <CheckCircle2 className="w-12 h-12 text-emerald-500 mx-auto" />
-                  <h4 className="font-cormorant text-2xl font-bold text-[#011331]">Thank You!</h4>
+                  <h4 className="font-cormorant text-2xl font-bold text-[#01327a]">Thank You!</h4>
                   <p className="text-xs text-slate-600 font-medium">
                     Your review has been submitted for verification. We appreciate your feedback.
                   </p>
@@ -807,7 +807,7 @@ export default function TestimonialsPage() {
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-[#011331] hover:bg-[#071f47] text-white font-extrabold text-xs py-3.5 rounded-xl border border-slate-900 uppercase tracking-wider shadow-md transition-colors"
+                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs py-3.5 rounded-xl border border-slate-900 uppercase tracking-wider shadow-md transition-colors"
                   >
                     <Send className="w-3.5 h-3.5 text-[#C59B27]" />
                     <span>Submit Review</span>

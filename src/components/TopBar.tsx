@@ -20,7 +20,7 @@ export default function TopBar() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 w-full h-10 bg-[#011331] text-white text-xs sm:text-sm border-b border-[#C59B27]/40 z-50 overflow-hidden font-sans shadow-xs flex items-center">
+    <div className="fixed top-0 left-0 w-full h-10 bg-[#01327a] text-white text-xs sm:text-sm border-b border-[#C59B27]/40 z-50 overflow-hidden font-sans shadow-xs flex items-center">
       <div className="flex w-max items-center whitespace-nowrap animate-marquee group">
         {/* Track 1 */}
         <div className="flex items-center shrink-0">

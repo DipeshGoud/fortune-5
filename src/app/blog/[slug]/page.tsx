@@ -47,7 +47,7 @@ function SectionRenderer({ section }: { section: ArticleSection }) {
   switch (section.type) {
     case "heading":
       return (
-        <h2 className="mt-12 mb-5 font-cormorant text-2xl font-bold leading-tight tracking-tight text-[#011331] sm:text-3xl">
+        <h2 className="mt-12 mb-5 font-cormorant text-2xl font-bold leading-tight tracking-tight text-[#01327a] sm:text-3xl">
           <span className="mr-2 inline-block h-6 w-1.5 translate-y-0.5 rounded-full bg-gradient-to-b from-[#F5D77F] to-[#C59B27]" />
           {section.text}
         </h2>
@@ -76,7 +76,7 @@ function SectionRenderer({ section }: { section: ArticleSection }) {
       );
     case "quote":
       return (
-        <blockquote className="relative my-8 overflow-hidden rounded-[1.4rem] bg-[#011331] p-6 text-white sm:p-8">
+        <blockquote className="relative my-8 overflow-hidden rounded-[1.4rem] bg-[#01327a] p-6 text-white sm:p-8">
           <span className="absolute -right-2 -top-6 font-cormorant text-[7rem] font-bold leading-none text-[#F5D77F]/15">
             &ldquo;
           </span>
@@ -93,7 +93,7 @@ function SectionRenderer({ section }: { section: ArticleSection }) {
         <div className="relative my-7 overflow-hidden rounded-[1.4rem] border border-[#C59B27]/25 bg-gradient-to-br from-amber-50 to-[#F9F8F6] p-6 sm:p-7">
           <div className="absolute right-0 top-0 h-20 w-20 rounded-bl-full bg-[#C59B27]/10" />
           <div className="flex items-start gap-3">
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#011331] text-[#F5D77F]">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#01327a] text-[#F5D77F]">
               <Lightbulb className="h-5 w-5" />
             </span>
             <div>
@@ -135,12 +135,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     .toUpperCase();
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#011331] selection:bg-amber-100 selection:text-amber-900">
+    <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#01327a] selection:bg-amber-100 selection:text-amber-900">
       <TopBar />
       <Navbar />
 
       {/* ── ARTICLE HERO ── */}
-      <section className="relative isolate overflow-hidden bg-[#011331] pt-[148px] sm:pt-[166px] lg:pt-[182px] pb-56 sm:pb-64 lg:pb-72">
+      <section className="relative isolate overflow-hidden bg-[#01327a] pt-[148px] sm:pt-[166px] lg:pt-[182px] pb-56 sm:pb-64 lg:pb-72">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -176,7 +176,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <p className="mt-5 max-w-2xl text-[15px] leading-8 text-slate-300 sm:text-lg">{article.excerpt}</p>
 
             <div className="mt-7 flex flex-wrap items-center gap-4 border-t border-white/10 pt-6">
-              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F5D77F] text-xs font-extrabold text-[#011331]">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#F5D77F] text-xs font-extrabold text-[#01327a]">
                 {authorInitials}
               </span>
               <div>
@@ -231,7 +231,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <Link
                   key={tag}
                   href={`/blog?q=${encodeURIComponent(tag.toLowerCase())}`}
-                  className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-[#011331] transition hover:border-[#C59B27]/40 hover:text-[#9A7A1A]"
+                  className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-[#01327a] transition hover:border-[#C59B27]/40 hover:text-[#9A7A1A]"
                 >
                   {tag}
                 </Link>
@@ -240,11 +240,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
             {/* author card */}
             <div className="mt-8 flex flex-col gap-4 rounded-[1.4rem] border border-slate-200/80 bg-white p-6 sm:flex-row sm:items-center sm:p-7">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#011331] text-sm font-extrabold text-[#F5D77F]">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#01327a] text-sm font-extrabold text-[#F5D77F]">
                 {authorInitials}
               </span>
               <div className="flex-1">
-                <p className="text-sm font-extrabold text-[#011331]">{article.author.name}</p>
+                <p className="text-sm font-extrabold text-[#01327a]">{article.author.name}</p>
                 <p className="text-xs font-medium text-slate-500">{article.author.role} — 75 years of client trust.</p>
               </div>
               <ShareBar />
@@ -254,13 +254,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/blog"
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#011331] px-6 py-3.5 text-xs font-extrabold tracking-widest text-white uppercase transition hover:bg-[#0a2a5e]"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#01327a] px-6 py-3.5 text-xs font-extrabold tracking-widest text-white uppercase transition hover:bg-[#01327a]"
               >
                 <ArrowLeft className="h-4 w-4 text-[#F5D77F]" /> All articles
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border-2 border-[#C59B27]/40 bg-white px-6 py-3.5 text-xs font-extrabold tracking-widest text-[#011331] uppercase transition hover:border-[#C59B27] hover:text-[#9A7A1A]"
+                className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border-2 border-[#C59B27]/40 bg-white px-6 py-3.5 text-xs font-extrabold tracking-widest text-[#01327a] uppercase transition hover:border-[#C59B27] hover:text-[#9A7A1A]"
               >
                 Discuss this topic <ArrowRight className="h-4 w-4" />
               </Link>
@@ -286,13 +286,13 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 </ul>
               </div>
 
-              <div className="rounded-[1.4rem] bg-[#011331] p-5 text-white relative overflow-hidden">
+              <div className="rounded-[1.4rem] bg-[#01327a] p-5 text-white relative overflow-hidden">
                 <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-[#C59B27]/20 blur-2xl" />
                 <p className="relative text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#F5D77F]">Free consultation</p>
                 <p className="relative mt-2 font-cormorant text-xl font-bold leading-snug">Get this applied to your portfolio.</p>
                 <a
                   href="/contact"
-                  className="relative mt-4 inline-flex items-center gap-2 rounded-full bg-[#F5D77F] px-4 py-2.5 text-[11px] font-extrabold uppercase tracking-widest text-[#011331] transition hover:bg-white"
+                  className="relative mt-4 inline-flex items-center gap-2 rounded-full bg-[#F5D77F] px-4 py-2.5 text-[11px] font-extrabold uppercase tracking-widest text-[#01327a] transition hover:bg-white"
                 >
                   Book a risk review <ArrowRight className="h-3.5 w-3.5" />
                 </a>
@@ -310,11 +310,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-[11px] font-extrabold uppercase tracking-[0.18em] text-[#9A7A1A]">Keep reading</p>
-              <h2 className="mt-2 font-cormorant text-3xl font-bold tracking-tight text-[#011331] sm:text-4xl">
+              <h2 className="mt-2 font-cormorant text-3xl font-bold tracking-tight text-[#01327a] sm:text-4xl">
                 Related <span className="font-light italic text-[#B8860B]">articles</span>
               </h2>
             </div>
-            <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#011331] hover:text-[#9A7A1A]">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#01327a] hover:text-[#9A7A1A]">
               View all articles <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>

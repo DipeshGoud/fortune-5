@@ -69,7 +69,7 @@ export default function FloatingWidgets() {
       <div className="fixed bottom-6 left-6 z-40 flex items-center gap-3">
         <button
           onClick={handleOpenForm}
-          className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#011331] text-[#F5D77F] border-2 border-[#C59B27] shadow-2xl hover:bg-[#071f47] hover:scale-110 transition-all duration-300"
+          className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#01327a] text-[#F5D77F] border-2 border-[#C59B27] shadow-2xl hover:bg-[#01255e] hover:scale-110 transition-all duration-300"
           aria-label="Open Inquiry Form"
         >
           {/* Subtle Pulse Animation Ring */}
@@ -78,7 +78,7 @@ export default function FloatingWidgets() {
           <Mail className="w-6 h-6 text-[#F5D77F] group-hover:scale-110 transition-transform" />
 
           {/* Tooltip on Hover */}
-          <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#011331] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+          <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
             Connect With Us
           </span>
         </button>
@@ -97,12 +97,12 @@ export default function FloatingWidgets() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.7 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="group relative flex items-center justify-center w-13 h-13 rounded-full bg-[#E5B842] hover:bg-[#FADB6A] text-[#011331] shadow-[0_4px_20px_rgba(229,184,66,0.45)] border border-[#D4AF37] transition-all duration-300 transform hover:scale-110"
+            className="group relative flex items-center justify-center w-13 h-13 rounded-full bg-[#E5B842] hover:bg-[#FADB6A] text-[#01327a] shadow-[0_4px_20px_rgba(229,184,66,0.45)] border border-[#D4AF37] transition-all duration-300 transform hover:scale-110"
           >
-            <ArrowUp className="w-6 h-6 text-[#011331] stroke-[2.8] group-hover:-translate-y-1 transition-transform" />
+            <ArrowUp className="w-6 h-6 text-[#01327a] stroke-[2.8] group-hover:-translate-y-1 transition-transform" />
             
             {/* Tooltip on Hover */}
-            <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#011331] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+            <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
               Back to Top
             </span>
           </motion.button>
@@ -126,7 +126,7 @@ export default function FloatingWidgets() {
           </svg>
 
           {/* Tooltip on Hover */}
-          <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#011331] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+          <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
             Chat on WhatsApp
           </span>
         </a>
@@ -140,7 +140,7 @@ export default function FloatingWidgets() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.22 }}
-          className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md"
+          className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#01327a]/80 backdrop-blur-md"
         >
           
           {/* Modal Backdrop Overlay Click to Close */}
@@ -159,12 +159,12 @@ export default function FloatingWidgets() {
           >
             
             {/* Top Navy Header */}
-            <div className="bg-[#011331] text-white p-6 sm:p-7 relative border-b border-[#C59B27]/40">
+            <div className="bg-[#01327a] text-white p-6 sm:p-7 relative border-b border-[#C59B27]/40">
               
               {/* Close Button */}
               <button
                 onClick={handleCloseForm}
-                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#C59B27] text-white hover:text-[#011331] flex items-center justify-center transition-colors"
+                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#C59B27] text-white hover:text-[#01327a] flex items-center justify-center transition-colors"
                 aria-label="Close Form"
               >
                 <X className="w-5 h-5" />
@@ -190,7 +190,7 @@ export default function FloatingWidgets() {
                   <div className="w-14 h-14 rounded-full bg-emerald-100 border-2 border-emerald-500 flex items-center justify-center text-emerald-600">
                     <Check className="w-8 h-8" />
                   </div>
-                  <h4 className="font-cormorant font-extrabold text-2xl text-[#011331]">
+                  <h4 className="font-cormorant font-extrabold text-2xl text-[#01327a]">
                     Thank You!
                   </h4>
                   <p className="text-xs sm:text-sm text-slate-600 max-w-xs font-medium">
@@ -203,7 +203,7 @@ export default function FloatingWidgets() {
                   {/* Name & Email Row */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-bold text-[#011331] uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
                         Name <span className="text-amber-600">*</span>
                       </label>
                       <input
@@ -217,7 +217,7 @@ export default function FloatingWidgets() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-[#011331] uppercase tracking-wider mb-1.5">
+                      <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
                         Email Id <span className="text-amber-600">*</span>
                       </label>
                       <input
@@ -233,7 +233,7 @@ export default function FloatingWidgets() {
 
                   {/* Contact Number */}
                   <div>
-                    <label className="block text-xs font-bold text-[#011331] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
                       Contact Number <span className="text-amber-600">*</span>
                     </label>
                     <input
@@ -248,7 +248,7 @@ export default function FloatingWidgets() {
 
                   {/* Requirement Message */}
                   <div>
-                    <label className="block text-xs font-bold text-[#011331] uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
                       Message / Insurance Needs
                     </label>
                     <textarea
@@ -263,7 +263,7 @@ export default function FloatingWidgets() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-[#011331] hover:bg-[#071F47] text-[#F5D77F] font-bold text-xs sm:text-sm tracking-widest py-3.5 px-6 rounded-lg border border-[#C59B27] shadow-lg transition-all transform hover:scale-[1.01] uppercase mt-2"
+                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-[#F5D77F] font-bold text-xs sm:text-sm tracking-widest py-3.5 px-6 rounded-lg border border-[#C59B27] shadow-lg transition-all transform hover:scale-[1.01] uppercase mt-2"
                   >
                     <span>SUBMIT INQUIRY</span>
                     <Send className="w-4 h-4 text-[#C59B27]" />

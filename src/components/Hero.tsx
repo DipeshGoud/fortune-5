@@ -5,24 +5,38 @@ import Image from "next/image";
 import { ArrowRight, ShieldCheck, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
+import heroBg from "../../public/hero-bg.png";
+import heroClipart from "../../public/hero-bg-CLIPART.png";
+
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-[#F9F8F6] flex flex-col justify-between pt-[160px] sm:pt-[190px] lg:pt-[220px] pb-20 sm:pb-32 lg:pb-36">
-      {/* Background Image */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pt-10">
+      {/* Background Image & Clipart Overlay */}
+      <div className="absolute inset-x-0 top-6 bottom-0 w-full z-0 overflow-hidden pointer-events-none">
         <motion.div
           initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
           className="relative w-full h-full"
         >
+          {/* Main Background Image */}
           <Image
-            src="/hero-bg.png"
+            src={heroBg}
             alt="Fortune 5 Hero Background"
             fill
             priority
             quality={100}
-            className="object-cover object-right-top pointer-events-none opacity-40 lg:opacity-100"
+            className="object-cover object-right-bottom sm:object-right-top pointer-events-none opacity-40 lg:opacity-100"
+          />
+
+          {/* Overlapping Bottom Clipart Wave */}
+          <Image
+            src={heroClipart}
+            alt="Hero Background Ribbon"
+            fill
+            priority
+            quality={100}
+            className="object-cover object-bottom pointer-events-none z-[1]"
           />
         </motion.div>
       </div>
@@ -63,10 +77,10 @@ export default function Hero() {
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 1.25, ease: [0.22, 1, 0.36, 1] }}
-            className="font-cormorant text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] 2xl:text-[56px] 3xl:text-[64px] 4xl:text-[72px] font-extrabold text-[#011331] leading-[1.12] sm:leading-[1.14] tracking-normal uppercase max-w-2xl lg:max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl"
+            className="font-cormorant text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] 2xl:text-[56px] 3xl:text-[64px] 4xl:text-[72px] font-extrabold text-[#01327a] leading-[1.12] sm:leading-[1.14] tracking-normal uppercase max-w-2xl lg:max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl"
           >
             PROTECTING BUSINESSES, <br />
-            FAMILIES <span className="text-[#C59B27]">& FUTURES</span> <br />
+            FAMILIES <span className="text-[#D4AF37]">& FUTURES</span> <br />
             THROUGH INTELLIGENT <br />
             RISK MANAGEMENT.
           </motion.h1>
@@ -83,19 +97,19 @@ export default function Hero() {
             {/* Primary Button */}
             <a
               href="/contact"
-              className="group flex items-center justify-center gap-3 bg-[#011331] hover:bg-[#071f47] text-white font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 uppercase border border-slate-900"
+              className="group flex items-center justify-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 uppercase border border-slate-900"
             >
               <span>GET A FREE CONSULTATION</span>
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#C59B27] group-hover:translate-x-1.5 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5D77F] group-hover:translate-x-1.5 transition-transform" />
             </a>
 
             {/* Secondary Button */}
             <a
               href="/services"
-              className="group flex items-center justify-center gap-3 bg-white/90 hover:bg-amber-50/70 text-[#8A600B] font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg border-2 border-[#D4AF37] hover:border-[#C59B27] shadow-2xs transition-all duration-200 uppercase"
+              className="group flex items-center justify-center gap-3 bg-white/90 hover:bg-amber-50/70 text-[#966C0F] hover:text-[#7A5606] font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg border-2 border-[#D4AF37] hover:border-[#F5D77F] shadow-2xs transition-all duration-200 uppercase"
             >
               <span>EXPLORE OUR SOLUTIONS</span>
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#8A600B] group-hover:translate-x-1.5 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#966C0F] group-hover:translate-x-1.5 transition-transform" />
             </a>
           </motion.div>
 
@@ -115,12 +129,12 @@ export default function Hero() {
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-6 sm:gap-14 lg:gap-16">
               {/* Metric 1 */}
               <div className="flex items-center gap-2.5 sm:gap-4">
-                <ShieldCheck className="w-8 h-8 sm:w-12 sm:h-12 text-[#C59B27] stroke-[1.8] flex-shrink-0" />
+                <ShieldCheck className="w-8 h-8 sm:w-12 sm:h-12 text-[#D4AF37] stroke-[1.8] flex-shrink-0" />
                 <div>
-                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#011331] font-sans leading-tight">
+                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#01327a] font-sans leading-tight">
                     500+
                   </div>
-                  <div className="text-xs sm:text-base font-bold text-[#011331]/90 font-sans">
+                  <div className="text-xs sm:text-base font-bold text-[#01327a]/90 font-sans">
                     Businesses
                   </div>
                 </div>
@@ -128,12 +142,12 @@ export default function Hero() {
 
               {/* Metric 2 */}
               <div className="flex items-center gap-2.5 sm:gap-4">
-                <Award className="w-8 h-8 sm:w-12 sm:h-12 text-[#C59B27] stroke-[1.8] flex-shrink-0" />
+                <Award className="w-8 h-8 sm:w-12 sm:h-12 text-[#D4AF37] stroke-[1.8] flex-shrink-0" />
                 <div>
-                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#011331] font-sans leading-tight">
+                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#01327a] font-sans leading-tight">
                     75+
                   </div>
-                  <div className="text-xs sm:text-base font-bold text-[#011331]/90 font-sans">
+                  <div className="text-xs sm:text-base font-bold text-[#01327a]/90 font-sans">
                     Years Legacy
                   </div>
                 </div>
@@ -141,12 +155,12 @@ export default function Hero() {
 
               {/* Metric 3 */}
               <div className="flex items-center gap-2.5 sm:gap-4 col-span-2 sm:col-span-1">
-                <Users className="w-8 h-8 sm:w-12 sm:h-12 text-[#C59B27] stroke-[1.8] flex-shrink-0" />
+                <Users className="w-8 h-8 sm:w-12 sm:h-12 text-[#D4AF37] stroke-[1.8] flex-shrink-0" />
                 <div>
-                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#011331] font-sans leading-tight">
+                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#01327a] font-sans leading-tight">
                     10,000+
                   </div>
-                  <div className="text-xs sm:text-base font-bold text-[#011331]/90 font-sans">
+                  <div className="text-xs sm:text-base font-bold text-[#01327a]/90 font-sans">
                     Lives Protected
                   </div>
                 </div>

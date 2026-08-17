@@ -25,12 +25,12 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
   const { q } = await searchParams;
   const initialQuery = typeof q === "string" ? q : Array.isArray(q) ? q[0] : "";
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#011331] selection:bg-amber-100 selection:text-amber-900">
+    <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#01327a] selection:bg-amber-100 selection:text-amber-900">
       <TopBar />
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative isolate overflow-hidden bg-[#011331] pt-[170px] sm:pt-[190px] lg:pt-[210px] pb-16 sm:pb-20 lg:pb-24">
+      <section className="relative isolate overflow-hidden bg-[#01327a] pt-[170px] sm:pt-[190px] lg:pt-[210px] pb-16 sm:pb-20 lg:pb-24">
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
           style={{
@@ -86,7 +86,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#C59B27]/40 via-[#F5D77F]/30 to-[#C59B27]/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
               <Link
                 href={`/blog/${articles[0].slug}`}
-                className="relative block rounded-2xl border border-[#C59B27]/30 bg-gradient-to-b from-[#051a3d] to-[#011331] p-6 sm:p-7 shadow-2xl transition duration-300 group-hover:border-[#C59B27]/60 overflow-hidden"
+                className="relative block rounded-2xl border border-[#C59B27]/30 bg-gradient-to-b from-[#01327a] to-[#01327a] p-6 sm:p-7 shadow-2xl transition duration-300 group-hover:border-[#C59B27]/60 overflow-hidden"
               >
                 <div className="flex items-center justify-between gap-3 mb-4">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#C59B27]/20 px-3 py-1 border border-[#C59B27]/40 text-[#F5D77F] text-[10px] font-extrabold uppercase tracking-widest">
@@ -102,7 +102,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                 </p>
                 <div className="flex items-center justify-between pt-4 border-t border-white/10">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-full bg-[#C59B27] text-[#011331] font-bold text-xs flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-[#C59B27] text-[#01327a] font-bold text-xs flex items-center justify-center">
                       FS
                     </div>
                     <div>
@@ -133,7 +133,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               key={s.label}
               className="group rounded-2xl border border-slate-200/80 bg-white p-5 sm:p-6 shadow-[0_10px_30px_rgba(1,19,49,0.08)] transition hover:-translate-y-1 hover:border-[#C59B27]/30 hover:shadow-[0_16px_40px_rgba(1,19,49,0.12)]"
             >
-              <p className="inline-flex items-center gap-2 font-cormorant text-3xl font-bold tracking-tight text-[#011331] sm:text-4xl">
+              <p className="inline-flex items-center gap-2 font-cormorant text-3xl font-bold tracking-tight text-[#01327a] sm:text-4xl">
                 {s.value}
                 <Sparkles className="h-4 w-4 text-[#C59B27]" />
               </p>
@@ -154,7 +154,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                 <span className="h-2 w-2 rounded-full bg-[#C59B27] animate-pulse" />
                 <span className="text-[11px] font-extrabold tracking-[0.16em] text-[#8A6A10] uppercase">Latest from the advisory desk</span>
               </div>
-              <h2 className="mt-4 font-cormorant text-4xl font-bold leading-[0.98] tracking-[-0.025em] text-[#011331] sm:text-5xl">
+              <h2 className="mt-4 font-cormorant text-4xl font-bold leading-[0.98] tracking-[-0.025em] text-[#01327a] sm:text-5xl">
                 Articles worth <span className="font-light italic text-[#B8860B]">a second cup of chai.</span>
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-[15px]">
@@ -174,17 +174,17 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">
           <div className="mt-10 flex flex-col items-center justify-between gap-4 rounded-[1.4rem] border border-[#C59B27]/20 bg-white p-5 sm:flex-row sm:p-6">
             <div className="flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#011331] text-[#F5D77F]">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#01327a] text-[#F5D77F]">
                 <ShieldCheck className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-sm font-extrabold text-[#011331]">Every article reviewed by the Fortune 5 advisory team</p>
+                <p className="text-sm font-extrabold text-[#01327a]">Every article reviewed by the Fortune 5 advisory team</p>
                 <p className="text-xs font-medium text-slate-500">Claims experience: ₹100+ crore settled • 98% approval rate</p>
               </div>
             </div>
             <Link
               href="/contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#011331] px-5 py-3 text-xs font-extrabold tracking-widest text-white uppercase transition hover:bg-[#0a2a5e]"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#01327a] px-5 py-3 text-xs font-extrabold tracking-widest text-white uppercase transition hover:bg-[#01327a]"
             >
               Ask us a question <ArrowRight className="h-4 w-4 text-[#F5D77F]" />
             </Link>

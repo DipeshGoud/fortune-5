@@ -6,7 +6,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function Legacy75Section() {
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-24 bg-[#0D182E] text-white relative overflow-hidden font-sans">
+    <section className="w-full py-16 sm:py-20 lg:py-24 bg-[#012257] text-white relative overflow-hidden font-sans">
       {/* Subtle Background Lighting */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-950/30 via-transparent to-transparent pointer-events-none" />
 

@@ -65,7 +65,7 @@ export default function ConsultationModal({
   return (
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#011331]/80 backdrop-blur-md">
+        <div className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#01327a]/80 backdrop-blur-md">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 15 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function ConsultationModal({
             className="relative w-full max-w-lg bg-white rounded-2xl border border-[#C59B27]/40 shadow-2xl overflow-hidden text-slate-900"
           >
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-[#011331] via-[#051a3d] to-[#011331] p-6 sm:p-7 text-white relative">
+            <div className="bg-gradient-to-r from-[#01327a] via-[#01327a] to-[#01327a] p-6 sm:p-7 text-white relative">
               <button
                 onClick={onClose}
                 className="absolute top-5 right-5 w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors border border-white/20"
@@ -102,7 +102,7 @@ export default function ConsultationModal({
                   <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-md">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="font-cormorant text-2xl font-bold text-[#011331]">
+                  <h4 className="font-cormorant text-2xl font-bold text-[#01327a]">
                     Consultation Requested!
                   </h4>
                   <p className="text-sm text-slate-600 max-w-xs mx-auto">
@@ -224,7 +224,7 @@ export default function ConsultationModal({
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-[#011331] hover:bg-[#071f47] text-white font-extrabold text-xs sm:text-sm tracking-wider px-6 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-slate-800 uppercase flex items-center justify-center gap-2 mt-2"
+                    className="w-full bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs sm:text-sm tracking-wider px-6 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-slate-800 uppercase flex items-center justify-center gap-2 mt-2"
                   >
                     <span>SUBMIT REQUEST</span>
                     <Send className="w-4 h-4 text-[#C59B27]" />

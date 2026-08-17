@@ -109,7 +109,7 @@ function ContactInner() {
     setTimeout(() => setSubmitted(false), 6000);
   };
 
-  const labelCls = "block text-[10px] font-extrabold tracking-[0.16em] text-[#0b2246] uppercase mb-2";
+  const labelCls = "block text-[10px] font-extrabold tracking-[0.16em] text-[#012b6b] uppercase mb-2";
   const inputBase =
     "w-full rounded-xl border bg-[#fcfcfb] px-4 py-3.5 text-sm font-medium text-slate-800 placeholder:text-slate-400 outline-none transition focus:bg-white";
   const inputBorder = (hasErr: boolean) =>
@@ -123,7 +123,7 @@ function ContactInner() {
       <Navbar />
 
       {/* ===== Contact Hero ===== */}
-      <section className="relative isolate overflow-hidden bg-[#041735] pt-[154px] sm:pt-[172px] lg:pt-[186px]">
+      <section className="relative isolate overflow-hidden bg-[#012257] pt-[154px] sm:pt-[172px] lg:pt-[186px]">
         {/* subtle texture */}
         <div className="absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(245,215,127,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.28)_1px,transparent_1px)] [background-size:56px_56px]" />
         <div className="absolute -left-28 top-16 h-[26rem] w-[26rem] rounded-full bg-[#c59b27]/18 blur-3xl" />
@@ -159,7 +159,7 @@ function ContactInner() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="tel:+919820710067"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#041735] uppercase shadow-lg transition hover:bg-white"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#012257] uppercase shadow-lg transition hover:bg-white"
               >
                 <Phone className="h-3.5 w-3.5" /> Cell: +91-98207 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
               </a>
@@ -212,13 +212,13 @@ function ContactInner() {
                     <p className="inline-flex items-center gap-1.5 text-[10px] font-extrabold tracking-[0.16em] text-[#a47a13] uppercase">
                       <Sparkles className="h-3.5 w-3.5" /> Visit us in Mumbai
                     </p>
-                    <h3 className="mt-1 font-cormorant text-2xl font-bold tracking-[-0.02em] text-[#0b2246]">Fortune 5 Risk Management</h3>
+                    <h3 className="mt-1 font-cormorant text-2xl font-bold tracking-[-0.02em] text-[#012b6b]">Fortune 5 Risk Management</h3>
                     <p className="mt-1 text-sm leading-6 text-slate-600">
                       106-107, E-Square, 1st Floor, Subhash Road,
                       <br /> Vile Parle (East), Mumbai 400057, India.
                     </p>
                   </div>
-                  <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#f3d47c] bg-[#041735] text-[#f3d47c] sm:flex">
+                  <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#f3d47c] bg-[#012257] text-[#f3d47c] sm:flex">
                     <Navigation className="h-5 w-5" />
                   </div>
                 </div>
@@ -229,11 +229,11 @@ function ContactInner() {
                     <div className="absolute left-1/2 top-0 h-full w-px bg-[#c59b27]/30" />
                     <div className="absolute left-0 top-1/2 h-px w-full bg-[#c59b27]/30" />
                     <div className="absolute left-[22%] top-[28%] h-16 w-20 rounded-lg border border-[#c59b27]/30 bg-white/70 backdrop-blur" />
-                    <div className="absolute right-[18%] bottom-[18%] h-10 w-28 rounded-lg border border-[#0b2246]/10 bg-white/80" />
+                    <div className="absolute right-[18%] bottom-[18%] h-10 w-28 rounded-lg border border-[#012b6b]/10 bg-white/80" />
                     <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                       <div className="relative">
                         <span className="absolute -inset-3 rounded-full bg-[#f3d47c]/40 blur-md" />
-                        <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#041735] text-[#f3d47c] shadow-xl">
+                        <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#012257] text-[#f3d47c] shadow-xl">
                           <MapPin className="h-5 w-5" />
                         </span>
                       </div>
@@ -244,7 +244,7 @@ function ContactInner() {
                     href="https://www.google.com/maps/search/E-Square+Subhash+Road+Vile+Parle+East+Mumbai"
                     target="_blank"
                     rel="noreferrer"
-                    className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-[#0b2246] px-3.5 py-2 text-[11px] font-extrabold tracking-[0.08em] text-white shadow-lg transition hover:bg-black"
+                    className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-[#012b6b] px-3.5 py-2 text-[11px] font-extrabold tracking-[0.08em] text-white shadow-lg transition hover:bg-black"
                   >
                     Open in Maps <ArrowRight className="h-3.5 w-3.5" />
                   </a>
@@ -257,14 +257,14 @@ function ContactInner() {
                     { v: "500+", k: "Businesses" },
                   ].map((s) => (
                     <div key={s.k} className="rounded-xl border border-[#ede8d6] bg-[#fdfbf3] px-2 py-3">
-                      <p className="font-cormorant text-sm font-bold leading-none text-[#0b2246]">{s.v}</p>
+                      <p className="font-cormorant text-sm font-bold leading-none text-[#012b6b]">{s.v}</p>
                       <p className="mt-1 text-[10px] font-extrabold tracking-[0.12em] text-[#8d6a10] uppercase">{s.k}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="absolute -bottom-3 -left-3 hidden items-center gap-2 rounded-full border border-[#f3d47c]/50 bg-[#0b2246] px-4 py-2 text-xs font-bold text-white shadow-xl sm:inline-flex">
+              <div className="absolute -bottom-3 -left-3 hidden items-center gap-2 rounded-full border border-[#f3d47c]/50 bg-[#012b6b] px-4 py-2 text-xs font-bold text-white shadow-xl sm:inline-flex">
                 <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)]" /> Typically replies in ~3 hours
               </div>
             </div>
@@ -283,14 +283,14 @@ function ContactInner() {
             {/* LEFT: Form */}
             <ScrollReveal variant="fadeUp" className="lg:col-span-7">
               <div className="relative overflow-hidden rounded-[26px] border border-[#e7e0c8] bg-white p-6 shadow-[0_20px_60px_rgba(11,34,70,0.08)] sm:p-8 lg:p-9">
-                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#041735] via-[#c59b27] to-[#f3d47c]" />
+                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#012257] via-[#c59b27] to-[#f3d47c]" />
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#f3d47c]/12 blur-2xl" />
 
                 <div className="relative">
                   <p className="inline-flex items-center gap-2 text-[11px] font-extrabold tracking-[0.18em] text-[#a47a13] uppercase">
                     <span className="h-px w-7 bg-[#c59b27]" /> Send us a message
                   </p>
-                  <h2 className="mt-2 font-cormorant text-3xl font-bold leading-none tracking-[-0.02em] text-[#0b2246] sm:text-4xl">
+                  <h2 className="mt-2 font-cormorant text-3xl font-bold leading-none tracking-[-0.02em] text-[#012b6b] sm:text-4xl">
                     Request a <span className="text-[#a47a13]">consultation</span>
                   </h2>
                   <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600">
@@ -430,7 +430,7 @@ function ContactInner() {
                   <div className="sm:col-span-2 flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="submit"
-                      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#0b2246] px-7 py-4 text-xs font-extrabold tracking-[0.14em] text-white uppercase shadow-[0_12px_30px_rgba(11,34,70,0.25)] transition hover:bg-black sm:w-auto"
+                      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#012b6b] px-7 py-4 text-xs font-extrabold tracking-[0.14em] text-white uppercase shadow-[0_12px_30px_rgba(11,34,70,0.25)] transition hover:bg-black sm:w-auto"
                     >
                       Send message <Send className="h-3.5 w-3.5 text-[#f3d47c] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </button>
@@ -450,7 +450,7 @@ function ContactInner() {
                     <div key={s.n} className="flex gap-3">
                       <span className="font-cormorant text-lg font-bold leading-none text-[#c59b27]">{s.n}</span>
                       <div>
-                        <p className="text-sm font-extrabold text-[#0b2246]">{s.t}</p>
+                        <p className="text-sm font-extrabold text-[#012b6b]">{s.t}</p>
                         <p className="text-xs leading-5 text-slate-600">{s.d}</p>
                       </div>
                     </div>
@@ -461,7 +461,7 @@ function ContactInner() {
 
             {/* RIGHT: Details premium card */}
             <ScrollReveal variant="fadeLeft" delay={0.15} className="lg:col-span-5">
-              <div className="relative overflow-hidden rounded-[26px] border border-[#0b2246] bg-gradient-to-br from-[#041735] via-[#0b254d] to-[#041735] p-6 text-white shadow-[0_20px_60px_rgba(4,23,53,0.35)] sm:p-7 lg:p-8">
+              <div className="relative overflow-hidden rounded-[26px] border border-[#012b6b] bg-gradient-to-br from-[#012257] via-[#012b6b] to-[#012257] p-6 text-white shadow-[0_20px_60px_rgba(4,23,53,0.35)] sm:p-7 lg:p-8">
                 <div className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-[#c59b27]/15 blur-3xl" />
                 <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(rgba(245,215,127,0.5)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.5)_1px,transparent_1px)] [background-size:36px_36px]" />
 
@@ -532,7 +532,7 @@ function ContactInner() {
                     href="https://www.google.com/maps/search/E-Square+Subhash+Road+Vile+Parle+East+Mumbai"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#f3d47c]/30 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:bg-white hover:text-[#041735]"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[#f3d47c]/30 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:bg-white hover:text-[#012257]"
                   >
                     <MapPin className="h-3.5 w-3.5" /> Get directions
                   </a>
@@ -540,14 +540,14 @@ function ContactInner() {
                     href="https://wa.me/919820810067"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#041735] uppercase transition hover:bg-white"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#012257] uppercase transition hover:bg-white"
                   >
                     <MessageCircle className="h-3.5 w-3.5" /> WhatsApp us
                   </a>
                 </div>
 
                 <div className="relative mt-6 flex items-center gap-3 rounded-2xl border border-[#f3d47c]/20 bg-black/20 px-4 py-3">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f3d47c] text-[#041735]">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#f3d47c] text-[#012257]">
                     <ShieldCheck className="h-4 w-4" />
                   </span>
                   <p className="text-xs font-semibold leading-5 text-slate-200">
@@ -558,10 +558,10 @@ function ContactInner() {
 
               {/* Secondary compact help bar */}
               <div className="mt-4 flex items-center justify-between gap-4 rounded-2xl border border-[#e7e0c8] bg-[#fdfbf3] px-5 py-4">
-                <p className="text-sm font-bold text-[#0b2246]">Need urgent claims help?</p>
+                <p className="text-sm font-bold text-[#012b6b]">Need urgent claims help?</p>
                 <a
                   href="tel:+919820810067"
-                  className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#0b2246] px-4 py-2 text-xs font-extrabold tracking-[0.1em] text-white uppercase transition hover:bg-black"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#012b6b] px-4 py-2 text-xs font-extrabold tracking-[0.1em] text-white uppercase transition hover:bg-black"
                 >
                   Call now <Phone className="h-3.5 w-3.5 text-[#f3d77f]" />
                 </a>
@@ -577,7 +577,7 @@ function ContactInner() {
           <ScrollReveal variant="fadeUp">
             <div className="text-center">
               <p className="text-[11px] font-extrabold tracking-[0.2em] text-[#a47a13] uppercase">Frequently asked questions</p>
-              <h2 className="mt-2 font-cormorant text-4xl font-bold tracking-[-0.02em] text-[#0b2246] sm:text-5xl">Got questions? We&apos;ve got answers.</h2>
+              <h2 className="mt-2 font-cormorant text-4xl font-bold tracking-[-0.02em] text-[#012b6b] sm:text-5xl">Got questions? We&apos;ve got answers.</h2>
               <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base">
                 Clear answers on cover, claims and how we work — so you can decide with confidence.
               </p>
@@ -599,10 +599,10 @@ function ContactInner() {
                     onClick={() => setOpenIndex(isOpen ? null : index)}
                     className="flex w-full items-center justify-between gap-4 px-6 py-4 text-left sm:px-7 sm:py-5"
                   >
-                    <span className="text-sm font-bold leading-6 text-[#0b2246] sm:text-[15px]">{faq.question}</span>
+                    <span className="text-sm font-bold leading-6 text-[#012b6b] sm:text-[15px]">{faq.question}</span>
                     <span
                       className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition ${
-                        isOpen ? "border-[#f3d47c] bg-[#0b2246] text-[#f3d77f]" : "border-[#e7e0c8] bg-[#fdfbf3] text-[#a47a13]"
+                        isOpen ? "border-[#f3d47c] bg-[#012b6b] text-[#f3d77f]" : "border-[#e7e0c8] bg-[#fdfbf3] text-[#a47a13]"
                       }`}
                     >
                       {isOpen ? <Minus className="h-3.5 w-3.5" /> : <Plus className="h-3.5 w-3.5" />}
@@ -629,13 +629,13 @@ function ContactInner() {
           <ScrollReveal variant="fadeUp" delay={0.15}>
           <div className="mt-8 flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#e7e0c8] bg-white px-6 py-5 text-center sm:flex-row sm:justify-between sm:text-left">
             <p className="text-sm font-semibold text-slate-700">
-              Still unsure? <span className="font-extrabold text-[#0b2246]">Talk to a human in minutes.</span>
+              Still unsure? <span className="font-extrabold text-[#012b6b]">Talk to a human in minutes.</span>
             </p>
             <div className="flex gap-2">
-              <a href="tel:+919820710067" className="inline-flex items-center gap-2 rounded-full bg-[#0b2246] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-white uppercase hover:bg-black">
+              <a href="tel:+919820710067" className="inline-flex items-center gap-2 rounded-full bg-[#012b6b] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-white uppercase hover:bg-black">
                 Call advisory
               </a>
-              <a href="mailto:insure@fortune5.in" className="inline-flex items-center gap-2 rounded-full border border-[#e7e0c8] bg-[#fdfbf3] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-[#0b2246] uppercase hover:border-[#c59b27]">
+              <a href="mailto:insure@fortune5.in" className="inline-flex items-center gap-2 rounded-full border border-[#e7e0c8] bg-[#fdfbf3] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-[#012b6b] uppercase hover:border-[#c59b27]">
                 Email us
               </a>
             </div>
