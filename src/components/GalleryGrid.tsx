@@ -74,7 +74,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: "8",
-    title: "Insurance Excellence Leadership Trophy",
+    title: "Risk Management Excellence Leadership Trophy",
     category: "awards",
     categoryLabel: "Awards",
     image: "/trophy.png",

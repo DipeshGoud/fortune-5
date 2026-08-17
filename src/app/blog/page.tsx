@@ -9,9 +9,9 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { articles } from "@/data/blog";
 
 export const metadata: Metadata = {
-  title: "Insurance Insights & Articles | Fortune 5 Risk Management Solutions LLP",
+  title: "Risk Management Insights & Articles | Fortune 5 Risk Management Solutions LLP",
   description:
-    "Practical articles on risk management, claims advocacy, employee benefits, corporate insurance and health cover from the Fortune 5 advisory team.",
+    "Practical articles on risk management, claims advocacy, employee benefits, corporate risk solutions and health cover from the Fortune 5 advisory team.",
 };
 
 const stats = [

@@ -1,10 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Shield, Award, Users, Briefcase, UserCheck } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "./ScrollReveal";
 
 export default function StatsBar() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 80) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const stats = [
     {
       icon: Shield,
@@ -29,13 +45,19 @@ export default function StatsBar() {
     {
       icon: UserCheck,
       value: "3rd Generation",
-      label: "Insurance Consultants",
+      label: "Risk Consultants",
       isHeadline: true,
     },
   ];
 
   return (
-    <section className="relative z-30 w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 -mt-10 sm:-mt-12 lg:-mt-14 mb-10">
+    <section
+      className={`relative z-30 w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 -mt-10 sm:-mt-12 lg:-mt-14 mb-10 transition-all duration-500 ease-out ${
+        isVisible
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 translate-y-8 pointer-events-none"
+      }`}
+    >
       <ScrollReveal variant="fadeUp" duration={0.8} amount={0.2}>
         <div className="bg-white rounded-2xl shadow-xl border border-slate-100/90 p-4 sm:p-6 lg:p-7 xl:p-8">
           <StaggerContainer

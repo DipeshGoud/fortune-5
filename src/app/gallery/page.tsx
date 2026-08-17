@@ -86,7 +86,7 @@ export default function GalleryPage() {
             </h1>
 
             <p className="mt-5 max-w-xl text-[15px] leading-7 text-slate-300 sm:text-[16px] sm:leading-8">
-              From historic family milestones to national insurance summits and team moments — step inside the visual archive that shaped 75 years of Fortune&nbsp;5.
+              From historic family milestones to national risk summits and team moments — step inside the visual archive that shaped 75 years of Fortune&nbsp;5.
             </p>
 
             <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -163,20 +163,20 @@ export default function GalleryPage() {
                   </div>
                 </div>
 
-                <div className="relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-white shadow-xl">
+                <Link href="/trophy" className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 hover:border-[#C59B27]/60 bg-white shadow-xl block transition-all">
                   <div className="relative aspect-[4/3] w-full bg-[#F9F8F6]">
-                    <Image src="/trophy.png" alt="Trophy award" fill sizes="220px" className="object-contain p-4" />
+                    <Image src="/trophy.png" alt="Trophy award" fill sizes="220px" className="object-contain p-4 group-hover:scale-105 transition-transform" />
                   </div>
                   <div className="flex items-center justify-between bg-white px-3 py-2.5">
                     <div>
-                      <p className="text-[11px] font-extrabold text-[#01327a]">Awards</p>
-                      <p className="text-[10px] font-semibold text-slate-500">Leadership Honor</p>
+                      <p className="text-[11px] font-extrabold text-[#01327a] group-hover:text-[#C59B27] transition-colors">100+ Trophies &amp; Awards</p>
+                      <p className="text-[10px] font-semibold text-slate-500">Explore Showcase →</p>
                     </div>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#01327a] text-[#F5D77F]">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#01327a] text-[#F5D77F] group-hover:bg-[#C59B27] group-hover:text-[#01327a] transition-colors">
                       <Sparkles className="h-3.5 w-3.5" />
                     </span>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
 

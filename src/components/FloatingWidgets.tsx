@@ -249,11 +249,11 @@ export default function FloatingWidgets() {
                   {/* Requirement Message */}
                   <div>
                     <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
-                      Message / Insurance Needs
+                      Message / Risk Management Requirements
                     </label>
                     <textarea
                       rows={3}
-                      placeholder="Briefly describe your insurance or risk requirement..."
+                      placeholder="Briefly describe your risk management requirement..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] font-medium shadow-xs resize-none"

@@ -126,7 +126,7 @@ const testimonialsData: Testimonial[] = [
     quote:
       "We operate 45 retail stores across South India. Fortune 5 created a consolidated Shopkeeper All Risk package covering counter cash, plate glass, theft, and public liability under a single renewal date.",
     fullStory:
-      "Managing 45 separate insurance policies was a nightmare. Fortune 5 unified all 45 retail outlets into a single master policy with localized claims assistance. Renewal administration time dropped from weeks to a single afternoon.",
+      "Managing 45 separate risk policies was a nightmare. Fortune 5 unified all 45 retail outlets into a single master policy with localized claims assistance. Renewal administration time dropped from weeks to a single afternoon.",
     policyType: "Shopkeeper All Risk & Public Liability",
     verified: true,
   },
@@ -148,16 +148,16 @@ const testimonialsData: Testimonial[] = [
   {
     id: "test-8",
     name: "Sameer Vora",
-    role: "Senior Partner",
-    company: "Vora & Associates Family Office",
-    location: "South Mumbai, Maharashtra",
+    role: "Family Office Trustee",
+    company: "Vora Family Wealth Management",
+    location: "South Mumbai",
     category: "Retail & HNI",
     rating: 5,
     quote:
-      "They manage our family office's art collection, luxury real estate, and global travel insurance. Fortune 5 represents the pinnacle of private client risk stewardship in India.",
+      "They manage our family office's art collection, luxury real estate, and global travel protection. Fortune 5 represents the pinnacle of private client risk stewardship in India.",
     fullStory:
-      "Private wealth protection requires absolute confidentiality and meticulous attention to detail. Fortune 5 has advised our family office for over 25 years, tailoring insurance covers for high-value artwork, vintage automobiles, and global medical emergencies.",
-    policyType: "HNI Wealth Protection & Fine Art Cover",
+      "Private wealth protection requires absolute confidentiality and meticulous attention to detail. Fortune 5 has advised our family office for over 25 years, tailoring risk coverage for high-value artwork, vintage automobiles, and global medical emergencies.",
+    policyType: "Private Wealth, Art & Luxury Real Estate",
     verified: true,
   },
 ];

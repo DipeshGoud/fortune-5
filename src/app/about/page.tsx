@@ -21,7 +21,7 @@ import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/Scroll
 export const metadata: Metadata = {
   title: "About Us | Fortune 5 Risk Management Solutions LLP",
   description:
-    "A 75-year, three-generation legacy of trusted insurance advice. Discover the mission, vision, values and leadership behind Fortune 5.",
+    "A 75-year, three-generation legacy of trusted risk management advice. Discover the mission, vision, values and leadership behind Fortune 5.",
 };
 
 const values = [
@@ -41,7 +41,7 @@ const values = [
     number: "03",
     title: "Expertise",
     icon: Award,
-    description: "Deep knowledge across corporate, retail and SME insurance risk lines.",
+    description: "Deep knowledge across corporate, retail and SME risk lines.",
   },
   {
     number: "04",
@@ -63,26 +63,31 @@ const values = [
   },
 ];
 
-const timeline = [
+const ourJourneyTimeline = [
   {
-    year: "1950s",
-    title: "A promise takes root",
-    text: "A family insurance practice begins with one conviction: protection should feel personal.",
+    step: "2000",
+    title: "Family Legacy",
+    text: "Proudly carrying forward a 75+ year family legacy in risk management & protection.",
   },
   {
-    year: "1980s",
-    title: "Business risk, understood",
-    text: "The practice expands into corporate risk advisory and placement across Maharashtra.",
+    step: "Qualifications",
+    title: "Professional Qualifications",
+    text: "Risk management & underwriting expertise with a strong academic foundation.",
   },
   {
-    year: "2000s",
-    title: "A broader brief",
-    text: "Employee benefits, health and bespoke liability solutions join the portfolio.",
+    step: "Recognition",
+    title: "Industry Recognition",
+    text: "Consistent performance and client trust built over decades of dedicated service.",
   },
   {
-    year: "Today",
-    title: "Fortune 5 LLP",
-    text: "A full-spectrum risk partner trusted by 500+ businesses and 10,000+ lives.",
+    step: "Since 2003",
+    title: "MD Club Member",
+    text: "Proud MD Club member, Bajaj Allianz continuously since 2003.",
+  },
+  {
+    step: "Leadership",
+    title: "Fortune 5 Leadership",
+    text: "Leading with a claims-first approach and long-term client partnerships.",
   },
 ];
 
@@ -96,7 +101,7 @@ const stats = [
 const founderPrinciples = [
   {
     title: "Our Vision",
-    desc: "To make insurance simple, transparent and impactful for every client.",
+    desc: "To make risk management simple, transparent and impactful for every client.",
   },
   {
     title: "Our Philosophy",
@@ -104,7 +109,7 @@ const founderPrinciples = [
   },
   {
     title: "Why Fortune 5 Started",
-    desc: "To bridge the gap between complex insurance and real protection with honest guidance.",
+    desc: "To bridge the gap between complex risk landscapes and real protection with honest guidance.",
   },
   {
     title: "Claims-First Thinking",
@@ -125,7 +130,7 @@ const founderQualifications = [
   {
     title: "Fellow Insurance Institute of India",
     subtitle: "Highest Technical Standard",
-    desc: "Recognized insurance expertise. Committed to professional excellence.",
+    desc: "Recognized risk and underwriting expertise. Committed to professional excellence.",
   },
   {
     title: "Advanced Diploma in Risk & Insurance",
@@ -169,7 +174,7 @@ export default function AboutPage() {
               Risk advice that stays with you, <span className="text-[#f5d77f]">generation after generation.</span>
             </h1>
             <p className="mt-5 sm:mt-7 max-w-xl text-sm sm:text-lg leading-7 sm:leading-8 text-slate-300">
-              For more than seven decades, Fortune 5 has brought a human point of view to insurance—turning complex risk into clear, confident decisions.
+              For more than seven decades, Fortune 5 has brought a human point of view to risk management—turning complex risk into clear, confident decisions.
             </p>
             <div className="mt-7 sm:mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#f3d47c] px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-[#012257] uppercase transition hover:bg-white">
@@ -232,7 +237,7 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#c59b27]/10 rounded-full blur-2xl pointer-events-none" />
               <span className="font-cormorant text-6xl text-[#c59b27] leading-none block">&ldquo;</span>
               <p className="font-cormorant text-2xl sm:text-3xl font-bold text-[#01327a] leading-snug italic mt-1 mb-6">
-                Insurance isn&apos;t about selling policies. It&apos;s about protecting dreams, preserving businesses, and standing by people when they need us the most.
+                Risk management isn&apos;t about selling policies. It&apos;s about protecting dreams, preserving businesses, and standing by people when they need us the most.
               </p>
               <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                 <div>
@@ -374,25 +379,35 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Legacy in Chapters Timeline */}
+      {/* Our Journey & Legacy Timeline */}
       <section className="overflow-hidden bg-[#071a38] py-20 text-white sm:py-24 lg:py-28">
-        <div className="mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12 xl:px-0">
+        <div className="mx-auto w-full max-w-[1380px] px-5 sm:px-8 lg:px-12 xl:px-16">
           <ScrollReveal variant="fadeUp">
-          <div className="max-w-2xl">
-            <p className="text-xs font-extrabold tracking-[0.2em] text-[#f3d47c] uppercase">The legacy, in chapters</p>
-            <h2 className="mt-3 font-cormorant text-4xl font-bold leading-none tracking-[-0.025em] sm:text-5xl">75 years, with our eyes on what&apos;s next.</h2>
-          </div>
+            <div className="max-w-2xl">
+              <p className="text-xs font-extrabold tracking-[0.2em] text-[#f3d47c] uppercase">
+                Our Journey
+              </p>
+              <h2 className="mt-3 font-cormorant text-4xl font-bold leading-none tracking-[-0.025em] sm:text-5xl">
+                A Legacy of Trust. A Future of Protection.
+              </h2>
+            </div>
           </ScrollReveal>
-          <div className="relative mt-12 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-4 md:gap-5">
-            <div className="absolute left-0 right-0 top-3 hidden h-px bg-gradient-to-r from-[#c59b27] via-[#f3d47c] to-[#c59b27]/20 md:block" />
-            {timeline.map((item, i) => (
-              <ScrollReveal key={item.year} variant="fadeUp" delay={i * 0.08}>
-              <article className="relative pt-0 md:pt-10">
-                <span className="absolute left-0 top-0 hidden h-6 w-6 -translate-y-1/2 rounded-full border-[5px] border-[#071a38] bg-[#f3d47c] md:block" />
-                <p className="font-cormorant text-2xl font-bold text-[#f3d47c]">{item.year}</p>
-                <h3 className="mt-3 text-base font-extrabold text-white">{item.title}</h3>
-                <p className="mt-2 max-w-xs text-sm leading-6 text-slate-300">{item.text}</p>
-              </article>
+          <div className="relative mt-12 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-5 md:gap-5">
+            <div className="absolute left-0 right-0 top-3 hidden h-px bg-gradient-to-r from-[#c59b27] via-[#f3d47c] to-[#c59b27] md:block" />
+            {ourJourneyTimeline.map((item, i) => (
+              <ScrollReveal key={item.title} variant="fadeUp" delay={i * 0.08}>
+                <article className="relative pt-0 md:pt-10">
+                  <span className="absolute left-0 top-0 hidden h-6 w-6 -translate-y-1/2 rounded-full border-[5px] border-[#071a38] bg-[#f3d47c] md:block" />
+                  <p className="font-cormorant text-2xl font-bold text-[#f3d47c]">
+                    {item.step}
+                  </p>
+                  <h3 className="mt-3 text-base font-extrabold text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm leading-relaxed text-slate-300">
+                    {item.text}
+                  </p>
+                </article>
               </ScrollReveal>
             ))}
           </div>

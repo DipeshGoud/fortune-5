@@ -46,16 +46,16 @@ const teamMembers: TeamMember[] = [
     department: "Leadership",
     experience: "22+ Yrs Exp",
     img: "/kaushal-shah.png",
-    bio: "3rd generation insurance consultant carrying forward a 75+ year family legacy. B.E. (Chemical Engg), Fellow Insurance Institute of India, NMIMS.",
+    bio: "3rd generation risk consultant carrying forward a 75+ year family legacy. B.E. (Chemical Engg), Fellow Insurance Institute of India, NMIMS.",
     fullBio:
-      "Kaushal Shah leads Fortune 5 Risk Management Solutions LLP, carrying forward a 75+ year family legacy in insurance. Holding a B.E. in Chemical Engineering, he brings unique analytical and quantitative rigor to risk assessment. He is a Fellow of the Insurance Institute of India, holds an Advanced Diploma in Risk & Insurance Management from NMIMS, and has been a proud MD Club member at Bajaj Allianz since 2003.",
+      "Kaushal Shah leads Fortune 5 Risk Management Solutions LLP, carrying forward a 75+ year family legacy in risk management & advisory. Holding a B.E. in Chemical Engineering, he brings unique analytical and quantitative rigor to risk assessment. He is a Fellow of the Insurance Institute of India, holds an Advanced Diploma in Risk & Insurance Management from NMIMS, and has been a proud MD Club member at Bajaj Allianz since 2003.",
     tags: ["3rd Generation Consultant", "Chemical Engineering Rigor", "FIII Qualified", "MD Club Member"],
     achievements: [
       "Assisted ₹100+ Cr in claims with unwavering client advocacy",
       "Advises 500+ corporate & business portfolios",
       "Fellow of Insurance Institute of India & NMIMS Alum",
     ],
-    linkedin: "https://linkedin.com",
+    linkedin: "https://www.linkedin.com/in/kaushal-shah-59765b1b?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
     email: "kaushal@fortune5.in",
   },
   {
@@ -82,10 +82,10 @@ const teamMembers: TeamMember[] = [
     role: "Partner & Head — Corporate Risk",
     department: "Corporate Risk",
     experience: "18+ Yrs Exp",
-    bio: "Drives complex Property, Casualty, Cyber, and Liability insurance programs for manufacturing and tech enterprises.",
+    bio: "Drives complex Property, Casualty, Cyber, and Liability risk programs for manufacturing and tech enterprises.",
     fullBio:
-      "Rahul leads the corporate risk practice at Fortune 5. With 18+ years in commercial insurance underwriting and risk advisory, he specialises in mapping operational risks, designing Directors & Officers (D&O) liability frameworks, and negotiating competitive terms with leading national and international underwriters.",
-    tags: ["Property & Casualty", "Cyber Risk", "Industrial All Risk", "D&O Insurance"],
+      "Rahul leads the corporate risk practice at Fortune 5. With 18+ years in corporate risk advisory and commercial underwriting, he specialises in mapping operational risks, designing Directors & Officers (D&O) liability frameworks, and negotiating competitive terms with leading national and international underwriters.",
+    tags: ["Property & Casualty", "Cyber Risk", "Industrial All Risk", "D&O Coverage"],
     achievements: [
       "Structured ₹2,500Cr+ property coverage",
       "Spearheaded Cyber Risk advisory division",
@@ -100,9 +100,9 @@ const teamMembers: TeamMember[] = [
     role: "Head — Claims & Legal Advisory",
     department: "Claims & Legal",
     experience: "15+ Yrs Exp",
-    bio: "Dedicated insurance legal specialist focused on securing zero-friction claim settlements and policy wording reviews.",
+    bio: "Dedicated risk & legal claims specialist focused on securing zero-friction claim settlements and policy wording reviews.",
     fullBio:
-      "Priya heads Fortune 5's dedicated claims resolution wing. With 15+ years of insurance legal and claims experience, she ensures that Fortune 5 clients never navigate claims alone. Her team coordinates directly with insurers and surveyors for fast, transparent payouts.",
+      "Priya heads Fortune 5's dedicated claims resolution wing. With 15+ years of legal and claims advisory experience, she ensures that Fortune 5 clients never navigate claims alone. Her team coordinates directly with insurers and surveyors for fast, transparent payouts.",
     tags: ["Claims Advocacy", "Arbitration & Legal", "Loss Minimisation", "Policy Audit"],
     achievements: [
       "Faster claims assistance across commercial lines",
@@ -118,10 +118,10 @@ const teamMembers: TeamMember[] = [
     role: "Head — Retail & Employee Benefits",
     department: "Retail & Health",
     experience: "14+ Yrs Exp",
-    bio: "Architect of employee wellness programs and Keyman insurance solutions protecting 10,000+ lives.",
+    bio: "Architect of employee wellness programs and Keyman risk solutions protecting 10,000+ lives.",
     fullBio:
-      "Amit oversees group employee benefits, Keyman insurance, and personal line portfolios at Fortune 5. With 14+ years in healthcare insurance, he designs customized group mediclaim policies, wellness programs, and high-net-worth individual (HNI) asset protection plans.",
-    tags: ["Employee Benefits", "Group Mediclaim", "Keyman Insurance", "Wealth Protection"],
+      "Amit oversees group employee benefits, Keyman risk protection, and personal line portfolios at Fortune 5. With 14+ years in healthcare risk solutions, he designs customized group mediclaim policies, wellness programs, and high-net-worth individual (HNI) asset protection plans.",
+    tags: ["Employee Benefits", "Group Mediclaim", "Keyman Protection", "Wealth Protection"],
     achievements: [
       "Manages 10,000+ insured corporate lives",
       "Designed cashless hospital networks for 200+ firms",
@@ -138,7 +138,7 @@ const teamMembers: TeamMember[] = [
     experience: "10+ Yrs Exp",
     bio: "Expert in quantitative risk profiling, business interruption modeling, and supply chain vulnerability assessments.",
     fullBio:
-      "Ananya brings deep quantitative rigor to Fortune 5's risk audit methodology. With a background in actuarial science, she models complex risk exposures, catastrophe losses, and business interruption scenarios to help clients right-size their insurance deductibles and limits.",
+      "Ananya brings deep quantitative rigor to Fortune 5's risk audit methodology. With a background in actuarial science, she models complex risk exposures, catastrophe losses, and business interruption scenarios to help clients right-size their risk deductibles and coverage limits.",
     tags: ["Actuarial Modeling", "Business Interruption", "Risk Audit", "Supply Chain"],
     achievements: [
       "Audited 300+ industrial facility risk profiles",
@@ -156,7 +156,7 @@ const teamMembers: TeamMember[] = [
     experience: "20+ Yrs Exp",
     bio: "Nurtures multi-decadal relationships with family offices, conglomerates, and institutional clients across India.",
     fullBio:
-      "Vikramaditya manages key client relationships and strategic alliances. With two decades in financial services and insurance stewardship, he ensures that every client receives white-glove advisory service, annual risk reviews, and rapid emergency support.",
+      "Vikramaditya manages key client relationships and strategic alliances. With two decades in financial services and risk management stewardship, he ensures that every client receives white-glove advisory service, annual risk reviews, and rapid emergency support.",
     tags: ["Client Stewardship", "Family Offices", "Marine Cargo", "Strategic Relations"],
     achievements: [
       "98.7% client retention over 15 years",
@@ -205,7 +205,7 @@ export default function TeamSection() {
             <span className="h-[1.5px] w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#C59B27] to-transparent inline-block" />
           </div>
           <p className="text-slate-600 text-sm sm:text-base lg:text-lg font-medium leading-relaxed max-w-3xl mt-5">
-            A dedicated ensemble of risk strategists, claims advocates, underwriters, and client advisors bringing over seven decades of combined insurance excellence to your service.
+            A dedicated ensemble of risk strategists, claims advocates, underwriters, and client advisors bringing over seven decades of combined risk management excellence to your service.
           </p>
         </ScrollReveal>
 

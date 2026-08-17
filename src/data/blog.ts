@@ -12,7 +12,7 @@ export const blogCategories = [
   { id: "risk-management", label: "Risk Management", icon: ShieldCheck },
   { id: "claims", label: "Claims", icon: FileSearch },
   { id: "employee-benefits", label: "Employee Benefits", icon: Users },
-  { id: "corporate", label: "Corporate Insurance", icon: Building2 },
+  { id: "corporate", label: "Corporate Risk Solutions", icon: Building2 },
   { id: "health-personal", label: "Health & Personal", icon: HeartPulse },
 ] as const;
 
@@ -53,11 +53,11 @@ export const articles: Article[] = [
     slug: "annual-risk-review-checklist",
     title: "The Annual Risk Review: A Practical Checklist for Indian Businesses",
     excerpt:
-      "A structured, field-tested checklist to audit your insurance portfolio every year — and close the gaps that most companies quietly carry into renewal season.",
+      "A structured, field-tested checklist to audit your risk management portfolio every year — and close the gaps that most companies quietly carry into renewal season.",
     category: "risk-management",
     categoryLabel: "Risk Management",
     coverImage: img("photo-1460925895917-afdab827c52f"),
-    alt: "Business team reviewing financial risk charts and insurance documents",
+    alt: "Business team reviewing financial risk charts and risk management documents",
     date: "2026-01-18",
     readTime: "7 min read",
     author: { name: "Kaushal Shah", role: "Principal Consultant, Fortune 5" },
@@ -66,7 +66,7 @@ export const articles: Article[] = [
     content: [
       {
         type: "paragraph",
-        text: "Most businesses only look at their insurance twice a year — once when the premium invoice arrives, and once when a claim is rejected. The first is a bad moment to think about cover, and the second is a worse one. In our 75 years of advising companies across Maharashtra, the most expensive gaps we have found were almost always silent: the cover lapsed, the valuation drifted, the new line of business was simply never added to the policy.",
+        text: "Most businesses only look at their risk management and coverage twice a year — once when the premium invoice arrives, and once when a claim is rejected. The first is a bad moment to think about cover, and the second is a worse one. In our 75 years of advising companies across Maharashtra, the most expensive gaps we have found were almost always silent: the cover lapsed, the valuation drifted, the new line of business was simply never added to the policy.",
       },
       {
         type: "heading",
@@ -74,7 +74,7 @@ export const articles: Article[] = [
       },
       {
         type: "paragraph",
-        text: "Insurance is not a purchase, it is a portfolio. Like any portfolio, it drifts. Sums insured are set against last year's balance sheet. New machinery arrives and is not declared. A product line is added, but the liability policy still describes the old one. An annual review — done properly, not as a formality — catches each of these before a claim ever tests them.",
+        text: "Risk management is not a purchase, it is a portfolio. Like any portfolio, it drifts. Sums insured are set against last year's balance sheet. New machinery arrives and is not declared. A product line is added, but the liability policy still describes the old one. An annual review — done properly, not as a formality — catches each of these before a claim ever tests them.",
       },
       {
         type: "list",
@@ -95,7 +95,7 @@ export const articles: Article[] = [
       },
       {
         type: "quote",
-        text: "Insurance should be reviewed the way you review your balance sheet — annually, with a pencil, and with someone who will tell you the truth.",
+        text: "Risk management should be reviewed the way you review your balance sheet — annually, with a pencil, and with someone who will tell you the truth.",
         author: "Kaushal Shah",
         role: "Principal Consultant, Fortune 5",
       },
@@ -121,7 +121,7 @@ export const articles: Article[] = [
     category: "claims",
     categoryLabel: "Claims",
     coverImage: img("photo-1554224155-6726b3ff858f"),
-    alt: "Close-up of insurance claim documents with calculator",
+    alt: "Close-up of risk claim documents with calculator",
     date: "2025-12-09",
     readTime: "6 min read",
     author: { name: "Priya Nair", role: "Head of Claims Advocacy, Fortune 5" },
@@ -129,7 +129,7 @@ export const articles: Article[] = [
     content: [
       {
         type: "paragraph",
-        text: "A claim is when insurance stops being paperwork and becomes a promise. It is also when most mistakes get made — not out of dishonesty, but out of haste and confusion. Having handled thousands of settlements — from a ₹4.2 crore flood loss to a family health claim of a few lakh — we can tell you that most disputes begin exactly where the policyholder had a chance to do something different.",
+        text: "A claim is when risk protection stops being paperwork and becomes a promise. It is also when most mistakes get made — not out of dishonesty, but out of haste and confusion. Having handled thousands of settlements — from a ₹4.2 crore flood loss to a family health claim of a few lakh — we can tell you that most disputes begin exactly where the policyholder had a chance to do something different.",
       },
       {
         type: "heading",
@@ -178,8 +178,8 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "group-health-insurance-employee-wellbeing",
-    title: "Group Health Insurance Beyond the Tender: Designing Benefits Your People Actually Use",
+    slug: "group-health-protection-employee-wellbeing",
+    title: "Group Health & Employee Wellbeing: Designing Benefits Your People Actually Use",
     excerpt:
       "A group mediclaim policy is not a commodity. Here is how corporates can move from cheapest-cover to a benefits design that retains talent and lowers claims friction.",
     category: "employee-benefits",
@@ -237,12 +237,12 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "cyber-insurance-for-smes",
-    title: "Cyber Insurance for Indian SMEs: What a Real Policy Covers (and What It Doesn't)",
+    slug: "cyber-risk-management-for-smes",
+    title: "Cyber Risk Management for Indian SMEs: What a Real Policy Covers (and What It Doesn't)",
     excerpt:
       "Ransomware is no longer a large-corporate problem. A practical guide to the cyber covers every mid-size business should carry — and the exclusions to read carefully.",
     category: "corporate",
-    categoryLabel: "Corporate Insurance",
+    categoryLabel: "Corporate Risk Solutions",
     coverImage: img("photo-1563986768609-322da13575f3"),
     alt: "Digital security concept with locks and data streams",
     date: "2025-10-30",
@@ -252,7 +252,7 @@ export const articles: Article[] = [
     content: [
       {
         type: "paragraph",
-        text: "The most dangerous myth in Indian business insurance today is that cyber attacks happen to banks and airlines. In our experience, the typical target is a 60-person manufacturing firm with a server room, an ERP system and a list of suppliers' bank details. The attacker does not need to break in loudly — they only need a phishing click and one unprotected backup.",
+        text: "The most dangerous myth in Indian business risk management today is that cyber attacks happen to banks and airlines. In our experience, the typical target is a 60-person manufacturing firm with a server room, an ERP system and a list of suppliers' bank details. The attacker does not need to break in loudly — they only need a phishing click and one unprotected backup.",
       },
       {
         type: "heading",
@@ -291,8 +291,8 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "family-health-insurance-buying-guide",
-    title: "How to Buy Family Health Insurance in 2026: A Buyer's Guide",
+    slug: "family-health-protection-buying-guide",
+    title: "How to Choose Family Health Protection in 2026: A Buyer's Guide",
     excerpt:
       "Floater or individual? Which riders justify their premium? And why the hospital network matters more than the sum insured. A plain-language guide for Indian families.",
     category: "health-personal",
@@ -302,12 +302,12 @@ export const articles: Article[] = [
     date: "2026-01-05",
     readTime: "8 min read",
     author: { name: "Dr. Ananya Merchant", role: "Advisor, Health & Personal Lines" },
-    tags: ["Health Insurance", "Family Floater", "Buying Guide"],
+    tags: ["Health Protection", "Family Floater", "Buying Guide"],
     featured: true,
     content: [
       {
         type: "paragraph",
-        text: "Every January, families across India open renewal notices, glance at the premium, and click pay. That is not buying insurance — that is re-buying last year's decision without a second look. Health insurance is the one policy most families rely on most and understand least. This guide walks through the choices that actually matter in 2026.",
+        text: "Every January, families across India open renewal notices, glance at the premium, and click pay. That is not active risk management — that is re-buying last year's decision without a second look. Health protection is the one policy most families rely on most and understand least. This guide walks through the choices that actually matter in 2026.",
       },
       {
         type: "heading",
@@ -350,7 +350,7 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "mumbai-monsoon-flood-insurance",
+    slug: "mumbai-monsoon-flood-risk-protection",
     title: "Mumbai Monsoon 2026: Why Flood Cover Is Not Automatic",
     excerpt:
       "The fine print between 'storm' and 'flood' has cost Mumbai businesses crores. What to check in your policy before the rain returns.",
@@ -365,7 +365,7 @@ export const articles: Article[] = [
     content: [
       {
         type: "paragraph",
-        text: "Every monsoon, we take calls from businesses discovering that their 'fire and allied perils' policy does not actually cover the water rising up their street. The word on the certificate says 'storm' — and the loss was a flood. In insurance, those are two different perils with two very different claims outcomes.",
+        text: "Every monsoon, we take calls from businesses discovering that their 'fire and allied perils' policy does not actually cover the water rising up their street. The word on the certificate says 'storm' — and the loss was a flood. In risk management, those are two different perils with two very different claims outcomes.",
       },
       {
         type: "heading",

@@ -19,6 +19,9 @@
 | **Support Line**        | `+91-98208 10067`                                                                   | TopBar, Contact Page, Sticky WhatsApp/Help Bar       |
 | **Board Line**          | `+91-22-2619 27 27`                                                                 | TopBar, Contact Page, Footer                         |
 | **Official Email**      | `insure@fortune5.in` (Claims: `claims@fortune5.in`)                                 | TopBar, Contact Forms, Footer Email Copy Action      |
+| **LinkedIn**            | `https://www.linkedin.com/in/kaushal-shah-59765b1b?utm_source=share_via&utm_content=profile&utm_medium=member_ios` | Footer, Team Profile, Contact Page                  |
+| **Facebook**            | `https://www.facebook.com/share/19LLUhbPQE/?mibextid=wwXIfr`                       | Footer, Social Navigation, Contact Page              |
+| **Instagram**           | `https://www.instagram.com/kaushal_f5?igsh=MWpnaHFjZGd6b213ZA%3D%3D&utm_source=qr` | Footer, Social Navigation, Contact Page              |
 
 ---
 
@@ -65,12 +68,12 @@ All statistics on the website must align with the brochure data:
 
 ### 3.5 Core Leadership Principles & Pillars
 
-- **Founder's Vision**: To make insurance simple, transparent and impactful for every client.
+- **Founder's Vision**: To make risk management simple, transparent and impactful for every client.
 - **Our Philosophy**: Right advice. Right protection. Right time.
-- **Why Fortune 5 Started**: To bridge the gap between complex insurance and real protection with honest guidance.
+- **Why Fortune 5 Started**: To bridge the gap between complex risk landscapes and real protection with honest guidance.
 - **Claims-First Thinking**: We don't sell policies. We stand beside our clients when it matters most.
 - **Customer-First Approach**: Your goals. Your challenges. Our priority. Always.
-- **Regulatory Identity**: We are Insurance Agents and advise on products only (we are not brokers).
+- **Regulatory Identity**: We are Risk Management Consultants & Corporate Advisors and advise on solutions only (we are not insurance brokers).
 
 ---
 
@@ -113,27 +116,27 @@ All statistics on the website must align with the brochure data:
 
 ---
 
-## 7. Insurance Solutions Categorization
+## 7. Risk Management Solutions Categorization
 
-### 7.1 Corporate Insurance Solutions
+### 7.1 Corporate Risk Management Solutions
 
-1. **Fire Insurance** (Industrial All Risk, standard fire & special perils)
-2. **Marine Insurance** (Inland transit, export-import cargo, open marine policies)
-3. **Engineering Insurance** (Contractor All Risk, Erection All Risk, Plant & Machinery)
-4. **Liability Insurance** (Directors & Officers (D&O), Professional Indemnity, Public/Product Liability, Cyber)
-5. **Package Insurance** (Office Package, Shopkeeper All Risk)
+1. **Fire Risk Solutions** (Industrial All Risk, standard fire & special perils)
+2. **Marine & Transit Risk Solutions** (Inland transit, export-import cargo, open marine policies)
+3. **Engineering & Project Risk Solutions** (Contractor All Risk, Erection All Risk, Plant & Machinery)
+4. **Corporate Liability & Governance Risk** (Directors & Officers (D&O), Professional Indemnity, Public/Product Liability, Cyber)
+5. **Commercial Package Risk Solutions** (Office Package, Shopkeeper All Risk)
 6. **Employee Benefits** (Group Mediclaim - GMC, Group Personal Accident - GPA, Group Term Life - GTL)
-7. **Industries Insurance** (Specialized risk management for manufacturing, chemicals, logistics & pharma)
+7. **Industrial Sector Risk Solutions** (Specialized risk management for manufacturing, chemicals, logistics & pharma)
 
-### 7.2 Retail Insurance Solutions (Personal Lines)
+### 7.2 Retail Risk Management Solutions (Personal Lines)
 
-1. **Health Insurance** (Comprehensive individual & family floaters, top-ups, senior citizen covers)
-2. **Motor Insurance** (Private cars, two-wheelers, commercial vehicle fleet)
-3. **Travel Insurance** (International Schengen/USA/Worldwide & domestic trip protection)
-4. **Home Insurance** (Structure, content, valuables & burglary protection)
-5. **Personal Accident Insurance** (Worldwide 24x7 accidental death & disablement)
-6. **Critical Illness Insurance** (Lump sum critical illness payout plans)
-7. **Term Life Insurance** (High-cover pure risk term life & wealth protection)
+1. **Health & Medical Protection** (Comprehensive individual & family floaters, top-ups, senior citizen covers)
+2. **Motor & Fleet Risk Protection** (Private cars, two-wheelers, commercial vehicle fleet)
+3. **Travel & International Protection** (International Schengen/USA/Worldwide & domestic trip protection)
+4. **Home & Property Protection** (Structure, content, valuables & burglary protection)
+5. **Personal Accident Protection** (Worldwide 24x7 accidental death & disablement)
+6. **Critical Illness Protection** (Lump sum critical illness payout plans)
+7. **Term Life & Wealth Protection** (High-cover pure risk term life & wealth protection)
 
 ---
 

@@ -2,7 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck, Trophy, Building2, Award } from "lucide-react";
+import Link from "next/link";
+import { ShieldCheck, Trophy, Award, ArrowRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function TrustProofSection() {
@@ -84,55 +85,19 @@ export default function TrustProofSection() {
     },
   ];
 
-  const corporateClients = [
-    "Harman",
-    "Mintifi",
-    "Gumpro Fluids",
-    "Rossari",
-    "AGS Shipping",
-    "Hathway",
-    "Chembond",
-    "AHK",
-    "Shubhada",
-    "BIS",
-    "Mehta API",
-    "TORM",
-    "Jenburkt",
-    "Mosil",
-    "HMM",
-    "Amal Group",
-    "TeamGlobal",
-    "Shemaroo",
-    "Nextgen Clearing",
-    "Sunidhi",
-    "Creative Eye",
-    "HP Adhesives",
-    "eClinicalWorks",
-    "Transtar",
-    "HAB",
-    "PentaFreight",
-    "PPFAS Mutual Fund",
-    "EVIO",
-    "Rodium Realty",
-    "Abhay Ispat",
-    "Wallem",
-    "Baggit",
-    "Being Human",
-  ];
-
   return (
     <section className="w-full py-16 sm:py-20 lg:py-24 bg-[#F9F8F6] relative overflow-hidden">
       <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20 relative z-10">
         
-        {/* 3 Columns Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10">
+        {/* 2 Columns Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 xl:gap-10">
           
-          {/* CARD 1: RECOMMENDED BUSINESS PARTNERS (lg:col-span-5) */}
+          {/* CARD 1: RECOMMENDED BUSINESS PARTNERS */}
           <ScrollReveal
             variant="fadeUp"
             delay={0.05}
             duration={0.8}
-            className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full"
+            className="bg-white rounded-2xl p-6 sm:p-7 lg:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full overflow-hidden"
           >
             <div>
               <div className="flex items-center justify-center gap-2 mb-5">
@@ -142,12 +107,12 @@ export default function TrustProofSection() {
                 </h3>
               </div>
 
-              {/* General Insurance */}
+              {/* General Risk & Coverage */}
               <div className="mb-6">
                 <h4 className="text-[11px] font-extrabold text-[#C59B27] uppercase tracking-wider mb-3 text-center border-b border-slate-100 pb-1.5">
-                  GENERAL INSURANCE PARTNERS
+                  GENERAL RISK &amp; COVERAGE PARTNERS
                 </h4>
-                <div className="grid grid-cols-2 gap-2.5">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                   {generalPartners.map((item, idx) => (
                     <div
                       key={idx}
@@ -167,16 +132,16 @@ export default function TrustProofSection() {
                 </div>
               </div>
 
-              {/* Life Insurance */}
+              {/* Life Protection */}
               <div>
                 <h4 className="text-[11px] font-extrabold text-[#C59B27] uppercase tracking-wider mb-3 text-center border-b border-slate-100 pb-1.5">
-                  LIFE INSURANCE PARTNERS
+                  LIFE PROTECTION PARTNERS
                 </h4>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
                   {lifePartners.map((item, idx) => (
                     <div
                       key={idx}
-                      className={`p-2.5 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group h-16 ${idx === 4 ? "col-span-2 sm:col-span-1" : ""}`}
+                      className="p-2.5 bg-[#F9F8F6] rounded-xl border border-slate-200/80 flex items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all group h-16"
                     >
                       <div className="relative w-full h-full flex items-center justify-center transition-transform duration-200 group-hover:scale-105">
                         <Image
@@ -194,19 +159,28 @@ export default function TrustProofSection() {
             </div>
           </ScrollReveal>
 
-          {/* CARD 2: RECENT AWARDS & RECOGNITION (lg:col-span-4) */}
+          {/* CARD 2: RECENT AWARDS & RECOGNITION */}
           <ScrollReveal
             variant="fadeUp"
             delay={0.2}
             duration={0.8}
-            className="lg:col-span-4 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full"
+            className="bg-white rounded-2xl p-6 sm:p-7 lg:p-8 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full overflow-hidden"
           >
             <div>
-              <div className="flex items-center justify-center gap-2 mb-5">
-                <Trophy className="w-5 h-5 text-[#C59B27]" />
-                <h3 className="font-cormorant font-extrabold text-2xl text-[#01327a] uppercase tracking-widest text-center">
-                  RECENT AWARDS &amp; RECOGNITION
-                </h3>
+              <div className="flex items-center justify-between gap-2 mb-5">
+                <div className="flex items-center gap-2">
+                  <Trophy className="w-5 h-5 text-[#C59B27]" />
+                  <h3 className="font-cormorant font-extrabold text-2xl text-[#01327a] uppercase tracking-widest">
+                    RECENT AWARDS &amp; RECOGNITION
+                  </h3>
+                </div>
+                <Link
+                  href="/trophy"
+                  className="inline-flex items-center gap-1 text-[11px] font-extrabold text-[#9A7A1A] hover:text-[#01327a] uppercase tracking-wider bg-amber-50 hover:bg-amber-100/80 px-2.5 py-1 rounded-full border border-amber-200/80 transition-colors shrink-0"
+                >
+                  <span>View All</span>
+                  <ArrowRight className="w-3 h-3" />
+                </Link>
               </div>
 
               {/* Featured Major Trophy Badge */}
@@ -263,40 +237,17 @@ export default function TrustProofSection() {
                   ))}
                 </div>
               </div>
-            </div>
-          </ScrollReveal>
 
-          {/* CARD 3: OUR VALUED CLIENTS (lg:col-span-3) */}
-          <ScrollReveal
-            variant="fadeUp"
-            delay={0.35}
-            duration={0.8}
-            className="lg:col-span-3 bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/90 shadow-xl flex flex-col justify-between hover:border-[#C59B27] transition-all duration-300 h-full"
-          >
-            <div>
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Building2 className="w-5 h-5 text-[#C59B27]" />
-                <h3 className="font-cormorant font-extrabold text-2xl text-[#01327a] uppercase tracking-widest text-center">
-                  VALUED CLIENTS
-                </h3>
-              </div>
-
-              <p className="text-[11px] font-bold text-[#C59B27] uppercase tracking-wider text-center mb-4">
-                TRUSTED BY LEADING BUSINESSES
-              </p>
-
-              {/* Scrollable / Multi-item Client Pills Grid */}
-              <div className="grid grid-cols-2 gap-1.5 max-h-[380px] overflow-y-auto pr-1">
-                {corporateClients.map((client, idx) => (
-                  <div
-                    key={idx}
-                    className="p-2 bg-[#F9F8F6] rounded-lg border border-slate-200/80 flex items-center justify-center text-center shadow-2xs hover:border-[#C59B27] hover:bg-white transition-all duration-200 group"
-                  >
-                    <span className="text-[11px] font-bold text-[#01327a] group-hover:text-[#C59B27] transition-colors leading-tight">
-                      {client}
-                    </span>
-                  </div>
-                ))}
+              {/* View All Trophies Action Button */}
+              <div className="mt-5 pt-3.5 border-t border-slate-100">
+                <Link
+                  href="/trophy"
+                  className="group w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#01327a] via-[#084299] to-[#01327a] hover:from-[#C59B27] hover:via-[#D4AF37] hover:to-[#F5D77F] text-white hover:text-[#01327a] text-xs font-extrabold tracking-wider uppercase flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg border border-[#C59B27]/40"
+                >
+                  <Trophy className="w-4 h-4 text-[#F5D77F] group-hover:text-[#01327a] transition-colors" />
+                  <span>View All 100+ Trophies &amp; Awards</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </Link>
               </div>
             </div>
           </ScrollReveal>

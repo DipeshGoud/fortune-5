@@ -10,15 +10,15 @@ export default function CustomizedRiskSolutions() {
     {
       id: "01",
       icon: Handshake,
-      title: "Risk Inspection & Insurance Advisory",
+      title: "Risk Inspection & Advisory",
       description:
-        "Identify gaps and review policy documents to recommend improvements, ensuring optimal protection and risk mitigation across all your insurance plans.",
+        "Identify gaps and review policy documents to recommend improvements, ensuring optimal protection and risk mitigation across all your risk coverage plans.",
       link: "/services",
     },
     {
       id: "02",
       icon: Target,
-      title: "Insurance Product Advisory & Placement",
+      title: "Risk Solution Advisory & Placement",
       description:
         "We shortlist top-tier insurers and secure competitive quotes to provide you with the best value-driven, tailored coverage for your specific needs.",
       link: "/services",
@@ -26,9 +26,9 @@ export default function CustomizedRiskSolutions() {
     {
       id: "03",
       icon: IndianRupee,
-      title: "Insurance Portfolio Management",
+      title: "Risk Portfolio Management",
       description:
-        "Outsource your comprehensive insurance requirements to us. We design tailored solutions for clients of all sizes, ensuring a streamlined, cost-effective portfolio.",
+        "Outsource your comprehensive risk management requirements to us. We design tailored solutions for clients of all sizes, ensuring a streamlined, cost-effective portfolio.",
       link: "/contact",
     },
   ];
@@ -75,9 +75,9 @@ export default function CustomizedRiskSolutions() {
             const IconComponent = item.icon;
             return (
               <StaggerItem key={item.id} variant="fadeUp">
-                <div className="group relative bg-white rounded-2xl p-8 sm:p-9 lg:p-10 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-2 h-full">
+                <div className="group relative bg-white rounded-2xl p-8 sm:p-9 lg:p-10 border border-slate-200/80 shadow-lg hover:shadow-2xl hover:border-[#C59B27] transition-all duration-300 flex flex-col justify-between transform hover:-translate-y-2 h-full overflow-hidden">
                   {/* Gold Gradient Top Border Highlight */}
-                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#01327a] via-[#C59B27] to-[#01327a] rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#C59B27] via-[#F5D77F] to-[#C59B27] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10" />
 
                   <div>
                     {/* Top Row: Icon Container & Number Badge */}

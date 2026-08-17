@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     template: "%s | Fortune 5 Risk Management",
   },
   description:
-    "Protecting Businesses, Families & Futures through Intelligent Risk Management. Over 75 years of trusted insurance advisory and claim-time advocacy.",
+    "Protecting Businesses, Families & Futures through Intelligent Risk Management. Over 75 years of trusted risk management advisory and claim-time advocacy.",
   keywords: [
     "Fortune 5",
     "Risk Management",
-    "Insurance Consultant",
-    "Corporate Insurance",
-    "Health Insurance",
+    "Risk Management Consultant",
+    "Corporate Risk Management",
+    "Health Risk Protection",
     "Claims Advocacy",
     "Kaushal Shah",
     "Mumbai",

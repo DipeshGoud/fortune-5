@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, Shield } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
@@ -97,18 +98,18 @@ export default function AboutFortune5() {
 
             {/* Paragraph Description */}
             <p className="text-slate-700 text-sm sm:text-base lg:text-lg font-medium leading-relaxed font-sans max-w-2xl">
-              Fortune 5 Risk Management Solutions LLP is a trusted insurance consultancy with a 75+ year legacy of helping businesses and individuals manage risk, optimise coverage and receive unwavering support when it matters the most.
+              Fortune 5 Risk Management Solutions LLP is a trusted risk management solutions partner with a 75+ year legacy of helping businesses and individuals manage risk, optimise coverage and receive unwavering support when it matters the most.
             </p>
 
             {/* Read More Button */}
             <div className="pt-3">
-              <a
+              <Link
                 href="/about"
-                className="group flex items-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-sm tracking-widest px-8 py-4 rounded-lg shadow-lg border border-slate-900 uppercase transition-all duration-200"
+                className="group inline-flex items-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-sm tracking-widest px-8 py-4 rounded-lg shadow-lg border border-slate-900 uppercase transition-all duration-200 cursor-pointer"
               >
                 <span>READ MORE ABOUT US</span>
                 <ArrowRight className="w-4 h-4 text-[#F5D77F] group-hover:translate-x-1.5 transition-transform" />
-              </a>
+              </Link>
             </div>
           </ScrollReveal>
 

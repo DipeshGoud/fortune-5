@@ -44,29 +44,69 @@ const initialForm: FormState = {
 
 const faqs = [
   {
-    question: "What types of insurance does Fortune 5 offer?",
+    question: "What insurance and risk management solutions does Fortune 5 provide?",
     answer:
-      "Fortune 5 offers a wide range of Retail Insurance (Health, Motor, Travel, Home, and Term Life Insurance) as well as Corporate Risk Solutions (Fire, Employee Benefits, Liability, Marine Cargo, Engineering, and Customized Niche Risk Agreements).",
+      "Fortune 5 provides comprehensive insurance and risk management solutions for businesses, families, and individuals. Our services include corporate insurance, retail insurance, employee benefits, liability insurance, health insurance, motor insurance, risk inspection, insurance advisory, portfolio management, and claims support.",
   },
   {
-    question: "How can I purchase an insurance policy from Fortune 5?",
+    question: "How can Fortune 5 help me assess my insurance requirements?",
     answer:
-      "You can request a consultation by filling out the contact form above, emailing us at insure@fortune5.in, or calling us directly at +91-98207 10067 / +91-98208 10067. Our advisors will audit your risks and recommend the best-suited coverage options.",
+      "Our process begins with understanding your current coverage, business or personal requirements, and risk exposure. We conduct a detailed risk assessment to identify protection gaps and recommend suitable insurance solutions aligned with your needs.",
   },
   {
-    question: "How do I file a claim?",
+    question: "What is Risk Inspection & Insurance Advisory?",
     answer:
-      "In case of a claim, contact our dedicated Claim Advocacy team immediately at +91-98208 10067 or email claims@fortune5.in. We will guide you through the process, coordinate with the insurer/surveyor, and manage the documentation to ensure quick approval.",
+      "Our Risk Inspection & Insurance Advisory service involves reviewing your existing policies, identifying coverage gaps and potential exposures, and recommending improvements to strengthen your overall protection and risk mitigation strategy.",
   },
   {
-    question: "What documents are required to file a claim?",
+    question: "How does Fortune 5 help businesses manage their insurance portfolio?",
     answer:
-      "The standard documents include a completed claim form, the policy schedule, proof of loss/damage, and relevant bills/estimates. Specific details depend on the policy type (e.g., FIR for theft, medical reports for health). Our team will provide a tailored checklist for your specific case.",
+      "We provide end-to-end Insurance Portfolio Management by reviewing your existing coverage, understanding your risk profile, coordinating insurance requirements, and developing a streamlined and cost-effective insurance portfolio.",
   },
   {
-    question: "What is a cashless claim, and how does it work?",
+    question: "How does Fortune 5 compare insurance options?",
     answer:
-      "A cashless claim allows you to receive treatments or repairs at network hospitals or garages without paying upfront (except compulsory deductibles). The insurer pays the service provider directly, provided the pre-authorization is approved by the TPA/Insurer.",
+      "We evaluate insurance options from leading insurers based on coverage, terms, suitability, and value. Our objective is to identify solutions that best match your specific risk profile and protection requirements.",
+  },
+  {
+    question: "What types of corporate insurance solutions does Fortune 5 provide?",
+    answer:
+      "Fortune 5 provides corporate insurance solutions designed to protect businesses against a wide range of financial and operational risks. These may include property, liability, employee benefits, motor, and other business-specific insurance requirements.",
+  },
+  {
+    question: "Does Fortune 5 provide employee benefits solutions?",
+    answer:
+      "Yes. We provide employee benefits solutions designed to support organisations in protecting their employees while building a structured and effective benefits programme aligned with business requirements.",
+  },
+  {
+    question: "What liability insurance solutions are available through Fortune 5?",
+    answer:
+      "We provide liability insurance solutions designed to help businesses manage financial exposure arising from potential third-party claims, professional risks, operational activities, and other applicable liabilities.",
+  },
+  {
+    question: "How does Fortune 5 assist with insurance claims?",
+    answer:
+      "Claims support is an important part of our service. Our team assists clients throughout the claims process, including documentation, coordination, communication, and follow-up, helping make the process smoother and more efficient.",
+  },
+  {
+    question: "How long does the insurance claim process take?",
+    answer:
+      "Claim timelines depend on the type and complexity of the claim, the documentation provided, and the insurer's assessment process. Fortune 5 provides ongoing claims assistance and coordination to help move the process forward efficiently.",
+  },
+  {
+    question: "Can Fortune 5 review my existing insurance policies?",
+    answer:
+      "Yes. Our team can review your existing insurance portfolio to identify coverage gaps, overlaps, exclusions, and potential areas for improvement. This helps ensure that your insurance programme remains aligned with your current risk exposure.",
+  },
+  {
+    question: "How does Fortune 5 support insurance renewals?",
+    answer:
+      "We provide renewal support by reviewing your existing coverage, reassessing your requirements, comparing available options, and helping you make informed renewal decisions so that your protection remains appropriate.",
+  },
+  {
+    question: "Why should I choose Fortune 5 for insurance and risk management?",
+    answer:
+      "Fortune 5 combines a 75+ year legacy, third-generation insurance expertise, strong insurer relationships, dedicated relationship management, unbiased advice, claims-driven support, and an end-to-end risk management approach to help clients protect what matters most.",
   },
 ];
 
@@ -182,6 +222,30 @@ function ContactInner() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
               >
                 <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kaushal-shah-59765b1b?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://www.facebook.com/share/19LLUhbPQE/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+              >
+                Facebook
+              </a>
+              <a
+                href="https://www.instagram.com/kaushal_f5?igsh=MWpnaHFjZGd6b213ZA%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+              >
+                Instagram
               </a>
             </div>
 
@@ -376,27 +440,27 @@ function ContactInner() {
                         className={`${inputBase} ${inputBorder(false)} appearance-none pr-10`}
                       >
                         <option value="">Select a service or requirement</option>
-                        <optgroup label="Corporate Insurance Solutions">
-                          <option value="Fire Insurance">Fire Insurance</option>
-                          <option value="Marine Insurance">Marine Insurance</option>
-                          <option value="Engineering Insurance">Engineering Insurance</option>
-                          <option value="Liability Insurance">Liability Insurance</option>
-                          <option value="Package Insurance">Package Insurance</option>
+                        <optgroup label="Corporate Risk Solutions">
+                          <option value="Fire Risk Solutions">Fire Risk Solutions</option>
+                          <option value="Marine & Transit Risk Solutions">Marine & Transit Risk Solutions</option>
+                          <option value="Engineering & Project Risk Solutions">Engineering & Project Risk Solutions</option>
+                          <option value="Corporate Liability & Governance Risk">Corporate Liability & Governance Risk</option>
+                          <option value="Commercial Package Risk Solutions">Commercial Package Risk Solutions</option>
                           <option value="Employee Benefits (GMC/GPA/GTL)">Employee Benefits (GMC/GPA/GTL)</option>
-                          <option value="Industries Insurance">Industries Insurance</option>
+                          <option value="Industrial Sector Risk Solutions">Industrial Sector Risk Solutions</option>
                         </optgroup>
-                        <optgroup label="Retail Insurance Solutions">
-                          <option value="Health Insurance">Health Insurance</option>
-                          <option value="Motor Insurance">Motor Insurance</option>
-                          <option value="Travel Insurance">Travel Insurance</option>
-                          <option value="Home Insurance">Home Insurance</option>
-                          <option value="Personal Accident Insurance">Personal Accident Insurance</option>
-                          <option value="Critical Illness Insurance">Critical Illness Insurance</option>
-                          <option value="Term Life Insurance">Term Life Insurance</option>
+                        <optgroup label="Retail Protection Solutions">
+                          <option value="Health & Medical Protection">Health & Medical Protection</option>
+                          <option value="Motor & Fleet Risk Protection">Motor & Fleet Risk Protection</option>
+                          <option value="Travel & International Protection">Travel & International Protection</option>
+                          <option value="Home & Property Protection">Home & Property Protection</option>
+                          <option value="Personal Accident Protection">Personal Accident Protection</option>
+                          <option value="Critical Illness Protection">Critical Illness Protection</option>
+                          <option value="Term Life & Wealth Protection">Term Life & Wealth Protection</option>
                         </optgroup>
                         <optgroup label="General Support">
                           <option value="Claims Support">Claims Advocacy & Support</option>
-                          <option value="Policy Audit & Renewal">Policy Audit & Renewal Review</option>
+                          <option value="Policy Audit & Renewal">Risk Audit & Renewal Review</option>
                           <option value="General Consultation">General Risk Consultation</option>
                         </optgroup>
                       </select>
@@ -434,9 +498,22 @@ function ContactInner() {
                     >
                       Send message <Send className="h-3.5 w-3.5 text-[#f3d47c] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </button>
-                    <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500">
-                      <ShieldCheck className="h-3.5 w-3.5 text-[#a47a13]" /> 75+ Years Legacy of Trust · No spam
-                    </p>
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs font-semibold text-slate-500">
+                      <p className="inline-flex items-center gap-1.5">
+                        <ShieldCheck className="h-3.5 w-3.5 text-[#a47a13]" /> 75+ Years Legacy of Trust · No spam
+                      </p>
+                      <span className="hidden sm:inline text-slate-300">•</span>
+                      <p className="text-[11px] text-slate-500">
+                        By submitting, you agree to our{" "}
+                        <Link href="/privacy" className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
+                          Privacy Policy
+                        </Link>{" "}
+                        &amp;{" "}
+                        <Link href="/terms" className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
+                          Terms &amp; Conditions
+                        </Link>.
+                      </p>
+                    </div>
                   </div>
                 </form>
 

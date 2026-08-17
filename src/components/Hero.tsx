@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight, ShieldCheck, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -95,22 +96,22 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 pt-2 w-full sm:w-auto"
           >
             {/* Primary Button */}
-            <a
+            <Link
               href="/contact"
-              className="group flex items-center justify-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 uppercase border border-slate-900"
+              className="group flex items-center justify-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 uppercase border border-slate-900 cursor-pointer"
             >
               <span>GET A FREE CONSULTATION</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#F5D77F] group-hover:translate-x-1.5 transition-transform" />
-            </a>
+            </Link>
 
             {/* Secondary Button */}
-            <a
+            <Link
               href="/services"
-              className="group flex items-center justify-center gap-3 bg-white/90 hover:bg-amber-50/70 text-[#966C0F] hover:text-[#7A5606] font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg border-2 border-[#D4AF37] hover:border-[#F5D77F] shadow-2xs transition-all duration-200 uppercase"
+              className="group flex items-center justify-center gap-3 bg-white/90 hover:bg-amber-50/70 text-[#966C0F] hover:text-[#7A5606] font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg border-2 border-[#D4AF37] hover:border-[#F5D77F] shadow-2xs transition-all duration-200 uppercase cursor-pointer"
             >
               <span>EXPLORE OUR SOLUTIONS</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-[#966C0F] group-hover:translate-x-1.5 transition-transform" />
-            </a>
+            </Link>
           </motion.div>
 
           {/* Trusted By / Inline Metrics Row */}

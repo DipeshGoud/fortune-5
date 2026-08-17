@@ -52,7 +52,7 @@ export default function Legacy75Section() {
 
             {/* Paragraph Description */}
             <p className="text-slate-300 text-base sm:text-lg lg:text-[19px] leading-relaxed font-sans font-normal max-w-xl lg:max-w-2xl">
-              For generations, Fortune 5 has been a trusted name in insurance and risk management, delivering protection with integrity and care. Join thousands of satisfied clients who have experienced our commitment to excellence.
+              For generations, Fortune 5 has been a trusted name in risk management and advisory, delivering protection with integrity and care. Join thousands of satisfied clients who have experienced our commitment to excellence.
             </p>
           </ScrollReveal>
 

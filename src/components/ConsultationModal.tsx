@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { X, Send, CheckCircle2, ShieldCheck } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -19,7 +20,7 @@ export default function ConsultationModal({
     name: "",
     email: "",
     phone: "",
-    service: defaultService || "Corporate Insurance",
+    service: defaultService || "Corporate Risk Solutions",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
@@ -54,7 +55,7 @@ export default function ConsultationModal({
           name: "",
           email: "",
           phone: "",
-          service: "Corporate Insurance",
+          service: "Corporate Risk Solutions",
           message: "",
         });
         onClose();
@@ -183,24 +184,24 @@ export default function ConsultationModal({
                       onChange={handleChange}
                       className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] transition-all"
                     >
-                      <optgroup label="Corporate Insurance Solutions">
-                        <option value="Corporate Insurance">Corporate Insurance (General)</option>
-                        <option value="Fire Insurance">Fire Insurance</option>
-                        <option value="Marine Insurance">Marine Insurance</option>
-                        <option value="Engineering Insurance">Engineering Insurance</option>
-                        <option value="Liability Insurance">Liability Insurance</option>
-                        <option value="Package Insurance">Package Insurance</option>
+                      <optgroup label="Corporate Risk Solutions">
+                        <option value="Corporate Risk Solutions">Corporate Risk Solutions (General)</option>
+                        <option value="Fire Risk Solutions">Fire Risk Solutions</option>
+                        <option value="Marine & Transit Risk Solutions">Marine & Transit Risk Solutions</option>
+                        <option value="Engineering & Project Risk Solutions">Engineering & Project Risk Solutions</option>
+                        <option value="Corporate Liability & Governance Risk">Corporate Liability & Governance Risk</option>
+                        <option value="Commercial Package Risk Solutions">Commercial Package Risk Solutions</option>
                         <option value="Employee Benefits">Employee Benefits (GMC/GPA/GTL)</option>
-                        <option value="Industries Insurance">Industries Insurance</option>
+                        <option value="Industrial Sector Risk Solutions">Industrial Sector Risk Solutions</option>
                       </optgroup>
-                      <optgroup label="Retail Insurance Solutions">
-                        <option value="Health Insurance">Health Insurance</option>
-                        <option value="Motor Insurance">Motor Insurance</option>
-                        <option value="Travel Insurance">Travel Insurance</option>
-                        <option value="Home Insurance">Home Insurance</option>
-                        <option value="Personal Accident">Personal Accident Insurance</option>
-                        <option value="Critical Illness">Critical Illness Insurance</option>
-                        <option value="Term Life Insurance">Term Life Insurance</option>
+                      <optgroup label="Retail Protection Solutions">
+                        <option value="Health & Medical Protection">Health & Medical Protection</option>
+                        <option value="Motor & Fleet Risk Protection">Motor & Fleet Risk Protection</option>
+                        <option value="Travel & International Protection">Travel & International Protection</option>
+                        <option value="Home & Property Protection">Home & Property Protection</option>
+                        <option value="Personal Accident Protection">Personal Accident Protection</option>
+                        <option value="Critical Illness Protection">Critical Illness Protection</option>
+                        <option value="Term Life & Wealth Protection">Term Life & Wealth Protection</option>
                       </optgroup>
                       <option value="General Risk Advisory">General Risk Audit & Advisory</option>
                     </select>
@@ -229,6 +230,17 @@ export default function ConsultationModal({
                     <span>SUBMIT REQUEST</span>
                     <Send className="w-4 h-4 text-[#C59B27]" />
                   </button>
+
+                  <p className="text-[10px] text-center text-slate-500 font-medium pt-1">
+                    By submitting, you agree to our{" "}
+                    <Link href="/privacy" onClick={onClose} className="text-[#01327a] underline hover:text-[#C59B27] transition-colors">
+                      Privacy Policy
+                    </Link>{" "}
+                    &amp;{" "}
+                    <Link href="/terms" onClick={onClose} className="text-[#01327a] underline hover:text-[#C59B27] transition-colors">
+                      Terms &amp; Conditions
+                    </Link>.
+                  </p>
                 </form>
               )}
             </div>
