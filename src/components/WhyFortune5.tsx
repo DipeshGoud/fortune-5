@@ -65,15 +65,19 @@ export default function WhyFortune5() {
         {/* Section Header */}
         <ScrollReveal variant="fadeUp" duration={0.7} className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#011331] tracking-wider uppercase">
-            WHY FORTUNE 5?
+            WHY FORTUNE 5
           </h2>
           
           {/* Gold Shield Line Ornament */}
-          <div className="flex items-center gap-3 mt-3">
+          <div className="flex items-center gap-3 mt-3 mb-2.5">
             <span className="h-[1.5px] w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#C59B27] to-transparent inline-block" />
             <div className="w-2.5 h-2.5 rounded-full bg-[#C59B27] border-2 border-white shadow-xs" />
             <span className="h-[1.5px] w-12 sm:w-20 bg-gradient-to-r from-transparent via-[#C59B27] to-transparent inline-block" />
           </div>
+
+          <p className="text-xs sm:text-sm font-extrabold text-[#011331] tracking-[0.2em] uppercase font-sans">
+            BUILDING TRUST. PROTECTING FUTURES.
+          </p>
         </ScrollReveal>
 
         {/* 8 Feature Cards Grid with Stagger Animation */}

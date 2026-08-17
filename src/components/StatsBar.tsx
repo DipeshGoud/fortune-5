@@ -13,23 +13,23 @@ export default function StatsBar() {
     },
     {
       icon: Award,
-      value: "₹100 Cr+",
+      value: "₹100+ Cr",
       label: "Claims Assisted",
     },
     {
       icon: Users,
-      value: "50,000+",
-      label: "Lives Insured",
+      value: "10,000+",
+      label: "Lives Protected",
     },
     {
       icon: Briefcase,
-      value: "150+",
+      value: "500+",
       label: "Business Portfolios",
     },
     {
       icon: UserCheck,
       value: "3rd Generation",
-      label: "Insurance Experts",
+      label: "Insurance Consultants",
       isHeadline: true,
     },
   ];

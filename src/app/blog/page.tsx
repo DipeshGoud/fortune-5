@@ -15,10 +15,10 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "75+", label: "Years of advisory" },
+  { value: "75+", label: "Years of legacy" },
   { value: "500+", label: "Businesses protected" },
-  { value: "50K+", label: "Lives insured" },
-  { value: "100+", label: "Lives touched monthly" },
+  { value: "10,000+", label: "Lives protected" },
+  { value: "₹100+ Cr", label: "Claims assisted" },
 ];
 
 export default async function BlogPage({ searchParams }: { searchParams: Promise<{ q?: string | string[] }> }) {

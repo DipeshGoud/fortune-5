@@ -52,7 +52,149 @@ export interface ServiceItem {
 }
 
 const servicesData: ServiceItem[] = [
-  // --- RETAIL SOLUTIONS ---
+  // --- CORPORATE INSURANCE SOLUTIONS ---
+  {
+    id: "fire-insurance",
+    title: "Fire Insurance",
+    category: "CORPORATE",
+    icon: Flame,
+    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Industrial All Risk (IAR) and standard fire protection safeguarding plant, machinery, stock, and commercial assets.",
+    fullDesc:
+      "Fortune 5 structures comprehensive fire insurance policies tailored for manufacturing plants, industrial premises, warehouses, and corporate facilities. We protect your physical assets against accidental fire, lightning, explosion, storm, flood, and earthquake damage with tailored business interruption add-ons.",
+    highlights: ["Industrial All Risk (IAR)", "Stock & Raw Material Valuation", "Business Interruption (FLOP)"],
+    coverage: [
+      "Fire, Lightning, Explosion & Implosion",
+      "Storm, Cyclone, Tempest & Inundation (STFI)",
+      "Earthquake, Landslide & Natural Perils",
+      "Architect, Surveyor & Consulting Engineer Fees",
+      "Debris Removal & Clean-up Expenses",
+    ],
+    whoNeedsIt: "Manufacturing factories, industrial units, commercial warehouses, storage yards, and corporate complexes.",
+    claimHighlight: "Immediate surveyor deputation and technical loss documentation within 24 hours.",
+  },
+  {
+    id: "marine-insurance",
+    title: "Marine Insurance",
+    category: "CORPORATE",
+    icon: Ship,
+    img: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Comprehensive inland transit, import-export cargo, and marine freight insurance against loss or damage.",
+    fullDesc:
+      "Protect your raw materials, finished goods, and machinery during transit via sea, air, rail, or road. We design Marine Open Policies and customized sales turnover policies (STOP) with global cover and seamless claims advocacy.",
+    highlights: ["All Risks Open Cargo Policy", "Import / Export Transit Cover", "Inland Road & Rail Logistics"],
+    coverage: [
+      "Institute Cargo Clauses ICC (A) All Risks",
+      "Loading, Unloading & Transshipment Risks",
+      "Jettison, Washing Overboard & Piracy",
+      "Collision, Overturning, Derailment & Sinking",
+      "Customs Duty & Intermediate Storage Cover",
+    ],
+    whoNeedsIt: "Exporters, importers, manufacturing firms, logistics operators, and global commodity traders.",
+    claimHighlight: "Global surveyor network and swift general average assistance across international ports.",
+  },
+  {
+    id: "engineering-insurance",
+    title: "Engineering Insurance",
+    category: "CORPORATE",
+    icon: HardHat,
+    img: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Contractor All Risk (CAR), Erection All Risk (EAR), and Contractor Plant & Machinery (CPM) protection.",
+    fullDesc:
+      "Specialized risk management for construction sites, civil engineering developments, and erection of plant machinery. Safeguards developers, EPC contractors, and machinery owners against physical loss, structural damage, and third-party liabilities during execution.",
+    highlights: ["Contractor All Risk (CAR)", "Erection All Risk (EAR)", "Machinery Breakdown (MBD)"],
+    coverage: [
+      "Civil Construction Works & Material Losses",
+      "Testing, Commissioning & Maintenance Visits",
+      "Contractor Plant & Heavy Equipment Breakdown",
+      "Third-Party Bodily Injury & Property Damage",
+      "Surrounding Property Damage Protection",
+    ],
+    whoNeedsIt: "Infrastructure developers, civil contractors, EPC builders, and engineering project owners.",
+    claimHighlight: "On-site engineering inspection and milestone-based claim settlement workflows.",
+  },
+  {
+    id: "liability-insurance",
+    title: "Liability Insurance",
+    category: "CORPORATE",
+    icon: Scale,
+    img: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Directors & Officers (D&O), Professional Indemnity, Cyber Risk, Commercial General Liability (CGL).",
+    fullDesc:
+      "Protect your enterprise, leadership board, and executive officers against costly legal defense fees and third-party financial liability claims arising from operational errors, regulatory disputes, product failures, or cyber breaches.",
+    highlights: ["Directors & Officers (D&O)", "Professional Indemnity (PI)", "Commercial General Liability (CGL)"],
+    coverage: [
+      "Directors & Officers Personal Liability & Defense Costs",
+      "Professional Errors & Omissions Indemnity",
+      "Public Liability & Commercial General Liability",
+      "Product Liability for Domestic & Export Markets",
+      "Cyber Crime, Data Breach & Ransomware Response",
+    ],
+    whoNeedsIt: "Corporate boards, IT companies, financial services, healthcare institutions, and exporters.",
+    claimHighlight: "Legal advocacy, panel attorney defense support, and swift settlement negotiations.",
+  },
+  {
+    id: "package-insurance",
+    title: "Package Insurance",
+    category: "CORPORATE",
+    icon: Building,
+    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Consolidated Office Package and Commercial Establishment policies covering property, assets, cash & liability.",
+    fullDesc:
+      "A comprehensive multi-peril umbrella policy combining fire, electronic equipment breakdown, money in transit, plate glass, burglary, and visitor public liability into a single streamlined annual insurance contract.",
+    highlights: ["Single Master Contract", "Electronic Equipment Protection", "Money & Transit Protection"],
+    coverage: [
+      "Office Building, Interior Works & Furniture Fire Cover",
+      "Computers, Servers & Electronic Breakdown",
+      "Money in Safe & Cash in Transit",
+      "Third-Party Public Liability for Office Visitors",
+      "Plate Glass, Signboard & Fixed Fixture Damage",
+    ],
+    whoNeedsIt: "Corporate headquarters, IT offices, financial consultancies, retail showrooms, and shared co-working spaces.",
+    claimHighlight: "Single-window claim management across all multi-peril loss occurrences.",
+  },
+  {
+    id: "employee-benefits",
+    title: "Employee Benefits (GMC/GPA/GTL)",
+    category: "CORPORATE",
+    icon: Users,
+    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Group Health Insurance (GMC), Group Personal Accident (GPA), and Group Term Life (GTL) for your workforce.",
+    fullDesc:
+      "Attract and retain talent with tailored employee health and wellness programs. Fortune 5 structures custom group mediclaim policies featuring corporate buffer pools, cashless hospitalization networks, maternity benefits, and workmen compensation compliance.",
+    highlights: ["Group Mediclaim (GMC)", "Group Personal Accident (GPA)", "Group Term Life (GTL)"],
+    coverage: [
+      "Group Mediclaim (GMC) for Employees, Spouses & Children",
+      "Group Personal Accident (GPA) 24/7 Worldwide Cover",
+      "Group Term Life (GTL) Pure Life Protection",
+      "Workmen's Compensation (WC) Act Compliance",
+      "Corporate Buffer Pool & Preventive Wellness",
+    ],
+    whoNeedsIt: "Corporates, IT firms, factories, startups, and institutions managing 10 to 10,000+ employees.",
+    claimHighlight: "Dedicated corporate claims desk and HR escalation support for cashless authorizations.",
+  },
+  {
+    id: "industries-insurance",
+    title: "Industries Insurance",
+    category: "CORPORATE",
+    icon: Factory,
+    img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Bespoke risk management solutions for chemicals, engineering, pharmaceuticals, logistics, and textiles.",
+    fullDesc:
+      "Industry-specific insurance programs designed for complex industrial verticals. We conduct detailed hazard identification, boiler explosion audits, supply chain vulnerability mapping, and environmental impairment risk reviews.",
+    highlights: ["Tailored for Core Industrial Sectors", "Machinery Breakdown & BI", "Hazardous Goods Risk Mapping"],
+    coverage: [
+      "Chemical, Petrochemical & Pharma Plant Coverage",
+      "Boiler & Pressure Vessel Explosion",
+      "Machinery Breakdown & Consequential Loss of Profits",
+      "Environmental Impairment & Pollution Clean-up",
+      "Industrial Bulk Storage & Tank Farm Protection",
+    ],
+    whoNeedsIt: "Chemical processors, pharmaceutical manufacturers, textile mills, metal fabricators, and heavy industry plants.",
+    claimHighlight: "Expert industrial surveyor coordination and salvage optimization for fast recovery.",
+  },
+
+  // --- RETAIL INSURANCE SOLUTIONS (PERSONAL LINES) ---
   {
     id: "health-insurance",
     title: "Health Insurance",
@@ -61,37 +203,37 @@ const servicesData: ServiceItem[] = [
     img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
     shortDesc: "Comprehensive medical protection for individuals, families, and senior citizens with cashless hospital networks.",
     fullDesc:
-      "Our Health Insurance advisory covers family floaters, critical illness covers, top-up plans, and senior citizen health insurance. We analyze your medical history, hospital network preferences, and sub-limits to select the most dependable policy.",
-    highlights: ["10,000+ Cashless Hospitals", "No Claim Bonus Protection", "Zero Sub-limit Options"],
+      "Our Health Insurance advisory covers comprehensive family floaters, top-up plans, and senior citizen covers. We analyze waiting periods, hospital network availability, room rent capping, and restoration benefits to recommend the optimal plan.",
+    highlights: ["10,000+ Cashless Hospitals", "Zero Room Rent Sub-limits", "Restoration of Sum Insured"],
     coverage: [
-      "In-patient Hospitalization Expenses",
-      "Pre & Post Hospitalization (Up to 180 days)",
-      "Day Care Treatments & Surgeries",
-      "AYUSH & Alternative Treatments",
-      "Critical Illness Lump Sum Payouts",
+      "In-patient Hospitalization & ICU Room Charges",
+      "Pre-Hospitalization (60 Days) & Post-Hospitalization (180 Days)",
+      "Day Care Procedures & Modern Robotic Surgeries",
+      "AYUSH & Alternative Medical Treatments",
+      "Organ Donor Expenses & Ambulance Charges",
     ],
-    whoNeedsIt: "Individuals, salaried professionals, families, and self-employed individuals looking for reliable healthcare backup.",
-    claimHighlight: "Dedicated 24/7 cashless authorization support and claim filing assistance.",
+    whoNeedsIt: "Individuals, salaried professionals, families, and self-employed individuals looking for dependable healthcare security.",
+    claimHighlight: "24/7 cashless hospitalization authorization assistance and claims advocacy.",
   },
   {
-    id: "vehicle-insurance",
-    title: "Vehicle Insurance",
+    id: "motor-insurance",
+    title: "Motor Insurance",
     category: "RETAIL",
     icon: Car,
     img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Complete motor protection for private cars, two-wheelers, and commercial vehicles with instant claim support.",
+    shortDesc: "Comprehensive vehicle protection for private cars, two-wheelers, and commercial fleets with instant claim settlement.",
     fullDesc:
-      "Protect your automobile against road accidents, theft, third-party liabilities, natural calamities, and fire. We offer zero-depreciation add-ons, engine protection, and roadside assistance terms.",
-    highlights: ["Zero Depreciation Cover", "24/7 Roadside Assistance", "Hassle-Free Garage Settlement"],
+      "Protect your automobile against road accidents, theft, third-party liability, fire, and flood damage. We structure policies with zero-depreciation add-ons, engine and gearbox protection, return to invoice, and 24/7 roadside assistance.",
+    highlights: ["Zero Depreciation Add-on", "24/7 Roadside Assistance", "Engine & Gearbox Protection"],
     coverage: [
-      "Own Damage (OD) Cover",
-      "Mandatory Third-Party Liability",
-      "Engine & Gearbox Protection Add-on",
-      "Personal Accident Cover for Driver",
-      "Key Replacement & Consumables Cover",
+      "Own Damage (OD) Protection Against Accidents & Calamities",
+      "Mandatory Third-Party Property & Bodily Injury Liability",
+      "Personal Accident Cover for Owner-Driver",
+      "Consumables Cover & Key Replacement",
+      "Return to Invoice (RTI) Protection",
     ],
-    whoNeedsIt: "Vehicle owners seeking seamless claim settlement without out-of-pocket depreciation losses.",
-    claimHighlight: "Direct cashless settlement at authorized network brand service stations.",
+    whoNeedsIt: "Car owners, two-wheeler riders, and commercial vehicle fleet managers seeking cashless garage repairs.",
+    claimHighlight: "Instant digital survey coordination and direct cashless network garage settlement.",
   },
   {
     id: "travel-insurance",
@@ -99,261 +241,99 @@ const servicesData: ServiceItem[] = [
     category: "RETAIL",
     icon: Plane,
     img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Worry-free domestic and international trip insurance covering medical emergencies, delays, and lost baggage.",
+    shortDesc: "Worry-free international and domestic travel protection covering overseas medical bills, lost baggage, and flight delays.",
     fullDesc:
-      "Travel with absolute peace of mind. Our travel insurance plans safeguard business travelers, vacationers, and students abroad against unexpected foreign medical bills, passport loss, and flight cancellations.",
-    highlights: ["Schengen Approved Policies", "Student Overseas Medical Cover", "Trip Delay Reimbursement"],
+      "Travel with absolute peace of mind. Our travel insurance plans safeguard business executives, vacationing families, and students abroad against expensive foreign medical emergencies, passport loss, trip cancellations, and baggage delays.",
+    highlights: ["Schengen & Worldwide Approved", "Student Overseas Medical Cover", "Trip Delay & Cancellation Cover"],
     coverage: [
-      "Overseas Medical Emergency & Hospitalization",
-      "Loss of Checked-in Baggage & Passport",
-      "Trip Cancellation & Flight Delays",
-      "Emergency Medical Evacuation",
+      "Overseas Emergency Medical Treatment & Hospitalization",
+      "Loss of Checked Baggage & Passport Reimbursement",
+      "Trip Cancellation, Curtailment & Missed Connection",
+      "Emergency Medical Evacuation & Repatriation",
       "Personal Liability Abroad",
     ],
-    whoNeedsIt: "International travelers, holidaying families, corporate executives, and overseas students.",
-    claimHighlight: "Global cashless medical assistance through international TPA partners.",
+    whoNeedsIt: "International business travelers, holidaying families, corporate executives, and overseas students.",
+    claimHighlight: "Global cashless medical assistance through international emergency TPA partners.",
   },
   {
-    id: "personal-accident",
-    title: "Personal Accident",
-    category: "RETAIL",
-    icon: ShieldAlert,
-    img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Financial shield against accidental death, permanent disablement, and temporary income loss.",
-    fullDesc:
-      "Life is unpredictable. Personal Accident Insurance provides worldwide 24x7 financial protection to ensure your family maintains financial stability in the event of severe injuries or loss of income due to accidents.",
-    highlights: ["Worldwide 24/7 Coverage", "Weekly Income Benefit", "Education Grant for Children"],
-    coverage: [
-      "Accidental Death Benefit (100% Sum Insured)",
-      "Permanent Total Disablement (PTD)",
-      "Permanent Partial Disablement (PPD)",
-      "Temporary Total Disablement Weekly Allowance",
-      "Medical Expenses & Transportation Costs",
-    ],
-    whoNeedsIt: "Earning individuals, frequent commuters, sports enthusiasts, and family breadwinners.",
-    claimHighlight: "Fast-track claim settlement for disability and income loss claims.",
-  },
-  {
-    id: "householder-insurance",
-    title: "Householder Insurance",
+    id: "home-insurance",
+    title: "Home Insurance",
     category: "RETAIL",
     icon: Home,
     img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "All-in-one protection for home structure, contents, valuables, electronics, and burglary losses.",
+    shortDesc: "All-in-one protection for home building structure, interior contents, valuables, and burglary risks.",
     fullDesc:
-      "Your home is your largest personal asset. Householder Insurance guards your building structure, furniture, electronic appliances, jewelry, and personal belongings against fire, floods, theft, and accidental damage.",
-    highlights: ["Structure & Content Protection", "Jewelry & Valuables Cover", "Alternate Accommodation Expense"],
+      "Your home is your most valuable personal asset. Home Insurance guards your building structure, furniture, electronic appliances, jewelry, and precious belongings against fire, earthquake, floods, storm, theft, and accidental breakdown.",
+    highlights: ["Structure & Content Cover", "Jewelry & Valuables Protection", "Alternate Accommodation Allowance"],
     coverage: [
-      "Fire, Flood, Earthquake & Storm Damage",
+      "Fire, Flood, Earthquake, Storm & Inundation Damage",
       "Burglary, Housebreaking & Robbery",
-      "Breakdown of Home Appliances & TVs",
-      "Loss/Damage to Gold & Precious Items",
-      "Public Liability for Domestic Accidents",
+      "Breakdown of Home Electronics, TVs & Air Conditioners",
+      "Loss/Damage to Gold, Jewelry & Curios",
+      "Public Liability for Domestic Accidents on Premises",
     ],
-    whoNeedsIt: "Homeowners, apartment owners, and tenants wanting to protect valuable household assets.",
-    claimHighlight: "Surveyor coordination and rapid loss estimation for home damages.",
+    whoNeedsIt: "Homeowners, apartment owners, landlords, and tenants wanting complete asset security.",
+    claimHighlight: "Independent surveyor coordination and rapid loss estimation for structural and content damage.",
   },
   {
-    id: "life-insurance",
-    title: "Life Insurance",
+    id: "personal-accident-insurance",
+    title: "Personal Accident Insurance",
+    category: "RETAIL",
+    icon: ShieldAlert,
+    img: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "24/7 worldwide financial shield against accidental death, permanent disablement, and temporary loss of income.",
+    fullDesc:
+      "Accidents can strike without warning. Personal Accident Insurance provides guaranteed worldwide 24/7 financial support, ensuring your family maintains economic stability in the event of severe injuries, physical disablement, or loss of earning capacity.",
+    highlights: ["Worldwide 24/7 Coverage", "Weekly Income Benefit", "Education Grant for Dependent Children"],
+    coverage: [
+      "Accidental Death Benefit (100% Sum Insured)",
+      "Permanent Total Disablement (PTD - Up to 150% Sum Insured)",
+      "Permanent Partial Disablement (PPD)",
+      "Temporary Total Disablement (Weekly Income Allowance)",
+      "Emergency Accidental Medical Expenses & Transportation",
+    ],
+    whoNeedsIt: "Earning professionals, business owners, frequent commuters, and family breadwinners.",
+    claimHighlight: "Fast-track documentation and claim settlement for disability and income loss benefits.",
+  },
+  {
+    id: "critical-illness-insurance",
+    title: "Critical Illness Insurance",
+    category: "RETAIL",
+    icon: ShieldCheck,
+    img: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop&q=80",
+    shortDesc: "Direct lump sum cash payout upon first diagnosis of major life-threatening illnesses like cancer, stroke, or heart attack.",
+    fullDesc:
+      "A critical illness diagnosis brings substantial out-of-pocket medical costs, lifestyle adaptations, and loss of income. Unlike basic health insurance, Critical Illness Insurance pays a 100% lump sum amount upon first diagnosis of specified major medical conditions.",
+    highlights: ["Lump Sum Cash Payout", "30+ Critical Illnesses Covered", "Zero Restriction on Fund Usage"],
+    coverage: [
+      "Cancer of Specified Severity",
+      "First Heart Attack of Specified Severity",
+      "Open Chest CABG & Heart Valve Replacement",
+      "Stroke Resulting in Permanent Symptoms",
+      "Kidney Failure Requiring Regular Dialysis",
+    ],
+    whoNeedsIt: "Individuals with family medical histories, corporate executives, self-employed professionals, and breadwinners.",
+    claimHighlight: "Hassle-free single diagnostic report claim verification with direct bank payout.",
+  },
+  {
+    id: "term-life-insurance",
+    title: "Term Life Insurance",
     category: "RETAIL",
     icon: ShieldCheck,
     img: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Term life, keyman cover, and retirement wealth security tailored to secure your family's future.",
+    shortDesc: "High-cover pure risk term life protection, keyman cover, and estate planning to secure your family's future.",
     fullDesc:
-      "Build a strong financial foundation for your loved ones. We guide you through pure term insurance plans, critical illness riders, and estate planning covers with zero bias and maximum tax benefits.",
-    highlights: ["High Sum Assured Pure Term", "Section 80C & 10(10D) Tax Savings", "Critical Illness Riders"],
+      "Ensure your family's financial independence and lifestyle security against life's uncertainties. We guide you through pure term life policies, terminal illness riders, waiver of premium benefits, and business keyman insurance with complete objectivity.",
+    highlights: ["High Sum Assured Pure Risk Cover", "Terminal Illness Acceleration Rider", "Tax Savings Under Sec 80C & 10(10D)"],
     coverage: [
-      "Pure Risk Term Insurance Cover",
-      "Accelerated Terminal Illness Benefit",
-      "Accidental Death & Disability Rider",
-      "Waiver of Premium Benefit",
-      "Legacy & Wealth Transfer Cover",
+      "Guaranteed Life Cover Payout to Beneficiaries",
+      "Accelerated Terminal Illness Lump Sum Benefit",
+      "Accidental Death & Permanent Disability Riders",
+      "Waiver of Future Premiums on Critical Disability",
+      "Keyman & Business Partnership Protection",
     ],
-    whoNeedsIt: "Family breadwinners, young parents, business partners, and individuals planning long-term security.",
-    claimHighlight: "100% dedicated claim assistance for beneficiaries during emotional times.",
-  },
-
-  // --- CORPORATE SOLUTIONS ---
-  {
-    id: "fire-burglary",
-    title: "Fire & Burglary Insurance",
-    category: "CORPORATE",
-    icon: Flame,
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Industrial All Risk (IAR) and property protection against fire, natural disasters, and theft.",
-    fullDesc:
-      "Safeguard your factory, warehouse, office building, stock, and machinery. Fire & Burglary policies cover physical damage caused by accidental fires, explosions, lightning, floods, riots, and forcible entry theft.",
-    highlights: ["Industrial All Risk (IAR)", "Stock & Inventory Valuation", "Business Interruption Add-on"],
-    coverage: [
-      "Fire, Explosion & Implosion",
-      "Storm, Cyclone, Tempest & Flood (STFI)",
-      "Earthquake & Landslide Damage",
-      "Burglary, Theft & Violent Entry",
-      "Architect & Surveyor Professional Fees",
-    ],
-    whoNeedsIt: "Manufacturing units, warehouses, retail chains, office complexes, and industrial plants.",
-    claimHighlight: "Immediate surveyor deputation within 24 hours of incident reporting.",
-  },
-  {
-    id: "employee-benefit",
-    title: "Employee Benefit Policy",
-    category: "CORPORATE",
-    icon: Users,
-    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Group Health Insurance (GHI), Group Personal Accident (GPA), and Workmen Compensation for your workforce.",
-    fullDesc:
-      "Attract and retain top talent with competitive employee health & wellness benefits. Fortune 5 designs custom group mediclaim structures with corporate buffer, cashless hospitalization, and maternity benefits.",
-    highlights: ["Cashless Corporate Cards", "Corporate Buffer Pools", "Maternity & Newborn Cover"],
-    coverage: [
-      "Group Mediclaim (GHI) for Employees & Families",
-      "Group Personal Accident (GPA) Cover",
-      "Workmen’s Compensation (WC) Act Compliance",
-      "Group Term Life (GTL) Coverage",
-      "Wellness Programs & Teleconsultations",
-    ],
-    whoNeedsIt: "Corporates, IT companies, factories, startups, and institutions managing 10 to 10,000+ employees.",
-    claimHighlight: "Dedicated corporate claims manager and HR dashboard for real-time tracking.",
-  },
-  {
-    id: "transit-marine",
-    title: "Transit & Marine Insurance",
-    category: "CORPORATE",
-    icon: Ship,
-    img: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Inland transit, import-export cargo, and marine hull insurance against loss, damage, or piracy.",
-    fullDesc:
-      "Protect goods in transit across sea, air, rail, or road. Marine Cargo Insurance shields your raw materials, finished products, and machinery against physical loss, accident, or damage during transport.",
-    highlights: ["All Risks Open Policy", "Export-Import Cargo Cover", "Inland Transit (Road/Rail)"],
-    coverage: [
-      "ICC (A) All Risks Coverage",
-      "Loading & Unloading Damages",
-      "Jettison, Washing Overboard & Piracy",
-      "Collision, Overturning & Derailment",
-      "Intermediate Storage & Warehouse Transit",
-    ],
-    whoNeedsIt: "Importers, exporters, logistics companies, manufacturers, and trading firms.",
-    claimHighlight: "Global surveyor network for international port & transit claim settlements.",
-  },
-  {
-    id: "office-package",
-    title: "Office Package Policy",
-    category: "CORPORATE",
-    icon: Building,
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "All-in-one comprehensive protection for office premises, electronic equipment, and money in transit.",
-    fullDesc:
-      "A single comprehensive policy designed specifically for corporate offices, IT parks, and professional services. It combines property fire, electronic breakdown, money insurance, and public liability into one policy.",
-    highlights: ["Single Policy Convenience", "Electronic Appliance Cover", "Money in Transit Cover"],
-    coverage: [
-      "Office Building & Furniture Fire Cover",
-      "Computers, Servers & Electronic Breakdown",
-      "Money in Safe & Money in Transit",
-      "Public Liability for Visitors",
-      "Fixed Glass & Signboard Damage",
-    ],
-    whoNeedsIt: "Corporate offices, IT firms, consultancies, financial institutions, and co-working spaces.",
-    claimHighlight: "Simplified single-window claim processing across all loss categories.",
-  },
-  {
-    id: "shopkeeper-insurance",
-    title: "Shopkeeper All Risk",
-    category: "CORPORATE",
-    icon: Store,
-    img: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Bespoke policy for retail store owners protecting inventory, counters, signboards, and cash sales.",
-    fullDesc:
-      "Tailored for small and large retail shopkeepers, showrooms, and outlets. Protect your stock-in-trade, cash counters, neon signs, and customer liabilities against unexpected disruptions.",
-    highlights: ["Stock-in-Trade Protection", "Neon Sign & Plate Glass Cover", "Cash Counter Theft Cover"],
-    coverage: [
-      "Fire & Allied Perils for Stocks & Shop",
-      "Burglary & Housebreaking of Inventory",
-      "Cash in Counter & Cash Transit",
-      "Plate Glass & Neon Signboards",
-      "Baggage & Customer Accidental Injury",
-    ],
-    whoNeedsIt: "Retail showroom owners, grocery stores, apparel outlets, pharmacies, and commercial shops.",
-    claimHighlight: "Fast survey and quick claim payout to ensure minimal retail business downtime.",
-  },
-  {
-    id: "sme-insurance",
-    title: "SME Insurance Package",
-    category: "CORPORATE",
-    icon: Factory,
-    img: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Customized risk management packages for Small & Medium Enterprises to protect machinery & continuity.",
-    fullDesc:
-      "Designed specifically for growing SMEs. We bundle property insurance, machinery breakdown, business interruption, and liability covers into a cost-optimized insurance portfolio.",
-    highlights: ["Customized for Growing SMEs", "Machinery Breakdown Protection", "Consequential Loss Cover"],
-    coverage: [
-      "Property & Factory Premises Insurance",
-      "Machinery Breakdown & Loss of Profits",
-      "Product Liability for Manufactured Goods",
-      "Fire & Explosion Perils",
-      "Key Personnel & Director Protection",
-    ],
-    whoNeedsIt: "MSMEs, manufacturing startups, engineering workshops, and ancillary industries.",
-    claimHighlight: "Expert advice on salvage, loss minimization, and swift claim recovery.",
-  },
-  {
-    id: "contractor-all-risk",
-    title: "Contractor All Risk (CAR)",
-    category: "CORPORATE",
-    icon: HardHat,
-    img: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Comprehensive insurance for construction sites, civil engineering projects, and plant machinery.",
-    fullDesc:
-      "Covers civil engineering projects, building construction, bridge developments, and infrastructure works against physical damage, collapse, floods, and third-party liabilities during execution.",
-    highlights: ["Project Construction Cover", "Contractor Plant & Machinery (CPM)", "Third Party Liability"],
-    coverage: [
-      "Contract Works & Material Damages",
-      "Construction Plant & Equipment Breakdown",
-      "Third-Party Property Damage & Personal Injury",
-      "Surrounding Property Protection",
-      "Debris Removal Expenses",
-    ],
-    whoNeedsIt: "Infrastructure developers, civil contractors, builders, and project engineering firms.",
-    claimHighlight: "On-site technical survey and project milestone claim settlements.",
-  },
-  {
-    id: "liability-insurance",
-    title: "Liability Insurance",
-    category: "CORPORATE",
-    icon: Scale,
-    img: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Directors & Officers (D&O), Professional Indemnity, Public Liability, and Cyber Risk Insurance.",
-    fullDesc:
-      "Shield your company, board of directors, and key executives from costly legal defense fees and third-party financial claims resulting from operational errors, regulatory actions, or cyber breaches.",
-    highlights: ["Directors & Officers (D&O)", "Professional Indemnity (PI)", "Cyber Security Risk Cover"],
-    coverage: [
-      "Directors & Officers Liability (D&O)",
-      "Professional Indemnity / Errors & Omissions",
-      "Public Liability & Product Liability",
-      "Cyber Crime & Data Breach Response",
-      "Legal Defense Costs & Settlement Sums",
-    ],
-    whoNeedsIt: "Corporate boards, IT companies, financial services, medical institutions, and exporters.",
-    claimHighlight: "Legal advocacy and panel attorney defense support for high-stakes claims.",
-  },
-  {
-    id: "miscellaneous-insurance",
-    title: "Miscellaneous Insurance",
-    category: "CORPORATE",
-    icon: Layers,
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
-    shortDesc: "Fidelity guarantee, plate glass, event cancellation, and specialized bespoke commercial covers.",
-    fullDesc:
-      "For unique operational risks that fall outside standard policies. We structure fidelity guarantee policies (employee fraud), event insurance, film production covers, and specialized financial guarantees.",
-    highlights: ["Employee Fidelity Guarantee", "Event & Concert Cancellation", "Plate Glass & Specialized Covers"],
-    coverage: [
-      "Fidelity Guarantee (Employee Dishonesty)",
-      "Event Cancellation & Public Liability",
-      "Plate Glass & Display Window Breakage",
-      "Money Insurance (Safe & Transit)",
-      "Customized Niche Risk Agreements",
-    ],
-    whoNeedsIt: "Event organizers, financial handlers, diamond merchants, film producers, and specialized businesses.",
-    claimHighlight: "Tailored claim documentation and specialized surveyor evaluation.",
+    whoNeedsIt: "Family breadwinners, young parents, business partners, and high-net-worth individuals.",
+    claimHighlight: "Compassionate, dedicated claim concierge assistance for nominees during critical times.",
   },
 ];
 
@@ -430,13 +410,13 @@ export default function ServicesPage() {
               <span>75+ YEARS TRUSTED LEGACY</span>
             </div>
             <h1 className="font-cormorant text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#011331] uppercase tracking-tight leading-[1.05]">
-              WHY CHOOSE{" "}
+              OUR INSURANCE{" "}
               <span className="text-[#C59B27]">
-                OUR EXPERTISE
+                SOLUTIONS
               </span>
             </h1>
             <p className="text-slate-600 text-sm sm:text-base lg:text-lg font-medium leading-relaxed max-w-2xl mx-auto mt-4">
-              Three generations of unwavering commitment to protecting what matters most to you. Experience our legacy through our comprehensive insurance solutions.
+              Comprehensive protection for every need. Covering 7 Corporate Solutions and 7 Retail Lines with the integrity of a 75-year legacy.
             </p>
           </ScrollReveal>
 
@@ -453,28 +433,28 @@ export default function ServicesPage() {
 
             <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
               <span className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#011331] tracking-normal whitespace-nowrap">
-                ₹100 Cr+
+                ₹100+ Cr
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
-                CLAIMS SETTLED
-              </span>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
-              <span className="font-sans text-3xl sm:text-4xl font-bold text-emerald-600 tracking-normal">
-                98%
-              </span>
-              <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
-                CLAIM APPROVAL
+                CLAIMS ASSISTED
               </span>
             </div>
 
             <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
               <span className="font-sans text-3xl sm:text-4xl font-bold text-[#011331] tracking-normal">
-                10K+
+                10,000+
               </span>
               <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
-                HAPPY CLIENTS
+                LIVES PROTECTED
+              </span>
+            </div>
+
+            <div className="bg-white rounded-2xl p-6 text-center border border-slate-200/80 shadow-md hover:shadow-xl hover:border-[#C59B27] hover:-translate-y-0.5 transition-all flex flex-col justify-center items-center">
+              <span className="font-sans text-3xl sm:text-4xl font-bold text-[#011331] tracking-normal">
+                500+
+              </span>
+              <span className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-2">
+                BUSINESS PORTFOLIOS
               </span>
             </div>
           </ScrollReveal>
@@ -495,26 +475,32 @@ export default function ServicesPage() {
               className="flex items-center gap-4 sm:gap-6 w-max"
             >
               {[
-                { name: "LIC", tag: "LIFE INSURANCE", color: "text-blue-900" },
-                { name: "HDFC Life", tag: "SAR UTHA KE JIYO", color: "text-red-600" },
-                { name: "ICICI Lombard", tag: "NIBHAYE VAADE", color: "text-amber-800" },
-                { name: "Bajaj Allianz", tag: "CARINGLY YOURS", color: "text-blue-700" },
-                { name: "TATA AIG", tag: "INSURANCE SOLUTIONS", color: "text-sky-800" },
-                { name: "Future Generali", tag: "TOTAL INSURANCE", color: "text-red-700" },
-                { name: "Go Digit", tag: "DIGIT INSURANCE", color: "text-slate-800" },
-                { name: "Star Health", tag: "HEALTH INSURANCE", color: "text-emerald-700" },
-                { name: "Max Life", tag: "YOU ARE THE DIFFERENCE", color: "text-amber-700" },
+                { name: "Bajaj General", tag: "GENERAL INSURANCE", color: "text-blue-700" },
+                { name: "Generali Central", tag: "GLOBAL PARTNER", color: "text-red-700" },
+                { name: "ICICI Lombard", tag: "GENERAL INSURANCE", color: "text-amber-800" },
+                { name: "HDFC ERGO", tag: "GENERAL INSURANCE", color: "text-red-600" },
+                { name: "Digit Insurance", tag: "GENERAL INSURANCE", color: "text-slate-800" },
+                { name: "TATA AIG", tag: "GENERAL INSURANCE", color: "text-sky-800" },
+                { name: "Oriental Insurance", tag: "GOVT OF INDIA", color: "text-blue-900" },
                 { name: "New India Assurance", tag: "GOVT OF INDIA", color: "text-blue-800" },
-                { name: "LIC", tag: "LIFE INSURANCE", color: "text-blue-900" },
+                { name: "Bajaj Life", tag: "LIFE GOALS DONE", color: "text-blue-700" },
                 { name: "HDFC Life", tag: "SAR UTHA KE JIYO", color: "text-red-600" },
-                { name: "ICICI Lombard", tag: "NIBHAYE VAADE", color: "text-amber-800" },
-                { name: "Bajaj Allianz", tag: "CARINGLY YOURS", color: "text-blue-700" },
-                { name: "TATA AIG", tag: "INSURANCE SOLUTIONS", color: "text-sky-800" },
-                { name: "Future Generali", tag: "TOTAL INSURANCE", color: "text-red-700" },
-                { name: "Go Digit", tag: "DIGIT INSURANCE", color: "text-slate-800" },
-                { name: "Star Health", tag: "HEALTH INSURANCE", color: "text-emerald-700" },
-                { name: "Max Life", tag: "YOU ARE THE DIFFERENCE", color: "text-amber-700" },
+                { name: "TATA AIA", tag: "LIFE INSURANCE", color: "text-sky-800" },
+                { name: "ICICI Prudential", tag: "LIFE INSURANCE", color: "text-amber-800" },
+                { name: "LIC of India", tag: "LIFE INSURANCE", color: "text-blue-900" },
+                { name: "Bajaj General", tag: "GENERAL INSURANCE", color: "text-blue-700" },
+                { name: "Generali Central", tag: "GLOBAL PARTNER", color: "text-red-700" },
+                { name: "ICICI Lombard", tag: "GENERAL INSURANCE", color: "text-amber-800" },
+                { name: "HDFC ERGO", tag: "GENERAL INSURANCE", color: "text-red-600" },
+                { name: "Digit Insurance", tag: "GENERAL INSURANCE", color: "text-slate-800" },
+                { name: "TATA AIG", tag: "GENERAL INSURANCE", color: "text-sky-800" },
+                { name: "Oriental Insurance", tag: "GOVT OF INDIA", color: "text-blue-900" },
                 { name: "New India Assurance", tag: "GOVT OF INDIA", color: "text-blue-800" },
+                { name: "Bajaj Life", tag: "LIFE GOALS DONE", color: "text-blue-700" },
+                { name: "HDFC Life", tag: "SAR UTHA KE JIYO", color: "text-red-600" },
+                { name: "TATA AIA", tag: "LIFE INSURANCE", color: "text-sky-800" },
+                { name: "ICICI Prudential", tag: "LIFE INSURANCE", color: "text-amber-800" },
+                { name: "LIC of India", tag: "LIFE INSURANCE", color: "text-blue-900" },
               ].map((partner, idx) => (
                 <div
                   key={idx}

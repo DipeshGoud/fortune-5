@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 const heroStats = [
   { value: "75+", label: "Years of legacy", sub: "Since 1950" },
   { value: "100+", label: "Events & summits", sub: "Pan-India" },
-  { value: "50+", label: "Awards & honours", sub: "National" },
-  { value: "50K+", label: "Lives protected", sub: "And growing" },
+  { value: "50+", label: "Awards & honours", sub: "National & Global" },
+  { value: "10,000+", label: "Lives protected", sub: "And growing" },
 ];
 
 export default function GalleryPage() {

@@ -379,7 +379,7 @@ export const articles: Article[] = [
         type: "list",
         title: "Five monsoon checks before the season",
         items: [
-          "Confirm 'flood and inundation' is named in your wording — do not assume the broker added it.",
+          "Confirm 'flood and inundation' is named in your wording — do not assume the advisor added it.",
           "Verify each location's flood history is declared; non-disclosure of a known risk can void cover.",
           "Review your sum insured against current reconstruction cost — the average clause bites hardest in water claims.",
           "Keep stock valuation records current — flood claims are disputed most on inventory valuation.",

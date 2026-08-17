@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, Copy, Check } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, Copy, Check, Building2, Clock } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Footer() {
@@ -64,11 +64,11 @@ export default function Footer() {
                   <ArrowRight className="h-4 w-4 text-[#011331] transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="tel:+919820810067"
+                  href="tel:+919820710067"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-white transition-all"
                 >
                   <Phone className="h-4 w-4 text-[#C59B27]" />
-                  <span>+91 98208 10067</span>
+                  <span>+91 98207 10067</span>
                 </a>
               </div>
             </div>
@@ -98,10 +98,13 @@ export default function Footer() {
               </div>
 
               <p className="text-slate-300 text-sm leading-relaxed font-medium max-w-sm">
-                Building trust. Protecting futures. A 3rd generation insurance consultancy committed to protecting what matters most to you.
+                People you trust, advice that works. A 3rd generation insurance consultancy committed to protecting what matters most to you.
+              </p>
+              <p className="text-xs text-[#F5D77F] font-bold tracking-widest uppercase">
+                Your Risk. Our Responsibility.
               </p>
 
-              <div className="flex items-center gap-3 pt-2">
+              <div className="flex items-center gap-3 pt-1">
                 <a
                   href="#"
                   aria-label="Facebook"
@@ -165,34 +168,38 @@ export default function Footer() {
                 SOLUTIONS
               </h4>
               <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
-                <li><Link href="/solutions#corporate" className="hover:text-[#F5D77F] transition-colors">Corporate Insurance</Link></li>
-                <li><Link href="/solutions#retail" className="hover:text-[#F5D77F] transition-colors">Retail Insurance</Link></li>
-                <li><Link href="/solutions#benefits" className="hover:text-[#F5D77F] transition-colors">Employee Benefits</Link></li>
-                <li><Link href="/solutions#liability" className="hover:text-[#F5D77F] transition-colors">Liability Insurance</Link></li>
-                <li><Link href="/solutions#health" className="hover:text-[#F5D77F] transition-colors">Health Insurance</Link></li>
-                <li><Link href="/solutions#motor" className="hover:text-[#F5D77F] transition-colors">Motor Insurance</Link></li>
+                <li><Link href="/services#corporate" className="hover:text-[#F5D77F] transition-colors">Corporate Insurance</Link></li>
+                <li><Link href="/services#retail" className="hover:text-[#F5D77F] transition-colors">Retail Insurance</Link></li>
+                <li><Link href="/services#benefits" className="hover:text-[#F5D77F] transition-colors">Employee Benefits</Link></li>
+                <li><Link href="/services#liability" className="hover:text-[#F5D77F] transition-colors">Liability Insurance</Link></li>
+                <li><Link href="/services#health" className="hover:text-[#F5D77F] transition-colors">Health Insurance</Link></li>
+                <li><Link href="/services#motor" className="hover:text-[#F5D77F] transition-colors">Motor Insurance</Link></li>
               </ul>
             </div>
 
-            {/* Column 4: OUR LOCATION */}
+            {/* Column 4: HEAD OFFICE */}
             <div className="lg:col-span-2 flex flex-col space-y-4 border-t lg:border-t-0 lg:border-l border-slate-800 lg:pl-6 pt-6 lg:pt-0">
               <h4 className="font-extrabold text-[#F5D77F] text-xs uppercase tracking-widest">
-                OUR LOCATION
+                HEAD OFFICE
               </h4>
-              <div className="space-y-3 text-xs text-slate-300 font-medium">
+              <div className="space-y-3.5 text-xs text-slate-300 font-medium">
                 <div>
-                  <div className="flex items-center gap-1.5 font-bold text-white mb-0.5">
+                  <div className="flex items-center gap-1.5 font-bold text-white mb-1">
                     <MapPin className="w-3.5 h-3.5 text-[#C59B27]" />
                     <span>Mumbai Office</span>
                   </div>
-                  <p className="text-slate-400 pl-5 text-[11px] leading-relaxed">
-                    Vile Parle (East)
+                  <p className="text-slate-300 pl-5 text-[11px] leading-relaxed">
+                    106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai 400057, India.
                   </p>
-                  <p className="text-amber-300 pl-5 text-[11px] font-semibold mt-1">
-                    +91-98208 10067
-                  </p>
-                  <p className="text-slate-400 pl-5 text-[11px]">
-                    +91-22-2619 27 27
+                </div>
+
+                <div className="pt-1 border-t border-slate-800/80">
+                  <div className="flex items-center gap-1.5 font-bold text-white mb-1">
+                    <Clock className="w-3.5 h-3.5 text-[#C59B27]" />
+                    <span>Working Hours</span>
+                  </div>
+                  <p className="text-slate-300 pl-5 text-[11px] leading-relaxed">
+                    Mon – Sat: 10:00 AM – 7:30 PM IST
                   </p>
                 </div>
               </div>
@@ -220,21 +227,30 @@ export default function Footer() {
                   </div>
                 </div>
 
-                {/* Phone */}
+                {/* Phone Numbers: Cell, Support, Board */}
                 <div className="flex items-start gap-2">
                   <Phone className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <span className="block font-bold text-white">+91-98208 10067</span>
-                    <span className="block text-[11px] text-slate-400">+91-22-2619 37 37</span>
+                  <div className="space-y-1">
+                    <div>
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Cell:</span>{" "}
+                      <a href="tel:+919820710067" className="font-bold text-white hover:text-[#F5D77F] transition-colors">+91-98207 10067</a>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Support:</span>{" "}
+                      <a href="tel:+919820810067" className="font-bold text-white hover:text-[#F5D77F] transition-colors">+91-98208 10067</a>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Board:</span>{" "}
+                      <a href="tel:+912226192727" className="font-medium text-slate-300 hover:text-[#F5D77F] transition-colors">+91-22-2619 27 27</a>
+                    </div>
                   </div>
                 </div>
 
                 {/* Address */}
-                <div className="flex items-start gap-2 pt-1">
+                <div className="flex items-start gap-2 pt-1 border-t border-slate-800/80">
                   <MapPin className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
                   <p className="text-[11px] text-slate-300 leading-relaxed font-normal">
-                    Fortune 5 Risk Management Solutions LLP,<br />
-                    106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai - 400057.
+                    106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai 400057, India.
                   </p>
                 </div>
 
@@ -257,7 +273,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
     </footer>
   );
 }

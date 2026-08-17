@@ -52,7 +52,7 @@ export default function Hero() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
             className="flex items-center gap-2 sm:gap-3 text-[#B8860B] text-[11px] sm:text-sm lg:text-base 2xl:text-lg font-extrabold tracking-widest uppercase"
           >
-            <span>PEOPLE YOU TRUST. ADVICE THAT WORKS. •</span>
+            <span>PEOPLE YOU TRUST, ADVICE THAT WORKS •</span>
             <span className="h-[2px] w-10 sm:w-20 lg:w-28 2xl:w-36 bg-gradient-to-r from-[#C59B27] to-transparent inline-block"></span>
           </motion.div>
 
@@ -144,10 +144,10 @@ export default function Hero() {
                 <Users className="w-8 h-8 sm:w-12 sm:h-12 text-[#C59B27] stroke-[1.8] flex-shrink-0" />
                 <div>
                   <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[#011331] font-sans leading-tight">
-                    50,000+
+                    10,000+
                   </div>
                   <div className="text-xs sm:text-base font-bold text-[#011331]/90 font-sans">
-                    Lives Insured
+                    Lives Protected
                   </div>
                 </div>
               </div>

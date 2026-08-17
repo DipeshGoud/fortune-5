@@ -183,14 +183,26 @@ export default function ConsultationModal({
                       onChange={handleChange}
                       className="w-full bg-slate-50 border border-slate-200 rounded-lg px-3.5 py-2.5 text-xs sm:text-sm text-slate-800 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] transition-all"
                     >
-                      <option value="Corporate Insurance">Corporate Risk & Insurance</option>
-                      <option value="Health & Medical">Health & Medical Insurance</option>
-                      <option value="Employee Benefits">Group Employee Benefits</option>
-                      <option value="Fire & Property">Fire, Property & Burglary</option>
-                      <option value="Liability Insurance">Directors & Officers / Liability</option>
-                      <option value="Vehicle Insurance">Motor / Vehicle Insurance</option>
-                      <option value="Marine & Cargo">Transit & Marine Cargo</option>
-                      <option value="Other Advisory">General Risk Advisory</option>
+                      <optgroup label="Corporate Insurance Solutions">
+                        <option value="Corporate Insurance">Corporate Insurance (General)</option>
+                        <option value="Fire Insurance">Fire Insurance</option>
+                        <option value="Marine Insurance">Marine Insurance</option>
+                        <option value="Engineering Insurance">Engineering Insurance</option>
+                        <option value="Liability Insurance">Liability Insurance</option>
+                        <option value="Package Insurance">Package Insurance</option>
+                        <option value="Employee Benefits">Employee Benefits (GMC/GPA/GTL)</option>
+                        <option value="Industries Insurance">Industries Insurance</option>
+                      </optgroup>
+                      <optgroup label="Retail Insurance Solutions">
+                        <option value="Health Insurance">Health Insurance</option>
+                        <option value="Motor Insurance">Motor Insurance</option>
+                        <option value="Travel Insurance">Travel Insurance</option>
+                        <option value="Home Insurance">Home Insurance</option>
+                        <option value="Personal Accident">Personal Accident Insurance</option>
+                        <option value="Critical Illness">Critical Illness Insurance</option>
+                        <option value="Term Life Insurance">Term Life Insurance</option>
+                      </optgroup>
+                      <option value="General Risk Advisory">General Risk Audit & Advisory</option>
                     </select>
                   </div>
 

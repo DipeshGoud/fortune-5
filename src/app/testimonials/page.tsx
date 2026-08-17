@@ -165,10 +165,10 @@ const testimonialsData: Testimonial[] = [
 const testimonialCategories = ["All", "Corporate", "Retail & HNI", "Claims Story", "Employee Benefits"] as const;
 
 const proofPoints = [
-  { value: "500+", label: "businesses advised" },
-  { value: "50K+", label: "lives protected" },
-  { value: "99.4%", label: "claim settlement ratio" },
-  { value: "75+", label: "years of trust" },
+  { value: "500+", label: "businesses protected" },
+  { value: "10,000+", label: "lives protected" },
+  { value: "₹100+ Cr", label: "claims assisted" },
+  { value: "75+", label: "years of legacy" },
 ];
 
 export default function TestimonialsPage() {

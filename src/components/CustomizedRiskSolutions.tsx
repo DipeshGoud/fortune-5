@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Handshake, Target, IndianRupee, ArrowRight, ShieldCheck } from "lucide-react";
 import ScrollReveal, { StaggerContainer, StaggerItem } from "./ScrollReveal";
 
@@ -12,15 +13,15 @@ export default function CustomizedRiskSolutions() {
       title: "Risk Inspection & Insurance Advisory",
       description:
         "Identify gaps and review policy documents to recommend improvements, ensuring optimal protection and risk mitigation across all your insurance plans.",
-      link: "#advisory",
+      link: "/services",
     },
     {
       id: "02",
       icon: Target,
-      title: "Insurance Broking & Placement",
+      title: "Insurance Product Advisory & Placement",
       description:
         "We shortlist top-tier insurers and secure competitive quotes to provide you with the best value-driven, tailored coverage for your specific needs.",
-      link: "#broking",
+      link: "/services",
     },
     {
       id: "03",
@@ -28,7 +29,7 @@ export default function CustomizedRiskSolutions() {
       title: "Insurance Portfolio Management",
       description:
         "Outsource your comprehensive insurance requirements to us. We design tailored solutions for clients of all sizes, ensuring a streamlined, cost-effective portfolio.",
-      link: "#portfolio",
+      link: "/contact",
     },
   ];
 
@@ -102,13 +103,13 @@ export default function CustomizedRiskSolutions() {
                   </div>
 
                   {/* Card Action Link */}
-                  <a
+                  <Link
                     href={item.link}
                     className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#011331] tracking-wider uppercase group-hover:text-[#C59B27] transition-colors pt-4 border-t border-slate-100"
                   >
                     <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 text-[#C59B27] group-hover:translate-x-1.5 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </StaggerItem>
             );

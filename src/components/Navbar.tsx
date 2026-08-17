@@ -59,7 +59,7 @@ export default function Navbar() {
             : "bg-transparent border-transparent"
         }`}
       >
-        <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-0">
+        <div className="w-full max-w-[1720px] 2xl:max-w-[94vw] 3xl:max-w-[92vw] 4xl:max-w-[2800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 2xl:px-16 3xl:px-20">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo Section */}
             <Logo imgClassName="h-12 sm:h-14 md:h-16" />

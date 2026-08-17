@@ -40,7 +40,7 @@ export default function Home() {
       {/* Section 5: How We Work */}
       <HowWeWork />
 
-      {/* Section 6: Partners, Awards & Recognition, Our Clients */}
+      {/* Section 6: Partners (with Official Logos), Awards & Recognition, Our Clients */}
       <TrustProofSection />
 
       {/* Footer Section */}

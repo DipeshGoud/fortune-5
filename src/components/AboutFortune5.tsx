@@ -80,13 +80,13 @@ export default function AboutFortune5() {
 
             {/* Paragraph Description */}
             <p className="text-slate-700 text-sm sm:text-base lg:text-lg font-medium leading-relaxed font-sans max-w-2xl">
-              Fortune 5 Risk Management Solutions LLP is a trusted insurance consultancy with a 70+ year legacy of helping businesses and individuals manage risk, optimise coverage and receive unwavering support when it matters the most.
+              Fortune 5 Risk Management Solutions LLP is a trusted insurance consultancy with a 75+ year legacy of helping businesses and individuals manage risk, optimise coverage and receive unwavering support when it matters the most.
             </p>
 
             {/* Read More Button */}
             <div className="pt-3">
               <a
-                href="#read-more"
+                href="/about"
                 className="group flex items-center gap-3 bg-[#011331] hover:bg-[#071f47] text-white font-bold text-xs sm:text-sm tracking-widest px-8 py-4 rounded-lg shadow-lg border border-slate-900 uppercase transition-all duration-200"
               >
                 <span>READ MORE ABOUT US</span>

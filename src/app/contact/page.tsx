@@ -18,9 +18,10 @@ import {
   Headset,
   Navigation,
   Sparkles,
+  Building2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import ScrollReveal, { StaggerContainer, StaggerItem } from "@/components/ScrollReveal";
+import ScrollReveal from "@/components/ScrollReveal";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -45,12 +46,12 @@ const faqs = [
   {
     question: "What types of insurance does Fortune 5 offer?",
     answer:
-      "Fortune 5 offers a wide range of Retail Insurance (Health, Motor, Travel, Home, and Life Insurance) as well as Corporate Risk Solutions (Fire, Employee Benefits, Liability, Marine Cargo, Engineering, and Customized Niche Risk Agreements).",
+      "Fortune 5 offers a wide range of Retail Insurance (Health, Motor, Travel, Home, and Term Life Insurance) as well as Corporate Risk Solutions (Fire, Employee Benefits, Liability, Marine Cargo, Engineering, and Customized Niche Risk Agreements).",
   },
   {
     question: "How can I purchase an insurance policy from Fortune 5?",
     answer:
-      "You can request a consultation by filling out the contact form above, emailing us at insure@fortune5.in, or calling us directly at +91-98208 10067. Our advisors will audit your risks and recommend the best-suited coverage options.",
+      "You can request a consultation by filling out the contact form above, emailing us at insure@fortune5.in, or calling us directly at +91-98207 10067 / +91-98208 10067. Our advisors will audit your risks and recommend the best-suited coverage options.",
   },
   {
     question: "How do I file a claim?",
@@ -157,31 +158,37 @@ function ContactInner() {
             {/* quick contact chips */}
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="tel:+919820810067"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-6 py-3 text-xs font-extrabold tracking-[0.12em] text-[#041735] uppercase shadow-lg transition hover:bg-white"
+                href="tel:+919820710067"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#041735] uppercase shadow-lg transition hover:bg-white"
               >
-                <Phone className="h-3.5 w-3.5" /> +91-98208 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                <Phone className="h-3.5 w-3.5" /> Cell: +91-98207 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+              </a>
+              <a
+                href="tel:+919820810067"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+              >
+                <Phone className="h-3.5 w-3.5 text-[#f3d47c]" /> Support: +91-98208 10067
               </a>
               <a
                 href="mailto:insure@fortune5.in"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
               >
-                <Mail className="h-3.5 w-3.5" /> insure@fortune5.in
+                <Mail className="h-3.5 w-3.5 text-[#f3d47c]" /> insure@fortune5.in
               </a>
               <a
                 href="https://wa.me/919820810067"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
               >
-                <MessageCircle className="h-3.5 w-3.5" /> WhatsApp
+                <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
               </a>
             </div>
 
             {/* micro trust bar */}
             <div className="mt-10 flex flex-wrap items-center gap-4 border-t border-white/10 pt-6 text-xs">
               <span className="inline-flex items-center gap-2 font-semibold text-slate-300">
-                <ShieldCheck className="h-4 w-4 text-[#f3d47c]" /> IRDAI Licensed Broker
+                <ShieldCheck className="h-4 w-4 text-[#f3d47c]" /> 75+ Years Legacy of Trust
               </span>
               <span className="hidden h-3 w-px bg-white/15 sm:block" />
               <span className="inline-flex items-center gap-2 font-semibold text-slate-300">
@@ -205,10 +212,10 @@ function ContactInner() {
                     <p className="inline-flex items-center gap-1.5 text-[10px] font-extrabold tracking-[0.16em] text-[#a47a13] uppercase">
                       <Sparkles className="h-3.5 w-3.5" /> Visit us in Mumbai
                     </p>
-                    <h3 className="mt-1 font-cormorant text-2xl font-bold tracking-[-0.02em] text-[#0b2246]">Fortune 5, Vile Parle (E)</h3>
+                    <h3 className="mt-1 font-cormorant text-2xl font-bold tracking-[-0.02em] text-[#0b2246]">Fortune 5 Risk Management</h3>
                     <p className="mt-1 text-sm leading-6 text-slate-600">
                       106-107, E-Square, 1st Floor, Subhash Road,
-                      <br /> Vile Parle (East), Mumbai — 400057
+                      <br /> Vile Parle (East), Mumbai 400057, India.
                     </p>
                   </div>
                   <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#f3d47c] bg-[#041735] text-[#f3d47c] sm:flex">
@@ -368,15 +375,30 @@ function ContactInner() {
                         onChange={handleChange}
                         className={`${inputBase} ${inputBorder(false)} appearance-none pr-10`}
                       >
-                        <option value="">Select a topic</option>
-                        <option>Corporate Insurance</option>
-                        <option>Retail Insurance</option>
-                        <option>Employee Benefits</option>
-                        <option>Liability Insurance</option>
-                        <option>Health Insurance</option>
-                        <option>Motor Insurance</option>
-                        <option>Claims Support</option>
-                        <option>Other</option>
+                        <option value="">Select a service or requirement</option>
+                        <optgroup label="Corporate Insurance Solutions">
+                          <option value="Fire Insurance">Fire Insurance</option>
+                          <option value="Marine Insurance">Marine Insurance</option>
+                          <option value="Engineering Insurance">Engineering Insurance</option>
+                          <option value="Liability Insurance">Liability Insurance</option>
+                          <option value="Package Insurance">Package Insurance</option>
+                          <option value="Employee Benefits (GMC/GPA/GTL)">Employee Benefits (GMC/GPA/GTL)</option>
+                          <option value="Industries Insurance">Industries Insurance</option>
+                        </optgroup>
+                        <optgroup label="Retail Insurance Solutions">
+                          <option value="Health Insurance">Health Insurance</option>
+                          <option value="Motor Insurance">Motor Insurance</option>
+                          <option value="Travel Insurance">Travel Insurance</option>
+                          <option value="Home Insurance">Home Insurance</option>
+                          <option value="Personal Accident Insurance">Personal Accident Insurance</option>
+                          <option value="Critical Illness Insurance">Critical Illness Insurance</option>
+                          <option value="Term Life Insurance">Term Life Insurance</option>
+                        </optgroup>
+                        <optgroup label="General Support">
+                          <option value="Claims Support">Claims Advocacy & Support</option>
+                          <option value="Policy Audit & Renewal">Policy Audit & Renewal Review</option>
+                          <option value="General Consultation">General Risk Consultation</option>
+                        </optgroup>
                       </select>
                       <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">▾</span>
                     </div>
@@ -413,7 +435,7 @@ function ContactInner() {
                       Send message <Send className="h-3.5 w-3.5 text-[#f3d47c] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </button>
                     <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-500">
-                      <ShieldCheck className="h-3.5 w-3.5 text-[#a47a13]" /> IRDAI-compliant · No spam · Privacy respected
+                      <ShieldCheck className="h-3.5 w-3.5 text-[#a47a13]" /> 75+ Years Legacy of Trust · No spam
                     </p>
                   </div>
                 </form>
@@ -457,13 +479,17 @@ function ContactInner() {
                   {[
                     {
                       icon: MapPin,
-                      label: "Office address",
-                      lines: ["Fortune 5 Risk Management Solutions LLP,", "106-107, E-Square, 1st Floor, Subhash Road,", "Vile Parle (East), Mumbai — 400057."],
+                      label: "Head Office",
+                      lines: [
+                        "Fortune 5 Risk Management Solutions LLP",
+                        "106-107, E-Square, 1st Floor, Subhash Road,",
+                        "Vile Parle (East), Mumbai 400057, India.",
+                      ],
                     },
                     {
                       icon: Phone,
                       label: "Call us",
-                      lines: ["+91-98208 10067", "+91-22-2619 27 27"],
+                      lines: ["Cell: +91-98207 10067", "Support: +91-98208 10067", "Board: +91-22-2619 27 27"],
                       strong: 0,
                     },
                     {
@@ -481,7 +507,7 @@ function ContactInner() {
                   ].map((row) => {
                     const Icon = row.icon;
                     return (
-                      <div key={row.label} className="flex gap-4 px-5 py-5">
+                      <div key={row.label} className="flex gap-4 px-5 py-4.5">
                         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#f3d47c]/25 bg-[#f3d47c]/10 text-[#f3d77f]">
                           <Icon className="h-4.5 w-4.5" />
                         </span>
@@ -490,7 +516,7 @@ function ContactInner() {
                           {row.lines.map((l, i) => (
                             <p
                               key={l}
-                              className={`text-sm leading-6 ${row.strong === i ? "font-bold text-white" : i === 0 && row.label !== "Office address" ? "font-bold text-white" : "font-medium text-slate-200"}`}
+                              className={`text-sm leading-6 ${row.strong === i ? "font-bold text-white" : i === 0 && row.label !== "Head Office" ? "font-bold text-white" : "font-medium text-slate-200"}`}
                             >
                               {l}
                             </p>
@@ -606,7 +632,7 @@ function ContactInner() {
               Still unsure? <span className="font-extrabold text-[#0b2246]">Talk to a human in minutes.</span>
             </p>
             <div className="flex gap-2">
-              <a href="tel:+919820810067" className="inline-flex items-center gap-2 rounded-full bg-[#0b2246] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-white uppercase hover:bg-black">
+              <a href="tel:+919820710067" className="inline-flex items-center gap-2 rounded-full bg-[#0b2246] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-white uppercase hover:bg-black">
                 Call advisory
               </a>
               <a href="mailto:insure@fortune5.in" className="inline-flex items-center gap-2 rounded-full border border-[#e7e0c8] bg-[#fdfbf3] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-[#0b2246] uppercase hover:border-[#c59b27]">
