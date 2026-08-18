@@ -441,22 +441,23 @@ function ContactInner() {
                       >
                         <option value="">Select a service or requirement</option>
                         <optgroup label="Corporate Risk Solutions">
-                          <option value="Fire Risk Solutions">Fire Risk Solutions</option>
-                          <option value="Marine & Transit Risk Solutions">Marine & Transit Risk Solutions</option>
-                          <option value="Engineering & Project Risk Solutions">Engineering & Project Risk Solutions</option>
-                          <option value="Corporate Liability & Governance Risk">Corporate Liability & Governance Risk</option>
-                          <option value="Commercial Package Risk Solutions">Commercial Package Risk Solutions</option>
-                          <option value="Employee Benefits (GMC/GPA/GTL)">Employee Benefits (GMC/GPA/GTL)</option>
-                          <option value="Industrial Sector Risk Solutions">Industrial Sector Risk Solutions</option>
+                          <option value="Fire / Burglary Insurance">Fire / Burglary Insurance</option>
+                          <option value="Employee Benefit Policy">Employee Benefit Policy</option>
+                          <option value="Transit Insurance">Transit Insurance</option>
+                          <option value="Contractor All Risk Insurance">Contractor All Risk Insurance</option>
+                          <option value="Liability Insurance">Liability Insurance</option>
+                          <option value="Miscellaneous Insurance">Miscellaneous Insurance</option>
+                          <option value="Office Comprehensive Package Policy">Office Comprehensive Package Policy</option>
+                          <option value="Shopkeeper All Risk Insurance">Shopkeeper All Risk Insurance</option>
+                          <option value="Corporate Insurance">Corporate Insurance</option>
                         </optgroup>
                         <optgroup label="Retail Protection Solutions">
-                          <option value="Health & Medical Protection">Health & Medical Protection</option>
-                          <option value="Motor & Fleet Risk Protection">Motor & Fleet Risk Protection</option>
-                          <option value="Travel & International Protection">Travel & International Protection</option>
-                          <option value="Home & Property Protection">Home & Property Protection</option>
-                          <option value="Personal Accident Protection">Personal Accident Protection</option>
-                          <option value="Critical Illness Protection">Critical Illness Protection</option>
-                          <option value="Term Life & Wealth Protection">Term Life & Wealth Protection</option>
+                          <option value="Health Insurance">Health Insurance</option>
+                          <option value="Vehicle Insurance">Vehicle Insurance</option>
+                          <option value="Travel Insurance">Travel Insurance</option>
+                          <option value="Personal Accident">Personal Accident</option>
+                          <option value="Householder Insurance">Householder Insurance</option>
+                          <option value="Life Insurance">Life Insurance</option>
                         </optgroup>
                         <optgroup label="General Support">
                           <option value="Claims Support">Claims Advocacy & Support</option>

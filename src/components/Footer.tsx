@@ -157,8 +157,8 @@ export default function Footer() {
               <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
                 <li><Link href="/about" className="hover:text-[#F5D77F] transition-colors">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-[#F5D77F] transition-colors">Our Services</Link></li>
-                <li><Link href="/testimonials" className="hover:text-[#F5D77F] transition-colors">Testimonials</Link></li>
-                <li><Link href="/blog" className="hover:text-[#F5D77F] transition-colors">Blog &amp; Articles</Link></li>
+                {/* <li><Link href="/testimonials" className="hover:text-[#F5D77F] transition-colors">Testimonials</Link></li> */}
+                {/* <li><Link href="/blog" className="hover:text-[#F5D77F] transition-colors">Blog &amp; Articles</Link></li> */}
                 <li><Link href="/gallery" className="hover:text-[#F5D77F] transition-colors">Gallery &amp; Media</Link></li>
                 <li><Link href="/trophy" className="hover:text-[#F5D77F] transition-colors">Trophies &amp; Awards</Link></li>
                 <li><Link href="/contact" className="hover:text-[#F5D77F] transition-colors">Contact Us</Link></li>

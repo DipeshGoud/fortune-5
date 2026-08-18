@@ -80,7 +80,7 @@ export default function AboutFortune5() {
           >
             {/* Tagline */}
             <div className="text-[#966C0F] font-extrabold text-xs sm:text-sm tracking-widest uppercase">
-              ABOUT FORTUNE 5
+              ABOUT <span className="inline-block whitespace-nowrap">FORTUNE 5</span>
             </div>
 
             {/* Main Headline */}

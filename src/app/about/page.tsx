@@ -86,7 +86,7 @@ const ourJourneyTimeline = [
   },
   {
     step: "Leadership",
-    title: "Fortune 5 Leadership",
+    title: "Fortune 5 Risk Management Solutions LLP",
     text: "Leading with a claims-first approach and long-term client partnerships.",
   },
 ];
@@ -123,19 +123,24 @@ const founderPrinciples = [
 
 const founderQualifications = [
   {
+    title: "Diploma in Chemical Engineering",
+    subtitle: "Technical Foundation",
+    desc: "Strong technical grounding in engineering principles and process analysis.",
+  },
+  {
     title: "B.E. (Chemical Engineering)",
     subtitle: "Engineering Rigor",
     desc: "Engineering background bringing analytical and quantitative rigor to risk assessment.",
   },
   {
-    title: "Fellow Insurance Institute of India",
-    subtitle: "Highest Technical Standard",
-    desc: "Recognized risk and underwriting expertise. Committed to professional excellence.",
-  },
-  {
-    title: "Advanced Diploma in Risk & Insurance",
+    title: "Advance Diploma in Risk and Insurance",
     subtitle: "NMIMS Mumbai",
     desc: "Specialized knowledge and strategic risk management insight.",
+  },
+  {
+    title: "Fellow Institute of India",
+    subtitle: "Highest Technical Standard",
+    desc: "Recognized risk and underwriting expertise. Committed to professional excellence.",
   },
   {
     title: "MD Club Member (Bajaj Allianz)",
@@ -163,7 +168,7 @@ export default function AboutPage() {
             <nav aria-label="Breadcrumb" className="mb-6 sm:mb-8 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
               <Link href="/" className="transition-colors hover:text-[#f5d77f]">Home</Link>
               <span className="h-px w-5 bg-[#c59b27]" />
-              <span className="text-[#f5d77f]">About Fortune 5</span>
+              <span className="text-[#f5d77f] whitespace-nowrap">About Fortune 5</span>
             </nav>
 
             <p className="mb-4 sm:mb-5 flex items-center gap-3 text-xs font-extrabold tracking-[0.2em] text-[#f5d77f] uppercase">
@@ -278,9 +283,9 @@ export default function AboutPage() {
             <h3 className="text-xs font-extrabold tracking-[0.2em] text-[#a47a13] uppercase text-center mb-8">
               Professional Qualifications &amp; Industry Standing
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
               {founderQualifications.map((item, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#c59b27] transition-all flex flex-col justify-between">
+                <div key={idx} className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#c59b27] transition-all flex flex-col justify-between">
                   <div>
                     <span className="text-[10px] font-extrabold uppercase text-[#c59b27] tracking-wider block mb-2">{item.subtitle}</span>
                     <h4 className="font-sans font-bold text-sm sm:text-base text-[#01327a] mb-2">{item.title}</h4>

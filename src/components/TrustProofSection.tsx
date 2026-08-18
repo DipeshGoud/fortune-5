@@ -22,9 +22,9 @@ export default function TrustProofSection() {
 
   const otherRecognitions = [
     { title: "MD Club Member", sub: "Bajaj General (Since 2003)" },
-    { title: "Top 30 Advisors Worldwide", sub: "Generali Central (2025)" },
+    { title: "Top 30 Advisors Worldwide", sub: "Generali Central (2025 & 2026)" },
     { title: "COT CLUB", sub: "LIC of India" },
-    { title: "DGC Committee & Advisor", sub: "Bajaj General" },
+    { title: "DGC Committee & Advisor", sub: "Bajaj General (2025 & 2026)" },
   ];
 
   const generalPartners = [

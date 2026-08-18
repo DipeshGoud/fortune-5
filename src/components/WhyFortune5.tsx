@@ -65,7 +65,7 @@ export default function WhyFortune5() {
         {/* Section Header */}
         <ScrollReveal variant="fadeUp" duration={0.7} className="flex flex-col items-center text-center mb-12 sm:mb-16">
           <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#01327a] tracking-wider uppercase">
-            WHY FORTUNE 5
+            WHY <span className="inline-block whitespace-nowrap">FORTUNE 5</span>
           </h2>
           
           {/* Gold Shield Line Ornament */}

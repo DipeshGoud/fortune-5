@@ -17,7 +17,7 @@ import {
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "team" | "events" | "awards";
+  category: "events" | "team" | "awards";
   categoryLabel: string;
   image: string;
 }
@@ -25,81 +25,116 @@ export interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: "1",
-    title: "Fortune 5 Advisory Team",
-    category: "team",
-    categoryLabel: "Team Photo",
-    image: "/gallery-team1.png",
+    title: "Fortune 5 75th Platinum Jubilee Stage",
+    category: "events",
+    categoryLabel: "Events & Celebrations",
+    image: "/Gallery/gallery-75th-stage.png",
   },
   {
     id: "2",
-    title: "Kaushal Shah - Principal Consultant",
-    category: "team",
-    categoryLabel: "Team Photo",
-    image: "/kaushal-shah.png",
+    title: "75th Anniversary Celebration Cake",
+    category: "events",
+    categoryLabel: "Events & Celebrations",
+    image: "/Gallery/gallery-75th-cake.png",
   },
   {
     id: "3",
-    title: "Founding Legacy & Culture",
+    title: "Founder – Jagdip K. Shah",
     category: "team",
-    categoryLabel: "Team Photo",
-    image: "/founder.png",
+    categoryLabel: "Leadership",
+    image: "/Team/jagdip-k-shah.png",
   },
   {
     id: "4",
-    title: "National Risk Advisory Summit",
-    category: "events",
-    categoryLabel: "Events",
-    image: "/gallery-summit.png",
+    title: "Chairman & Managing Director – Kaushal J. Shah",
+    category: "team",
+    categoryLabel: "Leadership",
+    image: "/Team/kaushal-j-shah.png",
   },
   {
     id: "5",
-    title: "75th Anniversary Gala Celebration",
-    category: "events",
-    categoryLabel: "Events",
-    image: "/gallery-event-gala.png",
+    title: "Chief Executive Officer – Ekta K. Shah",
+    category: "team",
+    categoryLabel: "Leadership",
+    image: "/Team/ekta-k-shah.png",
   },
   {
     id: "6",
-    title: "Corporate Client Forum",
-    category: "events",
-    categoryLabel: "Events",
-    image: "/gallery-advisory.png",
+    title: "Chief Marketing Officer – Hemal N. Mashruwala",
+    category: "team",
+    categoryLabel: "Leadership",
+    image: "/Team/hemal-n-mashruwala.png",
   },
   {
     id: "7",
-    title: "Commercial Risk Infrastructure Tour",
-    category: "events",
-    categoryLabel: "Events",
-    image: "/hero-bg.png",
+    title: "Claims Head – L. N. Shanbhag",
+    category: "team",
+    categoryLabel: "Leadership",
+    image: "/Team/l-n-shanbhag.png",
   },
   {
     id: "8",
-    title: "Risk Management Excellence Leadership Trophy",
+    title: "Bajaj Allianz – Largest Conglomerate Award",
     category: "awards",
-    categoryLabel: "Awards",
-    image: "/trophy.png",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL1964.webp",
   },
   {
     id: "9",
-    title: "Golden Jubilee Excellence Honor",
+    title: "Bajaj Allianz MD Club Gold Trophy",
     category: "awards",
-    categoryLabel: "Awards",
-    image: "/gallery-award.png",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL2069.webp",
   },
   {
     id: "10",
-    title: "75 Years Golden Milestone Emblem",
+    title: "Bajaj Allianz MD Club Dedicated Services Award",
     category: "awards",
-    categoryLabel: "Awards",
-    image: "/75year-logo.png",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL2011.webp",
+  },
+  {
+    id: "11",
+    title: "Bajaj Allianz Exceptional Achievement Award (Dubai)",
+    category: "awards",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL2044.webp",
+  },
+  {
+    id: "12",
+    title: "Bajaj Allianz Outstanding Achievers Award",
+    category: "awards",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL1954.webp",
+  },
+  {
+    id: "13",
+    title: "LIC MDRT Prestigious Honor – Ekta Kaushal Shah",
+    category: "awards",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL2127.webp",
+  },
+  {
+    id: "14",
+    title: "Future Generali Certificate of Appreciation",
+    category: "awards",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL2089.webp",
+  },
+  {
+    id: "15",
+    title: "LIC MDRT Award – Ekta Kaushal Shah",
+    category: "awards",
+    categoryLabel: "Awards & Honors",
+    image: "/Trophy/IMGL2118.webp",
   },
 ];
 
 const categories = [
   { id: "all", label: "All Photos", icon: Sparkles },
-  { id: "team", label: "Team Photos", icon: Users },
-  { id: "events", label: "Events", icon: Calendar },
-  { id: "awards", label: "Awards", icon: Award },
+  { id: "events", label: "75th Jubilee & Events", icon: Calendar },
+  { id: "team", label: "Leadership & Team", icon: Users },
+  { id: "awards", label: "Awards & Recognitions", icon: Award },
 ];
 
 export default function GalleryGrid() {
@@ -142,7 +177,7 @@ export default function GalleryGrid() {
               onClick={() => setActiveCategory(cat.id)}
               className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-xs font-extrabold tracking-widest uppercase transition-all duration-300 ${
                 isActive
-                  ? "bg-[#071a38] text-[#f5d77f] shadow-lg border border-[#c59b27]/40 ring-2 ring-[#c59b27]/20 scale-105"
+                  ? "bg-[#01327a] text-[#f5d77f] shadow-lg border border-[#c59b27]/40 ring-2 ring-[#c59b27]/20 scale-105"
                   : "bg-white hover:bg-slate-100 text-slate-700 border border-slate-200/80 shadow-sm hover:scale-102"
               }`}
             >
@@ -153,7 +188,7 @@ export default function GalleryGrid() {
         })}
       </div>
 
-      {/* Pure Visual Photo Grid - No Info Text Boxes */}
+      {/* Pure Visual Photo Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
         {filteredItems.map((item, index) => (
           <div
@@ -167,15 +202,15 @@ export default function GalleryGrid() {
               alt={item.title}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
+              className="object-cover object-center transition-transform duration-700 group-hover:scale-108"
             />
 
             {/* Subtle Gradient Overlay on Hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071a38]/90 via-[#071a38]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/90 via-[#01327a]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 z-10" />
 
             {/* Category Tag on Hover (Top Left) */}
             <div className="absolute top-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-              <span className="px-3 py-1 rounded-full bg-[#071a38]/90 backdrop-blur-md text-[10px] font-extrabold tracking-widest text-[#f5d77f] uppercase border border-[#c59b27]/40 shadow-sm">
+              <span className="px-3 py-1 rounded-full bg-[#01327a]/90 backdrop-blur-md text-[10px] font-extrabold tracking-widest text-[#f5d77f] uppercase border border-[#c59b27]/40 shadow-sm">
                 {item.categoryLabel}
               </span>
             </div>
@@ -199,83 +234,88 @@ export default function GalleryGrid() {
 
       {/* Fullscreen Lightbox Modal */}
       <AnimatePresence>
-      {lightboxIndex !== null && activeItem && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.22 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-8"
-          onClick={() => setLightboxIndex(null)}
-        >
+        {activeItem && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.94 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.94 }}
-            transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="relative max-w-5xl w-full h-[85vh] bg-[#012257] rounded-2xl overflow-hidden border border-[#c59b27]/40 shadow-2xl flex flex-col justify-between"
-            onClick={(e) => e.stopPropagation()}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 sm:p-6 backdrop-blur-md"
+            onClick={() => setLightboxIndex(null)}
           >
-            {/* Modal Header */}
-            <div className="flex items-center justify-between p-4 sm:p-5 bg-[#071a38] border-b border-slate-800 z-20">
-              <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full bg-[#c59b27]/20 border border-[#c59b27]/50 text-[#f5d77f] text-[10px] font-extrabold tracking-widest uppercase">
-                  {activeItem.categoryLabel}
-                </span>
-                <h3 className="font-cormorant text-lg sm:text-xl font-bold text-white truncate max-w-xs sm:max-w-md">
-                  {activeItem.title}
-                </h3>
+            {/* Close Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightboxIndex(null);
+              }}
+              className="absolute top-5 right-5 z-50 rounded-full bg-white/15 p-2.5 text-white hover:bg-white/30 transition-all duration-200"
+              aria-label="Close image viewer"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {/* Previous Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handlePrev();
+              }}
+              className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white/15 p-3 text-white hover:bg-white/30 transition-all duration-200"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+
+            {/* Next Button */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                handleNext();
+              }}
+              className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-50 rounded-full bg-white/15 p-3 text-white hover:bg-white/30 transition-all duration-200"
+              aria-label="Next image"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
+            {/* Active Image Box */}
+            <motion.div
+              key={activeItem.id}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative max-h-[85vh] max-w-[90vw] overflow-hidden rounded-2xl bg-black/40 border border-white/10 shadow-2xl flex flex-col"
+            >
+              <div className="relative h-[65vh] w-[85vw] max-w-[900px]">
+                <Image
+                  src={activeItem.image}
+                  alt={activeItem.title}
+                  fill
+                  className="object-contain"
+                  sizes="90vw"
+                  priority
+                />
               </div>
 
-              {/* Close Button */}
-              <button
-                onClick={() => setLightboxIndex(null)}
-                className="w-9 h-9 rounded-full bg-slate-800 hover:bg-[#c59b27] text-white hover:text-[#071a38] flex items-center justify-center transition-all shadow-md"
-                aria-label="Close modal"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Image View Area */}
-            <div className="relative flex-1 bg-black flex items-center justify-center overflow-hidden">
-              <Image
-                src={activeItem.image}
-                alt={activeItem.title}
-                fill
-                priority
-                className="object-contain"
-              />
-
-              {/* Navigation Controls */}
-              <button
-                onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 hover:bg-[#c59b27] text-white hover:text-[#071a38] flex items-center justify-center transition-all border border-white/20 shadow-2xl"
-                aria-label="Previous photo"
-              >
-                <ChevronLeft className="w-7 h-7" />
-              </button>
-              <button
-                onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/60 hover:bg-[#c59b27] text-white hover:text-[#071a38] flex items-center justify-center transition-all border border-white/20 shadow-2xl"
-                aria-label="Next photo"
-              >
-                <ChevronRight className="w-7 h-7" />
-              </button>
-            </div>
-
-            {/* Modal Footer Bar */}
-            <div className="flex items-center justify-between p-4 bg-[#071a38] border-t border-slate-800 text-xs text-slate-300 z-20">
-              <span className="font-semibold text-[#f5d77f]">
-                {activeItem.title}
-              </span>
-              <span className="text-slate-400 font-bold uppercase tracking-wider">
-                Photo {lightboxIndex + 1} of {filteredItems.length}
-              </span>
-            </div>
+              {/* Caption Bottom Bar */}
+              <div className="bg-[#01327a] px-6 py-4 border-t border-white/10 flex items-center justify-between">
+                <div>
+                  <span className="text-[10px] font-extrabold tracking-widest text-[#f5d77f] uppercase">
+                    {activeItem.categoryLabel}
+                  </span>
+                  <h4 className="font-cormorant text-xl font-bold text-white mt-0.5">
+                    {activeItem.title}
+                  </h4>
+                </div>
+                <span className="text-xs text-slate-300 font-medium">
+                  {lightboxIndex! + 1} / {filteredItems.length}
+                </span>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      )}
+        )}
       </AnimatePresence>
     </div>
   );

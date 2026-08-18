@@ -190,9 +190,9 @@ _Trusted by leading businesses across manufacturing, logistics, media, finance, 
 ### 10.2 Standing Recognitions & Institutional Clubs
 
 - **MD Club Member** — Bajaj General Insurance (_Member continuously since 2003_)
-- **Top 30 Advisors Worldwide 2025** — Generali Central
+- **Top 30 Advisors Worldwide (2025 & 2026)** — Generali Central
 - **COT CLUB (Court of the Table)** — Life Insurance Corporation of India (LIC)
-- **DGC Committee & Advisor** — Bajaj General Insurance
+- **DGC Committee & Advisor (2025 & 2026)** — Bajaj General Insurance
 
 ---
 

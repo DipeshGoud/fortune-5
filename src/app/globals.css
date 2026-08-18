@@ -10,31 +10,60 @@
     --primary-navy: #01327a;
     --primary-gold: #c59b27;
   }
+
+  *,
+  *::before,
+  *::after {
+    font-variant-numeric: lining-nums proportional-nums;
+    font-feature-settings: "lnum" 1, "onum" 0;
+  }
 }
 
 html {
   scrollbar-gutter: stable;
   overflow-y: scroll;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
 }
 
 body {
   background-color: #f9f8f6;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
 }
 
 .font-serif-title {
   font-family: var(--font-serif);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
 }
 
 .font-cormorant {
   font-family: var(--font-cormorant);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
 }
 
 .font-cinzel {
   font-family: var(--font-cinzel);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
 }
 
 .font-sans-body {
   font-family: var(--font-sans);
+  font-variant-numeric: lining-nums proportional-nums;
+  font-feature-settings: "lnum" 1, "onum" 0;
 }
 
 /* Primary Navy Brand Colors */

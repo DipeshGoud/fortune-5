@@ -39,8 +39,8 @@ export default function Navbar() {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
     { name: "SERVICES", href: "/services" },
-    { name: "TESTIMONIALS", href: "/testimonials" },
-    { name: "BLOG", href: "/blog" },
+    // { name: "TESTIMONIALS", href: "/testimonials" }, // Hidden for now - to be updated later
+    // { name: "BLOG", href: "/blog" }, // Hidden for now - to be updated later
     { name: "GALLERY", href: "/gallery" },
     { name: "CONTACT US", href: "/contact" },
   ];
