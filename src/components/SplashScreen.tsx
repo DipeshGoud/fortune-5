@@ -41,12 +41,12 @@ export default function SplashScreen() {
 
   return (
     <div
-      className={`fixed inset-0 z-[999999] bg-[#DEDFE4] flex items-center justify-center overflow-hidden transition-opacity duration-700 ease-in-out ${
+      className={`fixed inset-0 z-[999999] bg-[#D2D4D4] flex items-center justify-center overflow-hidden transition-opacity duration-700 ease-in-out ${
         isFading ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      {/* Video Container - Full screen cover with exact matching gray background */}
-      <div className="relative w-full h-full flex items-center justify-center bg-[#DEDFE4]">
+      {/* Video Container - Full screen matching video background */}
+      <div className="relative w-full h-full flex items-center justify-center bg-[#D2D4D4]">
         <video
           ref={videoRef}
           src="/Fortune 5.mp4"
@@ -55,14 +55,14 @@ export default function SplashScreen() {
           playsInline
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleDismiss}
-          className="w-full h-full object-cover"
+          className="w-full h-full max-w-full max-h-full object-contain"
         />
       </div>
 
       {/* Skip Button Pinned to Bottom Right Corner */}
       <button
         onClick={handleDismiss}
-        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-10 z-[1000000] flex items-center gap-2.5 bg-slate-900/90 hover:bg-[#01327a] text-white font-bold text-xs sm:text-sm tracking-widest px-6 py-3.5 rounded-full border border-slate-700 shadow-xl backdrop-blur-md uppercase transition-all transform hover:scale-105"
+        className="fixed bottom-6 right-6 sm:bottom-8 sm:right-10 z-[1000000] flex items-center gap-2.5 bg-slate-900/90 hover:bg-[#01327a] text-white font-bold text-xs sm:text-sm tracking-widest px-5 py-3 sm:px-6 sm:py-3.5 rounded-full border border-slate-700/40 shadow-xl backdrop-blur-md uppercase transition-all transform hover:scale-105"
       >
         <span>SKIP INTRO</span>
         <ArrowRight className="w-4 h-4 text-[#C59B27]" />
