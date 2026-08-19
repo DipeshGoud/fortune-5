@@ -63,7 +63,7 @@ const servicesData: ServiceItem[] = [
     title: "Fire / Burglary Insurance",
     category: "CORPORATE",
     icon: Flame,
-    img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&auto=format&fit=crop&q=80",
+    img: "/fire-insurance.jpg",
     shortDesc: "Protect your assets from both fire-related incidents and thefts to ensure complete security.",
     fullDesc:
       "Protect your assets from both fire-related incidents and thefts to ensure complete security.",
@@ -90,7 +90,7 @@ const servicesData: ServiceItem[] = [
     title: "Employee Benefit Policy",
     category: "CORPORATE",
     icon: Users,
-    img: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80",
+    img: "/employee-benefit-policy.png",
     shortDesc: "Provide your employees with comprehensive coverage and secure their well-being with tailored benefit policies that cover health, accidents, and life risks.",
     fullDesc:
       "Provide your employees with comprehensive coverage and secure their well-being with tailored benefit policies that cover health, accidents, and life risks.",
@@ -128,7 +128,7 @@ const servicesData: ServiceItem[] = [
     title: "Transit Insurance",
     category: "CORPORATE",
     icon: Ship,
-    img: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?w=800&auto=format&fit=crop&q=80",
+    img: "/transit-insurance.jpg",
     shortDesc: "Protect goods in transit, ensuring secure movement and flexibility with tailored marine policies.",
     fullDesc:
       "Protect goods in transit, ensuring secure movement and flexibility with tailored marine policies.",
@@ -153,7 +153,7 @@ const servicesData: ServiceItem[] = [
     title: "Contractor All Risk Insurance",
     category: "CORPORATE",
     icon: HardHat,
-    img: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?w=800&auto=format&fit=crop&q=80",
+    img: "/contractor-all-risk-insurance.jpg",
     shortDesc: "Comprehensive insurance for civil construction projects, covering a broad spectrum of risks.",
     fullDesc:
       "Comprehensive insurance for civil construction projects, covering a broad spectrum of risks.",
@@ -245,7 +245,7 @@ const servicesData: ServiceItem[] = [
     title: "Office Comprehensive Package Policy",
     category: "CORPORATE",
     icon: Building,
-    img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80",
+    img: "/office-comprehensive-package-policy.png",
     shortDesc: "Ensure financial protection for corporates with coverage against various risks such as fire, burglary, and machinery breakdown.",
     fullDesc:
       "Ensure financial protection for corporates with coverage against various risks such as fire, burglary, and machinery breakdown.",
@@ -271,7 +271,7 @@ const servicesData: ServiceItem[] = [
     title: "Shopkeeper All Risk Insurance",
     category: "CORPORATE",
     icon: Store,
-    img: "https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=800&auto=format&fit=crop&q=80",
+    img: "/shopkeeper-all-risk-insurance.png",
     shortDesc: "Get peace of mind by protecting your corporate from financial hazards with comprehensive coverage.",
     fullDesc:
       "Get peace of mind by protecting your corporate from financial hazards with comprehensive coverage.",
@@ -884,10 +884,10 @@ export default function ServicesPage() {
                         y: -6,
                         transition: { duration: 0.3, ease: LUXURY_EASE },
                       }}
-                      className="group relative bg-white rounded-2xl border border-slate-200/80 shadow-md hover:shadow-2xl hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                      className="group relative bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between overflow-hidden"
                     >
                       {/* Top Card Image Thumbnail with Overlay Badges */}
-                      <div className="relative h-48 sm:h-52 w-full bg-slate-900 overflow-hidden">
+                      <div className="relative h-56 sm:h-64 w-full bg-slate-900 overflow-hidden">
                         <Image
                           src={service.img}
                           alt={service.title}
@@ -895,15 +895,16 @@ export default function ServicesPage() {
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                           className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/90 via-[#01327a]/30 to-transparent" />
+                        {/* Subtle soft vignette at bottom edge for contrast */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
 
                         {/* Category Badge on Top Left */}
                         <div className="absolute top-3.5 left-3.5 z-10">
                           <span
-                            className={`text-[10px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-md backdrop-blur-md border ${
+                            className={`text-[10px] font-black uppercase tracking-wider px-3.5 py-1 rounded-full shadow-sm backdrop-blur-md border ${
                               service.category === "RETAIL"
                                 ? "bg-[#01327a]/90 text-[#F5D77F] border-[#D4AF37]/50"
-                                : "bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] border-[#F5D77F]/80 shadow-md"
+                                : "bg-gradient-to-r from-[#D4AF37] via-[#F5D77F] to-[#D4AF37] text-[#01327a] border-[#F5D77F]/80 shadow-sm"
                             }`}
                           >
                             {service.category} SOLUTION
@@ -911,26 +912,26 @@ export default function ServicesPage() {
                         </div>
 
                         {/* Icon Circle on Bottom Right of Image */}
-                        <div className="absolute bottom-3.5 right-3.5 z-10 w-11 h-11 rounded-xl bg-[#01327a]/90 backdrop-blur-md border border-[#D4AF37]/50 text-[#F5D77F] flex items-center justify-center shadow-lg group-hover:bg-gradient-to-r group-hover:from-[#D4AF37] group-hover:to-[#F5D77F] group-hover:text-[#01327a] transition-all duration-300">
+                        <div className="absolute bottom-3.5 right-3.5 z-10 w-11 h-11 rounded-xl bg-[#01327a]/90 backdrop-blur-md border border-[#D4AF37]/50 text-[#F5D77F] flex items-center justify-center shadow-md group-hover:bg-gradient-to-r group-hover:from-[#D4AF37] group-hover:to-[#F5D77F] group-hover:text-[#01327a] transition-all duration-300">
                           <Icon className="w-5 h-5 stroke-[1.8]" />
                         </div>
                       </div>
 
                       {/* Card Content Body */}
-                      <div className="p-6 sm:p-7 flex flex-col flex-grow justify-between">
+                      <div className="p-5 sm:p-6 flex flex-col flex-grow justify-between">
                         <div>
                           {/* Title */}
-                          <h3 className="font-cormorant text-2xl font-extrabold text-[#01327a] group-hover:text-[#D4AF37] transition-colors leading-tight mb-2.5">
+                          <h3 className="font-cormorant text-2xl font-extrabold text-[#01327a] group-hover:text-[#D4AF37] transition-colors leading-tight mb-2">
                             {service.title}
                           </h3>
 
                           {/* Description */}
-                          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium mb-4 line-clamp-3">
+                          <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium mb-3 line-clamp-3">
                             {service.shortDesc}
                           </p>
 
                           {/* Highlights List */}
-                          <div className="space-y-2 pt-3 border-t border-slate-100">
+                          <div className="space-y-1.5 pt-3 border-t border-slate-100">
                             {service.highlights.map((h, i) => (
                               <div key={i} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
                                 <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
@@ -941,7 +942,7 @@ export default function ServicesPage() {
                         </div>
 
                         {/* Card Footer Action */}
-                        <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
                           <motion.button
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.97 }}
@@ -1013,7 +1014,7 @@ export default function ServicesPage() {
               className="relative w-full max-w-2xl bg-white rounded-3xl border border-[#C59B27]/40 shadow-2xl overflow-hidden text-slate-900 max-h-[90vh] flex flex-col"
             >
               {/* Header Banner with Image Background */}
-              <div className="relative h-44 sm:h-52 bg-slate-900 p-6 sm:p-8 flex items-end">
+              <div className="relative h-52 sm:h-60 bg-slate-900 p-6 sm:p-8 flex items-end">
                 <Image
                   src={selectedService.img}
                   alt={selectedService.title}
