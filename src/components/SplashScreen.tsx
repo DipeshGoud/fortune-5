@@ -55,7 +55,7 @@ export default function SplashScreen() {
           playsInline
           onTimeUpdate={handleTimeUpdate}
           onEnded={handleDismiss}
-          className="w-full h-full max-w-full max-h-full object-contain"
+          className="w-full h-full object-contain md:object-cover"
         />
       </div>
 
