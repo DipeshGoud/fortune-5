@@ -14,6 +14,7 @@ import {
   X,
   Send,
   ArrowRight,
+  Loader2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import TopBar from "@/components/TopBar";
@@ -177,6 +178,14 @@ export default function TestimonialsPage() {
   const [selectedTestimonial, setSelectedTestimonial] = useState<Testimonial | null>(null);
   const [showSubmitModal, setShowSubmitModal] = useState<boolean>(false);
   const [submitted, setSubmitted] = useState<boolean>(false);
+  const [isSubmittingReview, setIsSubmittingReview] = useState<boolean>(false);
+  const [submitReviewError, setSubmitReviewError] = useState<string | null>(null);
+  const [reviewForm, setReviewForm] = useState({
+    name: "",
+    company: "",
+    role: "",
+    testimonial: "",
+  });
 
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = { All: testimonialsData.length };
@@ -209,13 +218,45 @@ export default function TestimonialsPage() {
     });
   }, [activeCategory, searchQuery]);
 
-  const handleSubmitReview = (e: React.FormEvent) => {
+  const handleSubmitReview = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setShowSubmitModal(false);
-    }, 2500);
+    setIsSubmittingReview(true);
+    setSubmitReviewError(null);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/insure@fortune5.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          client_name: reviewForm.name,
+          company: reviewForm.company,
+          role: reviewForm.role,
+          review_content: reviewForm.testimonial,
+          _subject: `New Client Testimonial Review: ${reviewForm.name} (${reviewForm.company})`,
+          _template: "table",
+          _captcha: "false",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setShowSubmitModal(false);
+          setReviewForm({ name: "", company: "", role: "", testimonial: "" });
+        }, 3000);
+      } else {
+        setSubmitReviewError("Unable to submit review. Please try again.");
+      }
+    } catch (err) {
+      console.error("Testimonial review submit error:", err);
+      setSubmitReviewError("Network error. Please try again.");
+    } finally {
+      setIsSubmittingReview(false);
+    }
   };
 
   return (
@@ -764,21 +805,31 @@ export default function TestimonialsPage() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmitReview} className="space-y-4">
+                  {submitReviewError && (
+                    <div className="rounded-xl border border-red-200 bg-red-50 p-2.5 text-xs font-semibold text-red-700">
+                      {submitReviewError}
+                    </div>
+                  )}
+
                   <div className="grid grid-cols-2 gap-3">
                     <div>
-                      <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Full Name</label>
+                      <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Full Name *</label>
                       <input
                         type="text"
                         required
+                        value={reviewForm.name}
+                        onChange={(e) => setReviewForm({ ...reviewForm, name: e.target.value })}
                         placeholder="e.g. Rahul Sharma"
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#C59B27]"
                       />
                     </div>
                     <div>
-                      <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Company / Org</label>
+                      <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Company / Org *</label>
                       <input
                         type="text"
                         required
+                        value={reviewForm.company}
+                        onChange={(e) => setReviewForm({ ...reviewForm, company: e.target.value })}
                         placeholder="e.g. Apex Corp"
                         className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#C59B27]"
                       />
@@ -786,20 +837,24 @@ export default function TestimonialsPage() {
                   </div>
 
                   <div>
-                    <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Role / Designation</label>
+                    <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Role / Designation *</label>
                     <input
                       type="text"
                       required
+                      value={reviewForm.role}
+                      onChange={(e) => setReviewForm({ ...reviewForm, role: e.target.value })}
                       placeholder="e.g. Chief Risk Officer / Business Owner"
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#C59B27]"
                     />
                   </div>
 
                   <div>
-                    <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Your Testimonial</label>
+                    <label className="text-[11px] font-extrabold uppercase text-slate-700 block mb-1">Your Testimonial *</label>
                     <textarea
                       required
                       rows={4}
+                      value={reviewForm.testimonial}
+                      onChange={(e) => setReviewForm({ ...reviewForm, testimonial: e.target.value })}
                       placeholder="Describe your experience with Fortune 5 advisory or claims support..."
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl p-3.5 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#C59B27]"
                     />
@@ -807,10 +862,20 @@ export default function TestimonialsPage() {
 
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs py-3.5 rounded-xl border border-slate-900 uppercase tracking-wider shadow-md transition-colors"
+                    disabled={isSubmittingReview}
+                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs py-3.5 rounded-xl border border-slate-900 uppercase tracking-wider shadow-md transition-colors disabled:opacity-75 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-3.5 h-3.5 text-[#C59B27]" />
-                    <span>Submit Review</span>
+                    {isSubmittingReview ? (
+                      <>
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-[#C59B27]" />
+                        <span>Submitting...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-3.5 h-3.5 text-[#C59B27]" />
+                        <span>Submit Review</span>
+                      </>
+                    )}
                   </button>
                 </form>
               )}

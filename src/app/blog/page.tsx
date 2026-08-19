@@ -21,9 +21,7 @@ const stats = [
   { value: "₹100+ Cr", label: "Claims assisted" },
 ];
 
-export default async function BlogPage({ searchParams }: { searchParams: Promise<{ q?: string | string[] }> }) {
-  const { q } = await searchParams;
-  const initialQuery = typeof q === "string" ? q : Array.isArray(q) ? q[0] : "";
+export default function BlogPage() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#F9F8F6] text-[#01327a] selection:bg-amber-100 selection:text-amber-900">
       <TopBar />
@@ -168,7 +166,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </div>
           </ScrollReveal>
 
-          <BlogGrid initialQuery={initialQuery} />
+          <BlogGrid />
 
           {/* trust strip */}
           <ScrollReveal variant="fadeUp" delay={0.1} className="w-full">

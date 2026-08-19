@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { X, Send, CheckCircle2, ShieldCheck } from "lucide-react";
+import { X, Send, CheckCircle2, ShieldCheck, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ConsultationModalProps {
@@ -24,6 +24,8 @@ export default function ConsultationModal({
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleChange = (
@@ -45,21 +47,54 @@ export default function ConsultationModal({
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          service: "Corporate Risk Solutions",
-          message: "",
-        });
-        onClose();
-      }, 2500);
+    if (!validate()) return;
+
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/insure@fortune5.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service_requested: form.service,
+          message: form.message || "Free Consultation Requested",
+          _subject: `Consultation Request: ${form.name} - Fortune 5 Website`,
+          _template: "table",
+          _captcha: "false",
+          _autoresponse: "Thank you for requesting a consultation with Fortune 5 Risk Management Solutions. A senior risk advisor will reach out to you within 24 hours.",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setForm({
+            name: "",
+            email: "",
+            phone: "",
+            service: "Corporate Risk Solutions",
+            message: "",
+          });
+          onClose();
+        }, 3000);
+      } else {
+        setSubmitError("Failed to send request. Please try again or call +91 98250 25251.");
+      }
+    } catch (err) {
+      console.error("Consultation form submission error:", err);
+      setSubmitError("Network error. Please try again or call +91 98250 25251.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -223,13 +258,29 @@ export default function ConsultationModal({
                     />
                   </div>
 
+                  {submitError && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 p-2.5 text-xs font-semibold text-red-700">
+                      {submitError}
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs sm:text-sm tracking-wider px-6 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-slate-800 uppercase flex items-center justify-center gap-2 mt-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs sm:text-sm tracking-wider px-6 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-200 border border-slate-800 uppercase flex items-center justify-center gap-2 mt-2 disabled:opacity-75 disabled:cursor-not-allowed"
                   >
-                    <span>SUBMIT REQUEST</span>
-                    <Send className="w-4 h-4 text-[#C59B27]" />
+                    {isSubmitting ? (
+                      <>
+                        <span>SUBMITTING...</span>
+                        <Loader2 className="w-4 h-4 animate-spin text-[#C59B27]" />
+                      </>
+                    ) : (
+                      <>
+                        <span>SUBMIT REQUEST</span>
+                        <Send className="w-4 h-4 text-[#C59B27]" />
+                      </>
+                    )}
                   </button>
 
                   <p className="text-[10px] text-center text-slate-500 font-medium pt-1">

@@ -19,6 +19,7 @@ import {
   Navigation,
   Sparkles,
   Building2,
+  Loader2,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -114,6 +115,8 @@ function ContactInner() {
   const searchParams = useSearchParams();
   const [form, setForm] = useState<FormState>(initialForm);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -141,12 +144,45 @@ function ContactInner() {
     return Object.keys(next).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    setSubmitted(true);
-    setForm(initialForm);
-    setTimeout(() => setSubmitted(false), 6000);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/insure@fortune5.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service_requested: form.subject || "General Risk Advisory",
+          message: form.message,
+          _subject: `New Contact Inquiry: ${form.name} - Fortune 5 Website`,
+          _template: "table",
+          _captcha: "false",
+          _autoresponse: "Thank you for contacting Fortune 5 Risk Management Solutions. We have received your inquiry and our advisory desk will contact you within one business day.",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setForm(initialForm);
+        setTimeout(() => setSubmitted(false), 8000);
+      } else {
+        setSubmitError("Unable to send inquiry. Please try again or call us at +91 98250 25251.");
+      }
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setSubmitError("Network issue. Please try again or reach us directly at +91 98250 25251.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const labelCls = "block text-[10px] font-extrabold tracking-[0.16em] text-[#012b6b] uppercase mb-2";
@@ -492,12 +528,29 @@ function ContactInner() {
                     </div>
                   </div>
 
+                  {submitError && (
+                    <div className="sm:col-span-2 rounded-xl border border-red-200 bg-red-50 p-3 text-xs font-semibold text-red-700">
+                      {submitError}
+                    </div>
+                  )}
+
                   <div className="sm:col-span-2 flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="submit"
-                      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#012b6b] px-7 py-4 text-xs font-extrabold tracking-[0.14em] text-white uppercase shadow-[0_12px_30px_rgba(11,34,70,0.25)] transition hover:bg-black sm:w-auto"
+                      disabled={isSubmitting}
+                      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#012b6b] px-7 py-4 text-xs font-extrabold tracking-[0.14em] text-white uppercase shadow-[0_12px_30px_rgba(11,34,70,0.25)] transition hover:bg-black disabled:opacity-75 disabled:cursor-not-allowed sm:w-auto"
                     >
-                      Send message <Send className="h-3.5 w-3.5 text-[#f3d47c] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      {isSubmitting ? (
+                        <>
+                          <span>Sending...</span>
+                          <Loader2 className="h-3.5 w-3.5 animate-spin text-[#f3d47c]" />
+                        </>
+                      ) : (
+                        <>
+                          <span>Send message</span>
+                          <Send className="h-3.5 w-3.5 text-[#f3d47c] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                        </>
+                      )}
                     </button>
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs font-semibold text-slate-500">
                       <p className="inline-flex items-center gap-1.5">

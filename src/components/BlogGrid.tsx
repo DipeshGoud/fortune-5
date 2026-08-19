@@ -1,14 +1,23 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Search, X, SlidersHorizontal, FileQuestion, ArrowRight } from "lucide-react";
 import { articles, blogCategories } from "@/data/blog";
 import BlogCard from "./BlogCard";
 
-export default function BlogGrid({ initialQuery = "" }: { initialQuery?: string }) {
+function BlogGridContent({ initialQuery = "" }: { initialQuery?: string }) {
+  const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>(initialQuery);
+
+  useEffect(() => {
+    const q = searchParams.get("q");
+    if (q !== null) {
+      setSearchQuery(q);
+    }
+  }, [searchParams]);
 
   const filtered = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
@@ -209,5 +218,19 @@ export default function BlogGrid({ initialQuery = "" }: { initialQuery?: string 
         </motion.div>
       )}
     </div>
+  );
+}
+
+export default function BlogGrid({ initialQuery = "" }: { initialQuery?: string }) {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex h-64 w-full items-center justify-center rounded-[1.5rem] border border-slate-200/80 bg-white text-sm font-semibold text-slate-400">
+          Loading articles...
+        </div>
+      }
+    >
+      <BlogGridContent initialQuery={initialQuery} />
+    </Suspense>
   );
 }

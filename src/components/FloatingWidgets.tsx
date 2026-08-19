@@ -1,13 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Mail, X, Check, ShieldCheck, Send, ArrowUp } from "lucide-react";
+import { Mail, X, Check, ShieldCheck, Send, ArrowUp, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function FloatingWidgets() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,14 +55,46 @@ export default function FloatingWidgets() {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setIsFormOpen(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
-    }, 3000);
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/insure@fortune5.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message || "Quick callback requested via floating widget",
+          _subject: `Quick Inquiry Callback: ${formData.name} - Fortune 5 Widget`,
+          _template: "table",
+          _captcha: "false",
+          _autoresponse: "Thank you for reaching out to Fortune 5 Risk Management Solutions. Our risk experts have received your inquiry and will contact you shortly.",
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setIsFormOpen(false);
+          setFormData({ name: "", email: "", phone: "", message: "" });
+        }, 3000);
+      } else {
+        setSubmitError("Failed to submit. Please call +91 98250 25251.");
+      }
+    } catch (err) {
+      console.error("Floating widget submission error:", err);
+      setSubmitError("Network error. Please call +91 98250 25251.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -260,13 +294,29 @@ export default function FloatingWidgets() {
                     />
                   </div>
 
+                  {submitError && (
+                    <div className="rounded-lg border border-red-200 bg-red-50 p-2.5 text-xs font-semibold text-red-700">
+                      {submitError}
+                    </div>
+                  )}
+
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-[#F5D77F] font-bold text-xs sm:text-sm tracking-widest py-3.5 px-6 rounded-lg border border-[#C59B27] shadow-lg transition-all transform hover:scale-[1.01] uppercase mt-2"
+                    disabled={isSubmitting}
+                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-[#F5D77F] font-bold text-xs sm:text-sm tracking-widest py-3.5 px-6 rounded-lg border border-[#C59B27] shadow-lg transition-all transform hover:scale-[1.01] uppercase mt-2 disabled:opacity-75 disabled:cursor-not-allowed"
                   >
-                    <span>SUBMIT INQUIRY</span>
-                    <Send className="w-4 h-4 text-[#C59B27]" />
+                    {isSubmitting ? (
+                      <>
+                        <span>SUBMITTING...</span>
+                        <Loader2 className="w-4 h-4 animate-spin text-[#C59B27]" />
+                      </>
+                    ) : (
+                      <>
+                        <span>SUBMIT INQUIRY</span>
+                        <Send className="w-4 h-4 text-[#C59B27]" />
+                      </>
+                    )}
                   </button>
 
                   <p className="text-[11px] text-slate-500 text-center font-medium pt-1">
