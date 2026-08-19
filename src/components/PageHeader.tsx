@@ -49,6 +49,7 @@ export default function PageHeader({ title, subtitle, breadcrumb, bgImage }: Pag
         <nav className="flex items-center gap-2 text-xs sm:text-sm font-semibold tracking-wide text-slate-300 mb-5">
           <Link
             href="/"
+            prefetch={false}
             className="flex items-center gap-1 hover:text-[#F5D77F] transition-colors"
           >
             <Home className="w-3.5 h-3.5" />

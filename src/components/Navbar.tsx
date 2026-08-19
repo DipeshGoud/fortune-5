@@ -72,6 +72,7 @@ export default function Navbar() {
                   <div key={link.name} className="relative group">
                     <Link
                       href={link.href}
+                      prefetch={false}
                       className={`relative py-2 flex items-center gap-1 text-[13px] xl:text-sm font-bold tracking-wider transition-colors ${
                         active
                           ? "text-[#C59B27]"
@@ -140,6 +141,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
+                    prefetch={false}
                     className={`flex items-center justify-between text-sm font-bold tracking-wider py-2 px-3 rounded-md ${
                       active
                         ? "bg-amber-100/60 text-[#C59B27]"

@@ -166,7 +166,7 @@ export default function AboutPage() {
           <ScrollReveal variant="fadeUp" className="w-full">
           <div className="pb-0 lg:pb-24">
             <nav aria-label="Breadcrumb" className="mb-6 sm:mb-8 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
-              <Link href="/" className="transition-colors hover:text-[#f5d77f]">Home</Link>
+              <Link href="/" prefetch={false} className="transition-colors hover:text-[#f5d77f]">Home</Link>
               <span className="h-px w-5 bg-[#c59b27]" />
               <span className="text-[#f5d77f] whitespace-nowrap">About Fortune 5</span>
             </nav>
@@ -182,7 +182,7 @@ export default function AboutPage() {
               For more than seven decades, Fortune 5 has brought a human point of view to risk management—turning complex risk into clear, confident decisions.
             </p>
             <div className="mt-7 sm:mt-9 flex flex-col gap-3 sm:flex-row">
-              <Link href="/contact" className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#f3d47c] px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-[#012257] uppercase transition hover:bg-white">
+              <Link href="/contact" prefetch={false} className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#f3d47c] px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-[#012257] uppercase transition hover:bg-white">
                 Speak with an advisor <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <a href="#founder" className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3.5 text-xs font-extrabold tracking-[0.13em] text-white uppercase transition hover:border-[#f3d47c] hover:text-[#f3d47c]">

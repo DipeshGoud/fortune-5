@@ -176,6 +176,7 @@ export default function TrustProofSection() {
                 </div>
                 <Link
                   href="/trophy"
+                  prefetch={false}
                   className="inline-flex items-center gap-1 text-[11px] font-extrabold text-[#9A7A1A] hover:text-[#01327a] uppercase tracking-wider bg-amber-50 hover:bg-amber-100/80 px-2.5 py-1 rounded-full border border-amber-200/80 transition-colors shrink-0"
                 >
                   <span>View All</span>
@@ -242,6 +243,7 @@ export default function TrustProofSection() {
               <div className="mt-5 pt-3.5 border-t border-slate-100">
                 <Link
                   href="/trophy"
+                  prefetch={false}
                   className="group w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-[#01327a] via-[#084299] to-[#01327a] hover:from-[#C59B27] hover:via-[#D4AF37] hover:to-[#F5D77F] text-white hover:text-[#01327a] text-xs font-extrabold tracking-wider uppercase flex items-center justify-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg border border-[#C59B27]/40"
                 >
                   <Trophy className="w-4 h-4 text-[#F5D77F] group-hover:text-[#01327a] transition-colors" />

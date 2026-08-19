@@ -112,7 +112,7 @@ export default function TermsContent() {
           <ScrollReveal variant="fadeUp">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
-              <Link href="/" className="transition-colors hover:text-[#f5d77f]">
+              <Link href="/" prefetch={false} className="transition-colors hover:text-[#f5d77f]">
                 Home
               </Link>
               <span className="h-px w-5 bg-[#c59b27]" />
@@ -154,6 +154,7 @@ export default function TermsContent() {
                 </button>
                 <Link
                   href="/privacy"
+                  prefetch={false}
                   className="inline-flex items-center gap-2 rounded-full bg-[#f3d47c] px-4 py-2.5 text-xs font-extrabold text-[#012257] uppercase tracking-wider hover:bg-white transition"
                 >
                   Privacy Policy <ArrowRight className="w-3.5 h-3.5" />
@@ -199,6 +200,7 @@ export default function TermsContent() {
             <div className="pt-2 border-t border-[#e2dcce] space-y-1">
               <Link
                 href="/privacy"
+                prefetch={false}
                 className="flex items-center justify-between py-2 px-3.5 text-xs font-semibold text-slate-700 hover:text-[#012257] rounded-xl hover:bg-white/60 transition"
               >
                 <span>Privacy Policy</span>
@@ -206,6 +208,7 @@ export default function TermsContent() {
               </Link>
               <Link
                 href="/contact"
+                prefetch={false}
                 className="flex items-center justify-between py-2 px-3.5 text-xs font-semibold text-slate-700 hover:text-[#012257] rounded-xl hover:bg-white/60 transition"
               >
                 <span>Corporate Legal Desk</span>
@@ -244,6 +247,7 @@ export default function TermsContent() {
                 </div>
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className="shrink-0 inline-flex items-center gap-1.5 text-xs font-extrabold text-[#012257] hover:text-[#c59b27] transition"
                 >
                   Contact Legal Desk <ExternalLink className="w-3.5 h-3.5 text-[#c59b27]" />
@@ -407,6 +411,7 @@ export default function TermsContent() {
               <p>© {new Date().getFullYear()} Fortune 5 Risk Management Solutions LLP.</p>
               <Link
                 href="/privacy"
+                prefetch={false}
                 className="inline-flex items-center gap-1.5 text-[#012257] font-bold hover:text-[#c59b27] transition"
               >
                 Read Privacy Policy <ArrowRight className="w-3.5 h-3.5 text-[#c59b27]" />

@@ -105,6 +105,7 @@ export default function AboutFortune5() {
             <div className="pt-3">
               <Link
                 href="/about"
+                prefetch={false}
                 className="group inline-flex items-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-sm tracking-widest px-8 py-4 rounded-lg shadow-lg border border-slate-900 uppercase transition-all duration-200 cursor-pointer"
               >
                 <span>READ MORE ABOUT US</span>

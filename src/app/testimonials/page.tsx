@@ -423,7 +423,7 @@ export default function TestimonialsPage() {
         {/* Hero Content Container */}
         <div className="relative z-10 mx-auto w-full max-w-4xl px-5 text-center sm:px-8">
           <nav aria-label="Breadcrumb" className="mb-7 flex items-center justify-center gap-2 text-[11px] font-bold tracking-[0.16em] text-slate-500 uppercase">
-            <Link href="/" className="transition-colors hover:text-[#a47a13]">Home</Link>
+            <Link href="/" prefetch={false} className="transition-colors hover:text-[#a47a13]">Home</Link>
             <span className="h-px w-5 bg-[#c59b27]" />
             <span className="text-[#071a38]">Testimonials</span>
           </nav>
@@ -754,6 +754,7 @@ export default function TestimonialsPage() {
                 </button>
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className="flex items-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs px-5 py-2.5 rounded-xl border border-slate-900 transition-colors uppercase tracking-wider"
                 >
                   <span>Consult Fortune 5 Team</span>

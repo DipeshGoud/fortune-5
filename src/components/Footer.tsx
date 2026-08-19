@@ -58,6 +58,7 @@ export default function Footer() {
               <div className="flex flex-col sm:flex-row items-center gap-3.5 shrink-0 w-full sm:w-auto">
                 <Link
                   href="/contact"
+                  prefetch={false}
                   className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-[#C59B27] via-[#D4AF37] to-[#F5D77F] px-7 py-4 text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#01327a] shadow-xl transition-all duration-300 hover:shadow-amber-500/30 hover:scale-[1.02]"
                 >
                   <span>REQUEST CONSULTATION</span>
@@ -86,6 +87,7 @@ export default function Footer() {
               <div className="inline-block w-fit">
                 <Link
                   href="/"
+                  prefetch={false}
                   className="inline-flex items-center group cursor-pointer bg-white/95 hover:bg-white px-4 py-2.5 rounded-xl border border-white/30 shadow-lg transition-all duration-300 transform group-hover:scale-[1.02]"
                 >
                   <Image
@@ -155,15 +157,13 @@ export default function Footer() {
                 QUICK LINKS
               </h4>
               <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
-                <li><Link href="/about" className="hover:text-[#F5D77F] transition-colors">About Us</Link></li>
-                <li><Link href="/services" className="hover:text-[#F5D77F] transition-colors">Our Services</Link></li>
-                {/* <li><Link href="/testimonials" className="hover:text-[#F5D77F] transition-colors">Testimonials</Link></li> */}
-                {/* <li><Link href="/blog" className="hover:text-[#F5D77F] transition-colors">Blog &amp; Articles</Link></li> */}
-                <li><Link href="/gallery" className="hover:text-[#F5D77F] transition-colors">Gallery &amp; Media</Link></li>
-                <li><Link href="/trophy" className="hover:text-[#F5D77F] transition-colors">Trophies &amp; Awards</Link></li>
-                <li><Link href="/contact" className="hover:text-[#F5D77F] transition-colors">Contact Us</Link></li>
-                <li><Link href="/privacy" className="hover:text-[#F5D77F] transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="hover:text-[#F5D77F] transition-colors">Terms &amp; Conditions</Link></li>
+                <li><Link href="/about" prefetch={false} className="hover:text-[#F5D77F] transition-colors">About Us</Link></li>
+                <li><Link href="/services" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Our Services</Link></li>
+                <li><Link href="/gallery" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Gallery &amp; Media</Link></li>
+                <li><Link href="/trophy" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Trophies &amp; Awards</Link></li>
+                <li><Link href="/contact" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Contact Us</Link></li>
+                <li><Link href="/privacy" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Terms &amp; Conditions</Link></li>
               </ul>
             </div>
 
@@ -173,12 +173,12 @@ export default function Footer() {
                 SOLUTIONS
               </h4>
               <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
-                <li><Link href="/services#corporate" className="hover:text-[#F5D77F] transition-colors">Corporate Risk Solutions</Link></li>
-                <li><Link href="/services#retail" className="hover:text-[#F5D77F] transition-colors">Retail Risk Solutions</Link></li>
-                <li><Link href="/services#benefits" className="hover:text-[#F5D77F] transition-colors">Employee Benefits</Link></li>
-                <li><Link href="/services#liability" className="hover:text-[#F5D77F] transition-colors">Liability Solutions</Link></li>
-                <li><Link href="/services#health" className="hover:text-[#F5D77F] transition-colors">Health Solutions</Link></li>
-                <li><Link href="/services#motor" className="hover:text-[#F5D77F] transition-colors">Motor Protection</Link></li>
+                <li><Link href="/services#corporate" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Corporate Risk Solutions</Link></li>
+                <li><Link href="/services#retail" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Retail Risk Solutions</Link></li>
+                <li><Link href="/services#benefits" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Employee Benefits</Link></li>
+                <li><Link href="/services#liability" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Liability Solutions</Link></li>
+                <li><Link href="/services#health" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Health Solutions</Link></li>
+                <li><Link href="/services#motor" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Motor Protection</Link></li>
               </ul>
             </div>
 
@@ -272,9 +272,9 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Fortune 5 Risk Management Solutions LLP. All Rights Reserved.</p>
           
           <div className="flex items-center gap-4 text-slate-400">
-            <Link href="/privacy" className="hover:text-[#F5D77F] transition-colors">Privacy Policy</Link>
+            <Link href="/privacy" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Privacy Policy</Link>
             <span>|</span>
-            <Link href="/terms" className="hover:text-[#F5D77F] transition-colors">Terms &amp; Conditions</Link>
+            <Link href="/terms" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>

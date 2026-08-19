@@ -49,7 +49,7 @@ export default function BlogPage() {
                 aria-label="Breadcrumb"
                 className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur"
               >
-                <Link href="/" className="text-[11px] font-bold tracking-[0.14em] text-slate-300 hover:text-white uppercase transition-colors">
+                <Link href="/" prefetch={false} className="text-[11px] font-bold tracking-[0.14em] text-slate-300 hover:text-white uppercase transition-colors">
                   Home
                 </Link>
                 <span className="h-2 w-2 rounded-full bg-[#C59B27]/60" />
@@ -84,6 +84,7 @@ export default function BlogPage() {
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#C59B27]/40 via-[#F5D77F]/30 to-[#C59B27]/20 blur-xl opacity-75 group-hover:opacity-100 transition duration-500" />
               <Link
                 href={`/blog/${articles[0].slug}`}
+                prefetch={false}
                 className="relative block rounded-2xl border border-[#C59B27]/30 bg-gradient-to-b from-[#01327a] to-[#01327a] p-6 sm:p-7 shadow-2xl transition duration-300 group-hover:border-[#C59B27]/60 overflow-hidden"
               >
                 <div className="flex items-center justify-between gap-3 mb-4">
@@ -182,6 +183,7 @@ export default function BlogPage() {
             </div>
             <Link
               href="/contact"
+              prefetch={false}
               className="inline-flex shrink-0 items-center gap-2 rounded-full bg-[#01327a] px-5 py-3 text-xs font-extrabold tracking-widest text-white uppercase transition hover:bg-[#01327a]"
             >
               Ask us a question <ArrowRight className="h-4 w-4 text-[#F5D77F]" />

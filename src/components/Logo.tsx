@@ -9,7 +9,7 @@ interface LogoProps {
 
 export default function Logo({ className = "", imgClassName = "h-10 sm:h-12 md:h-14" }: LogoProps) {
   return (
-    <Link href="/" className={`flex items-center group cursor-pointer ${className}`}>
+    <Link href="/" prefetch={false} className={`flex items-center group cursor-pointer ${className}`}>
       <Image
         src="/logo.png"
         alt="Fortune 5 Risk Management Solutions LLP"

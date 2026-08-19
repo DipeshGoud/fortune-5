@@ -209,7 +209,7 @@ function ContactInner() {
           {/* Left copy */}
           <ScrollReveal variant="fadeUp" className="w-full">
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
-              <Link href="/" className="transition-colors hover:text-[#f5d77f]">
+              <Link href="/" prefetch={false} className="transition-colors hover:text-[#f5d77f]">
                 Home
               </Link>
               <span className="h-px w-5 bg-[#c59b27]" />
@@ -559,11 +559,11 @@ function ContactInner() {
                       <span className="hidden sm:inline text-slate-300">•</span>
                       <p className="text-[11px] text-slate-500">
                         By submitting, you agree to our{" "}
-                        <Link href="/privacy" className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
+                        <Link href="/privacy" prefetch={false} className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
                           Privacy Policy
                         </Link>{" "}
                         &amp;{" "}
-                        <Link href="/terms" className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
+                        <Link href="/terms" prefetch={false} className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
                           Terms &amp; Conditions
                         </Link>.
                       </p>

@@ -98,6 +98,7 @@ export default function Hero() {
             {/* Primary Button */}
             <Link
               href="/contact"
+              prefetch={false}
               className="group flex items-center justify-center gap-3 bg-[#01327a] hover:bg-[#01255e] text-white font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg shadow-md hover:shadow-xl transition-all duration-200 uppercase border border-slate-900 cursor-pointer"
             >
               <span>GET A FREE CONSULTATION</span>
@@ -107,6 +108,7 @@ export default function Hero() {
             {/* Secondary Button */}
             <Link
               href="/services"
+              prefetch={false}
               className="group flex items-center justify-center gap-3 bg-white/90 hover:bg-amber-50/70 text-[#966C0F] hover:text-[#7A5606] font-bold text-xs sm:text-base tracking-wider px-6 sm:px-8 py-3.5 sm:py-4.5 rounded-lg border-2 border-[#D4AF37] hover:border-[#F5D77F] shadow-2xs transition-all duration-200 uppercase cursor-pointer"
             >
               <span>EXPLORE OUR SOLUTIONS</span>

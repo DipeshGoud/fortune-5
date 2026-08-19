@@ -638,7 +638,7 @@ export default function ServicesPage() {
           {/* Header */}
           <ScrollReveal variant="fadeUp" className="text-center max-w-3xl mx-auto mb-12">
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center justify-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-400 uppercase">
-              <Link href="/" className="transition-colors hover:text-[#B8860B]">
+              <Link href="/" prefetch={false} className="transition-colors hover:text-[#B8860B]">
                 Home
               </Link>
               <span className="h-px w-5 bg-[#C59B27]" />
@@ -955,6 +955,7 @@ export default function ServicesPage() {
 
                           <Link
                             href={`/contact?service=${encodeURIComponent(service.title)}`}
+                            prefetch={false}
                             className="group/link text-xs font-bold text-[#01327a] hover:text-[#D4AF37] transition-colors flex items-center gap-1 uppercase tracking-wider"
                           >
                             <span>GET QUOTE</span>
@@ -1168,6 +1169,7 @@ export default function ServicesPage() {
                 </button>
                 <Link
                   href={`/contact?service=${encodeURIComponent(selectedService.title)}`}
+                  prefetch={false}
                   className="group flex items-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-white font-extrabold text-xs px-6 py-3 rounded-xl border border-slate-900 transition-colors uppercase tracking-wider shadow-md"
                 >
                   <PhoneCall className="w-3.5 h-3.5 text-[#C59B27]" />

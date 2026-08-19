@@ -155,11 +155,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="relative mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-10">
           <ScrollReveal variant="fadeUp" className="w-full">
           <nav aria-label="Breadcrumb" className="mb-8 inline-flex flex-wrap items-center gap-2 text-[11px] font-bold tracking-[0.14em] text-slate-300 uppercase">
-            <Link href="/" className="transition-colors hover:text-white">
+            <Link href="/" prefetch={false} className="transition-colors hover:text-white">
               Home
             </Link>
             <span className="h-2 w-2 rounded-full bg-[#C59B27]/60" />
-            <Link href="/blog" className="transition-colors hover:text-white">
+            <Link href="/blog" prefetch={false} className="transition-colors hover:text-white">
               Blog
             </Link>
             <span className="h-2 w-2 rounded-full bg-[#C59B27]/60" />
@@ -231,6 +231,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 <Link
                   key={tag}
                   href={`/blog?q=${encodeURIComponent(tag.toLowerCase())}`}
+                  prefetch={false}
                   className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-bold text-[#01327a] transition hover:border-[#C59B27]/40 hover:text-[#9A7A1A]"
                 >
                   {tag}
@@ -254,12 +255,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/blog"
+                prefetch={false}
                 className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#01327a] px-6 py-3.5 text-xs font-extrabold tracking-widest text-white uppercase transition hover:bg-[#01327a]"
               >
                 <ArrowLeft className="h-4 w-4 text-[#F5D77F]" /> All articles
               </Link>
               <Link
                 href="/contact"
+                prefetch={false}
                 className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border-2 border-[#C59B27]/40 bg-white px-6 py-3.5 text-xs font-extrabold tracking-widest text-[#01327a] uppercase transition hover:border-[#C59B27] hover:text-[#9A7A1A]"
               >
                 Discuss this topic <ArrowRight className="h-4 w-4" />
@@ -314,7 +317,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 Related <span className="font-light italic text-[#B8860B]">articles</span>
               </h2>
             </div>
-            <Link href="/blog" className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#01327a] hover:text-[#9A7A1A]">
+            <Link href="/blog" prefetch={false} className="inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#01327a] hover:text-[#9A7A1A]">
               View all articles <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>

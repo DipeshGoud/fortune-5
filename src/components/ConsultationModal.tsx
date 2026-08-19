@@ -285,11 +285,11 @@ export default function ConsultationModal({
 
                   <p className="text-[10px] text-center text-slate-500 font-medium pt-1">
                     By submitting, you agree to our{" "}
-                    <Link href="/privacy" onClick={onClose} className="text-[#01327a] underline hover:text-[#C59B27] transition-colors">
+                    <Link href="/privacy" prefetch={false} onClick={onClose} className="text-[#01327a] underline hover:text-[#C59B27] transition-colors">
                       Privacy Policy
                     </Link>{" "}
                     &amp;{" "}
-                    <Link href="/terms" onClick={onClose} className="text-[#01327a] underline hover:text-[#C59B27] transition-colors">
+                    <Link href="/terms" prefetch={false} onClick={onClose} className="text-[#01327a] underline hover:text-[#C59B27] transition-colors">
                       Terms &amp; Conditions
                     </Link>.
                   </p>

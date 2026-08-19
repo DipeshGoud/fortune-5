@@ -62,6 +62,7 @@ export default function GalleryPage() {
             >
               <Link
                 href="/"
+                prefetch={false}
                 className="text-[11px] font-bold tracking-[0.14em] text-slate-300 hover:text-white uppercase transition-colors"
               >
                 Home
@@ -101,6 +102,7 @@ export default function GalleryPage() {
               </a>
               <Link
                 href="/about"
+                prefetch={false}
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-xs font-extrabold tracking-[0.14em] text-white uppercase backdrop-blur transition hover:border-[#F5D77F]/50 hover:text-[#F5D77F]"
               >
                 Our legacy
@@ -169,7 +171,7 @@ export default function GalleryPage() {
                   </div>
                 </div>
 
-                <Link href="/trophy" className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 hover:border-[#C59B27]/60 bg-white shadow-xl block transition-all">
+                <Link href="/trophy" prefetch={false} className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 hover:border-[#C59B27]/60 bg-white shadow-xl block transition-all">
                   <div className="relative aspect-[4/3] w-full bg-[#F9F8F6]">
                     <Image
                       src="/Trophy/IMGL2069.webp"
@@ -271,6 +273,7 @@ export default function GalleryPage() {
           </div>
           <Link
             href="/contact"
+            prefetch={false}
             className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C59B27]/30 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-widest text-[#F5D77F] uppercase backdrop-blur transition hover:bg-[#F5D77F] hover:text-[#01327a]"
           >
             Connect With Us <ArrowRight className="h-4 w-4" />

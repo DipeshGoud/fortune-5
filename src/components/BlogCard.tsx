@@ -15,6 +15,7 @@ export default function BlogCard({ article, index = 0 }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${article.slug}`}
+      prefetch={false}
       className={`group relative flex flex-col overflow-hidden rounded-[1.4rem] border bg-white shadow-[0_8px_28px_rgba(1,19,49,0.07)] transition-all hover:-translate-y-1 hover:border-[#C59B27]/30 hover:shadow-[0_18px_45px_rgba(1,19,49,0.13)] ${
         article.featured || isFeatured ? "border-amber-200/70" : "border-slate-200/80"
       }`}

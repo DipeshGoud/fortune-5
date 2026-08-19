@@ -105,6 +105,7 @@ export default function CustomizedRiskSolutions() {
                   {/* Card Action Link */}
                   <Link
                     href={item.link}
+                    prefetch={false}
                     className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#01327a] tracking-wider uppercase group-hover:text-[#C59B27] transition-colors pt-4 border-t border-slate-100"
                   >
                     <span>Learn More</span>
