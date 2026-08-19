@@ -1,28 +1,13 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Mail, X, Check, ShieldCheck, Send, ArrowUp, Loader2 } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function FloatingWidgets() {
-  const [isFormOpen, setIsFormOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitError, setSubmitError] = useState<string | null>(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
 
   useEffect(() => {
-    // Automatically show form modal after 20 seconds of website loading
-    const popupTimer = setTimeout(() => {
-      setIsFormOpen(true);
-    }, 20000);
-
     // Scroll listener for Move to Top button
     const handleScroll = () => {
       if (window.scrollY > 300) {
@@ -35,18 +20,9 @@ export default function FloatingWidgets() {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      clearTimeout(popupTimer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const handleOpenForm = () => {
-    setIsFormOpen(true);
-  };
-
-  const handleCloseForm = () => {
-    setIsFormOpen(false);
-  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -55,70 +31,9 @@ export default function FloatingWidgets() {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitError(null);
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/insure@fortune5.in", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message || "Quick callback requested via floating widget",
-          _subject: `Quick Inquiry Callback: ${formData.name} - Fortune 5 Widget`,
-          _template: "table",
-          _captcha: "false",
-          _autoresponse: "Thank you for reaching out to Fortune 5 Risk Management Solutions. Our risk experts have received your inquiry and will contact you shortly.",
-        }),
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-        setTimeout(() => {
-          setSubmitted(false);
-          setIsFormOpen(false);
-          setFormData({ name: "", email: "", phone: "", message: "" });
-        }, 3000);
-      } else {
-        setSubmitError("Failed to submit. Please call +91 98250 25251.");
-      }
-    } catch (err) {
-      console.error("Floating widget submission error:", err);
-      setSubmitError("Network error. Please call +91 98250 25251.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <>
-      {/* 1. LEFT SIDE FLOATING FORM ICON BUTTON */}
-      <div className="fixed bottom-6 left-6 z-40 flex items-center gap-3">
-        <button
-          onClick={handleOpenForm}
-          className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#01327a] text-[#F5D77F] border-2 border-[#C59B27] shadow-2xl hover:bg-[#01255e] hover:scale-110 transition-all duration-300"
-          aria-label="Open Inquiry Form"
-        >
-          {/* Subtle Pulse Animation Ring */}
-          <span className="absolute inset-0 rounded-full bg-[#C59B27]/30 animate-ping opacity-75 pointer-events-none" />
-          
-          <Mail className="w-6 h-6 text-[#F5D77F] group-hover:scale-110 transition-transform" />
-
-          {/* Tooltip on Hover */}
-          <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
-            Connect With Us
-          </span>
-        </button>
-      </div>
-
-      {/* 2. RIGHT SIDE FLOATING WIDGETS (MOVE TO TOP + WHATSAPP) */}
+      {/* RIGHT SIDE FLOATING WIDGETS (MOVE TO TOP + WHATSAPP) */}
       <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3.5">
         
         {/* Scroll to Top Button (Vibrant Gold Theme) */}
@@ -165,171 +80,6 @@ export default function FloatingWidgets() {
           </span>
         </a>
       </div>
-
-      {/* 3. TIMED & INTERACTIVE LEAD FORM MODAL ("Connect With Us") */}
-      <AnimatePresence>
-      {isFormOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.22 }}
-          className="fixed inset-0 z-[999999] flex items-center justify-center p-4 sm:p-6 bg-[#01327a]/80 backdrop-blur-md"
-        >
-          
-          {/* Modal Backdrop Overlay Click to Close */}
-          <div
-            onClick={handleCloseForm}
-            className="absolute inset-0 cursor-pointer"
-          />
-
-          {/* Form Modal Box */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 12 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.92, y: 12 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border-2 border-[#C59B27] overflow-hidden z-10"
-          >
-            
-            {/* Top Navy Header */}
-            <div className="bg-[#01327a] text-white p-6 sm:p-7 relative border-b border-[#C59B27]/40">
-              
-              {/* Close Button */}
-              <button
-                onClick={handleCloseForm}
-                className="absolute top-5 right-5 w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#C59B27] text-white hover:text-[#01327a] flex items-center justify-center transition-colors"
-                aria-label="Close Form"
-              >
-                <X className="w-5 h-5" />
-              </button>
-
-              <div className="flex items-center gap-2 text-[#C59B27] text-xs font-extrabold uppercase tracking-widest mb-1.5">
-                <ShieldCheck className="w-4 h-4" />
-                <span>Fortune 5 Advisory Desk</span>
-              </div>
-
-              <h3 className="font-cormorant text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                Connect With <span className="text-[#C59B27]">Us</span>
-              </h3>
-              <p className="text-slate-300 text-xs sm:text-sm mt-1 font-medium">
-                Schedule a consultation with our 3rd-generation risk experts.
-              </p>
-            </div>
-
-            {/* Form Body / Success Screen */}
-            <div className="p-6 sm:p-8 bg-[#F9F8F6]">
-              {submitted ? (
-                <div className="py-8 flex flex-col items-center text-center space-y-3">
-                  <div className="w-14 h-14 rounded-full bg-emerald-100 border-2 border-emerald-500 flex items-center justify-center text-emerald-600">
-                    <Check className="w-8 h-8" />
-                  </div>
-                  <h4 className="font-cormorant font-extrabold text-2xl text-[#01327a]">
-                    Thank You!
-                  </h4>
-                  <p className="text-xs sm:text-sm text-slate-600 max-w-xs font-medium">
-                    Your request has been received. Our senior risk consultants will get in touch shortly.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  
-                  {/* Name & Email Row */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
-                        Name <span className="text-amber-600">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Your Full Name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] font-medium shadow-xs"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
-                        Email Id <span className="text-amber-600">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="name@company.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] font-medium shadow-xs"
-                      />
-                    </div>
-                  </div>
-
-                  {/* Contact Number */}
-                  <div>
-                    <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
-                      Contact Number <span className="text-amber-600">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+91 98765 43210"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] font-medium shadow-xs"
-                    />
-                  </div>
-
-                  {/* Requirement Message */}
-                  <div>
-                    <label className="block text-xs font-bold text-[#01327a] uppercase tracking-wider mb-1.5">
-                      Message / Risk Management Requirements
-                    </label>
-                    <textarea
-                      rows={3}
-                      placeholder="Briefly describe your risk management requirement..."
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-xs sm:text-sm text-slate-900 focus:outline-none focus:border-[#C59B27] focus:ring-1 focus:ring-[#C59B27] font-medium shadow-xs resize-none"
-                    />
-                  </div>
-
-                  {submitError && (
-                    <div className="rounded-lg border border-red-200 bg-red-50 p-2.5 text-xs font-semibold text-red-700">
-                      {submitError}
-                    </div>
-                  )}
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full flex items-center justify-center gap-2 bg-[#01327a] hover:bg-[#01255e] text-[#F5D77F] font-bold text-xs sm:text-sm tracking-widest py-3.5 px-6 rounded-lg border border-[#C59B27] shadow-lg transition-all transform hover:scale-[1.01] uppercase mt-2 disabled:opacity-75 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <span>SUBMITTING...</span>
-                        <Loader2 className="w-4 h-4 animate-spin text-[#C59B27]" />
-                      </>
-                    ) : (
-                      <>
-                        <span>SUBMIT INQUIRY</span>
-                        <Send className="w-4 h-4 text-[#C59B27]" />
-                      </>
-                    )}
-                  </button>
-
-                  <p className="text-[11px] text-slate-500 text-center font-medium pt-1">
-                    Your details are kept 100% confidential under our privacy policy.
-                  </p>
-                </form>
-              )}
-            </div>
-
-          </motion.div>
-        </motion.div>
-      )}
-      </AnimatePresence>
     </>
   );
 }
