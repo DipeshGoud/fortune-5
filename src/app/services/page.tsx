@@ -179,7 +179,7 @@ const servicesData: ServiceItem[] = [
     title: "Liability Insurance",
     category: "CORPORATE",
     icon: Scale,
-    img: "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=800&auto=format&fit=crop&q=80",
+    img: "/liability-insurance.png",
     shortDesc: "Covers corporates and individuals from various legal liabilities, offering protection for a wide range of risks, including damage to property or bodily injury.",
     fullDesc:
       "Covers corporates and individuals from various legal liabilities, offering protection for a wide range of risks, including damage to property or bodily injury.",
