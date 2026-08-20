@@ -21,7 +21,7 @@ export default function Legacy75Section() {
           >
             <div className="relative group">
               <Image
-                src="/75year-logo.png"
+                src="/75year-logo.webp"
                 alt="75+ Years of Trust & Excellence"
                 width={380}
                 height={380}

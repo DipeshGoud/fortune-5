@@ -6,9 +6,6 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
-import heroBg from "../../public/hero-bg.png";
-import heroClipart from "../../public/hero-bg-clipart.png";
-
 export default function Hero() {
   return (
     <section className="relative w-full min-h-screen bg-[#F9F8F6] flex flex-col justify-between pt-[160px] sm:pt-[190px] lg:pt-[220px] pb-20 sm:pb-32 lg:pb-36">
@@ -22,7 +19,7 @@ export default function Hero() {
         >
           {/* Main Background Image */}
           <Image
-            src={heroBg}
+            src="/hero-bg.webp"
             alt="Fortune 5 Hero Background"
             fill
             priority
@@ -32,7 +29,7 @@ export default function Hero() {
 
           {/* Overlapping Bottom Clipart Wave */}
           <Image
-            src={heroClipart}
+            src="/hero-bg-clipart.webp"
             alt="Hero Background Ribbon"
             fill
             priority

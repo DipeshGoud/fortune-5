@@ -11,7 +11,7 @@ export default function Logo({ className = "", imgClassName = "h-10 sm:h-12 md:h
   return (
     <Link href="/" prefetch={false} className={`flex items-center group cursor-pointer ${className}`}>
       <Image
-        src="/logo.png"
+        src="/logo.webp"
         alt="Fortune 5 Risk Management Solutions LLP"
         width={300}
         height={90}

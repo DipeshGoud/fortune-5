@@ -52,10 +52,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Fortune 5 Risk Management Solutions LLP" }],
   icons: {
     icon: [
-      { url: "/favicon.png?v=2", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
     ],
-    shortcut: "/favicon.png?v=2",
-    apple: "/favicon.png?v=2",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   openGraph: {
     title: "Fortune 5 | Risk Management Solutions LLP",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Fortune 5 Risk Management",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo.webp",
         width: 1200,
         height: 630,
         alt: "Fortune 5 Logo",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: "Fortune 5 | Risk Management Solutions LLP",
     description:
       "Protecting Businesses, Families & Futures through Intelligent Risk Management.",
-    images: ["/logo.png"],
+    images: ["/logo.webp"],
   },
 };
 
@@ -93,9 +93,9 @@ export default function RootLayout({
       className={`${playfair.variable} ${cormorant.variable} ${cinzel.variable} ${jakarta.variable} antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.png?v=2" type="image/png" sizes="any" />
-        <link rel="shortcut icon" href="/favicon.png?v=2" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.png?v=2" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon.ico" />
         <meta name="theme-color" content="#012257" />
       </head>
       <body className="min-h-screen bg-[#F9F8F6] text-slate-900 font-sans selection:bg-amber-100 selection:text-amber-900">

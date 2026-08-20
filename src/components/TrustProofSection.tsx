@@ -188,7 +188,7 @@ export default function TrustProofSection() {
               <div className="mb-5 p-4 rounded-xl bg-gradient-to-r from-[#01327a] via-[#084299] to-[#01327a] text-white flex items-center gap-4 border border-[#D4AF37]/50 shadow-md">
                 <div className="w-14 h-14 shrink-0 relative flex items-center justify-center">
                   <Image
-                    src="/trophy.png"
+                    src="/trophy.webp"
                     alt="Golden Trophy Award"
                     width={70}
                     height={100}

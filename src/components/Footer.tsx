@@ -91,7 +91,7 @@ export default function Footer() {
                   className="inline-flex items-center group cursor-pointer bg-white/95 hover:bg-white px-4 py-2.5 rounded-xl border border-white/30 shadow-lg transition-all duration-300 transform group-hover:scale-[1.02]"
                 >
                   <Image
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="Fortune 5 Risk Management Solutions LLP"
                     width={450}
                     height={140}

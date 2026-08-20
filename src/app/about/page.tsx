@@ -195,7 +195,7 @@ export default function AboutPage() {
           <ScrollReveal variant="fadeLeft" delay={0.15} className="w-full">
           <div className="relative mx-auto flex w-full max-w-[400px] sm:max-w-[540px] justify-center self-end lg:justify-end mt-4 lg:mt-0">
             <div className="absolute bottom-0 h-[82%] w-[78%] rounded-t-[10rem] border border-[#c59b27]/40 bg-gradient-to-b from-[#c59b27]/25 to-transparent z-0" />
-            <Image src="/kaushal-shah.png" alt="Kaushal Shah, Chairman & Managing Director" width={680} height={1050} priority className="relative z-10 h-auto w-[82%] sm:w-[86%] max-w-[360px] sm:max-w-[480px] object-contain drop-shadow-2xl" />
+            <Image src="/kaushal-shah.webp" alt="Kaushal Shah, Chairman & Managing Director" width={680} height={1050} priority className="relative z-10 h-auto w-[82%] sm:w-[86%] max-w-[360px] sm:max-w-[480px] object-contain drop-shadow-2xl" />
             <div className="absolute bottom-4 sm:bottom-8 right-2 sm:right-2 z-20 rounded-2xl border border-white/15 bg-[#012b6b]/90 px-3.5 py-2.5 sm:px-4 sm:py-3 text-left shadow-2xl backdrop-blur">
               <p className="text-[9px] sm:text-[10px] font-extrabold tracking-[0.18em] text-[#f5d77f] uppercase">Chairman &amp; Managing Director</p>
               <p className="mt-0.5 sm:mt-1 text-xs sm:text-sm font-semibold text-white whitespace-nowrap">Kaushal Shah</p>
