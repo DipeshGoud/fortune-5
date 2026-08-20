@@ -65,11 +65,11 @@ export default function Footer() {
                   <ArrowRight className="h-4 w-4 text-[#01327a] transition-transform group-hover:translate-x-1" />
                 </Link>
                 <a
-                  href="tel:+919820710067"
+                  href="tel:+919820810067"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/25 bg-black/20 hover:bg-black/30 backdrop-blur-sm px-6 py-4 text-xs sm:text-sm font-bold tracking-wider text-white transition-all shadow-sm"
                 >
                   <Phone className="h-4 w-4 text-[#C59B27]" />
-                  <span>+91 98207 10067</span>
+                  <span>+91 98208 10067</span>
                 </a>
               </div>
             </div>
@@ -237,11 +237,7 @@ export default function Footer() {
                   <Phone className="w-4 h-4 text-[#C59B27] flex-shrink-0 mt-0.5" />
                   <div className="space-y-1">
                     <div>
-                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Cell:</span>{" "}
-                      <a href="tel:+919820710067" className="font-bold text-white hover:text-[#F5D77F] transition-colors">+91-98207 10067</a>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Support:</span>{" "}
+                      <span className="text-[10px] text-slate-400 uppercase font-semibold">Direct / Support:</span>{" "}
                       <a href="tel:+919820810067" className="font-bold text-white hover:text-[#F5D77F] transition-colors">+91-98208 10067</a>
                     </div>
                     <div>

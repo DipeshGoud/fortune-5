@@ -7,7 +7,7 @@ import { ArrowRight, ShieldCheck, Award, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 import heroBg from "../../public/hero-bg.png";
-import heroClipart from "../../public/hero-bg-CLIPART.png";
+import heroClipart from "../../public/hero-bg-clipart.png";
 
 export default function Hero() {
   return (

@@ -30,58 +30,58 @@ export default function TrustProofSection() {
   const generalPartners = [
     {
       name: "Bajaj Allianz General",
-      logo: "/LOGO Partner/Bajaj-General.png",
+      logo: "/partners/bajaj-general.png",
     },
     {
       name: "Generali Central",
-      logo: "/LOGO Partner/general-central-logo.svg",
+      logo: "/partners/generali-central.svg",
     },
     {
       name: "ICICI Lombard",
-      logo: "/LOGO Partner/lombard-brand-logo.png",
+      logo: "/partners/icici-lombard.png",
     },
     {
       name: "HDFC ERGO",
-      logo: "/LOGO Partner/HDFO-ERGO-logo.png",
+      logo: "/partners/hdfc-ergo.png",
     },
     {
       name: "Digit General",
-      logo: "/LOGO Partner/digit-insurance-logo.png",
+      logo: "/partners/digit-insurance.png",
     },
     {
       name: "Tata AIG",
-      logo: "/LOGO Partner/tata-aig-logo-png.png",
+      logo: "/partners/tata-aig.png",
     },
     {
       name: "Oriental Insurance",
-      logo: "/LOGO Partner/oriental-insurance-Logo.png",
+      logo: "/partners/oriental-insurance.png",
     },
     {
       name: "New India Assurance",
-      logo: "/LOGO Partner/the-new-india-assurance-logo.png",
+      logo: "/partners/new-india-assurance.png",
     },
   ];
 
   const lifePartners = [
     {
       name: "Bajaj Allianz Life",
-      logo: "/LOGO Partner/bajaj-life-logo.png",
+      logo: "/partners/bajaj-life.png",
     },
     {
       name: "HDFC Life",
-      logo: "/LOGO Partner/hdfc-life-logo-png.png",
+      logo: "/partners/hdfc-life.png",
     },
     {
       name: "Tata AIA Life",
-      logo: "/LOGO Partner/tata-aia-life-insurance-logo.png",
+      logo: "/partners/tata-aia-life.png",
     },
     {
       name: "ICICI Prudential Life",
-      logo: "/LOGO Partner/icici-prudential-life-insurance-logo.png",
+      logo: "/partners/icici-prudential.png",
     },
     {
       name: "LIC of India",
-      logo: "/LOGO Partner/lic-logo.png",
+      logo: "/partners/lic.png",
     },
   ];
 

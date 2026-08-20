@@ -234,16 +234,16 @@ function ContactInner() {
             {/* quick contact chips */}
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="tel:+919820710067"
+                href="tel:+919820810067"
                 className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#012257] uppercase shadow-lg transition hover:bg-white"
               >
-                <Phone className="h-3.5 w-3.5" /> Cell: +91-98207 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                <Phone className="h-3.5 w-3.5" /> Call: +91-98208 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a
-                href="tel:+919820810067"
+                href="tel:+912226192727"
                 className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
               >
-                <Phone className="h-3.5 w-3.5 text-[#f3d47c]" /> Support: +91-98208 10067
+                <Phone className="h-3.5 w-3.5 text-[#f3d47c]" /> Board: +91-22-2619 27 27
               </a>
               <a
                 href="mailto:insure@fortune5.in"
@@ -620,7 +620,7 @@ function ContactInner() {
                     {
                       icon: Phone,
                       label: "Call us",
-                      lines: ["Cell: +91-98207 10067", "Support: +91-98208 10067", "Board: +91-22-2619 27 27"],
+                      lines: ["Direct / Support: +91-98208 10067", "Board: +91-22-2619 27 27"],
                       strong: 0,
                     },
                     {
@@ -763,7 +763,7 @@ function ContactInner() {
               Still unsure? <span className="font-extrabold text-[#012b6b]">Talk to a human in minutes.</span>
             </p>
             <div className="flex gap-2">
-              <a href="tel:+919820710067" className="inline-flex items-center gap-2 rounded-full bg-[#012b6b] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-white uppercase hover:bg-black">
+              <a href="tel:+919820810067" className="inline-flex items-center gap-2 rounded-full bg-[#012b6b] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-white uppercase hover:bg-black">
                 Call advisory
               </a>
               <a href="mailto:insure@fortune5.in" className="inline-flex items-center gap-2 rounded-full border border-[#e7e0c8] bg-[#fdfbf3] px-5 py-2.5 text-xs font-extrabold tracking-[0.12em] text-[#012b6b] uppercase hover:border-[#c59b27]">

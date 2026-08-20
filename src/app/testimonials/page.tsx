@@ -300,7 +300,7 @@ export default function TestimonialsPage() {
         >
           <div className="relative h-10 w-10 shrink-0 rounded-full overflow-hidden border border-[#c59b27]/40 shadow-sm transition-transform group-hover:scale-105">
             <Image
-              src="/client-avatar-1.png"
+              src="/testimonials/client-avatar-1.png"
               alt="Rajesh Mehta"
               fill
               className="object-cover"
@@ -333,7 +333,7 @@ export default function TestimonialsPage() {
         >
           <div className="relative h-10 w-10 shrink-0 rounded-full overflow-hidden border border-[#c59b27]/40 shadow-sm transition-transform group-hover:scale-105">
             <Image
-              src="/client-avatar-3.png"
+              src="/testimonials/client-avatar-3.png"
               alt="Vikramaditya R."
               fill
               className="object-cover"
@@ -366,7 +366,7 @@ export default function TestimonialsPage() {
         >
           <div className="relative h-10 w-10 shrink-0 rounded-full overflow-hidden border border-[#c59b27]/40 shadow-sm transition-transform group-hover:scale-105">
             <Image
-              src="/client-avatar-2.png"
+              src="/testimonials/client-avatar-2.png"
               alt="Ananya Sharma"
               fill
               className="object-cover"
@@ -399,7 +399,7 @@ export default function TestimonialsPage() {
         >
           <div className="relative h-10 w-10 shrink-0 rounded-full overflow-hidden border border-[#c59b27]/40 shadow-sm transition-transform group-hover:scale-105">
             <Image
-              src="/client-avatar-4.png"
+              src="/testimonials/client-avatar-4.png"
               alt="Sunita Deshmukh"
               fill
               className="object-cover"
@@ -455,7 +455,7 @@ export default function TestimonialsPage() {
               <div className="flex -space-x-3 overflow-hidden">
                 <div className="relative h-9 w-9 rounded-full border-2 border-white overflow-hidden shadow-sm">
                   <Image
-                    src="/client-avatar-1.png"
+                    src="/testimonials/client-avatar-1.png"
                     alt="Client avatar 1"
                     fill
                     className="object-cover"
@@ -463,7 +463,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="relative h-9 w-9 rounded-full border-2 border-white overflow-hidden shadow-sm">
                   <Image
-                    src="/client-avatar-2.png"
+                    src="/testimonials/client-avatar-2.png"
                     alt="Client avatar 2"
                     fill
                     className="object-cover"
@@ -471,7 +471,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="relative h-9 w-9 rounded-full border-2 border-white overflow-hidden shadow-sm">
                   <Image
-                    src="/executive-handshake.png"
+                    src="/testimonials/executive-handshake.png"
                     alt="Partnership portrait"
                     fill
                     className="object-cover"

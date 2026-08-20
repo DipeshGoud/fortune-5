@@ -442,8 +442,8 @@ export default function PrivacyContent() {
                   <a href="mailto:insure@fortune5.in" className="text-[#012257] hover:text-[#c59b27] flex items-center gap-1.5">
                     <Mail className="w-3.5 h-3.5 text-[#c59b27]" /> insure@fortune5.in
                   </a>
-                  <a href="tel:+919820710067" className="text-[#012257] hover:text-[#c59b27] flex items-center gap-1.5">
-                    <Phone className="w-3.5 h-3.5 text-[#c59b27]" /> +91 98207 10067
+                  <a href="tel:+919820810067" className="text-[#012257] hover:text-[#c59b27] flex items-center gap-1.5">
+                    <Phone className="w-3.5 h-3.5 text-[#c59b27]" /> +91 98208 10067
                   </a>
                   <a href="https://fortune5.in" className="text-[#012257] hover:text-[#c59b27] flex items-center gap-1.5">
                     <Globe className="w-3.5 h-3.5 text-[#c59b27]" /> fortune5.in

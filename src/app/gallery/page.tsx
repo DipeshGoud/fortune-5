@@ -133,7 +133,7 @@ export default function GalleryPage() {
               <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-slate-900 shadow-2xl">
                 <div className="relative aspect-[4/5] w-full">
                   <Image
-                    src="/Gallery/gallery-75th-stage.png"
+                    src="/gallery/gallery-75th-stage.png"
                     alt="Fortune 5 75th Platinum Jubilee Stage"
                     fill
                     priority
@@ -154,7 +154,7 @@ export default function GalleryPage() {
                 <div className="relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-slate-900 shadow-xl">
                   <div className="relative aspect-[4/3.2] w-full">
                     <Image
-                      src="/Gallery/gallery-75th-cake.png"
+                      src="/gallery/gallery-75th-cake.png"
                       alt="75th Anniversary Celebration Cake"
                       fill
                       sizes="220px"
@@ -174,7 +174,7 @@ export default function GalleryPage() {
                 <Link href="/trophy" prefetch={false} className="group relative overflow-hidden rounded-[1.25rem] border border-white/10 hover:border-[#C59B27]/60 bg-white shadow-xl block transition-all">
                   <div className="relative aspect-[4/3] w-full bg-[#F9F8F6]">
                     <Image
-                      src="/Trophy/IMGL2069.webp"
+                      src="/trophies/IMGL2069.webp"
                       alt="MD Club Gold Trophy Award"
                       fill
                       sizes="220px"

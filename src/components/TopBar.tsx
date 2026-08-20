@@ -5,8 +5,7 @@ import React from "react";
 export default function TopBar() {
   const marqueeItems = [
     "Fortune 5 Risk Management Solutions LLP",
-    "Cell: +91-98207 10067",
-    "Support: +91-98208 10067",
+    "Direct / Support: +91-98208 10067",
     "Board: +91-22-2619 27 27",
     "Email: insure@fortune5.in",
     "Hours: Monday to Saturday 10:00 AM - 7:30 PM",

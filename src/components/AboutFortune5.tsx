@@ -12,7 +12,7 @@ export default function AboutFortune5() {
       {/* Left Corner Gradient Clipart Watermark */}
       <div className="absolute left-0 bottom-0 w-[380px] sm:w-[480px] md:w-[580px] lg:w-[680px] h-auto opacity-30 pointer-events-none z-0">
         <Image
-          src="/gradient clipart.png"
+          src="/gradient-clipart.png"
           alt="Gradient Ornament Clipart"
           width={700}
           height={700}
@@ -23,7 +23,7 @@ export default function AboutFortune5() {
       {/* Right Corner City Skyline Watermark */}
       <div className="absolute right-0 bottom-0 w-[480px] sm:w-[600px] md:w-[750px] lg:w-[900px] h-auto opacity-15 pointer-events-none z-0 flex items-end justify-end">
         <Image
-          src="/city png.png"
+          src="/city-bg.png"
           alt="City Skyline Background"
           width={900}
           height={450}

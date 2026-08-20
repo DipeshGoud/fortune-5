@@ -15,8 +15,7 @@
 | **Secondary Motto**     | _Your Risk. Our Responsibility._                                                    | TopBar Marquee, Section Subtitles, Footer            |
 | **Brand Promise**       | _BUILDING TRUST. PROTECTING FUTURES._                                               | Founder Section, Why Fortune 5 Header                |
 | **Head Office Address** | `106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai 400057, India.` | Footer, Contact Page, Map Cards, TopBar              |
-| **Direct Cell**         | `+91-98207 10067`                                                                   | TopBar, Hero Phone Buttons, Contact Page, Footer     |
-| **Support Line**        | `+91-98208 10067`                                                                   | TopBar, Contact Page, Sticky WhatsApp/Help Bar       |
+| **Direct / Support**    | `+91-98208 10067`                                                                   | TopBar, Hero Phone Buttons, Contact Page, Footer     |
 | **Board Line**          | `+91-22-2619 27 27`                                                                 | TopBar, Contact Page, Footer                         |
 | **Official Email**      | `insure@fortune5.in` (Claims: `claims@fortune5.in`)                                 | TopBar, Contact Forms, Footer Email Copy Action      |
 | **LinkedIn**            | `https://www.linkedin.com/in/kaushal-shah-59765b1b?utm_source=share_via&utm_content=profile&utm_medium=member_ios` | Footer, Team Profile, Contact Page                  |
@@ -200,7 +199,7 @@ _Trusted by leading businesses across manufacturing, logistics, media, finance, 
 
 ```
 [Phase 1] Core Brand, Contact & Stats Alignment [COMPLETED]
-    ├── Phone numbers (+91-98207 10067, +91-98208 10067, +91-22-2619 27 27)
+    ├── Phone numbers (+91-98208 10067, +91-22-2619 27 27)
     ├── Head Office Address (106-107 E-Square, Subhash Road, Vile Parle (E), Mumbai 400057)
     └── Key statistics (75+ Years, 10,000+ Lives, 500+ Businesses, ₹100+ Cr Claims)
 
