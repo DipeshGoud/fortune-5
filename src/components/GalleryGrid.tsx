@@ -140,6 +140,7 @@ const categories = [
 export default function GalleryGrid() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
 
   // Filter items based on active category
   const filteredItems = useMemo(() => {
@@ -162,6 +163,10 @@ export default function GalleryGrid() {
     setLightboxIndex((prev) =>
       prev !== null && prev < filteredItems.length - 1 ? prev + 1 : 0
     );
+  };
+
+  const handleImageLoaded = (id: string) => {
+    setLoadedImages((prev) => ({ ...prev, [id]: true }));
   };
 
   return (
@@ -190,46 +195,60 @@ export default function GalleryGrid() {
 
       {/* Pure Visual Photo Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
-        {filteredItems.map((item, index) => (
-          <div
-            key={item.id}
-            onClick={() => setLightboxIndex(index)}
-            className="group relative aspect-[4/3] sm:aspect-square w-full overflow-hidden rounded-2xl bg-slate-900 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-slate-200/80"
-          >
-            {/* Image */}
-            <Image
-              src={item.image}
-              alt={item.title}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              className="object-cover object-center transition-transform duration-700 group-hover:scale-108"
-            />
+        {filteredItems.map((item, index) => {
+          const isLoaded = loadedImages[item.id];
+          return (
+            <div
+              key={item.id}
+              onClick={() => setLightboxIndex(index)}
+              className="group relative aspect-[4/3] sm:aspect-square w-full overflow-hidden rounded-2xl bg-slate-900 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer border border-slate-200/80"
+            >
+              {/* Shimmer skeleton placeholder while loading */}
+              {!isLoaded && (
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 animate-pulse flex items-center justify-center z-5">
+                  <div className="w-8 h-8 rounded-full border-2 border-[#f5d77f]/40 border-t-[#f5d77f] animate-spin" />
+                </div>
+              )}
 
-            {/* Subtle Gradient Overlay on Hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/90 via-[#01327a]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 z-10" />
+              {/* Image */}
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                loading={index < 4 ? "eager" : "lazy"}
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                onLoad={() => handleImageLoaded(item.id)}
+                className={`object-cover object-center transition-all duration-700 group-hover:scale-108 ${
+                  isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-95"
+                }`}
+              />
 
-            {/* Category Tag on Hover (Top Left) */}
-            <div className="absolute top-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-              <span className="px-3 py-1 rounded-full bg-[#01327a]/90 backdrop-blur-md text-[10px] font-extrabold tracking-widest text-[#f5d77f] uppercase border border-[#c59b27]/40 shadow-sm">
-                {item.categoryLabel}
-              </span>
-            </div>
+              {/* Subtle Gradient Overlay on Hover */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#01327a]/90 via-[#01327a]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-between p-5 z-10" />
 
-            {/* Zoom Icon on Hover (Top Right) */}
-            <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
-              <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-[#f5d77f] flex items-center justify-center border border-white/30 shadow-lg">
-                <Maximize2 className="w-4 h-4" />
+              {/* Category Tag on Hover (Top Left) */}
+              <div className="absolute top-4 left-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+                <span className="px-3 py-1 rounded-full bg-[#01327a]/90 backdrop-blur-md text-[10px] font-extrabold tracking-widest text-[#f5d77f] uppercase border border-[#c59b27]/40 shadow-sm">
+                  {item.categoryLabel}
+                </span>
+              </div>
+
+              {/* Zoom Icon on Hover (Top Right) */}
+              <div className="absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
+                <div className="w-9 h-9 rounded-full bg-white/20 backdrop-blur-md text-[#f5d77f] flex items-center justify-center border border-white/30 shadow-lg">
+                  <Maximize2 className="w-4 h-4" />
+                </div>
+              </div>
+
+              {/* Photo Title Overlay (Bottom) */}
+              <div className="absolute bottom-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <h3 className="font-cormorant text-lg font-bold text-white line-clamp-1 leading-snug drop-shadow-md">
+                  {item.title}
+                </h3>
               </div>
             </div>
-
-            {/* Photo Title Overlay (Bottom) */}
-            <div className="absolute bottom-4 left-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-              <h3 className="font-cormorant text-lg font-bold text-white line-clamp-1 leading-snug drop-shadow-md">
-                {item.title}
-              </h3>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Fullscreen Lightbox Modal */}

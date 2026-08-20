@@ -280,20 +280,27 @@ export default function AboutPage() {
 
           {/* Academic & Professional Rigor Grid */}
           <div className="mt-14 pt-12 border-t border-[#e5e1d6]">
-            <h3 className="text-xs font-extrabold tracking-[0.2em] text-[#a47a13] uppercase text-center mb-8">
-              Professional Qualifications &amp; Industry Standing
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5">
+            <ScrollReveal variant="fadeUp">
+              <h3 className="text-xs font-extrabold tracking-[0.2em] text-[#a47a13] uppercase text-center mb-8">
+                Professional Qualifications &amp; Industry Standing
+              </h3>
+            </ScrollReveal>
+            <StaggerContainer
+              staggerChildren={0.12}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5"
+            >
               {founderQualifications.map((item, idx) => (
-                <div key={idx} className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#c59b27] transition-all flex flex-col justify-between">
-                  <div>
-                    <span className="text-[10px] font-extrabold uppercase text-[#c59b27] tracking-wider block mb-2">{item.subtitle}</span>
-                    <h4 className="font-sans font-bold text-sm sm:text-base text-[#01327a] mb-2">{item.title}</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed font-medium">{item.desc}</p>
+                <StaggerItem key={idx} variant="fadeUp" className="h-full">
+                  <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm hover:shadow-md hover:border-[#c59b27] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between h-full">
+                    <div>
+                      <span className="text-[10px] font-extrabold uppercase text-[#c59b27] tracking-wider block mb-2">{item.subtitle}</span>
+                      <h4 className="font-sans font-bold text-sm sm:text-base text-[#01327a] mb-2">{item.title}</h4>
+                      <p className="text-xs text-slate-600 leading-relaxed font-medium">{item.desc}</p>
+                    </div>
                   </div>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
       </section>

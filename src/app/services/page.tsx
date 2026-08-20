@@ -212,7 +212,7 @@ const servicesData: ServiceItem[] = [
     shortDesc: "Cover unique and less conventional risks that don’t fall under standard insurance categories. Miscellaneous Insurance provides protection for specialized needs tailored to individual or corporate-specific risks.",
     fullDesc:
       "Cover unique and less conventional risks that don’t fall under standard insurance categories. Miscellaneous Insurance provides protection for specialized needs tailored to individual or corporate-specific risks.",
-    highlights: ["D&O Liability", "Fidelity & Liability", "Boiler & Pressure Plant", "Credit Insurance"],
+    highlights: [ "Fidelity & Liability", "Boiler & Pressure Plant", "Credit Insurance"],
     policyTypes: [
       "Directors & Officers (D&O) Liability: Provides coverage to company directors and officers for legal liabilities arising from their professional actions and decisions.",
       "Fidelity & Liability Insurance: Protects corporates from financial losses caused by fraudulent acts or embezzlement by employees.",
@@ -868,23 +868,18 @@ export default function ServicesPage() {
 
           {/* Services Cards Grid with High Quality Thumbnails */}
           {filteredServices.length > 0 ? (
-            <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8">
-              <AnimatePresence mode="popLayout">
-                {filteredServices.map((service) => {
-                  const Icon = service.icon;
-                  return (
-                    <motion.div
-                      key={service.id}
-                      layout
-                      initial={{ opacity: 0, y: 28, scale: 0.96 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.94, y: 20 }}
-                      transition={{ duration: 0.45, ease: LUXURY_EASE }}
-                      whileHover={{
-                        y: -6,
-                        transition: { duration: 0.3, ease: LUXURY_EASE },
-                      }}
-                      className="group relative bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#D4AF37] transition-all duration-300 flex flex-col justify-between overflow-hidden"
+            <StaggerContainer
+              key={activeCategory + searchQuery}
+              staggerChildren={0.1}
+              amount={0.08}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8"
+            >
+              {filteredServices.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <StaggerItem key={service.id} variant="slideUp" className="h-full">
+                    <div
+                      className="group relative bg-white rounded-2xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:border-[#D4AF37] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden h-full"
                     >
                       {/* Top Card Image Thumbnail with Overlay Badges */}
                       <div className="relative h-56 sm:h-64 w-full bg-slate-900 overflow-hidden">
@@ -963,11 +958,11 @@ export default function ServicesPage() {
                           </Link>
                         </div>
                       </div>
-                    </motion.div>
-                  );
-                })}
-              </AnimatePresence>
-            </motion.div>
+                    </div>
+                  </StaggerItem>
+                );
+              })}
+            </StaggerContainer>
           ) : (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
