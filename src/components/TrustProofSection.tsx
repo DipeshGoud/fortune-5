@@ -38,15 +38,15 @@ export default function TrustProofSection() {
     },
     {
       name: "ICICI Lombard",
-      logo: "/partners/icici-lombard.png",
+      logo: "/partners/icici-lombard.webp",
     },
     {
       name: "HDFC ERGO",
-      logo: "/partners/hdfc-ergo.png",
+      logo: "/partners/hdfc-ergo.webp",
     },
     {
       name: "Digit General",
-      logo: "/partners/digit-insurance.png",
+      logo: "/partners/digit-insurance.webp",
     },
     {
       name: "Tata AIG",
@@ -54,11 +54,11 @@ export default function TrustProofSection() {
     },
     {
       name: "Oriental Insurance",
-      logo: "/partners/oriental-insurance.png",
+      logo: "/partners/oriental-insurance.webp",
     },
     {
       name: "New India Assurance",
-      logo: "/partners/new-india-assurance.png",
+      logo: "/partners/new-india-assurance.webp",
     },
   ];
 
@@ -69,15 +69,15 @@ export default function TrustProofSection() {
     },
     {
       name: "HDFC Life",
-      logo: "/partners/hdfc-life.png",
+      logo: "/partners/hdfc-life.webp",
     },
     {
       name: "Tata AIA Life",
-      logo: "/partners/tata-aia-life.png",
+      logo: "/partners/tata-aia-life.webp",
     },
     {
       name: "ICICI Prudential Life",
-      logo: "/partners/icici-prudential.png",
+      logo: "/partners/icici-prudential.webp",
     },
     {
       name: "LIC of India",

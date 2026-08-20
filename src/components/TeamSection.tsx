@@ -31,7 +31,7 @@ export const teamMembers: TeamMember[] = [
     role: "Founder",
     department: "Founding Leadership",
     experience: "50+ Yrs Exp",
-    img: "/team/jagdip-k-shah.png",
+    img: "/team/jagdip-k-shah.webp",
     bio: "Guiding force behind Fortune 5's foundation with 50+ years of insurance industry experience. Retired as Deputy Zonal Head at The Oriental Insurance Co. Ltd. after a 35+ year career.",
     fullBio: [
       "With over five decades of experience in the insurance industry, Jagdip K. Shah is the Founder of Fortune 5 Risk Management Solutions LLP and the guiding force behind its foundation and values.",
@@ -51,7 +51,7 @@ export const teamMembers: TeamMember[] = [
     role: "Chairman & Managing Director",
     department: "Executive Leadership",
     experience: "22+ Yrs Exp",
-    img: "/team/kaushal-j-shah.png",
+    img: "/team/kaushal-j-shah.webp",
     bio: "3rd-generation insurance professional with 22+ years of experience. Advises HNIs, MSMEs and corporates on commercial, health, property and casualty insurance.",
     fullBio: [
       "A 3rd-generation insurance professional with 22+ years of experience, Kaushal J. Shah is the Chairman & Managing Director of Fortune 5 Risk Management Solutions LLP. He advises HNIs, MSMEs and corporates on commercial, health, property and casualty insurance.",
@@ -72,7 +72,7 @@ export const teamMembers: TeamMember[] = [
     role: "Chief Executive Officer",
     department: "Executive Leadership",
     experience: "20+ Yrs Exp",
-    img: "/team/ekta-k-shah.png",
+    img: "/team/ekta-k-shah.webp",
     bio: "With over two decades of insurance experience, she drives Fortune 5's growth, culture and client-first philosophy. Generali Central Top 30 Worldwide Advisor (2025 & 2026).",
     fullBio: [
       "With over two decades of experience in the insurance industry, Ekta K. Shah is the Chief Executive Officer of Fortune 5 Risk Management Solutions LLP, playing a pivotal role in driving the organisation’s growth, culture and client-first philosophy.",
@@ -92,7 +92,7 @@ export const teamMembers: TeamMember[] = [
     role: "Chief Marketing Officer",
     department: "Marketing & Growth",
     experience: "20+ Yrs Exp",
-    img: "/team/hemal-n-mashruwala.png",
+    img: "/team/hemal-n-mashruwala.webp",
     bio: "20+ years of insurance expertise with ADRIM from NMIMS Mumbai. Drives brand expansion, strategic marketing and relationship-driven client growth.",
     fullBio: [
       "With over two decades of experience in the insurance industry and an Advanced Diploma in Insurance & Risk Management (ADRIM) from NMIMS Mumbai, Hemal brings a distinctive blend of insurance expertise, strategic thinking and relationship-driven marketing to Fortune 5.",
@@ -112,7 +112,7 @@ export const teamMembers: TeamMember[] = [
     role: "Claims Head",
     department: "Claims Advocacy",
     experience: "30+ Yrs Exp",
-    img: "/team/l-n-shanbhag.png",
+    img: "/team/l-n-shanbhag.webp",
     bio: "Fellow III & Associate Member of London Insurance Institute. Renowned industry authority in resolving complex, high-value Fire, Marine, and Engineering claims.",
     fullBio: [
       "L. N. Shanbhag (LN) is a highly respected name in India’s General Insurance industry, particularly known for his expertise in handling complex and high-value claims.",

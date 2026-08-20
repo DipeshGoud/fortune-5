@@ -133,7 +133,7 @@ export default function GalleryPage() {
               <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-slate-900 shadow-2xl">
                 <div className="relative aspect-[4/5] w-full">
                   <Image
-                    src="/gallery/gallery-75th-stage.png"
+                    src="/gallery/gallery-75th-stage.webp"
                     alt="Fortune 5 75th Platinum Jubilee Stage"
                     fill
                     priority
@@ -154,7 +154,7 @@ export default function GalleryPage() {
                 <div className="relative overflow-hidden rounded-[1.25rem] border border-white/10 bg-slate-900 shadow-xl">
                   <div className="relative aspect-[4/3.2] w-full">
                     <Image
-                      src="/gallery/gallery-75th-cake.png"
+                      src="/gallery/gallery-75th-cake.webp"
                       alt="75th Anniversary Celebration Cake"
                       fill
                       sizes="220px"
