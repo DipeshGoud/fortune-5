@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useMemo, useEffect, useCallback, memo } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -15,10 +15,64 @@ import { TrophyImage, trophyImages } from "@/data/trophies";
 
 const PAGE_SIZE = 24;
 
+/**
+ * Isolated Memoized Trophy Card
+ * Prevents re-rendering all other cards when one image loads
+ */
+const TrophyCard = memo(function TrophyCard({
+  item,
+  idx,
+  onSelect,
+}: {
+  item: TrophyImage;
+  idx: number;
+  onSelect: () => void;
+}) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div
+      onClick={onSelect}
+      className="group relative bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col overflow-hidden cursor-pointer transform hover:-translate-y-1 transform-gpu"
+    >
+      {/* Aspect Ratio Image Container */}
+      <div className="relative aspect-[3/4] w-full p-3 sm:p-4 flex items-center justify-center bg-radial from-slate-50 to-[#F9F8F6]/70 overflow-hidden">
+        {/* Shimmer skeleton */}
+        {!loaded && (
+          <div className="absolute inset-3 rounded-xl bg-slate-100 animate-pulse flex items-center justify-center z-10">
+            <Trophy className="w-8 h-8 text-slate-300" />
+          </div>
+        )}
+
+        {/* Trophy Image */}
+        <Image
+          src={item.src}
+          alt={`Trophy ${item.id}`}
+          fill
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 16vw"
+          loading={idx < 12 ? "eager" : "lazy"}
+          priority={idx < 4}
+          decoding="async"
+          onLoad={() => setLoaded(true)}
+          className={`object-contain p-2 drop-shadow-sm transition-transform duration-500 ease-out group-hover:scale-105 will-change-transform transform-gpu ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        {/* Hover Overlay with Inspect Icon */}
+        <div className="absolute inset-0 bg-[#01327a]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-20 pointer-events-none">
+          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5D77F] text-[#01327a] shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
+            <Maximize2 className="w-5 h-5" />
+          </span>
+        </div>
+      </div>
+    </div>
+  );
+});
+
 export default function TrophyGallery() {
   const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
   const [selectedImage, setSelectedImage] = useState<TrophyImage | null>(null);
-  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
 
   const visibleImages = useMemo(() => {
     return trophyImages.slice(0, visibleCount);
@@ -52,19 +106,24 @@ export default function TrophyGallery() {
   }, [selectedImage]);
 
   useEffect(() => {
+    if (!selectedImage) return;
+
+    // Prevent background scrolling
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!selectedImage) return;
       if (e.key === "Escape") setSelectedImage(null);
       if (e.key === "ArrowLeft") handlePrev();
       if (e.key === "ArrowRight") handleNext();
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedImage, handlePrev, handleNext]);
 
-  const handleImageLoaded = (id: string) => {
-    setLoadedImages((prev) => ({ ...prev, [id]: true }));
-  };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedImage, handlePrev, handleNext]);
 
   return (
     <div className="w-full">
@@ -84,48 +143,14 @@ export default function TrophyGallery() {
 
       {/* ── TROPHIES IMAGE GRID ── */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-6 gap-4 sm:gap-6">
-        {visibleImages.map((item, idx) => {
-          const isLoaded = loadedImages[item.id];
-          return (
-            <div
-              key={item.id}
-              onClick={() => setSelectedImage(item)}
-              className="group relative bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#C59B27] transition-all duration-300 flex flex-col overflow-hidden cursor-pointer transform hover:-translate-y-1.5"
-            >
-              {/* Aspect Ratio Image Container */}
-              <div className="relative aspect-[3/4] w-full p-3 sm:p-4 flex items-center justify-center bg-radial from-slate-50 to-[#F9F8F6]/70 overflow-hidden">
-                {/* Shimmer skeleton */}
-                {!isLoaded && (
-                  <div className="absolute inset-3 rounded-xl bg-gradient-to-r from-slate-100 via-slate-200 to-slate-100 animate-pulse flex items-center justify-center">
-                    <Trophy className="w-8 h-8 text-slate-300" />
-                  </div>
-                )}
-
-                {/* Trophy Image */}
-                <Image
-                  src={item.src}
-                  alt={`Trophy ${item.id}`}
-                  fill
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 16vw"
-                  loading={idx < 12 ? "eager" : "lazy"}
-                  priority={idx < 6}
-                  quality={85}
-                  onLoad={() => handleImageLoaded(item.id)}
-                  className={`object-contain p-2 drop-shadow-md transition-all duration-500 group-hover:scale-105 group-hover:drop-shadow-xl ${
-                    isLoaded ? "opacity-100" : "opacity-0"
-                  }`}
-                />
-
-                {/* Hover Overlay with Inspect Icon */}
-                <div className="absolute inset-0 bg-[#01327a]/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5D77F] text-[#01327a] shadow-lg transform scale-75 group-hover:scale-100 transition-transform duration-300">
-                    <Maximize2 className="w-5 h-5" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {visibleImages.map((item, idx) => (
+          <TrophyCard
+            key={item.id}
+            item={item}
+            idx={idx}
+            onSelect={() => setSelectedImage(item)}
+          />
+        ))}
       </div>
 
       {/* ── PROGRESS & LOAD MORE ── */}
@@ -170,14 +195,15 @@ export default function TrophyGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-[#000814]/95 backdrop-blur-md p-4 sm:p-6"
+            transition={{ duration: 0.15 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-[#000814]/95 backdrop-blur-sm p-4 sm:p-6"
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
-              initial={{ scale: 0.92, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.92, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.18 }}
               className="relative w-full max-w-4xl bg-gradient-to-b from-[#011a42] to-[#000d24] rounded-3xl border border-[#C59B27]/40 shadow-2xl overflow-hidden flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
@@ -204,7 +230,7 @@ export default function TrophyGallery() {
                 <button
                   onClick={handlePrev}
                   aria-label="Previous"
-                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-[#C59B27] hover:text-[#01327a] text-white backdrop-blur border border-white/15 transition-all z-20 cursor-pointer"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-[#C59B27] hover:text-[#01327a] text-white border border-white/15 transition-all z-20 cursor-pointer"
                 >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
@@ -217,7 +243,7 @@ export default function TrophyGallery() {
                     fill
                     sizes="(max-width: 1024px) 90vw, 800px"
                     priority
-                    quality={95}
+                    decoding="async"
                     className="object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.8)]"
                   />
                 </div>
@@ -226,7 +252,7 @@ export default function TrophyGallery() {
                 <button
                   onClick={handleNext}
                   aria-label="Next"
-                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-[#C59B27] hover:text-[#01327a] text-white backdrop-blur border border-white/15 transition-all z-20 cursor-pointer"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-[#C59B27] hover:text-[#01327a] text-white border border-white/15 transition-all z-20 cursor-pointer"
                 >
                   <ChevronRight className="w-6 h-6" />
                 </button>

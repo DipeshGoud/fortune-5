@@ -16,7 +16,8 @@ export default function AboutFortune5() {
           alt="Gradient Ornament Clipart"
           width={700}
           height={700}
-          className="object-contain object-left-bottom w-full h-auto"
+          style={{ width: "100%", height: "auto" }}
+          className="object-contain object-left-bottom"
         />
       </div>
 
@@ -27,7 +28,8 @@ export default function AboutFortune5() {
           alt="City Skyline Background"
           width={900}
           height={450}
-          className="object-contain object-right-bottom w-full h-auto"
+          style={{ width: "100%", height: "auto" }}
+          className="object-contain object-right-bottom"
         />
       </div>
 
@@ -56,7 +58,8 @@ export default function AboutFortune5() {
                 height={680}
                 priority
                 quality={100}
-                className="relative z-10 w-full h-auto object-contain drop-shadow-2xl"
+                style={{ width: "100%", height: "auto" }}
+                className="relative z-10 object-contain drop-shadow-2xl"
               />
 
               {/* Grounded Floating Executive Badge */}

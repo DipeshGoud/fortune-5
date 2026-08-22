@@ -77,10 +77,9 @@ export default function Hero() {
             transition={{ duration: 1.25, ease: [0.22, 1, 0.36, 1] }}
             className="font-cormorant text-3xl sm:text-4xl md:text-5xl lg:text-[44px] xl:text-[50px] 2xl:text-[56px] 3xl:text-[64px] 4xl:text-[72px] font-extrabold text-[#01327a] leading-[1.12] sm:leading-[1.14] tracking-normal uppercase max-w-2xl lg:max-w-3xl 2xl:max-w-4xl 3xl:max-w-5xl"
           >
-            PROTECTING BUSINESSES, <br />
-            FAMILIES <span className="text-[#D4AF37]">& FUTURES</span> <br />
-            THROUGH INTELLIGENT <br />
-            RISK MANAGEMENT.
+            INSURANCE <span className="text-[#D4AF37]">& RISK</span> <br />
+            ADVISORY FOR <br />
+            BUSINESSES, FAMILIES.
           </motion.h1>
 
           {/* Action Buttons Row */}
