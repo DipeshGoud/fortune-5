@@ -105,7 +105,7 @@ const galleryItems: GalleryItem[] = [
     title: "Bajaj Allianz Outstanding Achievers Award",
     category: "awards",
     categoryLabel: "Awards & Honors",
-    image: "/trophies/IMGL1954.webp",
+    image: "/trophies/IMGL1953.webp",
   },
   {
     id: "13",
