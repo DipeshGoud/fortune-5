@@ -35,9 +35,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${article.title} | Fortune 5 Blog`,
     description: article.excerpt,
+    alternates: { canonical: `https://fortune5.in/blog/${article.slug}/` },
     openGraph: {
       title: article.title,
       description: article.excerpt,
+      url: `https://fortune5.in/blog/${article.slug}/`,
+      type: "article",
       images: [article.coverImage],
     },
   };

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   title: "Gallery & Milestones | Fortune 5 Risk Management Solutions LLP",
   description:
     "Explore 75 years of trust, corporate risk summits, leadership awards, team moments, and milestone events of Fortune 5.",
+  alternates: { canonical: "https://fortune5.in/gallery/" },
 };
 
 const heroStats = [

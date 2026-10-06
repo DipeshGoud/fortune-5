@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "https://fortune5.in/" },
+};
 import StatsBar from "@/components/StatsBar";
 import CustomizedRiskSolutions from "@/components/CustomizedRiskSolutions";
 import AboutFortune5 from "@/components/AboutFortune5";

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Fortune 5 Risk Management Solutions LLP",
   description:
     "Learn how Fortune 5 Risk Management Solutions LLP collects, uses, and protects your personal and corporate insurance data.",
+  alternates: { canonical: "https://fortune5.in/privacy/" },
 };
 
 export default function PrivacyPolicyPage() {

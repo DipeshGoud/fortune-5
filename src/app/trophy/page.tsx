@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Trophy Gallery | Fortune 5 Risk Management Solutions LLP",
   description:
     "Explore our complete archive of awards, honors, and trophy recognitions.",
+  alternates: { canonical: "https://fortune5.in/trophy/" },
 };
 
 export default function TrophyPage() {

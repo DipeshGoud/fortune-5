@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   title: "About Us | Fortune 5 Risk Management Solutions LLP",
   description:
     "A 75-year, three-generation legacy of trusted risk management advice. Discover the mission, vision, values and leadership behind Fortune 5.",
+  alternates: { canonical: "https://fortune5.in/about/" },
 };
 
 const values = [

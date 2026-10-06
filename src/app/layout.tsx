@@ -39,6 +39,19 @@ export const metadata: Metadata = {
   },
   description:
     "Protecting Businesses, Families & Futures through Intelligent Risk Management. Over 75 years of trusted risk management advisory and claim-time advocacy.",
+  alternates: {
+    canonical: "https://fortune5.in/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   keywords: [
     "Fortune 5",
     "Risk Management",
@@ -61,6 +74,7 @@ export const metadata: Metadata = {
     title: "Fortune 5 | Risk Management Solutions LLP",
     description:
       "Protecting Businesses, Families & Futures through Intelligent Risk Management. 75+ years of legacy.",
+    url: "https://fortune5.in/",
     siteName: "Fortune 5 Risk Management",
     images: [
       {
@@ -82,6 +96,23 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Fortune 5 Risk Management Solutions LLP",
+  url: "https://fortune5.in/",
+  logo: "https://fortune5.in/logo.webp",
+  email: "insure@fortune5.in",
+  telephone: "+91-98208 10067",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (East)",
+    addressLocality: "Mumbai",
+    addressCountry: "IN",
+  },
+  sameAs: ["https://fortune5.in/"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -99,6 +130,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#012257" />
       </head>
       <body className="min-h-screen bg-[#F9F8F6] text-slate-900 font-sans selection:bg-amber-100 selection:text-amber-900">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <SplashScreen />
         <CustomCursor />
         <FloatingWidgets />

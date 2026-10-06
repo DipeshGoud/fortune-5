@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Risk Management Insights & Articles | Fortune 5 Risk Management Solutions LLP",
   description:
     "Practical articles on risk management, claims advocacy, employee benefits, corporate risk solutions and health cover from the Fortune 5 advisory team.",
+  alternates: { canonical: "https://fortune5.in/blog/" },
 };
 
 const stats = [
