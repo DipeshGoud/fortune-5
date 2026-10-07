@@ -3,6 +3,7 @@ import { Playfair_Display, Plus_Jakarta_Sans, Cinzel, Cormorant_Garamond } from 
 import CustomCursor from "@/components/CustomCursor";
 import SplashScreen from "@/components/SplashScreen";
 import FloatingWidgets from "@/components/FloatingWidgets";
+import ChatBot from "@/components/ChatBot";
 import ScrollToTopOnNav from "@/components/ScrollToTopOnNav";
 import "./globals.css";
 
@@ -133,6 +134,7 @@ export default function RootLayout({
         <SplashScreen />
         <CustomCursor />
         <FloatingWidgets />
+        <ChatBot />
         <ScrollToTopOnNav />
         {children}
       </body>

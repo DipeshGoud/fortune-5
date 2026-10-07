@@ -34,7 +34,7 @@ export default function FloatingWidgets() {
   return (
     <>
       {/* RIGHT SIDE FLOATING WIDGETS (MOVE TO TOP + WHATSAPP) */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-3.5">
+      <div className="fixed bottom-6 left-6 z-40 flex flex-col items-center gap-3.5">
         
         {/* Scroll to Top Button (Vibrant Gold Theme) */}
         <AnimatePresence>
@@ -51,7 +51,7 @@ export default function FloatingWidgets() {
             <ArrowUp className="w-6 h-6 text-[#01327a] stroke-[2.8] group-hover:-translate-y-1 transition-transform" />
             
             {/* Tooltip on Hover */}
-            <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+            <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
               Back to Top
             </span>
           </motion.button>
@@ -75,7 +75,7 @@ export default function FloatingWidgets() {
           </svg>
 
           {/* Tooltip on Hover */}
-          <span className="absolute right-full mr-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
+          <span className="absolute left-full ml-3 px-3 py-1.5 bg-[#01327a] border border-[#C59B27] text-[#F5D77F] text-xs font-bold rounded-lg shadow-xl whitespace-nowrap opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 pointer-events-none">
             Chat on WhatsApp
           </span>
         </a>
