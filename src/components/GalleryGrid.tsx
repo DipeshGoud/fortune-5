@@ -294,16 +294,18 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      {/* View All Trophies CTA — links to full trophy archive */}
-      <Link
-        href="/trophy"
-        prefetch={false}
-        className="group mt-10 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#01327a] px-6 py-4 text-xs font-extrabold tracking-widest text-[#f5d77f] uppercase shadow-md transition-all duration-200 hover:bg-[#01255e] hover:shadow-xl sm:text-sm"
-      >
-        <Trophy className="h-4 w-4 shrink-0 text-[#f5d77f]" />
-        <span>View All {trophyImages.length} Trophies &amp; Awards</span>
-        <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
-      </Link>
+      {/* View All Trophies CTA — only on Awards filter, links to full trophy archive */}
+      {activeCategory === "awards" && (
+        <Link
+          href="/trophy"
+          prefetch={false}
+          className="group mt-10 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#01327a] px-6 py-4 text-xs font-extrabold tracking-widest text-[#f5d77f] uppercase shadow-md transition-all duration-200 hover:bg-[#01255e] hover:shadow-xl sm:text-sm"
+        >
+          <Trophy className="h-4 w-4 shrink-0 text-[#f5d77f]" />
+          <span>View All {trophyImages.length} Trophies &amp; Awards</span>
+          <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
+        </Link>
+      )}
 
       {/* Fullscreen Lightbox Modal */}
       <AnimatePresence>
