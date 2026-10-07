@@ -64,12 +64,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Fortune 5 Risk Management Solutions LLP" }],
   icons: {
-    icon: [
-      { url: "/Tab-logo.png", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    icon: [{ url: "/Tab-logo.png", type: "image/png" }],
   },
   openGraph: {
     title: "Fortune 5 | Risk Management Solutions LLP",
@@ -125,9 +120,9 @@ export default function RootLayout({
       className={`${playfair.variable} ${cormorant.variable} ${cinzel.variable} ${jakarta.variable} antialiased`}
     >
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
+        <link rel="icon" href="/Tab-logo.png" type="image/png" />
+        <link rel="shortcut icon" href="/Tab-logo.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/Tab-logo.png" />
         <meta name="theme-color" content="#012257" />
       </head>
       <body className="min-h-screen bg-[#F9F8F6] text-slate-900 font-sans selection:bg-amber-100 selection:text-amber-900">
