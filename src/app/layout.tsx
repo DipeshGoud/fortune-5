@@ -65,6 +65,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Fortune 5 Risk Management Solutions LLP" }],
   icons: {
     icon: [
+      { url: "/Tab-logo.png", type: "image/png" },
       { url: "/favicon.ico", sizes: "any" },
     ],
     shortcut: "/favicon.ico",
