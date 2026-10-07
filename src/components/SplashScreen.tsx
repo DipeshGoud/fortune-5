@@ -8,6 +8,13 @@ export default function SplashScreen() {
   const [isFading, setIsFading] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  const handleDismiss = () => {
+    setIsFading(true);
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 700);
+  };
+
   useEffect(() => {
     // Auto-play video
     if (videoRef.current) {
@@ -23,13 +30,6 @@ export default function SplashScreen() {
       clearTimeout(splashTimer);
     };
   }, []);
-
-  const handleDismiss = () => {
-    setIsFading(true);
-    setTimeout(() => {
-      setIsVisible(false);
-    }, 700);
-  };
 
   const handleTimeUpdate = () => {
     if (videoRef.current && videoRef.current.currentTime >= 5) {
