@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
   allowedDevOrigins: ["192.168.0.104", "localhost", "127.0.0.1"],
+  env: {
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY || "",
+  },
   images: {
     unoptimized: true,
     qualities: [75, 100],

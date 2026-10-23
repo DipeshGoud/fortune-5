@@ -277,9 +277,10 @@ export default function ChatBot() {
         }
       }
 
-      // 2. Local dev handler (runs during 'npm run dev' on localhost via .env.local)
-      if (!replyText && process.env.NEXT_PUBLIC_GEMINI_API_KEY) {
-        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${process.env.NEXT_PUBLIC_GEMINI_API_KEY}`;
+      // 2. Direct AI handler (runs on localhost or Vercel test env using GEMINI_API_KEY)
+      const clientApiKey = process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+      if (!replyText && clientApiKey) {
+        const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent?key=${clientApiKey}`;
         const contents = [
           ...historyPayload.map((h) => ({
             role: h.role,
