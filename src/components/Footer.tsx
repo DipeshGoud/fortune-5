@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, Copy, Check, Building2, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, ArrowRight, ShieldCheck, Copy, Check, Clock } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Footer() {
@@ -105,9 +105,6 @@ export default function Footer() {
               <p className="text-slate-300 text-sm leading-relaxed font-medium max-w-sm">
                 People you trust, advice that works. A 3rd generation risk management solutions partner committed to protecting what matters most to you.
               </p>
-              <p className="text-xs text-[#F5D77F] font-bold tracking-widest uppercase">
-                Your Risk. Our Responsibility.
-              </p>
 
               <div className="flex items-center gap-3 pt-1">
                 <a
@@ -159,6 +156,7 @@ export default function Footer() {
               <ul className="space-y-2.5 text-xs text-slate-300 font-medium">
                 <li><Link href="/about" prefetch={false} className="hover:text-[#F5D77F] transition-colors">About Us</Link></li>
                 <li><Link href="/services" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Our Services</Link></li>
+                <li><Link href="/claims" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Claim</Link></li>
                 <li><Link href="/gallery" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Gallery &amp; Media</Link></li>
                 <li><Link href="/trophy" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Trophies &amp; Awards</Link></li>
                 <li><Link href="/contact" prefetch={false} className="hover:text-[#F5D77F] transition-colors">Contact Us</Link></li>

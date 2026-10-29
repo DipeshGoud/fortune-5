@@ -39,14 +39,18 @@ export default function Navbar() {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
     { name: "SERVICES", href: "/services" },
+    { name: "CLAIM", href: "/claims" },
     // { name: "TESTIMONIALS", href: "/testimonials" }, // Hidden for now - to be updated later
     // { name: "BLOG", href: "/blog" }, // Hidden for now - to be updated later
     { name: "GALLERY", href: "/gallery" },
     { name: "CONTACT US", href: "/contact" },
   ];
 
-  const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href === "/claims") return pathname.startsWith("/claims") || pathname.startsWith("/claim-assistance");
+    return pathname.startsWith(href);
+  };
 
   const showSolid = scrolled || isInnerPage;
 
@@ -65,7 +69,7 @@ export default function Navbar() {
             <Logo imgClassName="h-12 sm:h-14 md:h-16" />
 
             {/* Desktop Nav Items */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-10 2xl:gap-14 3xl:gap-20 4xl:gap-24">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-7 2xl:gap-11 3xl:gap-16 4xl:gap-20">
               {navLinks.map((link) => {
                 const active = isActive(link.href);
                 return (

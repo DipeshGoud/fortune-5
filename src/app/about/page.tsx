@@ -167,8 +167,6 @@ export default function AboutPage() {
           <ScrollReveal variant="fadeUp" className="w-full">
           <div className="pb-0 lg:pb-24">
             <nav aria-label="Breadcrumb" className="mb-6 sm:mb-8 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
-              <Link href="/" prefetch={false} className="transition-colors hover:text-[#f5d77f]">Home</Link>
-              <span className="h-px w-5 bg-[#c59b27]" />
               <span className="text-[#f5d77f] whitespace-nowrap">About Fortune 5</span>
             </nav>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useEffect, useCallback, memo } from "react";
+import React, { useState, useEffect, useCallback, memo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,10 +9,6 @@ import {
   ChevronLeft,
   ChevronRight,
   Maximize2,
-  Users,
-  Calendar,
-  Award,
-  Sparkles,
   Trophy,
   ArrowRight,
 } from "lucide-react";
@@ -21,61 +17,12 @@ import { trophyImages } from "@/data/trophies";
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "events" | "team" | "awards";
+  category: "awards";
   categoryLabel: string;
   image: string;
 }
 
 const galleryItems: GalleryItem[] = [
-  {
-    id: "1",
-    title: "Fortune 5 75th Platinum Jubilee Stage",
-    category: "events",
-    categoryLabel: "Events & Celebrations",
-    image: "/gallery/gallery-75th-stage.webp",
-  },
-  {
-    id: "2",
-    title: "75th Anniversary Celebration Cake",
-    category: "events",
-    categoryLabel: "Events & Celebrations",
-    image: "/gallery/gallery-75th-cake.webp",
-  },
-  {
-    id: "3",
-    title: "Founder – Jagdip K. Shah",
-    category: "team",
-    categoryLabel: "Leadership",
-    image: "/team/jagdip-k-shah.webp",
-  },
-  {
-    id: "4",
-    title: "Chairman & Managing Director – Kaushal J. Shah",
-    category: "team",
-    categoryLabel: "Leadership",
-    image: "/team/kaushal-j-shah.webp",
-  },
-  {
-    id: "5",
-    title: "Chief Executive Officer – Ekta K. Shah",
-    category: "team",
-    categoryLabel: "Leadership",
-    image: "/team/ekta-k-shah.webp",
-  },
-  {
-    id: "6",
-    title: "Chief Marketing Officer – Hemal N. Mashruwala",
-    category: "team",
-    categoryLabel: "Leadership",
-    image: "/team/hemal-n-mashruwala.webp",
-  },
-  {
-    id: "7",
-    title: "Claims Head – L. N. Shanbhag",
-    category: "team",
-    categoryLabel: "Leadership",
-    image: "/team/l-n-shanbhag.webp",
-  },
   {
     id: "8",
     title: "Bajaj Allianz – Largest Conglomerate Award",
@@ -132,13 +79,6 @@ const galleryItems: GalleryItem[] = [
     categoryLabel: "Awards & Honors",
     image: "/trophies/IMGL2118.webp",
   },
-];
-
-const categories = [
-  { id: "all", label: "All Photos", icon: Sparkles },
-  { id: "events", label: "75th Jubilee & Events", icon: Calendar },
-  { id: "team", label: "Leadership & Team", icon: Users },
-  { id: "awards", label: "Awards & Recognitions", icon: Award },
 ];
 
 /**
@@ -211,15 +151,9 @@ const GalleryCard = memo(function GalleryCard({
 });
 
 export default function GalleryGrid() {
-  const [activeCategory, setActiveCategory] = useState<string>("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // Filter items based on active category
-  const filteredItems = useMemo(() => {
-    return galleryItems.filter(
-      (item) => activeCategory === "all" || item.category === activeCategory
-    );
-  }, [activeCategory]);
+  const filteredItems = galleryItems;
 
   const activeItem = lightboxIndex !== null ? filteredItems[lightboxIndex] : null;
 
@@ -260,28 +194,6 @@ export default function GalleryGrid() {
 
   return (
     <div className="w-full">
-      {/* Category Tabs Header */}
-      <div className="mb-10 flex flex-wrap items-center justify-center gap-3">
-        {categories.map((cat) => {
-          const Icon = cat.icon;
-          const isActive = activeCategory === cat.id;
-          return (
-            <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
-              className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-xs font-extrabold tracking-widest uppercase transition-colors duration-200 cursor-pointer ${
-                isActive
-                  ? "bg-[#01327a] text-[#f5d77f] shadow-lg border border-[#c59b27]/40 ring-2 ring-[#c59b27]/20"
-                  : "bg-white hover:bg-slate-100 text-slate-700 border border-slate-200/80 shadow-sm"
-              }`}
-            >
-              <Icon className={`w-4 h-4 ${isActive ? "text-[#f5d77f]" : "text-[#c59b27]"}`} />
-              <span>{cat.label}</span>
-            </button>
-          );
-        })}
-      </div>
-
       {/* Visual Photo Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
         {filteredItems.map((item, index) => (
@@ -294,18 +206,16 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      {/* View All Trophies CTA — only on Awards filter, links to full trophy archive */}
-      {activeCategory === "awards" && (
-        <Link
-          href="/trophy"
-          prefetch={false}
-          className="group mt-10 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#01327a] px-6 py-4 text-xs font-extrabold tracking-widest text-[#f5d77f] uppercase shadow-md transition-all duration-200 hover:bg-[#01255e] hover:shadow-xl sm:text-sm"
-        >
-          <Trophy className="h-4 w-4 shrink-0 text-[#f5d77f]" />
-          <span>View All {trophyImages.length} Trophies &amp; Awards</span>
-          <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
-        </Link>
-      )}
+      {/* View All Trophies CTA — links to full trophy archive */}
+      <Link
+        href="/trophy"
+        prefetch={false}
+        className="group mt-10 flex w-full items-center justify-center gap-3 rounded-2xl bg-[#01327a] px-6 py-4 text-xs font-extrabold tracking-widest text-[#f5d77f] uppercase shadow-md transition-all duration-200 hover:bg-[#01255e] hover:shadow-xl sm:text-sm"
+      >
+        <Trophy className="h-4 w-4 shrink-0 text-[#f5d77f]" />
+        <span>View All {trophyImages.length} Trophies &amp; Awards</span>
+        <ArrowRight className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-1" />
+      </Link>
 
       {/* Fullscreen Lightbox Modal */}
       <AnimatePresence>

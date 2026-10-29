@@ -10,7 +10,6 @@ export default function TopBar() {
     "Email: insure@fortune5.in",
     "Hours: Monday to Saturday 10:00 AM - 7:30 PM",
     "Head Office: 106-107, E-Square, 1st Floor, Subhash Road, Vile Parle (E), Mumbai 400057, India",
-    "YOUR RISK. OUR RESPONSIBILITY.",
     "PEOPLE YOU TRUST, ADVICE THAT WORKS",
     "75+ Years Legacy of Trust",
     "10,000+ Lives Protected",

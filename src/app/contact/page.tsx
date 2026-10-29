@@ -26,6 +26,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Contact3DCard from "@/components/Contact3DCard";
 
 interface FormState {
   name: string;
@@ -119,6 +120,20 @@ function ContactInner() {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [heroMouse, setHeroMouse] = useState({ x: 0, y: 0, active: false });
+
+  const handleHeroMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setHeroMouse({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+      active: true,
+    });
+  };
+
+  const handleHeroMouseLeave = () => {
+    setHeroMouse((prev) => ({ ...prev, active: false }));
+  };
 
   useEffect(() => {
     const svc = searchParams.get("service");
@@ -199,13 +214,28 @@ function ContactInner() {
       <Navbar />
 
       {/* ===== Contact Hero ===== */}
-      <section className="relative isolate overflow-hidden bg-[#012257] pt-[154px] sm:pt-[172px] lg:pt-[186px]">
+      <section
+        onMouseMove={handleHeroMouseMove}
+        onMouseLeave={handleHeroMouseLeave}
+        className="relative isolate overflow-hidden bg-[#012257] pt-[154px] sm:pt-[172px] lg:pt-[186px]"
+      >
         {/* subtle texture */}
-        <div className="absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(245,215,127,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.28)_1px,transparent_1px)] [background-size:56px_56px]" />
-        <div className="absolute -left-28 top-16 h-[26rem] w-[26rem] rounded-full bg-[#c59b27]/18 blur-3xl" />
-        <div className="absolute -right-28 top-0 h-[30rem] w-[30rem] rounded-full border border-[#c59b27]/18" />
+        <div className="pointer-events-none absolute inset-0 opacity-[0.16] [background-image:linear-gradient(rgba(245,215,127,0.28)_1px,transparent_1px),linear-gradient(90deg,rgba(245,215,127,0.28)_1px,transparent_1px)] [background-size:56px_56px]" />
+        <div className="pointer-events-none absolute -left-28 top-16 h-[26rem] w-[26rem] rounded-full bg-[#c59b27]/18 blur-3xl" />
+        <div className="pointer-events-none absolute -right-28 top-0 h-[30rem] w-[30rem] rounded-full border border-[#c59b27]/18" />
 
-        <div className="relative mx-auto grid w-full max-w-[1380px] grid-cols-1 items-center gap-10 px-5 pb-14 sm:px-8 sm:pb-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 lg:px-12 lg:pb-20 xl:px-16">
+        {/* Dynamic Interactive Hero Ambient Light */}
+        <div
+          className="pointer-events-none absolute inset-0 transition-opacity duration-700"
+          style={{
+            background: heroMouse.active
+              ? `radial-gradient(750px circle at ${heroMouse.x}px ${heroMouse.y}px, rgba(243, 212, 124, 0.08), transparent 70%)`
+              : "none",
+            opacity: heroMouse.active ? 1 : 0,
+          }}
+        />
+
+        <div className="relative mx-auto grid w-full max-w-[1480px] grid-cols-1 items-center gap-10 px-5 pb-14 sm:px-8 sm:pb-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-12 lg:px-10 lg:pb-20 xl:px-12">
           {/* Left copy */}
           <ScrollReveal variant="fadeUp" className="w-full">
             <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs font-bold tracking-[0.18em] text-slate-300 uppercase">
@@ -235,19 +265,19 @@ function ContactInner() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="tel:+919820810067"
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#012257] uppercase shadow-lg transition hover:bg-white"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-[#f3d47c] px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-[#012257] uppercase shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-xl"
               >
-                <Phone className="h-3.5 w-3.5" /> Call: +91-98208 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                <Phone className="h-3.5 w-3.5" /> Call: +91-98208 10067 <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
               <a
                 href="tel:+912226192727"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f3d47c]/60 hover:bg-white/10 hover:text-[#f3d47c] hover:shadow-lg"
               >
                 <Phone className="h-3.5 w-3.5 text-[#f3d47c]" /> Board: +91-22-2619 27 27
               </a>
               <a
                 href="mailto:insure@fortune5.in"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f3d47c]/60 hover:bg-white/10 hover:text-[#f3d47c] hover:shadow-lg"
               >
                 <Mail className="h-3.5 w-3.5 text-[#f3d47c]" /> insure@fortune5.in
               </a>
@@ -255,7 +285,7 @@ function ContactInner() {
                 href="https://wa.me/919820810067"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#25D366]/60 hover:bg-[#25D366]/10 hover:text-[#25D366] hover:shadow-lg"
               >
                 <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
               </a>
@@ -263,7 +293,7 @@ function ContactInner() {
                 href="https://www.linkedin.com/in/kaushal-shah-59765b1b?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f3d47c]/60 hover:bg-white/10 hover:text-[#f3d47c] hover:shadow-lg"
               >
                 LinkedIn
               </a>
@@ -271,7 +301,7 @@ function ContactInner() {
                 href="https://www.facebook.com/share/19LLUhbPQE/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f3d47c]/60 hover:bg-white/10 hover:text-[#f3d47c] hover:shadow-lg"
               >
                 Facebook
               </a>
@@ -279,7 +309,7 @@ function ContactInner() {
                 href="https://www.instagram.com/kaushal_f5?igsh=MWpnaHFjZGd6b213ZA%3D%3D&utm_source=qr"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition hover:border-[#f3d47c]/50 hover:text-[#f3d47c]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-3 text-xs font-extrabold tracking-[0.12em] text-white uppercase backdrop-blur transition-all duration-200 hover:-translate-y-0.5 hover:border-[#f3d47c]/60 hover:bg-white/10 hover:text-[#f3d47c] hover:shadow-lg"
               >
                 Instagram
               </a>
@@ -301,74 +331,9 @@ function ContactInner() {
             </div>
           </ScrollReveal>
 
-          {/* Right: contact card preview */}
+          {/* Right: 3D interactive contact card */}
           <ScrollReveal variant="fadeLeft" delay={0.15} className="w-full">
-          <div className="relative mx-auto w-full max-w-[480px] lg:mx-0 lg:ml-auto">
-            <div className="absolute -top-6 -right-6 h-40 w-40 rounded-full bg-[#f3d47c]/15 blur-2xl" />
-            <div className="relative rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-3 backdrop-blur">
-              <div className="rounded-[22px] bg-white p-5 shadow-2xl sm:p-6">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <p className="inline-flex items-center gap-1.5 text-[10px] font-extrabold tracking-[0.16em] text-[#a47a13] uppercase">
-                      <Sparkles className="h-3.5 w-3.5" /> Visit us in Mumbai
-                    </p>
-                    <h3 className="mt-1 font-cormorant text-2xl font-bold tracking-[-0.02em] text-[#012b6b]">Fortune 5 Risk Management</h3>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">
-                      106-107, E-Square, 1st Floor, Subhash Road,
-                      <br /> Vile Parle (East), Mumbai 400057, India.
-                    </p>
-                  </div>
-                  <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#f3d47c] bg-[#012257] text-[#f3d47c] sm:flex">
-                    <Navigation className="h-5 w-5" />
-                  </div>
-                </div>
-
-                <div className="relative mt-5 overflow-hidden rounded-2xl border border-[#e8e2d0] bg-[#f7f6f2]">
-                  <div className="absolute inset-0 opacity-[0.7] [background-image:linear-gradient(rgba(11,34,70,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(11,34,70,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
-                  <div className="relative h-[168px] w-full">
-                    <div className="absolute left-1/2 top-0 h-full w-px bg-[#c59b27]/30" />
-                    <div className="absolute left-0 top-1/2 h-px w-full bg-[#c59b27]/30" />
-                    <div className="absolute left-[22%] top-[28%] h-16 w-20 rounded-lg border border-[#c59b27]/30 bg-white/70 backdrop-blur" />
-                    <div className="absolute right-[18%] bottom-[18%] h-10 w-28 rounded-lg border border-[#012b6b]/10 bg-white/80" />
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <div className="relative">
-                        <span className="absolute -inset-3 rounded-full bg-[#f3d47c]/40 blur-md" />
-                        <span className="relative flex h-11 w-11 items-center justify-center rounded-full border-2 border-white bg-[#012257] text-[#f3d47c] shadow-xl">
-                          <MapPin className="h-5 w-5" />
-                        </span>
-                      </div>
-                      <div className="mx-auto mt-1 h-2 w-10 rounded-full bg-black/10 blur-[2px]" />
-                    </div>
-                  </div>
-                  <a
-                    href="https://www.google.com/maps/search/E-Square+Subhash+Road+Vile+Parle+East+Mumbai"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-[#012b6b] px-3.5 py-2 text-[11px] font-extrabold tracking-[0.08em] text-white shadow-lg transition hover:bg-black"
-                  >
-                    Open in Maps <ArrowRight className="h-3.5 w-3.5" />
-                  </a>
-                </div>
-
-                <div className="mt-4 grid grid-cols-3 gap-3 text-center">
-                  {[
-                    { v: "10am–7:30pm", k: "Working hours" },
-                    { v: "24h", k: "Claim hotline" },
-                    { v: "500+", k: "Businesses" },
-                  ].map((s) => (
-                    <div key={s.k} className="rounded-xl border border-[#ede8d6] bg-[#fdfbf3] px-2 py-3">
-                      <p className="font-cormorant text-sm font-bold leading-none text-[#012b6b]">{s.v}</p>
-                      <p className="mt-1 text-[10px] font-extrabold tracking-[0.12em] text-[#8d6a10] uppercase">{s.k}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="absolute -bottom-3 -left-3 hidden items-center gap-2 rounded-full border border-[#f3d47c]/50 bg-[#012b6b] px-4 py-2 text-xs font-bold text-white shadow-xl sm:inline-flex">
-                <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.9)]" /> Typically replies in ~3 hours
-              </div>
-            </div>
-          </div>
+            <Contact3DCard />
           </ScrollReveal>
         </div>
 
@@ -378,12 +343,11 @@ function ContactInner() {
 
       {/* ===== Form + Contact Details ===== */}
       <section className="w-full py-14 sm:py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-[1380px] px-5 sm:px-8 lg:px-12 xl:px-16">
+        <div className="mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-10 xl:px-12">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-8">
             {/* LEFT: Form */}
             <ScrollReveal variant="fadeUp" className="lg:col-span-7">
               <div className="relative overflow-hidden rounded-[26px] border border-[#e7e0c8] bg-white p-6 shadow-[0_20px_60px_rgba(11,34,70,0.08)] sm:p-8 lg:p-9">
-                <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#012257] via-[#c59b27] to-[#f3d47c]" />
                 <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#f3d47c]/12 blur-2xl" />
 
                 <div className="relative">
@@ -534,11 +498,11 @@ function ContactInner() {
                     </div>
                   )}
 
-                  <div className="sm:col-span-2 flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="sm:col-span-2 flex flex-col gap-4 pt-1 sm:flex-row sm:items-center sm:justify-between">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="group inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-[#012b6b] px-7 py-4 text-xs font-extrabold tracking-[0.14em] text-white uppercase shadow-[0_12px_30px_rgba(11,34,70,0.25)] transition hover:bg-black disabled:opacity-75 disabled:cursor-not-allowed sm:w-auto"
+                      className="group inline-flex w-full shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#012b6b] px-7 py-4 text-xs font-extrabold tracking-[0.14em] text-white uppercase shadow-[0_12px_30px_rgba(11,34,70,0.25)] transition hover:bg-black disabled:opacity-75 disabled:cursor-not-allowed sm:w-auto"
                     >
                       {isSubmitting ? (
                         <>
@@ -552,12 +516,11 @@ function ContactInner() {
                         </>
                       )}
                     </button>
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 text-xs font-semibold text-slate-500">
+                    <div className="flex min-w-0 flex-col gap-1 text-xs font-semibold text-slate-500 sm:items-end sm:text-right">
                       <p className="inline-flex items-center gap-1.5">
-                        <ShieldCheck className="h-3.5 w-3.5 text-[#a47a13]" /> 75+ Years Legacy of Trust · No spam
+                        <ShieldCheck className="h-3.5 w-3.5 shrink-0 text-[#a47a13]" /> 75+ Years Legacy of Trust · No spam
                       </p>
-                      <span className="hidden sm:inline text-slate-300">•</span>
-                      <p className="text-[11px] text-slate-500">
+                      <p className="text-[11px] leading-relaxed text-slate-500">
                         By submitting, you agree to our{" "}
                         <Link href="/privacy" prefetch={false} className="text-[#012b6b] underline hover:text-[#c59b27] transition-colors">
                           Privacy Policy
@@ -704,7 +667,7 @@ function ContactInner() {
 
       {/* ===== FAQ — premium ===== */}
       <section className="w-full border-t border-[#e7e0c8] bg-[#fdfbf3] py-14 sm:py-16 lg:py-20">
-        <div className="mx-auto w-full max-w-[1380px] px-5 sm:px-8 lg:px-12 xl:px-16">
+        <div className="mx-auto w-full max-w-[1480px] px-5 sm:px-8 lg:px-10 xl:px-12">
           <ScrollReveal variant="fadeUp">
             <div className="text-center">
               <p className="text-[11px] font-extrabold tracking-[0.2em] text-[#a47a13] uppercase">Frequently asked questions</p>

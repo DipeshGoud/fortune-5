@@ -296,7 +296,7 @@ const servicesData: ServiceItem[] = [
     title: "Corporate Insurance",
     category: "CORPORATE",
     icon: Factory,
-    img: "/services/corporate-insurance.avif",
+    img: "/services/corporate-insurance.jpg",
     shortDesc: "Safeguard your corporate assets with specialized coverage designed for corporate entities, protecting against risks like fire, property damage, and liability.",
     fullDesc:
       "Safeguard your corporate assets with specialized coverage designed for corporate entities, protecting against risks like fire, property damage, and liability.",
@@ -414,7 +414,7 @@ const servicesData: ServiceItem[] = [
     title: "Travel Insurance",
     category: "RETAIL",
     icon: Plane,
-    img: "/services/travel-insurance.avif",
+    img: "/services/travel-insurance.jpg",
     shortDesc: "Secure your journeys with coverage for medical emergencies, loss of baggage, and more.",
     fullDesc:
       "Secure your journeys with coverage for medical emergencies, loss of baggage, and more.",
@@ -451,7 +451,7 @@ const servicesData: ServiceItem[] = [
     title: "Personal Accident",
     category: "RETAIL",
     icon: ShieldAlert,
-    img: "/services/personal-accident.avif",
+    img: "/services/personal-accident.jpg",
     shortDesc: "Protect your family from financial hardships due to accidental death, disability, or loss of income.",
     fullDesc:
       "Protect your family from financial hardships due to accidental death, disability, or loss of income.",
@@ -661,7 +661,7 @@ export default function ServicesPage() {
               </span>
             </h1>
             <p className="text-slate-600 text-sm sm:text-base lg:text-lg font-medium leading-relaxed max-w-2xl mx-auto mt-4">
-              Comprehensive protection for every need. Covering 9 Corporate Solutions and 6 Retail Solutions with the integrity of a 75-year legacy.
+              Comprehensive protection for every need.
             </p>
           </ScrollReveal>
 
@@ -1142,15 +1142,6 @@ export default function ServicesPage() {
                   <p className="text-slate-600 text-xs leading-relaxed font-medium">
                     {selectedService.whoNeedsIt}
                   </p>
-                </div>
-
-                {/* Claim Support Commitment */}
-                <div className="bg-amber-50/60 p-4 rounded-2xl border border-[#C59B27]/30 flex items-start gap-3">
-                  <ShieldCheck className="w-5 h-5 text-[#B8860B] flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h5 className="text-xs font-extrabold text-[#01327a] uppercase">FORTUNE 5 CLAIM COMMITMENT</h5>
-                    <p className="text-slate-700 text-xs font-medium mt-0.5">{selectedService.claimHighlight}</p>
-                  </div>
                 </div>
               </div>
 

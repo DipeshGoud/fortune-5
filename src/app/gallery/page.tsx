@@ -6,10 +6,8 @@ import {
   ArrowUpRight,
   Camera,
   Sparkles,
-  Quote,
   ShieldCheck,
   Award,
-  Building2,
   Users,
 } from "lucide-react";
 import TopBar from "@/components/TopBar";
@@ -39,7 +37,7 @@ export default function GalleryPage() {
       <Navbar />
 
       {/* ── HERO ── */}
-      <section className="relative isolate overflow-hidden bg-[#01327a] pt-[148px] sm:pt-[166px] lg:pt-[182px] pb-20 sm:pb-24 lg:pb-28">
+      <section className="relative isolate overflow-hidden bg-[#012257] pt-[148px] sm:pt-[166px] lg:pt-[182px] pb-20 sm:pb-24 lg:pb-28">
         {/* grid + glows */}
         <div
           className="absolute inset-0 opacity-[0.06] pointer-events-none"
@@ -116,7 +114,7 @@ export default function GalleryPage() {
                   <Camera className="h-3.5 w-3.5 text-[#C59B27]" /> Curated photo collection
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 border border-white/10">
-                  <Building2 className="h-3.5 w-3.5 text-[#C59B27]" /> 3 primary categories
+                  <Award className="h-3.5 w-3.5 text-[#C59B27]" /> Awards &amp; Recognitions
                 </span>
                 <span className="text-slate-500">Updated 2026 • Mumbai</span>
               </div>
@@ -254,36 +252,6 @@ export default function GalleryPage() {
 
           <GalleryGrid />
         </div>
-      </section>
-
-      {/* ── LEGACY QUOTE STRIP ── */}
-      <section className="relative overflow-hidden bg-[#01327a] py-10 sm:py-14">
-        <div className="absolute inset-0 opacity-40">
-          <div className="absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-[#C59B27]/10 blur-2xl transform-gpu pointer-events-none" />
-          <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-white/[0.04] blur-2xl transform-gpu pointer-events-none" />
-        </div>
-        <ScrollReveal variant="fadeUp" className="w-full">
-          <div className="relative mx-auto flex w-full max-w-[1480px] flex-col gap-6 px-5 sm:px-8 lg:px-10 xl:px-12 md:flex-row md:items-center md:justify-between">
-            <div className="flex gap-4 max-w-3xl">
-              <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[#C59B27]/30 bg-white/5 text-[#F5D77F]">
-                <Quote className="h-6 w-6" />
-              </div>
-              <div>
-                <p className="font-cormorant text-xl font-medium leading-snug text-white sm:text-2xl">
-                  &ldquo;Protection is not a transaction — it is a promise kept across generations.&rdquo;
-                </p>
-                <p className="mt-2 text-sm font-semibold tracking-wide text-[#F5D77F]">— Fortune 5 Leadership • Mumbai</p>
-              </div>
-            </div>
-            <Link
-              href="/contact"
-              prefetch={false}
-              className="inline-flex shrink-0 items-center gap-2 rounded-full border border-[#C59B27]/30 bg-white/5 px-5 py-3 text-xs font-extrabold tracking-widest text-[#F5D77F] uppercase transition hover:bg-[#F5D77F] hover:text-[#01327a]"
-            >
-              Connect With Us <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </ScrollReveal>
       </section>
 
       <Footer />
