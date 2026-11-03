@@ -8,9 +8,6 @@ import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   ShieldCheck,
-  Printer,
-  Copy,
-  Check,
   ExternalLink,
   Mail,
   Phone,
@@ -35,21 +32,6 @@ const navSections = [
 
 export default function PrivacyContent() {
   const [activeSection, setActiveSection] = useState("intro");
-  const [copiedLink, setCopiedLink] = useState(false);
-
-  const handleCopyLink = () => {
-    if (typeof window !== "undefined") {
-      navigator.clipboard.writeText(window.location.href);
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2500);
-    }
-  };
-
-  const handlePrint = () => {
-    if (typeof window !== "undefined") {
-      window.print();
-    }
-  };
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -139,19 +121,6 @@ export default function PrivacyContent() {
 
               {/* Utility actions */}
               <div className="flex flex-wrap items-center gap-2.5 shrink-0">
-                <button
-                  onClick={handlePrint}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2.5 text-xs font-extrabold text-white uppercase tracking-wider backdrop-blur hover:bg-white hover:text-[#012257] transition"
-                >
-                  <Printer className="w-3.5 h-3.5 text-[#f3d47c]" /> Print / PDF
-                </button>
-                <button
-                  onClick={handleCopyLink}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2.5 text-xs font-extrabold text-white uppercase tracking-wider backdrop-blur hover:bg-white hover:text-[#012257] transition"
-                >
-                  {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 text-[#f3d47c]" />}
-                  {copiedLink ? "Copied" : "Share"}
-                </button>
                 <Link
                   href="/terms"
                   prefetch={false}
@@ -259,10 +228,6 @@ export default function PrivacyContent() {
                 <span>Effective Date: <strong className="text-slate-800">18 August 2026</strong></span>
                 <span>•</span>
                 <span>Last Updated: <strong className="text-slate-800">18 August 2026</strong></span>
-                <span>•</span>
-                <button onClick={handlePrint} className="text-[#012257] font-bold hover:underline">
-                  Download PDF
-                </button>
               </div>
             </section>
 
